@@ -1,0 +1,30 @@
+
+Soit $G=(V,A,CAP)$ le graphe orient\'e sans circuit mod\'elisant le r\'eseau \'electrique. 
+Chaque sommet de $G$ est soit une source, soit  un tableau ou soit un serveur. 
+L'ensemble des sommets $V$ est compos\'e des \'equipements sources $V_S$, interm\'ediaires ou passifs $V_I$ et  charges ou serveurs $V_C$. Il est une union disjointe deux \`a deux  de $V_C$, $V_I$ et $V_S$ de cardinalit\'e $n$ dans laquelle :
+\begin{itemize}
+	\item Les sommets $V_S$ sont des sommets de degr\'e entrant nul $d^{-} = 0$.
+	\item Les sommets $V_I$ sont des sommets de degr\'es entrant et sortant non nuls $d^{-} \ne 0, d^{+} \ne 0$.  
+	\item Les sommets $V_C$ sont des sommets de degr\'e sortant nul  $d^{+} = 0$.
+\end{itemize}
+$$ 
+V = V_S \cup V_I \cup V_C ~ et ~ 
+V_S \cap V_I =  \emptyset ~ et ~ 
+V_S \cap V_C =  \emptyset ~ et ~ 
+V_C \cap V_I =  \emptyset
+$$
+L'ensemble des arcs $A$ mod\'elise $m$ c\^ables \'electriques.
+Chaque arc a un flot, une capacit\'e et une r\'esistance consid\'er\'ee constante.
+La capacit\'e de chaque arc est fonction de la grandeur associ\'ee \`a cet arc.
+\newline
+Par convention,  les arcs incidents entrants dans chaque sommet du graphe portent les mesures des grandeurs physiques.
+
+%Consid\'erons $a_i^{-} \in V$ et $a_i^{+} \in V$ l'extr\'emit\'e initiale et l'extr\'emit\'e finale de l'arc $a_i \in E$ avec $1\le i \le n$.  
+%Les sommets de l'arc  $a_i$ appartiennent \`a des ensembles differents tel que 
+%\begin{itemize}
+%\item si $a_i^{-} \in V_S$ alors $a_i^{+} \in V_I$.
+%\item si $a_i^{-} \in V_I$ alors $a_i^{+} \in V_C$.
+%\end{itemize}
+%La capacit\'e de chaque arc est fonction de la grandeur associ\'e \`a cet arc.
+%\newline
+%Par convention,  les arcs incidents entrants dans chaque sommet du graphe portent les mesures physiques

@@ -1,0 +1,9 @@
+Nous avons g\'en\'er\'e des valeurs de corr\'elations pour toutes les cases de la matrice $M_{LG}$ en consid\'erant la distribution des valeurs de corr\'elation du r\'eseau \'electrique du datacenter {\em Champlan}. 
+Les valeurs de corr\'elation suivent des lois normales asym\'etriques de param\`etre $\alpha = 5$ pour les cases \`a $0$ et  de param\`etre $\alpha = -5$ pour les cases \`a $1$.
+La matrice de corr\'elation $M_c$ est construite \`a partir de ces corr\'elations.
+Un ensemble $s \in S$ de seuils est appliqu\'e \`a la matrice $M_c$ pour la transformer en la matrice d'adjacence $M_s$ du graphe $G_s$. 
+La matrice $M_s$ contient des cases {\em fausses n\'egatives} et {\em fausses positives}. 
+Nous cherchons \`a minimiser la distance de Hamming en corrigeant le maximum de cases \'erron\'ees pendant l'algorithme de correction. Cela passe par la s\'election ad\'equate du seuil et de la fonction de co\^ut.
+Apr\`es l'ex\'ecution de notre couple d'algorithmes, nous  avons d\'eduit que le bon seuil est contenu dans l'intervalle $s = ]0.6,0.7]$ et que la fonction {\em normale} est la meilleure fonction de co\^ut. 
+L'utilisation du seuil $s$ et de la fonction {\em normale} ne garantissent pas la suppression totale des cases \'erron\'ees.  Mais elles minimisent leur nombre de telle sorte qu'un expert du m\'etier puisse effectuer les corrections manuellement qui conduisent au line-graphe $LG$ recherch\'e.
+Dans la section suivante, nous nous int\'eressons aux graphes dans lesquelles tous les sommets ne peuvent \^etre couverts par $1$ ou $2$ cliques. Ces graphes sont dits {\em grilles boucl\'ees}. 

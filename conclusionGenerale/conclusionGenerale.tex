@@ -1,0 +1,72 @@
+\documentclass[onecolumn, 12pt]{book}
+
+\usepackage[latin1]{inputenc}   
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+%\usepackage[T1]{fontenc}
+
+%\usepackage[francais]{babel}     
+\usepackage{layout}    
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} 
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{color} 
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+%\usepackage{epstopdf}
+%\usepackage[outdir=/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/]{epstopdf}
+%\usepackage[outdir=./../../fusion_fichiers/images_fusionChapitres/]{epstopdf}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{enumitem} 
+\usepackage{amsthm} % ajouter pour environnement proof
+\usepackage{placeins}
+\usepackage{multirow}
+
+ \newcounter{subsubsubsection}
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\title{Chapitre6 : Exp\'erimentations sur des donn\'ees al\'eatoires}
+\author{Wilfried Ehounou}
+\date{\oldstylenums{\today}} 
+
+
+%--- d\'efinition macro ------
+\def\R{\mbox{I\hspace{-.15em}R}}
+\def\N{\mbox{I\hspace{-.15em}N}}
+\def\Z{\mbox{I\hspace{-.15em}Z}}
+\def\Q{\mbox{I\hspace{-.15em}Q}}
+
+\newtheorem{definition}{D\'efinition}
+\newtheorem{theorem}{Th\'eor\`eme}
+\newtheorem{property}{Propri\'et\'e}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Exemple}
+\newtheorem{remark}{Remarque}
+
+%---- path figures ----
+\graphicspath{
+{/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/}
+}
+ 
+\begin{document}
+\chapter{Conclusion g\'en\'erale}
+\section{Conclusion}
+	\input{conclusion}
+\section{Perspectives}
+ 	\input{perspectives}
+ 
+ \end{document}

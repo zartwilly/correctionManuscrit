@@ -1,0 +1,22 @@
+Le r\'eseau \'electrique a deux modes de fonctionnement : le mode triphas\'e regroupant les grandeurs $U_{12}, U_{23}, U_{13}, I_{12}, I_{23}, I_{13}$ et le mode monophas\'e regroupant les grandeurs $I,U$. Les autres grandeurs sont communes aux deux syst\`emes (les grandeurs $P, Q, S, cos \phi$). Les symboles
+  $U_{12}, U_{23}, U_{13}, U$ sont des tensions,
+  $I_{12}, I_{23}, I_{13}, I$ des intensit\'es, 
+  $P, Q, S$ des puissances actives, r\'eactives, apparentes respectivement et 
+  $cos \phi$ ou $FP$ le facteur de puissance.
+\newline 
+Une grandeur physique sur un arc est une caract\'eristique physique mesurable selon une unit\'e de mesure. \\
+Selon le ph\'enom\`ene physique pris en compte, les grandeurs physiques sont pr\'ed\'efinies. Dans le cas de l'\'electricit\'e, les grandeurs physiques forment l'ensemble \textbf{GP} de cardinalit\'e finie d\'efini comme suit :
+\begin{equation}
+	GP = \{I, I_{1}, I_{2}, I_{3}, U, U_{12}, U_{23}, U_{13}, P, Q, S, FP \}
+\end{equation}
+avec le facteur de puissance $FP$ qui d\'esigne le d\'ephasage entre l'intensit\'e ($I$) et la tension ($U$).
+\newline
+Ces deux modes (triphas\'e et monophas\'e) peuvent fonctionner dans le m\^eme r\'eseau. Cela implique qu'il n'existe qu'un seul sous-ensemble de grandeurs sur un arc, soit des grandeurs monophas\'ees soit des grandeurs triphas\'ees. On note $GP^{a_{i}}$ l'ensemble des grandeurs sur un arc $a_{i} $.
+\begin{equation}
+	\forall a_{i} \in A, \hspace{0.2cm}  GP^{a_{i}} \subset GP
+\end{equation}
+On distingue deux types de grandeurs :
+\begin{itemize}
+	\item Grandeurs \`a diff\'erentiel de potentiel : les tensions. On les note $gp_{ddp} \in \{U_{12}, U_{23}, U_{31}, U\}$.
+	\item Grandeurs \`a effet calorique :  l'intensit\'e, la puissance active et r\'eactive. On les note $gp_{cal} \in \{ P, I_{1}, I_{2}, I_{3}, Q\}$.
+\end{itemize} 

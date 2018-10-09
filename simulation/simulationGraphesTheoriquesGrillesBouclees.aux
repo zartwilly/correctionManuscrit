@@ -1,0 +1,96 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}\'Evaluation des performances des algorithmes}{5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapitreEvaluation}{{1}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}G\'en\'eration de graphes \'electriques}{5}}
+\newlabel{generationGraphesElectriques}{{1.1}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Exp\'erimentation 1 : modification de $k$ cases de la matrice du line-graphe}{6}}
+\newlabel{experimentation1}{{1.2}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}S\'election de $k$ cases et g\'en\'eration de la matrice $M_{k,p}$ }{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Protocole d'exp\'erimentation sur les graphes $G_{k,p}$}{6}}
+\citation{algorithmeCorrection}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces \'Etapes de l'exp\'erimentation :   1) On g\'en\`ere le graphe $G$ et son line-graphe $LG$;  2) On modifie $k$ cases selon la repartition $p$ $\alpha $ fois pour obtenir le graphe $G_{k,p,\alpha }$;  3) On applique les algorithmes de couverture et de correction pour avoir un line-graphe $LG_{k,p,\alpha }$. $LG_{k,p,\alpha }$ et $G_{k,p,\alpha }$ diff\`erent de $DC_{k,p,\alpha }$ ar\^etes. $LG_{k,p,\alpha }$ a $DH_{k,p,\alpha }$ cases modifi\'ees par rapport \`a $LG$;   4) $L^{-1}(LG_{k,p,\alpha })$ est le graphe racine de $LG_{k,p,\alpha }$. \relax }}{7}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{recapProtocoleEtude}{{1.1}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces  tableau r\'ecapitulatif des approches de corrections \relax }}{9}}
+\newlabel{tab:recapApprocheCorrection}{{1.1}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Analyses des r\'esultats }{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.1}Interpr\'etation du mode de correction {\em  al\'eatoire sans remise}}{9}}
+\newlabel{experimentation1InterpretationModeAleatoireSansRemise}{{1.2.3.1}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces  Approche de correction al\'eatoire sans remise \`a co\^ut unitaire pour $k =0 $ case modifi\'ee. La premi\`ere colonne repr\'esente la distribution des distances correction $moy\_DC_{0,0.5}$. La seconde colonne est la distribution des distances de Hamming $moy\_DH_{0,0.5}$. La troisi\`eme colonne est la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances (correlation\_DC\_DH). La quatri\`eme colonne est la fonction cumulative des distances de Hamming.\relax }}{10}}
+\newlabel{sansremise_unitaire_distanceMoyenDCDH_k_0_aleatoire_p_05}{{1.2}{10}}
+\newlabel{eqCorrelMoyDCDH}{{1.2}{11}}
+\newlabel{eqCumulMoyDH}{{1.3}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces  Approche de correction al\'eatoire sans remise \`a co\^ut unitaire pour $k =\{1,2,5,9\} $ cases modifi\'ees : La premi\`ere colonne repr\'esente la distribution des distances de correction $moy\_DC_{k,0.5}$. La seconde colonne est la distribution des distances de Hamming $moy\_DH_{k,0.5}$. La troisi\`eme colonne est la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances (correlation\_DC\_DH). La quatri\`eme colonne est la fonction cumulative des distances de Hamming. La premi\`ere ligne est associ\'ee \`a $k=1$ case modifi\'ee, la seconde ligne \`a $k=2$ cases modifi\'ees, la troisi\`eme ligne \`a $5$ cases modifi\'ees et enfin la derni\`ere \`a $9$ cases modifi\'ees. \relax }}{12}}
+\newlabel{sansremise_unitaire_distanceMoyenDCDH_k_1_2_5_9_aleatoire_p_05}{{1.3}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.2}Comparaison des modes de correction}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces  Comparaison des diff\'erentes approches de correction de sommets pour $k \in \{1,\cdots  ,9\}$ cases modifi\'ees. Les courbes en bleu carr\'e : approche degr\'e minimum sans remise (2a), rouge carr\'ee : approche co\^ut minimum avec remise (1b), rouge rond : approche co\^ut minimum sans remise (2b), vert rond : approche al\'eatoire sans remise (2c) et jaune triangle : approche degr\'e minimum avec remise (1a) \relax }}{15}}
+\newlabel{compareDifferentesMethodesCorrectionSommets_fct_cout_normal_p05}{{1.4}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.3}Influence des cases modifi\'ees et de la fonction de co\^ut}{16}}
+\newlabel{influenceFonctionCoutDistributionHamming1}{{1.2.3.3}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces  Comparaison des diff\'erentes repartitions des $k \in \{1,\cdots  ,9\}$ cases fausses positives et fausses n\'egatives avec le mode {\em  al\'eatoire sans remise} et la fonction de co\^ut {\em  unitaire}. \relax }}{16}}
+\newlabel{comparaison_p_correl_s_aleatoire_aucune}{{1.5}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces  Comparaison des diff\'erentes repartitions des $k \in \{1,\cdots  ,9\}$ cases fausses positives et fausses n\'egatives avec le mode {\em  al\'eatoire sans remise} et la fonction de co\^ut {\em  suppression}. \relax }}{17}}
+\newlabel{comparaison_p_correl_s_aleatoire_supp}{{1.6}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces  Comparaison des diff\'erentes repartitions des $k \in \{1,\cdots  ,9\}$ cases fausses positives et fausses n\'egatives avec le mode {\em  al\'eatoire sans remise} et la fonction de co\^ut {\em  ajout}. \relax }}{18}}
+\newlabel{comparaison_p_correl_s_aleatoire_ajout}{{1.7}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3.4}Relation entre la distance de Hamming et la distance de correction}{19}}
+\newlabel{relationMoyDHmoyDC}{{1.2.3.4}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces  La corr\'elation de la distance de correction versus la distance de Hamming pour $k$ cases modifi\'ees et $p = 0.5$ \relax }}{19}}
+\newlabel{dh_vs_dc_p_05}{{1.8}{19}}
+\newlabel{correlation_correction_hamming}{{1.4}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}Conclusion de l'exp\'erimention 1}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Exp\'erimentation 2 : Ajout de probabilit\'e dans la matrice du line-graphe}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Affectation de probabilit\'es aux cases de la matrice $M_{LG}$}{21}}
+\newlabel{affectationValeursProbabilites}{{1.3.1}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces  Distribution des valeurs de corr\'elation de $M_c$ selon les cases \`a $0$ (\`a gauche) et \`a $1$ (\`a droite) de $M_{LG}$. La corr\'elation \`a $0.1$ d\'esigne les valeurs de corr\'elation comprises entre $0.10$ et $0.199$. \relax }}{22}}
+\newlabel{distribution_0_1_metrique_wil_shapelets_P_len4950}{{1.9}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces  \`A gauche : loi asym\'etrique de coefficient d'asym\'etrie $\alpha = 5$ pour les cases \`a $0$. \`A droite : loi asym\'etrique de coefficient d'asym\'etrie $\alpha = -5$ pour les cases \`a $1$.\relax }}{22}}
+\newlabel{distributionsCases01avecCoefficientAsymetries}{{1.10}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces  Un exemple de la distribution des valeurs de corr\'elations g\'en\'er\'ees. $63\%$ des cases sont des cases \`a 0 et $37\%$ sont des cases \`a $1$ dans $LG$.\relax }}{23}}
+\newlabel{distribution01}{{1.11}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}G\'en\'eration du graphe de corr\'elation }{23}}
+\newlabel{experimentation2GenerationMatriceProbabiliteAvecSeuil}{{1.3.2}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces  Distribution des valeurs de corr\'elation sur un graphe g\'en\'er\'e de $30$ sommets et de degr\'e maximal de $5$. .\relax }}{24}}
+\newlabel{distrib_relationAdjacence_seuils}{{1.12}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Protocole d'exp\'erimentation des graphes $G_s$ de corr\'elation}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces \'Etapes de l'exp\'erimentation : 1) on g\'en\`ere le graphe $G$ et son line-graphe $LG$, 2) on g\'en\`ere la matrice de correlation $M_c$ du line-graphe $LG$ \`a partir de la distribution des valeurs de corr\'elation du graphe de Champlan puis on lui applique une valeur de seuil $s$ pour obtenir le graphe $G_{s}$, 3) on applique les algorithmes de d\'ecouverte et de correction pour avoir un line-graphe $LG_{s}$. $LG_{s}$ et $G_{s}$ diff\`erent de $DC_{s}$ ar\^etes. $LG_{s}$ a $DH_{s}$ cases modifi\'ees par rapport \`a $LG$, 4) $L^{-1}(LG_{s})$ est le graphe racine de $LG_{s}$. \relax }}{25}}
+\newlabel{recapProtocoleEtudeSeuil}{{1.13}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Analyses des r\'esultats}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.4.1}\'Evolution du pourcentage de cases corrig\'ees}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces  Choix du seuil: (a) cases {\em  fausses positives} dans la matrice $M_s$; (b) cases {\em  fausses n\'egatives} dans la matrice $M_s$,(c) cases {\em  fausses positives} dans la matrice $M'_s$; (d) cases {\em  fausses n\'egatives} dans la matrice $M'_s$; (e) comparaison des seuils selon $moy\_DH$ \relax }}{26}}
+\newlabel{graphiquesFctCoutNormale}{{1.14}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.4.2}Influence de la valeur du seuil }{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.4.3}Choix de la fonction de co\^ut et impact sur les distances de Hamming }{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces  comparaison entre les fonctions de co\^ut {\em  unitaire} et {\em  normale}: (a) cases {\em  fausses positives} dans la matrice $M_s$; (b) cases {\em  fausses n\'egatives} dans la matrice $M_s$; (c) cases {\em  fausses positives} dans la matrice $M'_s$; (d) cases {\em  fausses n\'egatives} dans la matrice $M'_s$; (e) comparaison des fonctions de co\^ut selon $moy\_DH$\relax }}{29}}
+\newlabel{comparaisonFctCoutUnitaireNormale}{{1.15}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces  Comparaison entre les fonctions de co\^ut {\em  normale}, {\em  ajout} et {\em  suppression} : la fonction {\em  ajout} est la courbe en rouge, la fonction {\em  normale} est en jaune et la fonction {\em  suppression est en bleu}\relax }}{30}}
+\newlabel{comparaisonFctCoutNormaleAjoutSuppression}{{1.16}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.5}Conclusion de l'exp\'erimentation 2}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Exp\'erimentation 3 : algorithmes sur les grilles boucl\'ees}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}D\'efinition des grilles boucl\'ees et les distances line th\'eoriques}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1.1}D\'efinition de la grille boucl\'ee $G_{k,k'}$ }{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1.2}Correction des grilles boucl\'ees}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces  La grille boucl\'ee $G_{4,4}$ : il est compos\'e de $16$ sommets, $28$ ar\^etes et $10$ cellules. \relax }}{33}}
+\newlabel{exempleGrapheCellule}{{1.17}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1.3}Modification par {\em  ajout d'ar\^etes uniquement}}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.18}{\ignorespaces  La grille boucl\'ee $G_{4,4}$ : il est compos\'e de $16$ sommets, $33$ ar\^etes. Il contient $4$ cliques $K_{2}$ et $6$ cliques $K_4$. Les ar\^etes ajout\'ees sont les traits de couleur rouge.\relax }}{34}}
+\newlabel{exempleCorrectionGrapheCelluleAvecAjout}{{1.18}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1.4}Modification par {\em  suppression d'ar\^etes uniquement}}{34}}
+\newlabel{modificationSuppressionAretesUniquement}{{1.4.1.4}{34}}
+\newlabel{borneSuperieureDL}{{1.6}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.19}{\ignorespaces  La grille boucl\'ee $G_{4,4}$ : il est compos\'e de $16$ sommets, $16$ ar\^etes et $16$ cliques $K_2$. Les ar\^etes supprim\'ees sont les traits en pointill\'ees rouges \relax }}{35}}
+\newlabel{exempleCorrectionGrapheCelluleAvecSuppression}{{1.19}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Protocole d'exp\'erimentation sur les grilles boucl\'ees}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Analyse des r\'esultats}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.20}{\ignorespaces Comparaison de la borne sup\'erieure de la distance line et calcul\'ees selon des fonctions de co\^ut {\em  suppression} et {\em  ajout} : La figure $(a)$ d\'esigne la comparaison entre les distances de correction et la borne sup\'erieure de l'\'equation 1.6\hbox {} avec la modification {\em  ajout d'ar\^etes uniquement}, La figure $(c)$ d\'esigne la comparaison entre les distances de correction et la borne sup\'erieure de l'\'equation 1.6\hbox {} avec la modification {\em  suppression d'ar\^etes uniquement}, La figure $(b)$ compare le pourcentage d'ar\^etes supprim\'ees dans les graphes boucl\'ees avec celui de la borne sup\'erieure de l'\'equation 1.6\hbox {} dans la modification {\em  ajout d'ar\^etes uniquement}, La figure $(d)$ compare le pourcentage d'ar\^etes supprim\'ees dans les graphes boucl\'ees avec celui de la borne sup\'erieure de l'\'equation 1.6\hbox {} dans la modification {\em  suppression d'ar\^etes uniquement}, La figure $(e)$ compare les distances de correction entre les diff\'erentes modifications. \relax }}{37}}
+\newlabel{comparaison_distances_line_graphes_cellules_k_2x50}{{1.20}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.4}Conclusion de l'exp\'erimentation 3}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Conclusion du chapitre 1\hbox {}}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Annexes}{39}}
+\newlabel{annexe_distribution_0_9}{{1.6}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.21}{\ignorespaces  Mode de correction al\'eatoire sans remise \`a co\^ut unitaire pour $k =\{1,2,3,4,5\} $ cases modifi\'ees : La premi\`ere colonne repr\'esente la distribution des distances de correction $moy\_DC_{k,0.5}$. La seconde colonne est la distribution des distances de Hamming $moy\_DH_{k,0.5}$. La troisi\`eme colonne est la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances (correlation\_DC\_DH). La quatri\`eme colonne est la fonction cumulative des distances de Hamming. La premi\`ere ligne est associ\'ee \`a $k=1$ case modifi\'ee, la seconde ligne \`a $k=2$ cases modifi\'ees, la troisi\`eme ligne \`a $5$ cases modifi\'ees et enfin la derni\`ere \`a $9$ cases modifi\'ees\relax }}{40}}
+\newlabel{sansremise_unitaire_distanceMoyenDCDH_k_1_5_aleatoire_p_05}{{1.21}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.22}{\ignorespaces  Mode de correction al\'eatoire sans remise \`a co\^ut unitaire pour $k =\{6,7,8,9\} $ cases modifi\'ees : La premi\`ere colonne repr\'esente la distribution des distances de correction $moy\_DC_{k,0.5}$. La seconde colonne est la distribution des distances de Hamming $moy\_DH_{k,0.5}$. La troisi\`eme colonne est la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances (correlation\_DL\_DH). La quatri\`eme colonne est la fonction cumulative des distances de Hamming. La premi\`ere ligne est associ\'ee \`a $k=1$ case modifi\'ee, la seconde ligne \`a $k=2$ cases modifi\'ees, la troisi\`eme ligne \`a $5$ cases modifi\'ees et enfin la derni\`ere \`a $9$ cases modifi\'ees\relax }}{41}}
+\newlabel{sansremise_unitaire_distanceMoyenDCDH_k_6_9_aleatoire_p_05}{{1.22}{41}}

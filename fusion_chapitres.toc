@@ -1,0 +1,92 @@
+\contentsline {chapter}{\numberline {1}Introduction G\'en\'erale}{15}{chapter.1}
+\contentsline {chapter}{\numberline {2}R\'eseaux de flots et mesures physiques}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}R\'eseau \'electrique d'un datacenter : un graphe de flots}{20}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Topologie du r\'eseau \'electrique du datacenter}{20}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}R\'eseau \'electrique : un graphe de flots}{21}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Mod\'elisation du r\'eseau \'electrique du datacenter}{22}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Description du graphe de flots}{22}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Grandeurs, flots et contraintes physiques}{22}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Grandeurs physiques}{23}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Capacit\'e d'un arc}{23}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3} Description d'un flot physique}{24}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4} Contraintes sur les flots}{24}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.5}Description de Verif-correl}{25}{subsubsection.2.2.2.5}
+\contentsline {section}{\numberline {2.3}\'Etat de l'art sur la d\'ecouverte de topologie}{26}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}D\'ecouverte des topologies par des sondes}{27}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Tomographie des r\'eseaux}{28}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}L'estimation des param\`etres (caract\'eristiques) d'un lien}{28}{subsubsection.2.3.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2.2}La pr\'ediction de topologie}{29}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.3}La densit\'e du trafic entre \'emetteur/recepteur}{29}{subsubsection.2.3.2.3}
+\contentsline {subsection}{\numberline {2.3.3}Reconstruction de la topologie par les s\'eries temporelles}{30}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Probl\`eme de d\'ecouverte de topologie \'electrique}{31}{section.2.4}
+\contentsline {section}{\numberline {2.5}Conclusion du chapitre \ref {ReseauFlotsMesures}}{32}{section.2.5}
+\contentsline {chapter}{\numberline {3}Mesures : Des S\'eries Temporelles}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}S\'eries temporelles}{33}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}La mod\'elisation et la pr\'evison d'une s\'erie temporelle}{34}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}La d\'etection de rupture}{37}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}La comparaison de s\'eries temporelles}{37}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}\'Etat de l'art des m\'ethodes de similarit\'e}{38}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1} Similarit\'e sur les s\'eries enti\`eres}{38}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Dynamic Time Warping DTW}{39}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Time Warp Edit TWE}{40}{subsubsection.3.2.1.2}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Move-Split-Merge MSM}{42}{subsubsection.3.2.1.3}
+\contentsline {subsubsection}{\numberline {3.2.1.4}Distance de Pearson}{43}{subsubsection.3.2.1.4}
+\contentsline {subsubsection}{\numberline {3.2.1.5}Longest Common Subsequence}{44}{subsubsection.3.2.1.5}
+\contentsline {subsection}{\numberline {3.2.2}Similarit\'e sur les s\'equences}{45}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Similarit\'e par aggr\'egation des caract\'eristiques descriptives}{47}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Conclusion sur les m\'ethodes de similarit\'e}{47}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}M\'ethode de similarit\'e entre des mesures \'electriques : \\ distance de Pearson}{48}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Choix de la distance}{48}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}R\'esultats sur des donn\'ees r\'eelles}{50}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Conclusion du chapitre \ref {timeSeries}}{57}{section.3.4}
+\contentsline {chapter}{\numberline {4}Line-graphes}{59}{chapter.4}
+\contentsline {section}{\numberline {4.1}Line-graphes : caract\'eristiques et propri\'et\'es}{60}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Caract\'eristiques d'un line-graphe}{60}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Line-graphes ambigus}{63}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Formulation du Probl\`eme {\em Proxi-Line}}{65}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Probl\`eme}{66}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Algorithmes de d\'ecouverte de topologie}{66}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Recherche de Couverture en cliques}{67}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Algorithme de couverture}{68}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Description de l'algorithme de couverture}{69}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Complexit\'e de l'algorithme de couverture}{74}{subsubsection.4.3.2.2}
+\contentsline {subsection}{\numberline {4.3.3}Algorithme de correction}{76}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Complexit\'e des algorithmes}{80}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Conclusion de la description des algorithmes}{81}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}D\'etermination de la topologie du r\'eseau \'energ\'etique}{81}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Orientation du graphe $G'$}{82}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Conclusion du chapitre \ref {linegraphesChapitre} }{85}{section.4.5}
+\contentsline {chapter}{\numberline {5}\'Evaluation des performances des algorithmes}{89}{chapter.5}
+\contentsline {section}{\numberline {5.1}G\'en\'eration de graphes \'electriques}{89}{section.5.1}
+\contentsline {section}{\numberline {5.2}Exp\'erimentation 1 : modification de $k$ cases de la matrice du line-graphe}{90}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}S\'election de $k$ cases et g\'en\'eration de la matrice $M_{k,p}$ }{90}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Protocole d'exp\'erimentation sur les graphes $G_{k,p}$}{91}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Analyses des r\'esultats }{94}{subsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3.1}Interpr\'etation du mode de correction {\em al\'eatoire sans remise}}{94}{subsubsection.5.2.3.1}
+\contentsline {subsubsection}{\numberline {5.2.3.2}Comparaison des modes de correction}{99}{subsubsection.5.2.3.2}
+\contentsline {subsubsection}{\numberline {5.2.3.3}Influence des cases modifi\'ees et de la fonction de co\^ut}{101}{subsubsection.5.2.3.3}
+\contentsline {subsubsection}{\numberline {5.2.3.4}Relation entre la distance de Hamming et la distance de correction}{104}{subsubsection.5.2.3.4}
+\contentsline {subsection}{\numberline {5.2.4}Conclusion de l'exp\'erimention 1}{106}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Exp\'erimentation 2 : Ajout de probabilit\'e dans la matrice du line-graphe}{107}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Affectation de probabilit\'es aux cases de la matrice $M_{LG}$}{107}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}G\'en\'eration du graphe de corr\'elation }{109}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Protocole d'exp\'erimentation des graphes $G_s$ de corr\'elation}{110}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Analyses des r\'esultats}{112}{subsection.5.3.4}
+\contentsline {subsubsection}{\numberline {5.3.4.1}\'Evolution du pourcentage de cases corrig\'ees}{112}{subsubsection.5.3.4.1}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Influence de la valeur du seuil }{117}{subsubsection.5.3.4.2}
+\contentsline {subsubsection}{\numberline {5.3.4.3}Choix de la fonction de co\^ut et impact sur les distances de Hamming }{117}{subsubsection.5.3.4.3}
+\contentsline {subsection}{\numberline {5.3.5}Conclusion de l'exp\'erimentation 2}{119}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Exp\'erimentation 3 : algorithmes sur les grilles boucl\'ees}{120}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}D\'efinition des grilles boucl\'ees et les distances line th\'eoriques}{120}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}D\'efinition de la grille boucl\'ee $G_{k,k'}$ }{120}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}Correction des grilles boucl\'ees}{121}{subsubsection.5.4.1.2}
+\contentsline {subsubsubsection}{\numberline {5.4.1.2.1}Modification par {\em ajout d'ar\^etes uniquement}}{121}{subsubsubsection.5.4.1.2.1}
+\contentsline {subsubsubsection}{\numberline {5.4.1.2.2}Modification par {\em suppression d'ar\^etes uniquement}}{123}{subsubsubsection.5.4.1.2.2}
+\contentsline {subsection}{\numberline {5.4.2}Protocole d'exp\'erimentation sur les grilles boucl\'ees}{124}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Analyse des r\'esultats}{125}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Conclusion de l'exp\'erimentation 3}{127}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Conclusion du chapitre \ref {chapitreEvaluation}}{128}{section.5.5}
+\contentsline {chapter}{\numberline {6}Conclusion g\'en\'erale}{131}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{131}{section.6.1}
+\contentsline {section}{\numberline {6.2}Perspectives}{133}{section.6.2}
+\contentsline {chapter}{\numberline {A}Annexes}{135}{appendix.A}

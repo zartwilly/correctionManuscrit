@@ -1,0 +1,51 @@
+
+
+\chapter{Mesures : Des S\'eries Temporelles}
+\label{timeSeries}
+\input{introductionSeriesTemporelles}
+
+\section{S\'eries temporelles}
+\input{seriesTemporelles}
+
+
+Notre objectif est de trouver la m\'ethode qui calcule au mieux la corr\'elation entre des arcs en tenant compte des caract\'eristiques de nos donn\'ees (valeurs manquantes et \'erron\'ees \`a certains instants $t$ dans les s\'eries temporelles des arcs).
+
+
+\section{\'Etat de l'art des m\'ethodes de similarit\'e}
+Les diff\'erentes m\'ethodes de calculs des coefficients de similarit\'e se basent sur les s\'eries temporelles associ\'ees aux arcs du r\'eseau.
+Nous allons pr\'esenter les principales m\'ethodes de calculs de similarit\'e qui sont regroup\'ees en $3$ familles et qui sont d\'etaill\'ees dans cette section.
+\subsection{ Similarit\'e sur les s\'eries enti\`eres}
+	\label{seriesEntieres}
+	\input{seriesEntieresIntroduction}
+	\subsubsection{Dynamic Time Warping  DTW}
+		\input{seriesEntieresDynamicTimeWarping}
+	\subsubsection{Time Warp Edit TWE}
+		\input{seriesEntieresTimeWarpEdit}
+	\subsubsection{Move-Split-Merge MSM}
+		\input{seriesEntieresMoveSplitMerge}
+	\subsubsection{Distance de Pearson}
+		\input{seriesEntieresDistancePearson}
+	\subsubsection{Longest Common Subsequence}
+		\input{seriesEntieresLongestCommonSubsequence}
+%	\subsubsection{Collective of Transform Ensemble COTE}
+%		\input{seriesEntieresCOTE}
+%	\subsubsection{Elastic Ensemble}
+%		\input{seriesEntieresElasticEnsemble}
+	\input{seriesEntieresConclusion}
+\subsection{Similarit\'e sur les s\'equences}
+	\input{shapeletsDescription}
+\subsection{Similarit\'e par aggr\'egation des caract\'eristiques descriptives}
+	\input{agregationDescription}
+\subsection{Conclusion sur les m\'ethodes de similarit\'e}
+	\input{conclusionSeriesDistances}
+
+\section{M\'ethode de similarit\'e entre des mesures \'electriques : \\ distance de Pearson}
+	\subsection{Choix de la distance}
+		\input{choixDistance}
+%	\subsection{Calcul de la distance}
+%		\input{calculDistance}
+	\subsection{R\'esultats sur des donn\'ees r\'eelles}
+		\input{ResultatsCorrelationChamplan}
+\section{Conclusion du chapitre \ref{timeSeries}}
+	\input{conclusionChapitre}		
+

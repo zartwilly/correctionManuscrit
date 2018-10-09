@@ -1,0 +1,42 @@
+
+%%%%% ---- commentaire dominique pour l'intro
+%Dire ce que cest le probleme tu regarde
+%qu'est ce qui existe pour resoudre proxiline
+%etant donn\'ee u graphe pour reconnaitre que cest un line graphe ou pas
+%%%%% ---- commentaire dominique pour l'intro
+
+Le probl\`eme consid\'er\'e ici est, 
+\'etant donn\'e un graphe, de d\'eterminer s'il est un line-graphe et dans ce cas donner le graphe racine.
+Nous d\'ebutons par l'\'etat de l'art des algorithmes de couverture en cliques puis pr\'esentons nos algorithmes tout en sp\'ecifiant leurs particularit\'es par rapport aux m\'ethodes existantes. 
+
+\subsection{Recherche de Couverture en cliques}
+Diff\'erents travaux ont \'et\'e r\'ealis\'es sur la d\'ecouverte de {\em couverture en cliques} dans les line-graphes.
+Parmi lesquelles, nous citons  l'algorithme de {\em Roussopoulos}  \cite{ROUSSOPOULOS1973108} qui utilise une propri\'et\'e des line-graphes provenant des travaux de {\em Krausz} \cite{krausz1943demonstration}. 
+Il affirme que le graphe $G$ est un line-graphe si ces ar\^etes  peuvent \^etre partitionn\'ees en cliques  de telle sorte qu'aucun sommet ne soit couvert par plus de deux cliques. 
+L'algorithme propos\'e d\'etecte si $G$ est un line-graphe et il fournit, en plus, son graphe racine en temps lin\'eaire $O(max(\{m,n\}))$, avec $n$ et $m$ les nombres respectives de sommets et d'ar\^etes.
+\newline
+Un autre algorithme, propos\'e par {\em Klauss Simon} et {\em Daniele Degiorgi} \cite{decompositionEnCliques}, est une simplication du probl\`eme de reconnaissance de line-graphes. Bas\'e sur la preuve de {\em Oystein Ore} \cite{ORE} du th\'eor\`eme de {\em Whitney} \cite{whitney1932congruent}, il stipule que deux line-graphes connexes avec plus de quatre sommets sont isomorphes si et seulement si leurs graphes racines sont aussi isomorphes et que ces graphes  doivent \^etre diff\'erents de $K_{1,3}$ et $K_3$. Il d\'etermine en un temps lin\'eaire une couverture \'etant mise \`a jour sommet apr\`es sommet. L'inconvenient de cette m\'ethode est le traitement de sommets appartenant \`a des cliques ayant d\'ej\`a \'et\'e d\'ecouverts.
+\newline
+L'algorithme de {\em Philippe Lehot} \cite{decompositionEnCliquesParArcs} a une complexit\'e en $O(n) + m$ avec $n$ le nombre de sommets de $G$ et $m$ le nombre d'ar\^etes de $L(G)$.
+Il recherche les $9$ sous-graphes de la figure \ref{neufSousGraphesInterditDesLineGraphes} et il utilise le th\'eor\`eme de {\em Van Rooij et Wilf} \cite{ROOIJetWILF1965interchange} qui \'enonce qu'un graphe $G$ est un line-graphe si $G$ ne contient pas de sous-graphe induit $K_{1,3}$ et si deux graphes triangles  {\em impairs} ont une ar\^ete commune, alors le sous-graphe induit par ces sommets est une clique $K_4$. 
+Rappelons qu'un graphe triangle (c'est-\`a-dire un cycle de longueur $3$) $\{a_1,a_2,a_3\} \subseteq V(L(G))$ est {\em impair} s'il existe un sommet $e \in V(G)$ adjacent \`a  au moins un des sommets $\{a_1, a_2, a_3\}$. Ce triangle est {\em pair} si chaque sommet de ce triangle est adjacent \`a $0$ ou $2$ autres sommets. Cet algorithme est d\'etaill\'e dans la section \ref{algoCouverture}.
+%% graphe odd = impair/ even=pair
+%A triangle in a graph is even if every other node is adjacent to 0 or 2 nodes in the triangle; it is odd otherwise. 
+%%
+\newline
+Tous les algorithmes existants ne retournent  aucun r\'esultat lorsque le graphe  de corr\'elation $G_c$ poss\`ede des cases \'erron\'ees c'est-\`a-dire qu'il n'est pas un line-graphe. 
+Cependant, la m\'ethode propos\'ee par {\em Halld{\'o}rsson and al.} \cite{Halldorsson2013} a pour but de corriger un graphe de corr\'elation pour en obtenir un line-graphe. En effet, il propose une m\'ethode de d\'ecouverte de la g\'en\'ealogie de population en se basant sur les haplotypes partag\'es entre les g\'enomes des individus.  
+Un haplotype est un groupe d'all\`eles dans un organisme qui est transmis ensemble par un parent.
+Les haplotypes sont uniques et sont les ar\^etes d'un graphe dit {\em Clark Consistency} \cite{halldorsson2011clark}. Quant aux sommets, ils sont form\'es par les individus. 
+Cette m\'ethode recherche le graphe racine induit par le graphe {\em Clark Consistency} si celui ci est un line-graphe. Dans le cas o\`u le graphe {\em Clark Consistency graph} n'est pas un line-graphe, l'algorithme suppose qu'il existe des sommets superflus dans le {\em graphe Clark Consistency}, va les supprimer afin que le graphe devienne un line-graphe et enfin retourner le graphe racine.     
+Le graphe {\em Clark consistency (CC)} a \'et\'e propos\'e dans  la m\'ethode d'identification d'haplotypes par {\em Andrew Clark}. 
+En effet, {\em Andrew Clark} consid\`ere un ensemble de g\'enomes d'individus qui ont des haplotypes homozygotes et h\'et\'erozygotes. Il suppose que deux g\'enomes n'ont pas les m\^emes paires d'haplotypes. Les sommets du graphe CC sont les g\'enomes des individus et une ar\^ete de graphe CC entre deux g\'enomes existe s'ils partagent le m\^eme haplotype (homozygote ou h\'et\'erozygote). Les ar\^etes de ce graphe sont form\'ees par des individus partageant les m\^emes haplotypes. 
+%%%
+%A key component of our approach is the graph of potential sharing of haplotypes between individuals. This graph, called the Clark consistency (CC) graph, was first suggested in the context of a method for haplotype phasing by Andrew Clark [10]. Given the genotypes of a set of individuals, the CC graph has one node for each individual and an edge between two individuals if their genotypes are consistent with sharing a haplotype, i.e., if for every site where one of the individuals is homozygous, the other individual is either homozygous for the same allele or heterozygous. As the haplotypes of individuals that are homozygous for the whole region being considered are easily determined, we assume that every given individual has two different haplotypes (i.e., it is heterozygous for at least one of the genotyped markers) and no two individuals have the same pair of haplotypes.
+%%%
+Le probl\`eme de d\'ecouverte de line-graphes \'etant {\em NP-Complet}, la solution propos\'ee r\'ealise un algorithme de suppression de sommets et d'ar\^etes. 
+L'algorithme de suppression de sommets est une 6-approximation alors que celui des ar\^etes est de complexit\'e $O(n*m)$ avec $m$ le nombre de sommets et $n$ le nombre d'ar\^etes.
+Dans le cas o\`u des suppressions sont effectu\'ees, le line-graphe fourni est le plus proche possible du line-graphe de l'arbre g\'en\'ealogique.
+La particularit\'e de la solution est l'absence d'ar\^etes ajout\'ees dans le line-graphe et cela implique que cette solution est inapplicable dans notre probl\`eme o\`u il existe des ar\^etes inconnues dans notre graphe de corr\'elation. En plus, l'ensemble de nos sommets dans le graphe de corr\'elation est connu contrairement \`a l'algorithme de {\em Halld{\'o}rsson et al.} qui suppose que les sommets doivent \^etre supprim\'es pour atteindre un line-graphe.
+\newline
+Nous nous basons sur l'algorithme de {\em Lehot} parce qu'il s'ex\'ecute en un temps lin\'eaire en effectuant un traitement sommet par sommet pour la reconnaissance de sous-graphes complets. Ce traitement permet de s\'electionner les cliques existantes et les sommets, n'appartenant \`a aucune clique, qui n\'ecessitent une modification de leur voisinage.

@@ -1,0 +1,31 @@
+\contentsline {chapter}{\numberline {1}\'Evaluation des performances des algorithmes}{5}
+\contentsline {section}{\numberline {1.1}G\'en\'eration de graphes \'electriques}{5}
+\contentsline {section}{\numberline {1.2}Exp\'erimentation 1 : modification de $k$ cases de la matrice du line-graphe}{6}
+\contentsline {subsection}{\numberline {1.2.1}S\'election de $k$ cases et g\'en\'eration de la matrice $M_{k,p}$ }{6}
+\contentsline {subsection}{\numberline {1.2.2}Protocole d'exp\'erimentation sur les graphes $G_{k,p}$}{6}
+\contentsline {subsection}{\numberline {1.2.3}Analyses des r\'esultats }{9}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Interpr\'etation du mode de correction {\em al\'eatoire sans remise}}{9}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Comparaison des modes de correction}{14}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Influence des cases modifi\'ees et de la fonction de co\^ut}{16}
+\contentsline {subsubsection}{\numberline {1.2.3.4}Relation entre la distance de Hamming et la distance de correction}{19}
+\contentsline {subsection}{\numberline {1.2.4}Conclusion de l'exp\'erimention 1}{20}
+\contentsline {section}{\numberline {1.3}Exp\'erimentation 2 : Ajout de probabilit\'e dans la matrice du line-graphe}{21}
+\contentsline {subsection}{\numberline {1.3.1}Affectation de probabilit\'es aux cases de la matrice $M_{LG}$}{21}
+\contentsline {subsection}{\numberline {1.3.2}G\'en\'eration du graphe de corr\'elation }{23}
+\contentsline {subsection}{\numberline {1.3.3}Protocole d'exp\'erimentation des graphes $G_s$ de corr\'elation}{24}
+\contentsline {subsection}{\numberline {1.3.4}Analyses des r\'esultats}{25}
+\contentsline {subsubsection}{\numberline {1.3.4.1}\'Evolution du pourcentage de cases corrig\'ees}{25}
+\contentsline {subsubsection}{\numberline {1.3.4.2}Influence de la valeur du seuil }{28}
+\contentsline {subsubsection}{\numberline {1.3.4.3}Choix de la fonction de co\^ut et impact sur les distances de Hamming }{28}
+\contentsline {subsection}{\numberline {1.3.5}Conclusion de l'exp\'erimentation 2}{31}
+\contentsline {section}{\numberline {1.4}Exp\'erimentation 3 : algorithmes sur les grilles boucl\'ees}{31}
+\contentsline {subsection}{\numberline {1.4.1}D\'efinition des grilles boucl\'ees et les distances line th\'eoriques}{32}
+\contentsline {subsubsection}{\numberline {1.4.1.1}D\'efinition de la grille boucl\'ee $G_{k,k'}$ }{32}
+\contentsline {subsubsection}{\numberline {1.4.1.2}Correction des grilles boucl\'ees}{32}
+\contentsline {subsubsection}{\numberline {1.4.1.3}Modification par {\em ajout d'ar\^etes uniquement}}{33}
+\contentsline {subsubsection}{\numberline {1.4.1.4}Modification par {\em suppression d'ar\^etes uniquement}}{34}
+\contentsline {subsection}{\numberline {1.4.2}Protocole d'exp\'erimentation sur les grilles boucl\'ees}{35}
+\contentsline {subsection}{\numberline {1.4.3}Analyse des r\'esultats}{36}
+\contentsline {subsection}{\numberline {1.4.4}Conclusion de l'exp\'erimentation 3}{38}
+\contentsline {section}{\numberline {1.5}Conclusion du chapitre 1\hbox {}}{38}
+\contentsline {section}{\numberline {1.6}Annexes}{39}

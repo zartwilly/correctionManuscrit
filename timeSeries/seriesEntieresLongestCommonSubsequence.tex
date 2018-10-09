@@ -1,0 +1,38 @@
+La distance {\em longest common subsequence (LCSS)} est bas\'ee sur la reconnaissance de motifs dans les probl\`emes {\em (LCSS}) . Dans ces probl\`emes, il recherche la plus longue s\'equence qui est commune aux deux s\'eries discr\`etes en utilisant la distance {\em edit distance (ED)}.
+Cette approche a \'et\'e \'elargie aux s\'eries continues en d\'efinissant la variable de seuil $\epsilon$ qui indique la diff\'erence entre une paire de valeurs. Cette diff\'erence d\'etermine s'il existe une similarit\'e entre ces s\'eries. 
+{\em LCSS} trouve un alignement optimal entre deux s\'eries en ins\'erant des \'ecarts pour d\'eterminer le nombre maximum de paires correspondantes.
+La distance {\em LCSS} entre deux s\'eries $A$ et $B$ peut \^etre calcul\'ee \`a partir de l'algorithme \ref{algorithmeLCSS}.
+ 
+\begin{algorithm}
+\algsetup{indent=2em}
+\caption{LCSS(A,B)}
+\label{algorithmeLCSS}
+\begin{algorithmic}[1]
+\STATE{Soit $L$ une matrice initialis\'ee \`a $0$ de dimension $(m+1) \times (m+1)$}
+\FOR{$i \leftarrow m ~ a ~ 1$}
+	\FOR{$j \leftarrow m ~ a ~ 1$}
+		\STATE{$L_{i,j} = L_{i+1, j+1}$}
+		\IF{$a_i =  b_j$}
+			\STATE{$L_{i,j} \leftarrow L_{i, j} + 1$}
+		\ELSIF{$ L_{i,j+1} > L_{i,j}$}
+			\STATE{$ L_{i,j} \leftarrow  L_{i,j+1}$ }
+		\ELSIF{ $L_{i+1,j} > L_{i,j}$ }
+			\STATE{ $L_{i,j} \leftarrow L_{i+1,j}$ }
+		\ENDIF
+	\ENDFOR
+\ENDFOR
+\RETURN{$L_{1,1}$}
+\end{algorithmic}
+\end{algorithm}
+
+La distance {\em LCSS} entre les s\'eries $A$ et $B$ est 
+$$
+d_{LCSS}(A,B) = 1 - \frac{LCSS(A,B)}{m}
+$$
+%The LCSS distance is based on the solution to the LCSS problem in pattern matching.
+%The typical problem is to find the longest subsequence that is common to two discrete
+%series based on the edit distance. An example using strings is shown in Fig. 3.
+%This approach can be extended to consider real-valued time series by using a dis-
+%tance threshold , which defines the maximum difference between a pair of values
+%that is allowed for them to be considered a match. LCSS finds the optimal alignment
+%between two series by inserting gaps to find the greatest number of matching pairs.

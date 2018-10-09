@@ -1,0 +1,15 @@
+Consid\'erons $G_0^k$ un graphe iourte de profondeur $k$.
+Nous construisons $50$ graphes iourtes dont chaque graphe a une profondeur $k \in \{0,\cdots,50\}$.
+Sur chaque graphe $G_0^k$, nous ex\'ecutons  notre couple d'algorithmes $50$ fois puis nous r\'ecup\'erons la distance line  minimale entre $G_0^k$ et les line-graphes propos\'ees.
+Nous utilisons la   distance line  minimale parce qu'il est impossible de trouver la bonne permutation qui minimise la distance line \`a cause de la combinatoire factorielle de l'ensemble $\cal C$.
+\newline
+Soient $\phi^{+}(u,v)$ le poids de l'op\'eration {\em ajouter une ar\^ete} et $\phi^{-}(u,v)$ le poids de l'op\'eration {\em supprimer une ar\^ete}. 
+Nous d\'efinissons trois fonctions de co\^ut :
+\begin{enumerate}[label = (\alph*)]
+\item {\em unitaire} : ajouter et supprimer une ar\^ete ont un poids $1$ ($\phi^{+} = \phi^{-} = 1$).
+\item {\em ajout} : l'ajout d'une ar\^ete a un poids $\phi^{+} = 1$ alors que la suppression a un poids $\phi^{-} = 10$.
+\item {\em suppression} : l'ajout d'une ar\^ete a un poids $\phi^{+} = 10$ alors que la suppression a un poids $\phi^{-} = 1$.
+\end{enumerate}
+L'objectif de ces valeurs de co\^ut  est de montrer l'influence de la priorisation d'une op\'eration dans le calcul des distances line. En d'autres termes, ajouter majoritairement des ar\^etes pendant la phase de correction donne-t-elle de bonnes distances line par rapport \`a la suppression  d'ar\^etes dans cette famille de graphes? 
+\newline
+Nous allons comparer les diff\'erentes fonctions de co\^ut en utilisant les distances line calcul\'ees. Les courbes croissantes dans les figures \ref{priorAjout1Ajout10}, \ref{priorAjout1Supp10} et \ref{priorAjout1Supp1} s'explique par le fait que les distances line sont rang\'ees par ordre croissant.

@@ -1,0 +1,89 @@
+
+Pour mesurer le pourcentage de cases corrig\'es, nous allons proc\'eder comme suit :
+\begin{enumerate}[label = (\alph*)]
+	\item Consid\'erer les cases {\em fausses positives} dans la matrice $M_s$ puis repr\'esenter le nombre de cases {\em fausses positives} pour chaque valeur de seuil. 
+	Le graphique $(a)$ de la figure \ref{graphiquesFctCoutNormale} correspond \`a  la comparaison des seuils par rapport au nombre de cases {\em fausses positives} avant la correction.
+	Nous remarquons qu'il n'y a aucune case {\em fausses positives} dans $M_s$ pour $s\in\{0.8,0.9\}$. Ce nombre croit quand le seuil $s$ decroit ($s \rightarrow 0$).
+	
+	\item Consid\'erer les cases {\em fausses n\'egatives} dans la matrice $M_s$ puis repr\'esenter le nombre de cases {\em fausses n\'egatives} pour chaque valeur de seuil.  Le graphique $(b)$ de la figure \ref{graphiquesFctCoutNormale}  correspond \`a la comparaison des seuils par rapport au nombre de cases {\em fausses n\'egatives} avant la correction. Le nombre des cases {\em fausses n\'egatives} est nul pour $s \not \in \{0.8,0.9\}$. 
+%	Cela signifie les valeurs de correlations sup\'erieures \`a $0.8$
+
+	\item Consid\'erer les cases {\em fausses positives} apr\`es la correction de $G_s$ (matrice $M'_s$) puis repr\'esenter le nombre de cases {\em fausses positives} pour chaque valeur de seuil. Le graphique $(c)$ de a figure \ref{graphiquesFctCoutNormale} correspond \`a  la comparaison des seuils par rapport au nombre de cases {\em fausses positives} apr\`es la correction.
+	 Le nombre de cases baisse quand $s \le 0.7$ puis augmente $s>0.7$.
+	 
+	\item Consid\'erer les cases {\em fausses n\'egatives} apr\`es la correction de $G_s$ (matrice $M'_s$) puis repr\'esenter le nombre de cases {\em fausses n\'egatives} pour chaque valeur de seuil. Le graphique $(d)$ de la figure \ref{graphiquesFctCoutNormale} correspond \`a la comparaison des seuils par rapport au nombre de cases {\em fausses n\'egatives} apr\`es la correction. Le nombre de cases varie peu quand $s < 0.4$ puis baisse quand $s = \{0.5, 0.6\}$ avant d'atteindre sa valeur minimum \`a $s = 0.7$. Il augmente $s>0.7$.
+	
+	\item Repr\'esenter les distances de Hamming moyennes de chaque graphe pour chaque seuil. Le graphique $(e)$ de la figure \ref{graphiquesFctCoutNormale} correspond \`a la comparaison des seuils en fonction de la distance de Hamming de chaque seuil.
+	La distance de Hamming baisse quand $s \rightarrow 0.7$ avec sa valeur minimum \`a $s = 0.7$ puis augmente quand $s > 0.7$. 
+\end{enumerate}
+Rappelons que les diff\'erents graphiques sont rang\'es par ordre croissant et 
+les distances de Hamming sont obtenues \`a partir la fonction de co\^ut {\em normale}.
+
+Nous distinguons trois familles de seuils:
+\begin{itemize}
+	\item Les seuils $s < 0.7$ qui baissent le nombre de cases  {\em fausses positives} et augmentent {\em fausses n\'egatives} apr\`es l'algorithme de correction. Ils n'ont pas d'effets r\'eels sur la distance de Hamming car il y'a un transfert d'\'el\'ements de l'ensemble des cases   {\em fausses positives} \`a celui des {\em fausses n\'egatives} et vice-versa. \`A cet effet, on remarque  qu'il y'a $20\%$ de cases {\em fausses n\'egatives} apr\`es la correction alors qu'il n'en existait aucune case {\em fausse n\'egative} avant la correction. Il en est de m\^eme avec les cases  {\em fausses positives}  dont le nombre diminue de $20\%$  \'egalement pendant la correction. Ces seuils n'ont aucune influence sur les cases \'erron\'ees.
+	% -------- graphiquesFctCoutNormale ---------
+\begin{figure}[htb!] 
+\centering
+\includegraphics[scale=0.18]{choix_du_seuil_pour_fauxPositif_seuil_fauxNegatif_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_normale.jpeg}
+\caption{ Choix du seuil : (a) cases {\em fausses positives} dans la matrice $M_s$; (b) cases {\em fausses n\'egatives} dans la matrice $M_s$,(c) cases {\em fausses positives} dans la matrice $M'_s$; (d) cases {\em fausses n\'egatives} dans la matrice $M'_s$; (e) comparaison des seuils selon $moy\_DH$ }.
+\label{graphiquesFctCoutNormale} 
+\end{figure}
+\FloatBarrier
+% -------- graphiquesFctCoutNormale ---------
+
+	\item Les seuils $s > 0.7$ qui augmentent le nombre de cases {\em fausses positives} et baissent celui des cases {\em fausses n\'egatives} apr\`es l'algorithme de correction. En effet, 
+	le nombre de cases {\em fausses positives} est nul dans $M_s$ parce qu'il n'y a aucune case en $1$ ayant une valeur inf\'erieure \`a $s$ dans la distribution.
+	Dans $M'_s$, le nombre moyen de cases {\em fausses positives} est de pour $1.76$ pour $s=0.8$ et pour $2.33$ pour $s=0.9$. Il y'a ajout d'ar\^etes dans le graphe $LG_s$ parce que le nombre d'ar\^etes \`a supprimer pour corriger un sommet est tr\`es \'elev\'e et cela implique que le co\^ut de la correction par la suppression d'ar\^etes est tr\`es on\'ereux par rapport \`a celui de l'ajout d'ar\^etes. Ainsi \`a chaque sommet \`a corriger, l'algorithme ajoute plus d'ar\^etes qu'il en supprime et certaines ar\^etes ajout\'ees appartiennent \`a l'ensemble des ar\^etes de $LG$. Cela fait baisser les cases {\em fausses n\'egatives} comme nous le constatons avec les chiffres suivants : le nombre moyen de ces cases passe de  $6.7$ \`a $2.5$  pour $s = 0.8$ et $17.7$ \`a $12.5$ pour $s = 0.9$.
+	
+	\item Le seuil $s=0.7$ qui diminue le nombre de cases {\em fausses n\'egatives} et {\em fausses positives}. En effet, le nombre moyen de cases \'erron\'ees est faible $< 10$ avant la phase de correction et il est $ \le 5$ apr\`es la correction. Nous remarquons aussi les cases \'erron\'ees sont majoritairement des cases {\em fausses n\'egatives} apr\`es la correction.
+	La pr\'esence de ces cases provient du co\^ut de modification des ar\^etes car la compression $\pi_1,\pi_2, \pi_s$ de co\^ut minimale n\'ecessite la suppression d'ar\^etes existantes.
+	En effet, la matrice $M_s$ contient que des cases {\em fausses positives}. Pour trouver des bipartitions coh\'erentes (voir d\'efintion \ref{cliquesCoherentes}) autour des sommets \`a corriger, il faut ajouter beaucoup d'ar\^etes pour chaque partition et cela fait croitre le co\^ut de la correction. 
+	Nous avons remarqu\'e aussi que la suppression de quelques ar\^etes permet d'obtenir des cliques qui correspondent \`a des sommets de $G$. L'algorithme pr\'ef\`ere alors supprimer des ar\^etes car elles sont peu par rapport aux ar\^etes \`a ajouter et aussi le co\^ut de la suppression d'ar\^etes est faible.
+	 La distance de Hamming obtenue avec ce seuil est minimale par rapport aux autres seuils. Ce seuil fournit alors une meilleure correction des sommets de ${\cal C}$. 
+	
+\end{itemize}
+
+{\bf Conclusion} : 
+nous pouvons conclure que la repartition des cases \'erron\'ees avant la phase de correction a une influence sur l'algorithme de correction. 
+Ainsi, le choix du seuil dans le bon intervalle permet de r\'eduire le nombre de cases \'erron\'ees et fournit une excellente correction des sommets de ${\cal C}$. 
+Cependant,  les seuils diff\'erents du bon seuil  entraine que la fonction de co\^ut n'a aucune influence sur les corrections parce que l'algorithme corrige peu de cases \'erron\'ees mais ajoute aussi des cases {\em fausses positives} et {\em fausses n\'egatives} dans la m\^eme proportion. 
+
+% ----------- comparaisonFctCoutUnitaireNormale -----------------
+\begin{figure}[htb!] 
+\centering
+\includegraphics[scale=0.20]{choix_fct_cout_pour_fauxPositif_seuil_fauxNegatif_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_s_07.jpeg}
+\caption{ Comparaison entre les fonctions de co\^ut {\em unitaire} et {\em normale}: (a) cases {\em fausses positives} dans la matrice $M_s$; (b) cases {\em fausses n\'egatives} dans la matrice $M_s$; (c) cases {\em fausses positives} dans la matrice $M'_s$; (d) cases {\em fausses n\'egatives} dans la matrice $M'_s$; (e) comparaison des fonctions de co\^ut selon $moy\_DH$}
+\label{comparaisonFctCoutUnitaireNormale} 
+\end{figure}
+ \FloatBarrier
+% ----------- comparaisonFctCoutUnitaireNormale -----------------
+
+
+%Dans la figure \ref{graphiquesFctCoutNormale}, nous disposons de $5$ graphiques qui sont:
+%\begin{enumerate}[label = (\alph*)]
+%\item le graphique $(a)$ de la repartition des cases {\em fausses positives} dans la matrice $M_s$. Nous le d\'esignons par le graphique des {\em FAUXPOSITIF\_SEUIL}.
+%\item  le graphique $(b)$ de la repartition des cases {\em fausses n\'egatives} dans la matrice $M_s$. Nous le d\'esignons par le graphique des {\em FAUXNEGATIF\_SEUIL}. Nous remarquons que le nombre de cases {\em fausses n\'egatives} pour les seuils $s \le 0.7$ est tr\`es faible ou \'egale \`a $0$.
+%\item le graphique $(c)$ de la repartition des cases {\em fausses positives} dans la matrice $M'_s$. Nous le d\'esignons par le graphique des {\em FAUXPOSITIF\_CORRECTION}.
+%\item le graphique $(d)$  de la repartition des cases {\em fausses n\'egatives} dans la matrice $M'_s$. Nous le d\'esignons par le graphique des {\em FAUXNEGATIF\_CORRECTION}.
+%\item  le graphique $(e)$ de l'\'evolution des distances de Hamming. Nous le d\'esignons par le graphique des {\em comparaison\_MOY\_DH}.
+%\end{enumerate}
+%Les diff\'erents graphiques ont des courbes qui sont associ\'ees aux diverses valeurs de seuils $s$.
+%Les distances de Hamming $moy\_DH$, le taux des {\em FAUXPOSITIF\_CORRECTION}, le taux des {\em FAUXNEGATIF\_CORRECTION}, le taux des {\em FAUXPOSITIF\_SEUIL} et le taux des \\ {\em FAUXNEGATIF\_SEUIL} sont rang\'es par ordre croissant. Ce qui explique que toutes les courbes sont croissantes.
+%\newline
+%
+%%%% comment interpreter chaque graphique
+%%1er remarque : le taux de cases fausses positives decroit quand le seuil tend vers $s \leftarrow 0.9$ alors que celui de cases fausses negatives croit. Nous remarquons aussi le taux de cases fausses negatives est proche ou \'egale \`a de $0$ pour $s  \in [0, 0.7]$. POURQUOI
+%
+%%2ieme remarque :  
+%Apr\`es la correction des graphes de corr\'elation, nous remarquons que nous avons une baisse moyenne du nombre de cases  erronn\'ees de $25\%$ pour le seuil $s= 0.1$, de $12.5$ pour $s= 0.2$, de $7.5$ pour $s= 0.3$, de $5.5$ pour $s= 0.5$, de $4.5$ pour $s= 0.6$, de de $5.5$ pour $s= 0.7$. Cette baisse s'explique par $15\%$ des graphes $LG_s$ corrig\'ees  qui sont les line-graphes des graphes $G_s$ de corr\'elation. Les $85\%$ des graphes $LG_s$ sont repartis en deux groupes : 
+%\begin{itemize}
+%\item ceux dont le seuil reduit le nombre de cases faux positives et faux n\'egatives. Nous les d\'esignons par {\em seuil correct} et nous citons $s = 0.7$. En effet, le nombre de cases erronn\'ees est faible $< 10$ avant la phase de correction et le  nombre de sommets \`a corriger est aussi faible $ \le 5$. Nous remarquons aussi les cases erronn\'ees sont majoritairement des cases {\em fausses n\'egatives}. Nous l'expliquons par le fait que les cliques \`a compresser entraine la suppression de beaucoup d'ar\^etes autour du sommet \`a corriger. Les cliques  \`a compresser sont les cliques \`a modifier de telle sorte que le partitionnement de la modification donne deux cliques contenant un sommet de ${\cal C}$.
+%
+%\item ceux dont le seuil baisse le nombre de cases faux n\'egatives et augmente le nombre de  cases faux positives. Nous les d\'esignons par les {\em seuils faux positifs} et nous citons $s \in \{0.8, 0.9\}$. Dans les {\em seuils faux positifs}, le nombre des cases {\em fausses n\'egatives} est respectivement en moyenne pour $s=0.8$ et $s=0.9$ de $2.5$ et $12.5$ avant la correction et de $6.7$ et $17.3$ apr\`es la correction.  De m\^eme, pour $s=0.8$ et $s=0.9$ le nombre des cases {\em fausses positives} est respectivement en moyenne  de $0.5$ et $0.81$ avant la correction et de $1.76$ et $2.33$ apr\`es la correction. 
+%L'augmentation des cases {\em fausses n\'egatives} avant la correction est due aux distributions normales asym\'etriques des valeurs de corr\'elation g\'en\'er\'ees. Pendant la correction, le nombre de sommets \`a corriger est \`a $12.23$ en moyenne et la compression des cliques voisines des sommets de  ${\cal C}$ entraine la correction de beaucoup de cases {\em fausses positives} parce que supprimer une ar\^ete coute moins ch\`ere qu'en ajouter une \`a cause de leurs valeurs de corr\'elation. La baisse des cases {\em fausses n\'egatives} provient principalement des ar\^etes  ajout\'ees dans la phase de compression et seulement $30.27\%$ de ces cases sont corrig\'ees. 
+%
+%\item ceux dont le seuil a un effet baisse sur le nombre de cases faux positives et faux n\'egatives. Nous les designons par les {\em seuils indiff\'erents} et nous en citons $s = \{0.1, 0.2, 0.3, 0.4, 0.5, 0.6\}$. En effet, m\^eme si nous constatons une baisse du nombre de cases fausses positives et l'absence de cases fausses n\'egatives avant la correction, la correction ajoute/supprime ces cases erronn\'ees dans la m\^eme proportion car la fonction de co\^ut de ces cases est pratiquement identique. Ainsi pour obtenir une clique dont il faut ajouter peu d'ar\^etes, l'algorithme de correction  ajoute ces ar\^etes manquantes et supprime des ar\^etes pr\'esentes s'il faut ajouter beaucoup d'ar\^etes.
+%\end{itemize}
+%
+%Nous pouvons conclure que la repartition des cases erronn\'ees avant la phase de correction a une influence sur l'algorithme de correction. Ainsi le choix du seuil dans le bon intervalle permet de r\'eduire le nombre de cases erronn\'ees et fournit une excellent correction des sommets de ${\cal C}$. Cependant,  les seuils inf\'erieurs du bon seuil  entraine que la fonction de cout n'a aucun impact sur les corrections parce que l'algorithme corrige peu de cases erronn\'ees mais ajoute aussi des cases {\em fausses positives} et {\em fausses n\'egatives} dans la m\^eme proportion. 

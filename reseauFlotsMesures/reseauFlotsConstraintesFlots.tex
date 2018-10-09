@@ -1,0 +1,93 @@
+ \label{reglesLocales}
+Un flot  $gp_{a}^{x}[t]$ est admissible s'il respecte, pour chaque arc $a \in A$ travers\'e, la contrainte ci-dessous:
+\begin{equation}
+	0 \le  gp_{a}^{x}[t] \le Cap_{a}[x]
+\end{equation}	
+avec $Cap_{a}$ la capacit\'e de l'arc $a$ pour la grandeur $x \in GP^{a}$.
+\newline
+Un flot est une fonction qui prend en entr\'ees 
+un arc $a$, 
+une grandeur $x \in GP^{a}$, 
+un vecteur $gp_{a}^{x}$ associ\'e \`a la grandeur $x$ de l'arc $a$, 
+un facteur de puissance $cos \phi$ ou $FP$ associ\'e  \`a l'arc $a$
+et retourne un vecteur d\'efini comme suit :
+\begin{equation}
+	flo(a,x,gp_{a}^{x}) = f(a, x, r, cos \phi, gp_{a}^{x}) =
+	\begin{cases}
+		 \frac{  gp_{a}^{x} }{r \times cos \phi}, x \in gp_{ddp} \\
+		 gp_{a}^{x} , x \in gp_{cal}
+	\end{cases}
+\end{equation}
+avec $r$ la r\'esistance du c\^able, FP ou cos $\phi$ le facteur de puissance.
+\newline
+Une valeur $flo_{t}(a,x,gp_{a}^{x})$ de $flo(a,x,gp_{a}^{x})$ s'obtient \`a un indice $t < T^{a, x}$ donn\'e et se d\'efinit comme suit : 
+\begin{equation}
+	flo_t(a,x,gp_{a}^{x}) = f(a, x, r, cos \phi, gp_{a}^{x}) =
+	\begin{cases}
+		 \frac{  gp_{a}^{x}(t) }{r \times cos \phi}, x \in gp_{ddp} \\
+		 gp_{a}^{x}(t) , x \in gp_{cal}
+	\end{cases}
+\end{equation}
+Soient $a \in A$ un arc et $x \in GP^{a}$ une grandeur li\'ee \`a l'arc $a$.
+L'ensemble des arcs incidents \`a $a$ ayant la m\^eme extr\'emit\'e initiale que $a$ est not\'e  $succ(a)$ et 
+ l'ensemble des arcs incidents \`a $a$ ayant la m\^eme extr\'emit\'e finale que $a$ est not\'e $pred(a)$.
+ Tous les \'el\'ements de $succ(a)$ et $pred(a)$ ont les m\^emes grandeurs physiques. 
+ \newline
+La fonction $flo$ doit respecter la contrainte de la loi de conservation $R$ \cite{loiDeConservation}. La loi de  conservation $R$ ne s'applique qu'avec les grandeurs \`a effet calorique $gp_{cal} \in GP$ et se d\'efinit  comme suit :
+\begin{enumerate}
+		\item 
+			\begin{equation}
+				\sum_{a_{j} \in pred(a)} flo_t(a_{j},x,gp_{a_{j}}^{x}) = \sum_{a_{k} \in succ(a)} flo_t(a_{k},x,gp_{a_{k}}^{x}) + \epsilon 
+			\end{equation}
+		avec $\epsilon$ les pertes par effets joules. Cette \'equation est la loi de conservation ou de Kirchhoff
+
+%		\item L'extr\'emit\'e finale de $a$ est un puits ou noeud consommateur
+%			\begin{equation}
+%				si~ succ(a) = \emptyset ~ alors ~ \sum_{a_{j} \in pred(a)} flo_t(a,x,gp_{a}^{x}) \ge 0 
+%			\end{equation}	
+%		\item L'extr\'emit\'e initiale de $a$ est une source ou noeud source
+%			\begin{equation}
+%				si ~ pred(a) = \emptyset ~ alors ~ \sum_{a_{j} \in succ(a)} flo_t(a,x, gp_{a}^{x}) \ge 0 
+%			\end{equation}	
+\end{enumerate}
+
+
+%Soient 2 arcs $a_{i}, a_{j}$ ayant une extr\'emit\'e en commun, et une grandeur physique $gp_{a} \in GP$.\\
+%Un flot $flo$ est une fonction qui prend en entr\'ee un arc et une grandeur physique et qui fournit une valeur r\'eelle en sortie. 
+%Le flot d\'epend des caract\'eristiques  de l'arc (r\'esistance, cos $\phi$) et se d\'efinit ainsi:
+%\begin{equation}
+%	flo(a,gp_{a}^{x}) = f(a, r, cos \phi, gp_{a}^{x}) =
+%	\begin{cases}
+%		 \frac{  gp_{a}^{x} }{r \times cos \phi}, x \in gp_{ddp} \\
+%		 gp_{a}^{x} , x \in gp_{cal}
+%	\end{cases}
+%\end{equation}
+%avec $x \in GP^{a}$, $r$ la r\'esistance du c\^able, FP ou cos $\phi$ le facteur de puissance. \\
+%Le vecteur de flot $flo(a,gp_{a}^{x})$ est de norme $T^{a,x}$.\\
+%Une valeur de $flo(a,gp_{a}^{x})$ s'obtient \`a un indice $t < T^{a, x}$ donn\'e c'est-\`a-dire $flo_{t}(a,gp_{a}^{x})$
+%\begin{equation}
+%	flo_{t}(a, gp_{a}^{x}) = f[a, r, cos \phi, gp_{a}^{x}, t] =
+%	\begin{cases}
+%		 \frac{  gp_{a}^{x}[t] }{r \times cos \phi}, gp \in \{U, U_{12}, U_{23}, U_{13}  \} \\
+%		 gp_{a}^{x}[t] , gp \in \{P, Q, I, I_{1}, I_{2}, I_{3}  \}
+%	\end{cases}
+%\end{equation}
+%La loi de conservation aussi nomm\'ee  \textbf{r\`egles locales $R$} ne s'applique qu'avec les grandeurs \`a effet calorique $gp_{cal} \in GP$ et se d\'efinisse  comme suit:
+%	\begin{enumerate}
+%		\item 
+%			\begin{equation}
+%				\forall a_{i} \in A_{gp},  \sum_{a_{j} \in P(a_{i})} flo(a_{j},gp_{a_{j}}^{x}) = \sum_{a_{k} \in S( a_{i} )} flo(a_{k},gp_{a_{k}}^{x}) + \epsilon 
+%			\end{equation}
+%		avec $\epsilon$ les pertes par effets joules. Cette \'equation est la loi de conservation ou de Kirchhoff
+%
+%		\item l'extr\'emit\'e finale de $a_{i}$ est un puits ou noeud consommateur
+%			\begin{equation}
+%				si \hspace{0,1cm} S( a_{i} ) = \emptyset \hspace{0,1 cm} alors \hspace{0,1cm} \forall a_{i} \in A_{gp}, \sum_{a_{j} \in S(a_{i})} flo(a_{j},gp_{a_{j}}^{x}) \ge 0 
+%			\end{equation}	
+%		\item l'extr\'emit\'e initiale de $a_{i}$ est une source ou noeud source
+%			\begin{equation}
+%				si \hspace{0,1cm} P( a_{i} ) = \emptyset \hspace{0,1cm} alors  \hspace{0,1cm} \sum_{a_{j} \in P(a_{i})} flo(a_{j}, gp_{a_{j}}^{x}) \ge 0 
+%			\end{equation}	
+%	\end{enumerate}
+%avec $ S(a_{i}) = \{a_{j}: a_{i}^{-} = a_{j}^{-}   \}$ l'ensemble des arcs ayant la m\^eme extr\'emit\'e initiale que $a_{i}$ et 
+% $ P(a_{i}) = \{a_{j}: a_{i}^{+} = a_{j}^{+}   \}$  l'ensemble des arcs ayant la m\^eme extr\'emit\'e  finale que $a_{i}$.

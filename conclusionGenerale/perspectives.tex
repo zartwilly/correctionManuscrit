@@ -1,0 +1,24 @@
+% introduction
+Certains probl\`emes rencontr\'es au cours de l'impl\'ementation de ces algorithmes et de l'analyse des s\'eries temporelles ouvrent des perspectives int\'eressantes pour les travaux futures.
+\newline 
+
+% probleme avec des cliques maximales
+Nous commencons par la d\'etermination de cliques maximales dans un graphe. En effet, nous avons montr\'e que la pr\'esence de cliques est indispensable dans un line-graphe car un line-graphe admet une couverture en cliques dans laquelle chaque clique est un sommet du graphe racine du line-graphe. 
+Les travaux de \cite{tomita2006worst, eppstein2011listing} affirment que la d\'etermination de cliques maximales depend du nombre de sommets du graphe et le meilleur algorithme s'ex\'ecute dans le pire des cas en ${\cal O}^{3^{n/3}}$ avec $n$ le nombre de sommets du graphe. 
+Ainsi, pour des graphes racines de degr\'es maximals tr\`es \'elev\'es, la couverture en cliques est irr\'ealiste \`a trouver.  
+Par ailleurs, pour les graphes de degr\'es maximals tr\`es \'elev\'es dans lesquels nous devons appliqu\'e l'algorithme de correction, la compression autour chaque sommet \`a corriger est difficile \`a obtenir \`a cause du nombre de partitions $\pi_1, \pi_2, \pi_s$ \`a comparer pour avoir celles de co\^ut minimum. 
+Nous pensons que la d\'efinition d'une structure de donn\'ees adapt\'ee \`a ces types de graphes permettrait de r\'esoudre les soucis \'evoqu\'es plus haut.
+\newline
+
+% reduction de erreurs de corr\'elations en utilisant des methodes qui combinent l'utilisation des series entieres, les shapelets et les : COTE 
+Ensuite, le calcul des coefficients de similarit\'e introduit aussi des erreurs dans la matrice de corr\'elation. Nous pensons qu'une m\'ethode combinant des classifieurs dans le temps, des auto corr\'elations, des transformations de s\'eries telles que les shapelets et la densit\'e spectrale de puissance donnerait de coefficients proches de la r\'ealit\'e. Nous pensons \`a la m\'ethode {\em Collection of Transformation Ensemble (COTE)} \cite{bagnall2015time} qui fournit de meilleurs r\'esultats \cite{bagnallreview} sur les donn\'ees de la base de donn\'ees UCR \cite{chen2015ucr}. 
+\newline
+
+% complexite et NP completude
+Nous d\'emontrons la NP-compl\'etude et l'approximabilit\'e de notre probl\`eme. 
+Aussi, une \'etude approfondie sur la mani\`ere de fixer les fonctions de co\^ut pourrait am\'eliorer les performances de l'algorithme de correction. Nous donnerons la latitude \`a l'algorithme de correction de choisir la fonction de co\^ut ad\'equate selon les caract\'eristiques du graphe et le r\'esultat de l'algorithme de couverture. 
+\newline 
+
+% utilisation sur d'autres reseaux energetiques particulierement les reseaux de fluides 
+% prendre en compte les temps de propagation du fluides
+Enfin, nous pouvons \'etendre l'application de nos algorithmes \`a la d\'ecouverte de topologie d'autres r\'eseaux \'energ\'etiques tels que les r\'eseaux de gaz, d'eau et de chaleur. La particularit\'e de ces r\'eseaux est le fluide transport\'e. Ce fluide implique la d\'efinition de nouvelles r\`egles locales et de m\'ethodes de similarit\'e qui tiennent compte du d\'elai de propagation du fluide. 

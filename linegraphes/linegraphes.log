@@ -1,0 +1,987 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  5 JUL 2018 15:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**linegraphes.tex
+(./linegraphes.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks16
+\float@box=\box26
+\@float@everytoks=\toks17
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks18
+\c@algorithm=\count89
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+\c@ALC@unique=\count90
+\c@ALC@line=\count91
+\c@ALC@rem=\count92
+\c@ALC@depth=\count93
+\ALC@tlm=\skip43
+\algorithmicindent=\skip44
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
+Package: layout 2014/10/28 v1.2c Show layout parameters
+\oneinch=\count94
+\cnt@paperwidth=\count95
+\cnt@paperheight=\count96
+\cnt@hoffset=\count97
+\cnt@voffset=\count98
+\cnt@textheight=\count99
+\cnt@textwidth=\count100
+\cnt@topmargin=\count101
+\cnt@oddsidemargin=\count102
+\cnt@evensidemargin=\count103
+\cnt@headheight=\count104
+\cnt@headsep=\count105
+\cnt@marginparsep=\count106
+\cnt@marginparwidth=\count107
+\cnt@marginparpush=\count108
+\cnt@footskip=\count109
+\fheight=\count110
+\ref@top=\count111
+\ref@hoffset=\count112
+\ref@voffset=\count113
+\ref@head=\count114
+\ref@body=\count115
+\ref@foot=\count116
+\ref@margin=\count117
+\ref@marginwidth=\count118
+\ref@marginpar=\count119
+\Interval=\count120
+\ExtraYPos=\count121
+\PositionX=\count122
+\PositionY=\count123
+\ArrowLength=\count124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count125
+\Gm@cntv=\count126
+\c@Gm@tempcnt=\count127
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks21
+\SOUL@lasttoken=\toks22
+\SOUL@cmds=\toks23
+\SOUL@buffer=\toks24
+\SOUL@token=\toks25
+\SOUL@spaceskip=\skip45
+\SOUL@ttwidth=\dimen111
+\SOUL@uldp=\dimen112
+\SOUL@ulht=\dimen113
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count128
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks26
+\verbatim@line=\toks27
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/moreverb/moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+\tab@position=\count129
+\tab@size=\count130
+\listing@line=\count131
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count132
+\lst@gtempboxa=\box28
+\lst@token=\toks28
+\lst@length=\count133
+\lst@currlwidth=\dimen114
+\lst@column=\count134
+\lst@pos=\count135
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count136
+\lst@lineno=\count137
+\lst@maxwidth=\dimen117
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count138
+\lst@skipnumbers=\count139
+\lst@framebox=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+)
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen120
+\captionmargin@=\dimen121
+\captionwidth=\dimen122
+\caption@tempdima=\dimen123
+\caption@indent=\dimen124
+\caption@parindent=\dimen125
+\caption@hangindent=\dimen126
+)
+\c@ContinuedFloat=\count140
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks29
+\ex@=\dimen127
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen128
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count141
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count142
+\leftroot@=\count143
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count144
+\DOTSCASE@=\count145
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen129
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count146
+\c@MaxMatrixCols=\count147
+\dotsspace@=\muskip11
+\c@parentequation=\count148
+\dspbrk@lvl=\count149
+\tag@help=\toks30
+\row@=\count150
+\column@=\count151
+\maxfields@=\count152
+\andhelp@=\toks31
+\eqnshift@=\dimen130
+\alignsep@=\dimen131
+\tagshift@=\dimen132
+\tagwidth@=\dimen133
+\totwidth@=\dimen134
+\lineht@=\dimen135
+\@envbody=\toks32
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks34
+\thm@bodyfont=\toks35
+\thm@headfont=\toks36
+\thm@notefont=\toks37
+\thm@headpunct=\toks38
+\thm@preskip=\skip49
+\thm@postskip=\skip50
+\thm@headsep=\skip51
+\dth@everypar=\toks39
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen136
+\enit@toks=\toks40
+\enit@inbox=\box32
+\enitdp@description=\count153
+)
+\c@definition=\count154
+\c@property=\count155
+\c@theorem=\count156
+\c@proposition=\count157
+\c@lemma=\count158
+\c@corollary=\count159
+\c@conjecture=\count160
+\c@observation=\count161
+\c@example=\count162
+\c@remark=\count163
+\c@Proof=\count164
+
+(./linegraphes.aux)
+\openout1 = `linegraphes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-47.23828pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=98.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count165
+\scratchdimen=\dimen137
+\scratchbox=\box33
+\nofMPsegments=\count166
+\nofMParguments=\count167
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count168
+\MPscratchDim=\dimen138
+\MPnumerator=\count169
+\makeMPintoPDFobject=\count170
+\everyMPtoPDFconversion=\toks42
+)
+\c@lstlisting=\count171
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 60.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <14.4> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 60.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./introduction_chapitre_l
+inegraphes.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+)
+(./introduction_linegraphes.tex
+
+LaTeX Warning: Citation `harary1960some' on page 2 undefined on input line 1.
+
+) (./caracteristiques_linegraphes.tex
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/grapheRacineLineGrapheExemple.eps>
+(epstopdf)                    date: 2018-05-29 10:38:03
+(epstopdf)                    size: 128307 bytes
+(epstopdf)             Output file: <./grapheRacineLineGrapheExemple-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-05-29 11:34:03
+(epstopdf)                    size: 29474 bytes
+(epstopdf)             Command: <repstopdf --outfile=./grapheRacineLineGrapheEx
+emple-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fich
+iers/images_fusionChapitres/grapheRacineLineGrapheExemple.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+
+<./grapheRacineLineGrapheExemple-eps-converted-to.pdf, id=9, 768.8725pt x 311.1
+625pt>
+File: ./grapheRacineLineGrapheExemple-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ./grapheRacineLineGrapheExemple-eps-converted-to.pdf>
+Package pdftex.def Info: ./grapheRacineLineGrapheExemple-eps-converted-to.pdf u
+sed on input line 19.
+(pdftex.def)             Requested size: 499.7612pt x 202.25322pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 27--35
+
+ []
+
+
+LaTeX Warning: Citation `whitney1932congruent' on page 3 undefined on input lin
+e 36.
+
+
+Overfull \hbox (12.90717pt too wide) in paragraph at lines 36--37
+[]\OT1/cmr/m/n/12 La no-tion de \OT1/cmr/m/it/12 line-graphe \OT1/cmr/m/n/12 a 
+^^Set^^Se in-tro-duite par \OT1/cmr/m/it/12 Whit-ney \OT1/cmr/m/n/12 [[]] en se
+ bas-ant sur la no-tion d'isomorphisme.
+ []
+
+
+LaTeX Warning: Citation `lineGraphe' on page 3 undefined on input line 37.
+
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/graphesRacinesDeQuatresAretes.eps>
+(epstopdf)                    date: 2017-12-28 10:38:01
+(epstopdf)                    size: 53236 bytes
+(epstopdf)             Output file: <./graphesRacinesDeQuatresAretes-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-05-29 11:34:03
+(epstopdf)                    size: 5870 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphesRacinesDeQuatresA
+retes-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fich
+iers/images_fusionChapitres/graphesRacinesDeQuatresAretes.eps>
+(epstopdf)             \includegraphics on input line 52.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphesRacinesDeQuatresAretes-eps-converted-to.pdf, id=20, 623.32875pt x 507
+.8975pt>
+File: ./graphesRacinesDeQuatresAretes-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ./graphesRacinesDeQuatresAretes-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphesRacinesDeQuatresAretes-eps-converted-to.pdf u
+sed on input line 52.
+(pdftex.def)             Requested size: 311.6636pt x 253.94814pt.
+ [3 <./grapheRacineLineGrapheExemple-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `krausz1943demonstration' on page 4 undefined on input 
+line 60.
+
+
+LaTeX Warning: Citation `ROOIJetWILF1965interchange' on page 4 undefined on inp
+ut line 61.
+
+
+LaTeX Warning: Citation `beineke1968derived' on page 4 undefined on input line 
+62.
+
+
+LaTeX Warning: Citation `lineGraphe' on page 4 undefined on input line 63.
+
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/neufSousGraphesInterditDesLineGraphes.eps
+>
+(epstopdf)                    date: 2017-12-24 14:31:54
+(epstopdf)                    size: 82093 bytes
+(epstopdf)             Output file: <./neufSousGraphesInterditDesLineGraphes-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2018-05-29 11:34:04
+(epstopdf)                    size: 11616 bytes
+(epstopdf)             Command: <repstopdf --outfile=./neufSousGraphesInterditD
+esLineGraphes-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fus
+ion_fichiers/images_fusionChapitres/neufSousGraphesInterditDesLineGraphes.eps>
+(epstopdf)             \includegraphics on input line 78.
+Package epstopdf Info: Output file is already uptodate.
+
+<./neufSousGraphesInterditDesLineGraphes-eps-converted-to.pdf, id=27, 775.89874
+pt x 686.565pt>
+File: ./neufSousGraphesInterditDesLineGraphes-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use ./neufSousGraphesInterditDesLineGraphes-eps-converted-to.pdf>
+Package pdftex.def Info: ./neufSousGraphesInterditDesLineGraphes-eps-converted-
+to.pdf used on input line 78.
+(pdftex.def)             Requested size: 387.94843pt x 343.28166pt.
+ [4 <./graphesRacinesDeQuatresAretes-eps-converted-to.pdf>]) (./linegraphes_amb
+igus.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--8
+
+ []
+
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/configurationAmbiguite.eps>
+(epstopdf)                    date: 2018-05-29 11:45:35
+(epstopdf)                    size: 127267 bytes
+(epstopdf)             Output file: <./configurationAmbiguite-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-05-29 11:45:41
+(epstopdf)                    size: 29152 bytes
+(epstopdf)             Command: <repstopdf --outfile=./configurationAmbiguite-e
+ps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fichiers/im
+ages_fusionChapitres/configurationAmbiguite.eps>
+(epstopdf)             \includegraphics on input line 18.
+Package epstopdf Info: Output file is already uptodate.
+
+<./configurationAmbiguite-eps-converted-to.pdf, id=33, 435.6275pt x 584.1825pt>
+File: ./configurationAmbiguite-eps-converted-to.pdf Graphic file (type pdf)
+<use ./configurationAmbiguite-eps-converted-to.pdf>
+Package pdftex.def Info: ./configurationAmbiguite-eps-converted-to.pdf used on 
+input line 18.
+(pdftex.def)             Requested size: 304.93716pt x 408.92496pt.
+ [5 <./neufSousGraphesInterditDesLineGraphes-eps-converted-to.pdf>] [6 <./confi
+gurationAmbiguite-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/graphe2Couverture.eps>
+(epstopdf)                    date: 2017-02-21 22:22:01
+(epstopdf)                    size: 45383 bytes
+(epstopdf)             Output file: <./graphe2Couverture-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-29 11:52:23
+(epstopdf)                    size: 3946 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphe2Couverture-eps-co
+nverted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_
+fusionChapitres/graphe2Couverture.eps>
+(epstopdf)             \includegraphics on input line 62.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphe2Couverture-eps-converted-to.pdf, id=45, 630.355pt x 182.6825pt>
+File: ./graphe2Couverture-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphe2Couverture-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphe2Couverture-eps-converted-to.pdf used on input
+ line 62.
+(pdftex.def)             Requested size: 472.76509pt x 137.01152pt.
+)
+(./introduction_probleme_proxi_line.tex [7 <./graphe2Couverture-eps-converted-t
+o.pdf>]) (./probleme_distance_line.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+
+ []
+
+
+LaTeX Warning: Citation `yannakakis1978node' on page 8 undefined on input line 
+29.
+
+
+LaTeX Warning: Citation `Halldorsson2013' on page 8 undefined on input line 29.
+
+
+) (./introduction_algorithme_decouverte.tex
+
+LaTeX Warning: Citation `ROUSSOPOULOS1973108' on page 8 undefined on input line
+ 14.
+
+
+LaTeX Warning: Citation `krausz1943demonstration' on page 8 undefined on input 
+line 14.
+
+
+LaTeX Warning: Citation `decompositionEnCliques' on page 8 undefined on input l
+ine 18.
+
+
+LaTeX Warning: Citation `ORE' on page 8 undefined on input line 18.
+
+
+LaTeX Warning: Citation `whitney1932congruent' on page 8 undefined on input lin
+e 18.
+
+
+LaTeX Warning: Citation `decompositionEnCliquesParArcs' on page 8 undefined on 
+input line 20.
+
+
+LaTeX Warning: Citation `ROOIJetWILF1965interchange' on page 8 undefined on inp
+ut line 21.
+
+
+LaTeX Warning: Citation `Halldorsson2013' on page 8 undefined on input line 28.
+
+
+
+LaTeX Warning: Citation `allele' on page 8 undefined on input line 29.
+
+
+LaTeX Warning: Citation `halldorsson2011clark' on page 8 undefined on input lin
+e 30.
+
+) [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+(./algorithme_couverture.tex
+
+LaTeX Warning: Citation `decompositionEnCliquesParArcs' on page 10 undefined on
+ input line 3.
+
+
+LaTeX Warning: Citation `decompositionEnCliquesParArcs' on page 10 undefined on
+ input line 32.
+
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/deroulementAlgorithmeLehot.eps>
+(epstopdf)                    date: 2018-06-23 13:32:53
+(epstopdf)                    size: 174554 bytes
+(epstopdf)             Output file: <./deroulementAlgorithmeLehot-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-06-23 16:35:29
+(epstopdf)                    size: 42608 bytes
+(epstopdf)             Command: <repstopdf --outfile=./deroulementAlgorithmeLeh
+ot-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fichier
+s/images_fusionChapitres/deroulementAlgorithmeLehot.eps>
+(epstopdf)             \includegraphics on input line 53.
+Package epstopdf Info: Output file is already uptodate.
+
+<./deroulementAlgorithmeLehot-eps-converted-to.pdf, id=60, 720.6925pt x 824.078
+75pt>
+File: ./deroulementAlgorithmeLehot-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./deroulementAlgorithmeLehot-eps-converted-to.pdf>
+Package pdftex.def Info: ./deroulementAlgorithmeLehot-eps-converted-to.pdf used
+ on input line 53.
+(pdftex.def)             Requested size: 360.34537pt x 412.03836pt.
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+
+ []
+
+[11 <./deroulementAlgorithmeLehot-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
+
+ []
+
+
+LaTeX Warning: Reference `VerifCorrel' on page 12 undefined on input line 104.
+
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/exempleAlgorithmeCouverture.eps>
+(epstopdf)                    date: 2018-06-23 15:47:10
+(epstopdf)                    size: 152048 bytes
+(epstopdf)             Output file: <./exempleAlgorithmeCouverture-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2018-06-23 16:35:29
+(epstopdf)                    size: 33747 bytes
+(epstopdf)             Command: <repstopdf --outfile=./exempleAlgorithmeCouvert
+ure-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fichie
+rs/images_fusionChapitres/exempleAlgorithmeCouverture.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+
+<./exempleAlgorithmeCouverture-eps-converted-to.pdf, id=69, 994.71625pt x 624.3
+325pt>
+File: ./exempleAlgorithmeCouverture-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ./exempleAlgorithmeCouverture-eps-converted-to.pdf>
+Package pdftex.def Info: ./exempleAlgorithmeCouverture-eps-converted-to.pdf use
+d on input line 117.
+(pdftex.def)             Requested size: 500.01308pt x 300.00009pt.
+ [12] [13 <./exempleAlgorithmeCouverture-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `VerifCorrel' on page 14 undefined on input line 136.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 179--183
+
+ []
+
+
+LaTeX Warning: Reference `VerifCorrel' on page 15 undefined on input line 189.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
+
+ []
+
+) (./algorithme_correction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
+
+ []
+
+
+LaTeX Warning: Reference `chapitreEvaluation' on page 15 undefined on input lin
+e 20.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--28
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/./correctionGraph.eps>
+(epstopdf)                    date: 2018-06-29 17:40:01
+(epstopdf)                    size: 101872 bytes
+(epstopdf)             Output file: <./correctionGraph-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-06-29 17:40:35
+(epstopdf)                    size: 20498 bytes
+(epstopdf)             Command: <repstopdf --outfile=./correctionGraph-eps-conv
+erted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fu
+sionChapitres/./correctionGraph.eps>
+(epstopdf)             \includegraphics on input line 85.
+Package epstopdf Info: Output file is already uptodate.
+<./correctionGraph-eps-converted-to.pdf, id=86, 1139.25626pt x 457.71pt>
+File: ./correctionGraph-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./correctionGraph-eps-converted-to.pdf>
+Package pdftex.def Info: ./correctionGraph-eps-converted-to.pdf used on input l
+ine 85.
+(pdftex.def)             Requested size: 512.66058pt x 205.96759pt.
+
+Overfull \hbox (12.17659pt too wide) in paragraph at lines 85--88
+ [][] 
+ []
+
+[16]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [17 <./correctionGraph-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--134
+
+ []
+
+
+LaTeX Warning: Reference `chapitreEvaluation' on page 18 undefined on input lin
+e 144.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--146
+
+ []
+
+[18]) (./complexite_algorithme.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--5
+
+ []
+
+) (./conclusion_algorithmes_couverture_correction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
+[19]) (./algorithme_orientation.tex
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/ExempleGraphesRacinesIsomorphes.eps>
+(epstopdf)                    date: 2018-06-29 20:59:56
+(epstopdf)                    size: 189404 bytes
+(epstopdf)             Output file: <./ExempleGraphesRacinesIsomorphes-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-06-29 21:00:31
+(epstopdf)                    size: 47497 bytes
+(epstopdf)             Command: <repstopdf --outfile=./ExempleGraphesRacinesIso
+morphes-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction/fusion_fi
+chiers/images_fusionChapitres/ExempleGraphesRacinesIsomorphes.eps>
+(epstopdf)             \includegraphics on input line 33.
+Package epstopdf Info: Output file is already uptodate.
+
+<./ExempleGraphesRacinesIsomorphes-eps-converted-to.pdf, id=103, 770.88pt x 510
+.90875pt>
+File: ./ExempleGraphesRacinesIsomorphes-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./ExempleGraphesRacinesIsomorphes-eps-converted-to.pdf>
+Package pdftex.def Info: ./ExempleGraphesRacinesIsomorphes-eps-converted-to.pdf
+ used on input line 33.
+(pdftex.def)             Requested size: 539.61234pt x 357.63368pt.
+
+Overfull \hbox (39.12834pt too wide) in paragraph at lines 33--38
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+[20]
+Package epstopdf Info: Source file: </home/willy/Documents/latexDoc/redaction/f
+usion_fichiers/images_fusionChapitres/orientationAretesHeuristiqueContreExemple
+.eps>
+(epstopdf)                    date: 2018-06-29 20:48:16
+(epstopdf)                    size: 56244 bytes
+(epstopdf)             Output file: <./orientationAretesHeuristiqueContreExempl
+e-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-06-29 21:01:06
+(epstopdf)                    size: 7656 bytes
+(epstopdf)             Command: <repstopdf --outfile=./orientationAretesHeurist
+iqueContreExemple-eps-converted-to.pdf /home/willy/Documents/latexDoc/redaction
+/fusion_fichiers/images_fusionChapitres/orientationAretesHeuristiqueContreExemp
+le.eps>
+(epstopdf)             \includegraphics on input line 77.
+Package epstopdf Info: Output file is already uptodate.
+
+<./orientationAretesHeuristiqueContreExemple-eps-converted-to.pdf, id=107, 617.
+30624pt x 491.8375pt>
+File: ./orientationAretesHeuristiqueContreExemple-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use ./orientationAretesHeuristiqueContreExemple-eps-converted-to.pdf>
+Package pdftex.def Info: ./orientationAretesHeuristiqueContreExemple-eps-conver
+ted-to.pdf used on input line 77.
+(pdftex.def)             Requested size: 432.11142pt x 344.28389pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--86
+
+ []
+
+[21 <./ExempleGraphesRacinesIsomorphes-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
+
+ []
+
+[22 <./orientationAretesHeuristiqueContreExemple-eps-converted-to.pdf>])
+(./conclusionChapitreLinegraphes.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
+
+ []
+
+
+LaTeX Warning: Citation `decompositionEnCliques' on page 23 undefined on input 
+line 5.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--21
+
+ []
+
+
+LaTeX Warning: Reference `VerifCorrel' on page 23 undefined on input line 23.
+
+[23]) [24] (./linegraphes.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6640 strings out of 494910
+ 99103 string characters out of 6179836
+ 174370 words of memory out of 5000000
+ 9758 multiletter control sequences out of 15000+600000
+ 13774 words of font info for 52 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 42i,8n,39p,1008b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on linegraphes.pdf (24 pages, 468520 bytes).
+PDF statistics:
+ 176 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+

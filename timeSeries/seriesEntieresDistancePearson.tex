@@ -1,0 +1,44 @@
+Dans la comparaison de s\'eries temporelles, nous avons toujours constat\'e que la normalisation dans le calcul d'une distance euclidienne entre des s\'eries donne de meilleurs r\'esultats.
+Nous allons montrer la relation existance entre la distance euclienne et le coefficient de Pearson.
+\newline
+Soient deux s\'eries temporelles $A$ et $B$ compos\'ees de $T$ \'el\'ements $A=(a_1, \cdots, a_T) ~et~ B=(b_1, \cdots, B_T)$.
+La distance euclidienne entre  $A$ et $B$ est d\'efinie par l'\'equation \ref{distanceEuclienne}
+\begin{equation}
+\label{distanceEuclienne}
+d_E = \sum_{t=1}^{T}(a_i - b_i)^{2}
+\end{equation}
+Elle est une m\'etrique et les s\'eries $A$ et $B$ sont identiques si cette distance est \'egale \`a $0$. Pour les analyses de s\'eries, il est recommend\'e de normaliser les s\'eries pour \'eviter les variations d'\'echelles.
+En ce qui concerne le coefficient de Pearson, il mesure la corr\'elation $\varrho$  entre deux variables al\'eatoires $X$ et $Y$ comme indiqu\'e dans l'\'equation \ref{coeffPearson}.
+\begin{equation}
+\label{coeffPearson}
+ \varrho_{X,Y} = \frac{ E[X - \mu_{X}][ Y - \mu_{Y}] }{\sigma_X . \sigma_Y} 
+\end{equation}
+o\`u $\mu_{X}$ est la moyenne  et $\sigma_{X}$ est l'\'ecart-type de $X$.
+Le coefficient $|\varrho| = 1$ est \'egal \`a  
+$1$ si les variables $X$ et $Y$ sont parfaitement corr\'el\'ees et 
+$0$ si $X$ et $Y$ sont non corr\'el\'ees.
+\newline
+Dans le but d'utiliser le coefficient de Pearson comme une distance de s\'eries temporelles, nous introduisons la {\em distance de Pearson} en g\'en\'erant de petites valeurs de distances pour des s\'eries similaires. %corr\'el\'ees. 
+Elle est d\'efinie par l'\'equation \ref{personDistance}.
+\begin{equation}
+\label{personDistance}
+d_{P}(A,B) = 1 - \varrho_{A,B}= 1- \frac{ \frac{1}{T} \sum_{t=1}^{T} (a_t - \mu_A)(b_t - \mu_B) }{\sigma_A . \sigma_B}
+\end{equation}
+avec $0 \le d_P{(A,B)} \le 2$.
+Nous obtenons une parfaite correspondance ($d_P = 0$) pour les s\'eries $A$ et $B$ s'il existe des nombres $\alpha, \beta \in \R$ avec $\beta>0$ tels que $a_i = \alpha + \beta * b_i$.
+Nous exprimons $d_E$ en fonction de $d_P$.
+\begin{equation}
+\label{demontrationPearson}
+d_E(A,B) = \sum_{t=1}^{T}(a_i - b_i)^{2}
+=  \sum_{t=1}^{T}(a_i - 0)^{2} -2 \sum_{t=1}^{T}(a_i . b_i) + \sum_{t=1}^{T}(b_i - 0)^{2}
+\end{equation}
+Les termes $ \sum_{t=1}^{T}(a_i - 0)^{2}$ et $\sum_{t=1}^{T}(b_i - 0)^{2}$ correspondent \`a l'\'ecart-type des s\'eries $A$ et $B$ en supposant que la moyenne de ces s\'eries est nulle $\mu_{A} = \mu_{B} = 0$ et leurs \'ecarts-types sont \'egaux \`a $1$ ($\sigma_A = \sigma_B = 1$).
+L'\'equation pr\'ec\'edente \ref{demontrationPearson} devient 
+$$
+d_E(A_{norm},B_{norm}) = 2.T (1 - \frac{\frac{1}{T} \sum_{t=1}^{T}(a_{i,norm} - 0)(b_{i,norm} - 0) }{1 . 1})
+= 2 . T. d_P(A_{norm},B_{norm})
+$$
+Ainsi, la distance euclidienne de deux s\'eries norm\'ees est \'egale \`a la distance de Pearson multipli\'ee par un facteur constant $2T$.
+L'\'equivalence entre ces deux distances est pertinente parce que certains algorithmes utilisent  la distance  euclidienne pour faire de la classification (cas de k-means). 
+%et  aussi plusieurs articles sur la d\'etermination de similarit\'e entre des series temporelles ont conclu que la normalisation de la serie initiale est cruciale.
+Dans l'article \cite{berthold2016clusteringDistancePearson}, l'auteur utilise la classification {\em k-means} de s\'eries avec la distance de Pearson et il en conclut que cette classification donne les m\^emes  r\'esultats que le {\em k-means} avec la distance euclidienne.

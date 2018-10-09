@@ -1,0 +1,151 @@
+\documentclass[onecolumn, 12pt]{book}
+
+\usepackage[latin1]{inputenc}   
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+%\usepackage[T1]{fontenc}
+
+%\usepackage[francais]{babel}     
+\usepackage{layout}    
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} 
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{color} 
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+%\usepackage{epstopdf}
+%\usepackage[outdir=/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/]{epstopdf}
+%\usepackage[outdir=./../../fusion_fichiers/images_fusionChapitres/]{epstopdf}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{amssymb} %---------> symbole R reel
+\usepackage{placeins}
+\usepackage{fancyhdr}
+ 
+ \newcounter{subsubsubsection}
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% \title{Mod\`ele de Donn\'ees}
+% \author{Willy Ehounou}
+ %\date{01/06/15}
+\title{chapitre3 : R\'eseau de flots et mesures physiques}
+\author{Wilfried Ehounou}
+\date{\oldstylenums{\today}} 
+
+\newtheorem{definition}{D\'efinition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{property}{Propri\'et\'e}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Exemple}
+\newtheorem{remark}{Remarque}
+\newtheorem{Proof}{Preuve}
+
+% d\'efinition macro
+\def\R{\mbox{I\hspace{-.15em}R}}
+\def\N{\mbox{I\hspace{-.15em}N}}
+\def\Z{\mbox{I\hspace{-.15em}Z}}
+\def\Q{\mbox{I\hspace{-.15em}Q}}
+
+% definition macro algorithmes
+%\newcommand{\algorithmicrequire}{\textbf{Require:}}
+%\newcommand{\algorithmicensure}{\textbf{Ensure:}}
+%\newcommand{\algorithmicend}{\textbf{end}}
+%\newcommand{\algorithmicif}{\textbf{si}}
+%\newcommand{\algorithmicthen}{\textbf{alors}}
+%\newcommand{\algorithmicelse}{\textbf{sinon}}
+%\newcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+%\newcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+%\newcommand{\algorithmicfor}{\textbf{Pour}}
+%\newcommand{\algorithmicforall}{\textbf{Pour tout}}
+%\newcommand{\algorithmicdo}{\textbf{faire}}
+%\newcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+%\newcommand{\algorithmicwhile}{\textbf{Tant que}}
+%\newcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+%\newcommand{\algorithmicloop}{\textbf{loop}}
+%\newcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+%\newcommand{\algorithmicrepeat}{\textbf{repeter}}
+%\newcommand{\algorithmicuntil}{\textbf{jusqu'\`a}}
+%\newcommand{\algorithmicprint}{\textbf{print}}
+%\newcommand{\algorithmicreturn}{\textbf{retourner}}
+%\newcommand{\algorithmictrue}{\textbf{true}}
+%\newcommand{\algorithmicfalse}{\textbf{false}}
+
+%---- path figures ----
+\graphicspath{
+{/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/}
+}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{R\'eseau de flots et mesures physiques}
+% ----------------------------------------------------------------------------------------------------------------------------------
+%		 introduction 
+% ----------------------------------------------------------------------------------------------------------------------------------
+	\input{reseauFlotsIntroductionChapitreReseauFlots}
+
+% ----------------------------------------------------------------------------------------------------------------------------------
+%		 reseau electrique d'un datacenter : graphe de flots
+% ----------------------------------------------------------------------------------------------------------------------------------
+	\section{R\'eseau \'electrique d'un datacenter : un graphe de flots}
+		\subsection{Topologie du r\'eseau \'electrique du datacenter}
+			\input{reseauFlotsTopologieReseauElectrique}
+		\subsection{R\'eseau \'electrique : un graphe de flots}
+			\input{reseauFlotsGrapheFlots}
+		\input{reseauFlotsConclusionDatacenterGrapheFlots}
+		
+% ----------------------------------------------------------------------------------------------------------------------------------
+% 		Modelisation du graphe de flots electriques
+% ----------------------------------------------------------------------------------------------------------------------------------
+	\section{Mod\'elisation du r\'eseau \'electrique du datacenter}
+		\subsection{Description du graphe de flots}
+			\input{reseauFlotsDescriptionGrapheFlots}
+		\subsection{Grandeurs, flots et contraintes physiques}
+			\input{reseauFlotsGrandeursFlotsContraintesPhysiques}
+			\subsubsection{Grandeurs physiques}
+				\input{reseauFlotsGrandeursPhysiques}
+			\subsubsection{Capacit\'e d'un arc}
+				\input{reseauFlotsCapaciteArc}
+			\subsubsection{ Description d'un flot physique}
+				\input{reseauFlotsDescriptionFlot}
+			\subsubsection{ Contraintes sur les flots}
+				\input{reseauFlotsConstraintesFlots}
+			\subsubsection{Description de Verif-correl}
+				\input{reseauFlotsDescriptionVerifCorrel}
+%			 \subsubsection{ Influence des pertes par effets joules} 
+%			 	\input{reseauFlotsInfluencesPertesEffetJoules}
+		\input{reseauFlotsConclusionModelisation}
+		
+% ----------------------------------------------------------------------------------------------------------------------------------
+%		 etat de l'art sur la reconstruction/decouverte de reseau
+% ----------------------------------------------------------------------------------------------------------------------------------
+	\section{\'Etat de l'art sur la d\'ecouverte de topologie}
+		\input{reseauFlotsEtatArtReconstructionTopologie}
+		\input{reseauFlotsConclusionEtatDeLartReconstruction}	
+
+% ----------------------------------------------------------------------------------------------------------------------------------
+%		problematique
+% ----------------------------------------------------------------------------------------------------------------------------------
+	\section{Probl\`eme de d\'ecouverte de topologie \'electrique}
+		\input{reseauFlotsProblematique}
+			
+% ----------------------------------------------------------------------------------------------------------------------------------
+%		 conclusion
+% ----------------------------------------------------------------------------------------------------------------------------------
+	\section{Conclusion du chapitre}
+		\input{reseauFlotsConclusionChapitre}
+		
+\end{document}

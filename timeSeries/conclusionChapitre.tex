@@ -1,0 +1,13 @@
+Ce chapitre se subdivise en quatres parties.
+La premi\`ere partie pr\'esente les domaines dans lesquels l'analyse des s\'eries temporelles est importante. Ensuite, nous exposons notre probl\`eme qui consiste \`a comparer deux s\'eries temporelles en supposant que les variations dans une s\'erie sont reproduites dans l'autre s\'erie.
+Pour r\'esoudre notre probl\`eme, nous d\'ecidons de nous servir des m\'ethodes de classification de s\'eries temporelles.
+Dans la seconde partie, nous d\'etaillons les m\'ethodes qui se regroupent en trois cat\'egories :
+{\em similarit\'e sur les s\'eries enti\`eres, similarit\'e sur les parties significatives, similarit\'e par aggr\'egation des caract\'eristiques descriptives}. Chaque cat\'egorie d\'ecrit des distances de similarit\'e. 
+Les avantages et les inconv\'enents de chaque cat\'egorie sont d\'ecrites dans la troisi\`eme partie. Ainsi, en analysant nos donn\'ees et en se basant sur notre hypoth\`ese, nous avons montr\'e que  les m\'ethodes sur les s\'eries enti\`eres sont adapt\'ees \`a notre probl\`eme.
+En effet, notre hypoth\`ese stipule que deux arcs partageant un \'equipement ont les m\^emes profils de consommation et leur coefficient de similarit\'e est proche de $1$. Dans le cas contraire,  leur coefficient de similarit\'e tend vers $0$ et les profils de consommation ont des courbes diff\'erentes.
+Nous avons alors choisi la {\em distance de Pearson} comme la m\'ethode de similarit\'e parce qu'elle est une m\'etrique, de complexit\'e lin\'eaire, ne traite pas le d\'ecalage temporel et enfin retourne des valeurs appartenant \`a l'intervalle $[0,1]$.
+Nous avons appliqu\'e cette distance sur un {\em sous-r\'eseau du datacenter Champlan} parce que ce sous-r\'eseau ne poss\`ede aucun \'equipement aliment\'e par un onduleur.
+Ensuite, la seule grandeur qui contient des valeurs en monophas\'e et triphas\'e est la grandeur $P$.
+Les coefficients de similarit\'e entre les arcs obtenus avec la grandeur $P$ contiennent des erreurs de similarit\'e. Une erreur de similarit\'e est un coefficient proche de $1$ alors que les arcs ne concourent pas en un \'equipement et vice-versa.
+Ces coefficients forment la {\em matrice de corr\'elation} qui appliqu\'ee \`a un seuil propose la matrice d'adjacence du sous-r\'eseau de champlan. Ceci est v\'erifi\'e \`a condition que les coefficients ne contiennent aucune erreur.
+Enfin, nous avons montr\'e qu'il est difficile de d\'eterminer la bonne valeur de seuil en pr\'esence des coefficients de similarit\'e \'erron\'es.

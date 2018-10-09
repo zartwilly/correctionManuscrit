@@ -1,0 +1,244 @@
+\documentclass[onecolumn, 12pt]{book}
+
+%----------------------------------------------- debut usepackage -------------------------------------------------------------
+\usepackage[latin1]{inputenc}   
+%\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{algorithm,algorithmic} 
+%\usepackage[T1]{fontenc}
+%\usepackage[francais]{babel}     
+\usepackage{layout}    
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} 
+\geometry{
+	left=16mm,
+	top=30mm,
+	right=16mm,
+	bottom=30mm
+}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{color} 
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+%\usepackage[outdir=./]{epstopdf}
+\usepackage[outdir=./images_fusionChapitres/]{epstopdf}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{enumitem} 
+\usepackage{amsthm} % ajouter pour environnement proof
+\usepackage{placeins}
+\usepackage{multirow}
+
+\usepackage{titlesec} 
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+%%%% page de garde et abstract
+\usepackage{helvet}
+\usepackage{array}
+\usepackage{xcolor}
+\definecolor{bordeau}{rgb}{0.3515625,0,0.234375}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{multicol}
+\setlength{\columnseprule}{0pt}
+\setlength\columnsep{10pt}
+%%%% page de garde et abstract 
+
+%%% ------ nouveau import package ------------
+%%%%----- handle titlesec : generate problem ------
+%% solution 1 : update package titlesec 
+%%%-------- link : https://tex.stackexchange.com/questions/299969/titlesec-loss-of-section-numbering-with-the-new-update-2016-03-15
+%% solution 2 : below
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+%%%%----- headle titlesec : generate problem ------
+
+\let\proof\relax
+\let\endproof\relax
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{amsfonts}
+%-------------------------------------------------- fin usepackage -------------------------------------------------------------
+
+% --------------------------------------------- new commands ----------------------------------------------------------------
+\renewcommand{\chaptername}{Chapitre}
+\renewcommand{\contentsname}{Table des Mati\`eres}
+\renewcommand{\bibname}{Bibliographie}
+\renewcommand{\tablename}{Tableau}
+%\renewcommand{\figurename}{Fig}
+\renewcommand{\listfigurename}{Liste des figures}
+\renewcommand{\listtablename}{Liste des Tableaux}
+\renewcommand{\listalgorithmname}{Liste des Algorithmes}
+%\renewcommand{\thealgorithm}{\arabic{chapter}.\arabic{algorithm}} 
+
+%%%%%-------------- redefine part, section, subsection , subsubsection, subsubsubsection ------ 
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+%%%%%-------------- redefine part, section, subsection , subsubsection, subsubsubsection ------
+
+
+
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+ %---- add name algorithm 
+ \makeatletter
+\renewcommand{\ALG@name}{Algorithme}
+\makeatother
+% ----------------------------------- new commands --------------------------------------------------------------------------
+
+ %---------- definitions ------------------
+\def\R{\mbox{I\hspace{-.15em}R}}
+\def\N{\mbox{I\hspace{-.15em}N}}
+\def\Z{\mbox{I\hspace{-.15em}Z}}
+\def\Q{\mbox{I\hspace{-.15em}Q}}
+
+\newtheorem{definition}{D\'efinition}
+\newtheorem{theorem}{Th\'eor\`eme}
+\newtheorem{property}{Propri\'et\'e}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{corollary}[theorem]{Corollaire}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Exemple}
+\newtheorem{remark}{Remarque}
+\newtheorem{Proof}{Preuve}
+%---------- definitions ------------------
+ 
+% \title{Mod\`ele de Donn\'ees}
+% \author{Willy Ehounou}
+ %\date{01/06/15}
+%\title{Algorithme de graphes pour la d\'ecouverte de la topologie d'un r\'eseau \'energ\'etique par la connaissance de ses flots}
+\title{}
+\author{}
+\date{}
+%\author{Wilfried Ehounou}
+%\date{\oldstylenums{1875}} 
+
+
+% -------- chemin images et graphiques
+\graphicspath{
+%{/home/willy/Documents/latexDoc/redaction/fusion_fichiers_v2/images_fusionChapitres/}
+{./images_fusionChapitres/}
+{./pageDeGarde/}
+}
+
+\makeatletter
+%% -------------------------------------- repertoire des fichiers de chaque chapitre -----------------------------
+\def\input@path{
+{./introductionGenerale/}
+{./reseauFlotsMesures/}
+{./timeSeries/}
+{./linegraphes/}
+{./simulation/}
+{./conclusionGenerale/}
+{./pageDeGarde/}
+{./remerciements/}
+}
+%% -------------------------------------- repertoire des fichiers de chaque chapitre -----------------------------
+\makeatother
+
+\setlength{\belowcaptionskip}{-5pt}
+
+%% ------------------------------------- page de Garde, abstract : informations ------------------------------------
+\input{pageDeGarde_informations}   % --------------> ne sert plus a rien
+%% -------------------------------------- page de Garde, abstract : informations -----------------------------------
+
+\begin{document}
+
+	% --------- metadonnees du pdf
+	\hypersetup{
+		pdfauthor={Wilfried Joseph EHOUNOU},
+		pdftitle={Algorithme de graphes pour la d\'ecouverte de la topologie d'un r\'eseau \'energ\'etique par la connaissance de ses flots},
+		pdfsubject={ th\`ese de doctorat},
+		pdfkeywords={Graphes, s\'eries temporelles, similarit\'e, line-graphes, cliques, d\'ecouverte de topologie}
+	}
+	% --------- metadonnees du pdf
+	%---- plan -----
+%	\input@path{planBis}
+
+	% ------ page de garde, abstract : execution -------- 
+	\includepdf[pages={1}]{pageDeGarde.pdf}
+	\includepdf[pages={1}]{abstract.pdf}
+%	\input{pageDeGarde_execution}             -----------------> du vrai bricolage mais je le garde 
+	% ------ page de garde, abstract : execution -------- 
+	\maketitle
+	
+	%---- Remerciements
+	{\setstretch{1.10}
+	\section*{Remerciements}
+%		\input{remerciements}	
+	}
+
+	\tableofcontents
+	% ------- listes de figures et tableau et algorithmes
+	\listofalgorithms
+	\listoffigures
+	\listoftables
+	
+	\onehalfspacing
+	%---- introduction
+	\input{introductionV1}
+
+	%---- chapitre 1 : reseau de flots et MEsures
+	\input{reseauFlotsMEsuresV1}
+	
+	%---- chapitre 2 : timeSeries et similarite entre series
+	\input{timeSeriesV1}
+	
+	%---- chapitre 3 : linegraphes
+	\input{linegraphesV1}
+	
+	%---- chapitre 4 : simulation 
+	\input{simulationGraphesTheoriquesGrillesBoucleesV1}
+
+	%---- conclusion et persectives
+%	\input@path{conclusionGeneraleV1}
+	\input{conclusionGeneraleV1}
+	
+	\appendix
+	\chapter{Annexes}
+		\input{annexes}
+
+	% reference bibtex
+% 	\bibliographystyle{plainTheseNat}
+ 	 \bibliographystyle{unsrt}
+	\bibliography{bibliographie}
+	
+	
+\end{document}

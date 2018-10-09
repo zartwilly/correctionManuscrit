@@ -1,0 +1,94 @@
+
+\chapter{\'Evaluation des performances des algorithmes}
+\label{chapitreEvaluation}
+
+\input{introduction_chapitre}
+
+\section{G\'en\'eration de graphes \'electriques}
+	\label{generationGraphesElectriques}
+	\input{generationGraphesElectriques}
+
+%-----------------------------------------------------------------------
+%------- 		experimentation 1     ---------------------
+%--------------------------------------------------------------------
+\section{Exp\'erimentation 1 : modification de $k$ cases  de la matrice du line-graphe}
+	\label{experimentation1}
+	\subsection{S\'election de $k$ cases et g\'en\'eration de la matrice $M_{k,p}$ }
+		\input{experimentation1SelectionkCasesGenerationMatrice}
+	\subsection{Protocole d'exp\'erimentation sur les graphes $G_{k,p}$}
+		\input{experimentation1ProtocoleExperimentationGrapheGkp}
+	\subsection{Analyses des r\'esultats }
+
+	Nous d\'ebutons l'interpr\'etation de nos r\'esultats par l'analyse des distributions des distances de Hamming avec l'approche de correction {\em al\'eatoire sans remise} $(2c)$ et  la fonction de co\^ut {\em unitaire} $(3i)$.
+	Ensuite, nous expliquons le choix de l'approche $(2c)$  pour la correction des sommets. 
+	Nous pr\'esentons \'egalement le meilleur compromis dans la repartition des $k$ cases modifi\'ees et la relation existante entre les distances de correction et de Hamming.
+	Enfin,  nous montrons que l'approche $(2c)$ fournit des distributions de distances de correction et de Hamming identiques, quelles que soient la fonction de co\^ut $(i), (2i), (3i)$ et la repartition $k$ choisies.
+		\subsubsection{Interpr\'etation du mode de correction {\em al\'eatoire sans remise}}
+			\label{experimentation1InterpretationModeAleatoireSansRemise}
+			\input{experimentation1InterpretationModeAleatoireSansRemise}
+		\subsubsection{Comparaison des modes de correction}
+			\input{experimentation1ComparaisonModeCorrection}
+		\subsubsection{Influence des cases modifi\'ees et de la fonction de co\^ut}
+			\label{influenceFonctionCoutDistributionHamming1}
+			\input{experimentation1InfluenceCasesModifieesDistributionsHamming}
+		\subsubsection{Relation entre la distance de Hamming et la distance de correction}
+			\input{experimentation1RelationDHDC}
+	\subsection{Conclusion de l'exp\'erimention 1}	
+		\input{conclusionExperimentation1}
+
+%---------------------------------------------------------------------------
+%------- 		experimentation 2 	---------------------
+%---------------------------------------------------------------------------
+\section{Exp\'erimentation 2 : Ajout de probabilit\'e dans la matrice du line-graphe}
+
+Notre seconde exp\'erimentation a le m\^eme but que la premi\`ere sauf qu'ici la modification des cases est faite \`a partir de valeurs de seuils appliqu\'ees \`a des matrices de corr\'elation. Les valeurs de ces matrices sont d\'efinies selon la distribution des valeurs de corr\'elation d'un r\'eseau r\'eel, celui du datacenter {\em Champlan}.
+\newline
+Notre but est de d\'eterminer la valeur de seuil qui minimise les distances de correction et de Hamming obtenues avec l'approche {\em al\'eatoire sans remise} (tableau \ref{tab:recapApprocheCorrection}). 
+\newline
+Nous d\'ecrivons tout d'abord l'affectation des valeurs de corr\'elation aux cases de la matrice du line-graphe. Ensuite nous pr\'esentons les diff\'erentes \'etapes de notre exp\'erimentation et enfin nous analysons les r\'esultats obtenus.
+	\subsection{Affectation de probabilit\'es aux cases de la matrice $M_{LG}$}
+		\label{affectationValeursProbabilites}
+		\input{experimentation2AffectationProbabilitesCasesMatrice}
+	\subsection{G\'en\'eration du graphe de corr\'elation }
+		\label{experimentation2GenerationMatriceProbabiliteAvecSeuil}
+		\input{experimentation2GenerationMatriceProbabiliteAvecSeuil}
+	\subsection{Protocole d'exp\'erimentation des graphes  $G_s$ de corr\'elation} 
+		\input{experimentation2ProtocoleExperimentationGrapheCorrelation}
+	\subsection{Analyses des r\'esultats}
+	Nous allons d\'ecrire l'\'evolution du pourcentage des cases corrig\'ees en fonction de la valeur du seuil pour la fonction de co\^ut {\em normale}. Ensuite nous d\'eterminons l'influence de la valeur de seuil sur le nombre de cases corrig\'ees et enfin nous recherchons la meilleure fonction de co\^ut et l'influence des fonctions de co\^ut sur l'\'evolution des distances de Hamming.
+		\subsubsection{\'Evolution du pourcentage de cases corrig\'ees}
+			\input{experimentation2EvolutionDistanceHammingTauxCasesCorrigees}
+		\subsubsection{Influence de la valeur du seuil }
+			\input{experimentation2InfluenceSeuil}
+		\subsubsection{Choix de la fonction de co\^ut et impact sur les distances de Hamming }
+			\input{experimentation2ChoixFonctionCout}
+	\subsection{Conclusion de l'exp\'erimentation 2}	
+		\input{conclusionExperimentation2}		
+
+%---------------------------------------------------------------------------
+%------- experimentation 3  graphes grilles boucl\'ees
+%---------------------------------------------------------------------------	
+\section{Exp\'erimentation 3 : algorithmes sur les grilles boucl\'ees}
+	\input{grillesBoucleesIntroduction}
+	\subsection{D\'efinition des grilles boucl\'ees et les distances line th\'eoriques}
+%		\input{grillesBoucleesDefinitionDistanceslineTheoriques}
+		\subsubsection{D\'efinition de la grille boucl\'ee $G_{k,k'}$ }
+			\input{grillesBoucleesDefinitionConstructionGkk}
+		\subsubsection{Correction des grilles boucl\'ees}
+			\input{grillesBoucleesCorrectionGkk}
+	\subsection{Protocole d'exp\'erimentation sur les grilles boucl\'ees}
+		\input{grillesBoucleesProtocoleExperimentation}
+	\subsection{Analyse des r\'esultats}
+		\input{grillesBoucleesAnalyseResultats}
+	\subsection{Conclusion de l'exp\'erimentation 3}
+		\input{grillesBoucleesConclusionExperimentation3}
+
+%---------------------------------------------------------------------------
+%------- conclusion chapitre
+%---------------------------------------------------------------------------
+	\section{Conclusion du chapitre \ref{chapitreEvaluation}}
+		\input{conclusionChapitre6}
+
+%\section{Annexes}
+%	\input{annexes}
+

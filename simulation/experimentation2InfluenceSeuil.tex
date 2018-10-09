@@ -1,0 +1,16 @@
+%choix du seuil
+Les seuils inf\'erieurs \`a $0.7$ correspondent \`a une reduction des cases {\em fausses positives} et une augmentation de cases {\em fausses n\'egatives} dans la matrice de correction. Dans ce cas, nous constatons que le nombre des  cases
+{\em fausses positives} baisse \'enormement quand $s \rightarrow 0.7$. Ce ph\'enom\`ene s'explique par le co\^ut de modifications des ar\^etes (normale) et le nombre faible de cases \'erron\'ees au voisinage de  $0.7$. L'augmentation des cases  {\em fausses n\'egatives} provient du  fonctionnement de notre algorithme de correction.  L'algorithme doit ajouter des ar\^etes dans une partition $\pi_1 ~ou~ \pi_2$ au voisinage d'un sommet pour en faire une clique. Le nombre \'elev\'e de cases  {\em fausses n\'egatives} n\'ecessite l'ajout de beaucoup d'ar\^etes.
+\newline
+Les seuils sup\'erieurs \`a $0.7$ correspondent \`a l'augmentation des  cases {\em fausses positives} et la baisse de celles {\em fausses n\'egatives}. 
+La pr\'esence de cases {\em fausses positives} en grand nombre entraine l'algorithme de correction dans deux cas :
+l'ajout de peu d'ar\^etes  et 
+la suppression de beaucoup d'ar\^etes pour atteindre un line-graphe.
+Dans le premier cas, la distance de Hamming est faible mais le line-graphe est diff\'erent du line-graphe de $G_s$. 
+Dans ce second cas, la distance de Hamming est tr\`es \'elev\'ee et nous avons tr\`es peu de chance de retrouver le line-graphe de $G_s$.
+%Quant \`a la baisse des cases {\em fausses n\'egatives},  elle reduit le nombre de cases \`a modifier pour obtenir une .
+\newline
+
+{\bf Conclusion} : 
+le meilleur compromis de seuil est celui qui baisse les cases {\em fausses positives}  et les cases {\em fausses n\'egatives} apr\`es l'algorithme de correction.  Le seuil capable d'atteindre ce r\'esultat est dans l'intervalle $s=]0.6,0.7]$. Dans la suite du chapitre, nous retenons $s=0.7$.
+Avec ce seuil, les distances de Hamming sont aussi les plus faibles (graphique $(e)$ figure \ref{graphiquesFctCoutNormale}). 

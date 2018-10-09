@@ -1,0 +1,20 @@
+\newline 
+
+{\bf Conclusion} :
+le r\'eseau \'electrique est mod\'elis\'e par un graphe $G=(V,A,CAP)$.
+L'ensemble des sommets $V$ est mod\'elis\'e par des \'equipements sources $V_S$, interm\'ediaires $V_I$ et serveurs $V_C$. Les sous-ensembles  $V_S, V_I, V_C$ sont disjoints deux \`a deux.
+Chaque arc $a$ contient des grandeurs physiques $GP^{a}$. Nous en avons denombr\'e $8$ regroup\'ees en 
+grandeurs \`a diff\'erentiel de potentiel $gp_{ddp} = \{U_{12}, U_{23},U_{31},U \}$ et en 
+grandeurs \`a effet calorifique  $gp_{cal} = \{I_{1}, I_{2}, I_{3}, P \}$.
+ Pour chaque grandeur physique $x \in GP^{a}$ associ\'ee \`a l'arc $a$, une capacit\'e $Cap_{a}$ et les mesures $gp_{a}^{x}$ lui sont associ\'ees.
+Le flot de mesures $flo$ est un vecteur de mesures qui d\'epend de l'arc $a$, de la grandeur physique $x$ et de la mesure physique $gp_{a}^{x}$. Une valeur de flot $flo_t$  v\'erifie la loi de conservation $R$ et est d\'efinie comme suit :
+\begin{equation}
+	flo_{t}(a, x, gp_{a}^{x}) = f[a, x, r, cos \phi, gp_{a}^{x}, t] =
+	\begin{cases}
+		 \frac{  gp_{a}^{x}[t] }{r \times cos \phi}, gp \in \{U, U_{12}, U_{23}, U_{13}  \} \\
+		 gp_{a}^{x}[t] , gp \in \{P, Q, I, I_{1}, I_{2}, I_{3}  \}
+	\end{cases}
+\end{equation}. 
+\newline
+Nous avons d\'efini la fonction $Verif-correl$, qui \'etant donn\'ee deux ensembles d'arcs $S_1$ et $S_2$, affirme si ces arcs concourent en un sommet $v \in V$ en attribuant  $S_1$ \`a l'ensemble d'arcs entrants et $S_2$ \`a l'ensemble d'arcs sortants du sommet $v$.
+Nous consid\'erons que la reponse de $Verif-correl$ est toujours exacte.  

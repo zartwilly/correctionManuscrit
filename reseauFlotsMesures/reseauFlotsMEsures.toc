@@ -1,0 +1,25 @@
+\contentsline {chapter}{\numberline {1}R\'eseau de flots et mesures physiques}{5}
+\contentsline {section}{\numberline {1.1}R\'eseau \'electrique d'un datacenter : un graphe de flots}{5}
+\contentsline {subsection}{\numberline {1.1.1}Topologie du r\'eseau \'electrique du datacenter}{5}
+\contentsline {paragraph}{\numberline {1.1.1.0.0.1}Les sources}{5}
+\contentsline {paragraph}{\numberline {1.1.1.0.0.2}Les tableaux}{6}
+\contentsline {paragraph}{\numberline {1.1.1.0.0.3}Les baies (ou racks) de serveurs}{6}
+\contentsline {paragraph}{\numberline {1.1.1.0.0.4}Les c\^ables}{6}
+\contentsline {subsection}{\numberline {1.1.2}R\'eseau \'electrique : un graphe de flots}{7}
+\contentsline {section}{\numberline {1.2}Mod\'elisation du r\'eseau \'electrique du datacenter}{7}
+\contentsline {subsection}{\numberline {1.2.1}Description du graphe de flots}{7}
+\contentsline {subsection}{\numberline {1.2.2}Grandeurs, flots et contraintes physiques}{8}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Grandeurs physiques}{8}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Capacit\'e d'un arc}{8}
+\contentsline {subsubsection}{\numberline {1.2.2.3} Description d'un flot physique}{9}
+\contentsline {subsubsection}{\numberline {1.2.2.4} Contraintes sur les flots}{9}
+\contentsline {subsubsection}{\numberline {1.2.2.5}Description de Verif-correl}{10}
+\contentsline {section}{\numberline {1.3}\'Etat de l'art sur la d\'ecouverte de topologie}{11}
+\contentsline {subsection}{\numberline {1.3.1}D\'ecouverte des topologies par des sondes}{11}
+\contentsline {subsection}{\numberline {1.3.2}Tomographie des r\'eseaux}{12}
+\contentsline {paragraph}{\numberline {1.3.2.0.0.1}l'estimation des param\`etres (caract\'eristiques) d'un lien}{12}
+\contentsline {paragraph}{\numberline {1.3.2.0.0.2}La pr\'ediction de topologie}{13}
+\contentsline {paragraph}{\numberline {1.3.2.0.0.3}La densit\'e du trafic entre \'emetteur/recepteur}{13}
+\contentsline {subsection}{\numberline {1.3.3}Reconstruction de la topologie par les s\'eries temporelles}{13}
+\contentsline {section}{\numberline {1.4}Probl\`eme de d\'ecouverte de topologie \'electrique}{14}
+\contentsline {section}{\numberline {1.5}Conclusion du chapitre}{15}

@@ -1,0 +1,29 @@
+\'Etant donn\'e un graphe $G'$ qui a des ar\^etes en plus ou en moins par rapport \`a un autre graphe $G$ de m\^eme ensemble de sommets.
+\begin{definition}
+%La distance en $G$ et $G'$ est la distance de Hamming not\'ee $DH(G,G')$ entre leurs deux matrices d'adjacente, c'est-\`a-dire le nombre d'\'el\'ements ayant une valeur diff\'erente dans chacune des deux matrices.
+Soient $G$ et $G'$ deux  graphes non orient\'es ayant le m\^eme ensemble de sommets.
+\newline
+La distance de Hamming entre les graphes $G$ et $G'$ not\'ee $DH(G,G')$ est le nombre d'ar\^etes pr\'esentes dans $G$ et pas $G'$ et inversement.
+\end{definition}
+Une distance de Hamming \'egale \`a $k$ $(k \in \mathbb{N})$ signifie qu'il existe $k$ cases diff\'erentes entre les matrices d'adjacence des graphes $G$ et $G'$.
+
+
+\begin{definition}
+Soit $G$ un graphe non orient\'e.
+\newline
+On appelle {\em distance line} de $G$, not\'ee $DL(G)$, la plus petite distance de Hamming entre $G$ et $G'$, un line-graphe ayant le m\^eme ensemble de sommets que $G$.
+\end{definition}
+
+
+Nous consid\'erons le probl\`eme suivant. \newline
+{\bf Probl\`eme} Proxi-Line \newline
+{\bf Donn\'ees} : Un graphe $G=(V,E)$, un entier $k$. \newline
+{\bf Question} : $DL(G) \le k$ ? 
+\newline
+
+
+\begin{conjecture}
+Proxi-Line est NP-complet.
+\end{conjecture}
+
+Ce probl\`eme g\'en\'eralise le probl\`eme {\em NP-complet} d\'efini et montr\'e  dans \cite{yannakakis1978node}, c'est-\`a-dire \'etant donn\'es un graphe $ G $ et un entier $k$, le probl\`eme de savoir s'il existe un line-graphe $ G'$ qui est un sous-graphe couvrant de $ G $ tel que $ dH (G, G' ) \leq k $ (c'est-\`a-dire, le probl\`eme Proxi-Line dans lequel seule la suppression d'ar\^etes  est autoris\'ee); une solution de programmation lin\'eaire en nombres entiers   dans \cite{Halldorsson2013}. R\'ecemment, il a \'et\'e montr\'e au sein du laboratoire DAVID que ce probl\`eme est aussi NP-complet si seul l'ajout d'ar\^etes est autoris\'e.

@@ -1,0 +1,130 @@
+\documentclass[onecolumn, 12pt]{book}
+
+\usepackage[latin1]{inputenc}   
+%\usepackage[francais]{babel}     
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+
+\usepackage{layout}    
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} 
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{color} 
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+%\usepackage[outdir=/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/]{epstopdf}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{amsfonts}
+\usepackage{placeins}
+\usepackage{enumitem} 
+ 
+\title{chapitre5: D\'ecouverte de topologie par les corr\'elations}
+\author{Wilfried Ehounou}
+\date{\oldstylenums{\today}} 
+
+\newtheorem{definition}{D\'efinition}
+\newtheorem{property}{Propri\'et\'e}
+\newtheorem{theorem}{Th\'eor\`eme}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemme}
+\newtheorem{corollary}{Corollaire}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Exemple}
+\newtheorem{remark}{Remarque}
+\newtheorem{Proof}{Preuve}
+
+%---insert paragraph (use 4) and subparagraph (use 5) to table of contents
+%\setcounter{tocdepth}{4} 
+%\setcounter{secnumdepth}{4}
+
+%---- path figures ----
+\graphicspath{
+{/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/}
+}
+ 
+ \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+ %---- add name algorithm 
+ \makeatletter
+\renewcommand{\ALG@name}{Algorithme}
+\makeatother
+
+\begin{document}
+\maketitle
+%\tableofcontents
+\label{linegraphesChapitre}
+%--------------------------------------------------------------------
+%------- formulation du probleme ---------------------
+%--------------------------------------------------------------------
+\input{introduction_chapitre_linegraphes}
+
+\section{Line-graphes : caract\'eristiques et propri\'et\'es}
+	%------- introduction_line_graphes_caracteristiques ---------
+	\input{introduction_linegraphes}
+	
+	%------- caracteristiques_linegraphes ----------------
+	\subsection{Caract\'eristiques d'un line-graphe}
+		\input{caracteristiques_linegraphes}
+
+	%------- proprietes_linegraphes -------------------------
+	\subsection{Line-graphes ambigus}
+		\input{linegraphes_ambigus}
+
+
+\section{Formulation du Probl\`eme {\em Proxi-Line}}
+
+	%------- introduction_matrice_correlation ---------
+	\input{introduction_probleme_proxi_line}
+
+	%------- probleme -----------------------------------------------
+	\subsection{Probl\`eme}
+		\input{probleme_distance_line}
+
+	%------- Conclusion description algorithmes -----------------------------------------------
+%	\subsection{Conclusion de la formulation du probl\`eme}
+%		\input{conclusion_formulation_probleme}
+
+%-----------------------------------------------------------------------------------------------------------
+%------- algorithme de decouverte: couverture et correction ---------------------
+%-----------------------------------------------------------------------------------------------------------
+\section{Algorithmes de d\'ecouverte de topologie}
+
+	\input{introduction_algorithme_decouverte}
+	
+	%------- algo couverture -----------------------------------------------
+	\subsection{Algorithme de couverture}
+		\label{algoCouverture}
+		\input{algorithme_couverture}% ------------> a debuger l'algo et a l'ecrire
+		
+	%------- algo correction -----------------------------------------------
+	\subsection{Algorithme de correction}
+		\input{algorithme_correction}
+
+	%------- Complexite algorithmes -----------------------------------------------
+	\subsection{Complexit\'e des algorithmes}
+		\input{complexite_algorithme}
+
+	%------- Conclusion description algorithmes -----------------------------------------------
+	\subsection{Conclusion de la description des algorithmes}
+		\input{conclusion_algorithmes_couverture_correction}
+
+%--------------------------------------------------------------------
+%------- 		graphe root		---------------------
+%--------------------------------------------------------------------
+\section{D\'etermination de la topologie du r\'eseau \'energ\'etique}
+	\input{algorithme_orientation}
+		
+%--------------------------------------------------------------------
+%------- 	conclusion chapitre		 ---------------------
+%--------------------------------------------------------------------
+\section{Conclusion du chapitre \ref{linegraphesChapitre} }
+	\input{conclusionChapitreLinegraphes} 
+
+\end{document}

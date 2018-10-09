@@ -1,0 +1,92 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction G\351n\351rale}{}% 1
+\BOOKMARK [0][-]{chapter.2}{R\351seaux de flots et mesures physiques}{}% 2
+\BOOKMARK [1][-]{section.2.1}{R\351seau \351lectrique d'un datacenter : un graphe de flots}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Topologie du r\351seau \351lectrique du datacenter}{section.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.1.2}{R\351seau \351lectrique : un graphe de flots}{section.2.1}% 5
+\BOOKMARK [1][-]{section.2.2}{Mod\351lisation du r\351seau \351lectrique du datacenter}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Description du graphe de flots}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{Grandeurs, flots et contraintes physiques}{section.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.2.1}{Grandeurs physiques}{subsection.2.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.2.2}{Capacit\351 d'un arc}{subsection.2.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.2.3}{ Description d'un flot physique}{subsection.2.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.2.4}{ Contraintes sur les flots}{subsection.2.2.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.2.5}{Description de Verif-correl}{subsection.2.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{\311tat de l'art sur la d\351couverte de topologie}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{D\351couverte des topologies par des sondes}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Tomographie des r\351seaux}{section.2.3}% 16
+\BOOKMARK [3][-]{subsubsection.2.3.2.1}{L'estimation des param\350tres \(caract\351ristiques\) d'un lien}{subsection.2.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.3.2.2}{La pr\351diction de topologie}{subsection.2.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.3.2.3}{La densit\351 du trafic entre \351metteur/recepteur}{subsection.2.3.2}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{Reconstruction de la topologie par les s\351ries temporelles}{section.2.3}% 20
+\BOOKMARK [1][-]{section.2.4}{Probl\350me de d\351couverte de topologie \351lectrique}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.5}{Conclusion du chapitre 2}{chapter.2}% 22
+\BOOKMARK [0][-]{chapter.3}{Mesures : Des S\351ries Temporelles}{}% 23
+\BOOKMARK [1][-]{section.3.1}{S\351ries temporelles}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.1.1}{La mod\351lisation et la pr\351vison d'une s\351rie temporelle}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.2}{La d\351tection de rupture}{section.3.1}% 26
+\BOOKMARK [2][-]{subsection.3.1.3}{La comparaison de s\351ries temporelles}{section.3.1}% 27
+\BOOKMARK [1][-]{section.3.2}{\311tat de l'art des m\351thodes de similarit\351}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.2.1}{ Similarit\351 sur les s\351ries enti\350res}{section.3.2}% 29
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Dynamic Time Warping DTW}{subsection.3.2.1}% 30
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{Time Warp Edit TWE}{subsection.3.2.1}% 31
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{Move-Split-Merge MSM}{subsection.3.2.1}% 32
+\BOOKMARK [3][-]{subsubsection.3.2.1.4}{Distance de Pearson}{subsection.3.2.1}% 33
+\BOOKMARK [3][-]{subsubsection.3.2.1.5}{Longest Common Subsequence}{subsection.3.2.1}% 34
+\BOOKMARK [2][-]{subsection.3.2.2}{Similarit\351 sur les s\351quences}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.3}{Similarit\351 par aggr\351gation des caract\351ristiques descriptives}{section.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.2.4}{Conclusion sur les m\351thodes de similarit\351}{section.3.2}% 37
+\BOOKMARK [1][-]{section.3.3}{M\351thode de similarit\351 entre des mesures \351lectriques : \040distance de Pearson}{chapter.3}% 38
+\BOOKMARK [2][-]{subsection.3.3.1}{Choix de la distance}{section.3.3}% 39
+\BOOKMARK [2][-]{subsection.3.3.2}{R\351sultats sur des donn\351es r\351elles}{section.3.3}% 40
+\BOOKMARK [1][-]{section.3.4}{Conclusion du chapitre 3}{chapter.3}% 41
+\BOOKMARK [0][-]{chapter.4}{Line-graphes}{}% 42
+\BOOKMARK [1][-]{section.4.1}{Line-graphes : caract\351ristiques et propri\351t\351s}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.1.1}{Caract\351ristiques d'un line-graphe}{section.4.1}% 44
+\BOOKMARK [2][-]{subsection.4.1.2}{Line-graphes ambigus}{section.4.1}% 45
+\BOOKMARK [1][-]{section.4.2}{Formulation du Probl\350me Proxi-Line}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.2.1}{Probl\350me}{section.4.2}% 47
+\BOOKMARK [1][-]{section.4.3}{Algorithmes de d\351couverte de topologie}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.3.1}{Recherche de Couverture en cliques}{section.4.3}% 49
+\BOOKMARK [2][-]{subsection.4.3.2}{Algorithme de couverture}{section.4.3}% 50
+\BOOKMARK [3][-]{subsubsection.4.3.2.1}{Description de l'algorithme de couverture}{subsection.4.3.2}% 51
+\BOOKMARK [3][-]{subsubsection.4.3.2.2}{Complexit\351 de l'algorithme de couverture}{subsection.4.3.2}% 52
+\BOOKMARK [2][-]{subsection.4.3.3}{Algorithme de correction}{section.4.3}% 53
+\BOOKMARK [2][-]{subsection.4.3.4}{Complexit\351 des algorithmes}{section.4.3}% 54
+\BOOKMARK [2][-]{subsection.4.3.5}{Conclusion de la description des algorithmes}{section.4.3}% 55
+\BOOKMARK [1][-]{section.4.4}{D\351termination de la topologie du r\351seau \351nerg\351tique}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.4.1}{Orientation du graphe G'}{section.4.4}% 57
+\BOOKMARK [1][-]{section.4.5}{Conclusion du chapitre 4 }{chapter.4}% 58
+\BOOKMARK [0][-]{chapter.5}{\311valuation des performances des algorithmes}{}% 59
+\BOOKMARK [1][-]{section.5.1}{G\351n\351ration de graphes \351lectriques}{chapter.5}% 60
+\BOOKMARK [1][-]{section.5.2}{Exp\351rimentation 1 : modification de k cases de la matrice du line-graphe}{chapter.5}% 61
+\BOOKMARK [2][-]{subsection.5.2.1}{S\351lection de k cases et g\351n\351ration de la matrice Mk,p }{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.2}{Protocole d'exp\351rimentation sur les graphes Gk,p}{section.5.2}% 63
+\BOOKMARK [2][-]{subsection.5.2.3}{Analyses des r\351sultats }{section.5.2}% 64
+\BOOKMARK [3][-]{subsubsection.5.2.3.1}{Interpr\351tation du mode de correction al\351atoire sans remise}{subsection.5.2.3}% 65
+\BOOKMARK [3][-]{subsubsection.5.2.3.2}{Comparaison des modes de correction}{subsection.5.2.3}% 66
+\BOOKMARK [3][-]{subsubsection.5.2.3.3}{Influence des cases modifi\351es et de la fonction de co\373t}{subsection.5.2.3}% 67
+\BOOKMARK [3][-]{subsubsection.5.2.3.4}{Relation entre la distance de Hamming et la distance de correction}{subsection.5.2.3}% 68
+\BOOKMARK [2][-]{subsection.5.2.4}{Conclusion de l'exp\351rimention 1}{section.5.2}% 69
+\BOOKMARK [1][-]{section.5.3}{Exp\351rimentation 2 : Ajout de probabilit\351 dans la matrice du line-graphe}{chapter.5}% 70
+\BOOKMARK [2][-]{subsection.5.3.1}{Affectation de probabilit\351s aux cases de la matrice MLG}{section.5.3}% 71
+\BOOKMARK [2][-]{subsection.5.3.2}{G\351n\351ration du graphe de corr\351lation }{section.5.3}% 72
+\BOOKMARK [2][-]{subsection.5.3.3}{Protocole d'exp\351rimentation des graphes Gs de corr\351lation}{section.5.3}% 73
+\BOOKMARK [2][-]{subsection.5.3.4}{Analyses des r\351sultats}{section.5.3}% 74
+\BOOKMARK [3][-]{subsubsection.5.3.4.1}{\311volution du pourcentage de cases corrig\351es}{subsection.5.3.4}% 75
+\BOOKMARK [3][-]{subsubsection.5.3.4.2}{Influence de la valeur du seuil }{subsection.5.3.4}% 76
+\BOOKMARK [3][-]{subsubsection.5.3.4.3}{Choix de la fonction de co\373t et impact sur les distances de Hamming }{subsection.5.3.4}% 77
+\BOOKMARK [2][-]{subsection.5.3.5}{Conclusion de l'exp\351rimentation 2}{section.5.3}% 78
+\BOOKMARK [1][-]{section.5.4}{Exp\351rimentation 3 : algorithmes sur les grilles boucl\351es}{chapter.5}% 79
+\BOOKMARK [2][-]{subsection.5.4.1}{D\351finition des grilles boucl\351es et les distances line th\351oriques}{section.5.4}% 80
+\BOOKMARK [3][-]{subsubsection.5.4.1.1}{D\351finition de la grille boucl\351e Gk,k' }{subsection.5.4.1}% 81
+\BOOKMARK [3][-]{subsubsection.5.4.1.2}{Correction des grilles boucl\351es}{subsection.5.4.1}% 82
+\BOOKMARK [4][-]{subsubsubsection.5.4.1.2.1}{Modification par ajout d'ar\352tes uniquement}{subsubsection.5.4.1.2}% 83
+\BOOKMARK [4][-]{subsubsubsection.5.4.1.2.2}{Modification par suppression d'ar\352tes uniquement}{subsubsection.5.4.1.2}% 84
+\BOOKMARK [2][-]{subsection.5.4.2}{Protocole d'exp\351rimentation sur les grilles boucl\351es}{section.5.4}% 85
+\BOOKMARK [2][-]{subsection.5.4.3}{Analyse des r\351sultats}{section.5.4}% 86
+\BOOKMARK [2][-]{subsection.5.4.4}{Conclusion de l'exp\351rimentation 3}{section.5.4}% 87
+\BOOKMARK [1][-]{section.5.5}{Conclusion du chapitre 5}{chapter.5}% 88
+\BOOKMARK [0][-]{chapter.6}{Conclusion g\351n\351rale}{}% 89
+\BOOKMARK [1][-]{section.6.1}{Conclusion}{chapter.6}% 90
+\BOOKMARK [1][-]{section.6.2}{Perspectives}{chapter.6}% 91
+\BOOKMARK [0][-]{appendix.A}{Annexes}{}% 92

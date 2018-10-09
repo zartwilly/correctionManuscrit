@@ -1,0 +1,22 @@
+Soient $G$ un graphe non orient\'e d'un DAG,
+ $G_c$ un graphe de corr\'elation de $G$ et 
+ $M$ la matrice d'adjacence de $G_c$.
+ \newline
+ Notre probl\`eme est de d\'eterminer $G$ \`a partir de $G_c$. Pour ce faire, nous d\'ecidons de nous servir de la {\em couverture de corr\'elation}.
+On a trois cas :
+\begin{itemize}
+	\item Soit $G_c$ est isomorphe \`a $L(G)$. Nous trouverons la couverture de corr\'elation unique qui donne $G$.% est unique car nous parvenons \`a r\'esoudre les situations d'ambigu\"{i}t\'es avec la fonction $Verif-correl$ \ref{VerifCorrel}.
+	\item Soit $G_c$ est un line-graphe non isomorphe \`a $L(G)$. 
+		Modifier la matrice d'un line-graphe peut en effet le transformer en un autre line-graphe. Ce cas arrive rarement notamment lorsqu'il y'a peu d'ar\^etes \'erron\'ees dans $G_c$. 
+	\item Soit $G_c$ n'est pas un line-graphe. Dans ce cas, l'id\'ee est de corriger $G_c$ en ajoutant ou supprimant le minimum d'ar\^etes.
+\end{itemize}
+Nous resolvons le $3^{ieme}$ cas en introduisant le probl\`eme suivant :
+
+%\begin{itemize}	
+%	\item Soit $G_c$ a une couverture de corr\'elation. Nous consid\'erons que cette couverture est identique \`a celle du line-graphe $L(G)$ de $G$ meme si les erreurs dans $M$ peuvent conduire au line-graphe d'un autre graphe.
+%	\item Soit $G_c$ a une couverture de corr\'elation qui est diff\'erente de celle de $L(G)$ et que les erreurs de corr\'elation arrive rarement.
+%	Dans ce cas, nous avons une  ambigu\"{i}t\'e et nous resolvons cette ambigu\"{i}t\'e avec la fonction $Verif-correl$ \ref{VerifCorrel}.
+%	\item Soit $G_c$ n'a pas de  couverture de corr\'elation. Dans ce cas, l'id\'ee est de corriger $G_c$ en ajoutant ou supprimant le minimum d'ar\^etes.
+%\end{itemize}
+%Nous resolvons le $3^{ieme}$ cas en introduisant le probl\`eme suivant :
+

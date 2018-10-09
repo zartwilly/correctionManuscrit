@@ -1,0 +1,83 @@
+\thispagestyle{empty}
+
+%\color{bordeau} \hfill \vfill \tiny \ecodocnum
+\begin{textblock}{5}(0,0)
+	\textblockcolour{bordeau}
+	%\vspace{10mm}
+	\includegraphics [scale=0.9]{media/bande.png}
+	\vspace{300mm}
+\end{textblock}
+
+
+
+\begin{textblock}{1}(0.3,3)
+	\Large{\rotatebox{90}{\color{white}{NNT : \NNT}}}
+\end{textblock}
+
+
+                            
+
+\begin{textblock}{1}(\hpostt,\vpostt)
+	\textblockcolour{white}
+	\includegraphics[scale=1]{media/etab/\logoEtt.png}
+\end{textblock}
+
+\begin{textblock}{1}(\hpos,\vpos)
+	\textblockcolour{white}
+		\includegraphics[scale=1]{media/etab/\logoEt.png}	
+\end{textblock}
+
+%\vspace{6cm}
+%% Texte
+\begin{textblock}{10.3}(5.4,3)
+	\textblockcolour{white}
+	
+	\color{bordeau}
+	%\begin{center}  
+	\begin{flushright}
+		\huge{\PhDTitle} \bigskip %% Titre de la thèse 
+		\vfill
+		\color{black} %% Couleur noire du reste du texte
+		\normalsize {Th\`ese de doctorat de l'Universit\'e Paris-Saclay} \\
+		pr\'epar\'ee \`a \PhDworkingplace \\ \bigskip
+		\vfill
+		Ecole doctorale n$^{\circ}$\ecodocnum ~\ecodoctitle ~(\ecodocacro)  \\
+		
+		\small{Sp\'ecialit\'e de doctorat: \PhDspeciality} \bigskip %% Spécialité 
+		\vfill  
+		\footnotesize{Th\`ese pr\'esent\'ee et soutenue \`a \defenseplace, le \defensedate, par} \bigskip
+		\vfill
+		\Large{\textbf{\textsc{\PhDname}}} %% Nom du docteur
+		\vfill
+		%\bigskip
+	\end{flushright}
+	
+	%\end{center}
+	\color{black}
+	%% Jury
+	\begin{flushleft}
+		
+		\small Composition du Jury :
+	\end{flushleft}
+	%% Members of the jury
+
+	\small
+	%\begin{center}
+	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}lm{#1}}
+	
+	\label{jury} 																				%% Mettre à jour si des membres ont été ajoutés ou retirés / Update if members have been added or removed
+	\begin{flushleft}
+	\begin{tabular}{@{} L{10cm} R{4cm}}
+		\jurynameA  \\ \juryadressA & \juryroleA \\
+		\jurynameB  \\ \juryadressB & \juryroleB \\
+		\jurynameC  \\ \juryadressC & \juryroleC \\
+		\jurynameD  \\ \juryadressD & \juryroleD \\
+		\jurynameE  \\ \juryadressE & \juryroleE \\
+		\jurynameF  \\ \juryadressF & \juryroleF \\
+		\jurynameG  \\ \juryadressG & \juryroleG \\
+		\jurynameH  \\ \juryadressH & \juryroleH \\
+	\end{tabular} 
+	\end{flushleft}   
+	%\end{center}
+\end{textblock}

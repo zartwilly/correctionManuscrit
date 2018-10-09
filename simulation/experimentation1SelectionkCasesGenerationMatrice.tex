@@ -1,0 +1,17 @@
+Nous modifions $k$ cases de la matrice d'adjacence $M_{LG}$. Ces cases sont choisies de mani\`ere al\'eatoire. Afin de contr\^oler la proportion des cases \`a modifier dont la valeur initiale est $0$ ou $1$,  nous introduisons la probabilit\'e $p$.
+\newline
+Soit donc $p  \in [0,1]$ la variable qui d\'esigne la proportion de cases \`a $0$ s\'electionn\'ees. La proportion de cases \`a $1$ est donc $1-p$.
+Par exemple, $p = 0.5$ signifie que $50\%$ des cases s\'electionn\'ees sont des cases \`a $0$ et $50\%$ des autres cases s\'electionn\'ees sont des cases \`a $1$. 
+De m\^eme, les $k$ cases sont des cases \`a $1$ si $p = 0$ et elles sont des cases \`a $0$ si $p = 1$. 
+ Avec la repartition $p$, nous calculons les nombres $n_0$ de cases \`a $0$ et $n_1$ de cases \`a $1$. Ces cases sont \`a modifier dans $M_{LG}$. 
+Ensuite nous s\'electionnons uniformement $n_0$ cases \`a $0$ et $n_1$ cases \`a $1$ dans la matrice $M_{LG}$.
+Les cases \`a $0$ sont chang\'ees en $1$ et les cases \`a $1$ sont chang\'ees en $0$.
+La nouvelle matrice d'adjacence $M_{k,p}$ contient quatre types de cases :
+\begin{itemize}
+	\item Si $M_{k,p} [i,j] = M_{LG} [i,j] = 0$ alors $M_{k,p} [i,j]$ est dit {\em vrai n\'egatif}. 
+	\item Si $M_{k,p} [i,j] = M_{LG} [i,j] = 1$ alors $M_{k,p} [i,j]$ est dit {\em vrai positif}. 
+	\item Si $M_{k,p} [i,j] = 0$ et $M_{LG} [i,j] = 1$ alors $M_{k,p} [i,j]$ est dit {\em faux n\'egatif}.
+	\item Si $M_{k,p} [i,j] = 1$ et $M_{LG} [i,j] = 0$ alors $M_{k,p} [i,j]$ est dit {\em faux positif}.
+\end{itemize}
+La matrice $M_{k,p}$ est la matrice d'adjacence du graphe $G_{k,p}$ et ce graphe a le m\^eme ensemble de sommets que $LG$ mais leur ensemble d'ar\^etes diff\`ere de $k$ ar\^etes.
+G\'en\'eralement, $G_{k,p}$ n'est pas un line-graphe. Toutefois, s'il est un line-graphe alors il est  impossible que $G_{k,p}$ soit le line-graphe de $G$. 

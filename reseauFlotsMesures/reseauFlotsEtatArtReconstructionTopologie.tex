@@ -1,0 +1,112 @@
+Notre probl\`eme de d\'ecouverte de topologie est d'identifier la topologie du r\'eseau \`a partir des mesures c'est-\`a-dire les extr\'emit\'es communes aux arcs dans le r\'eseau.
+\newline
+Il existe un grand int\'er\^et \`a la d\'ecouverte de topologie notamment dans les syst\`emes distribu\'es avec le d\'eploiement de nouvelles g\'en\'erations de capteurs qui permettent de collecter des mesures selon diff\'erentes granularit\'es (millisecondes, secondes, minutes, quart d'heure, etc).
+La communaut\'e scientifique examine tr\`es peu comment interpr\'eter ces mesures et l'impact de celles-ci dans le r\'eseau.
+En effet, beaucoup de travaux sont orient\'es sur la d\'ecouverte de la topologie au moyen de protocoles r\'eseau. Des sondes sont propag\'ees dans le r\'eseau omettant la pr\'esence de capteurs dans les r\'eseaux. D'autres travaux cherchent \`a pr\'edire la topologie du r\'eseau informatique \`a partir des lois statistiques et des mod\`eles de files d'attentes.
+\newline
+Nous regroupons ces travaux en troix axes.
+Les deux premiers axes font principalement de la m\'etrologie et cela leur permet de d\'eduire la topologie en connaissant les caract\'eristiques de chaque lien et de chaque noeud du syst\`eme.
+Le dernier axe porte sur la reconstruction de la topologie par les s\'eries temporelles.
+
+\subsection{D\'ecouverte des topologies par des sondes}
+La d\'ecouverte de topologie est un sujet important dans les r\'eseaux informatiques.
+En effet, dans ces r\'eseaux,  on connait la topologie physique et les noeuds mais on ignore l'\'etat des noeuds. On recherche alors la topologie fonctionnelle du r\'eseau (l'interconnexion entre les noeuds) selon l'\'etat des noeuds. 
+Il existe de nombreux outils pour sonder et faciliter les t\^aches d'administration de ces r\'eseaux. 
+Ces outils permettent aux administrateurs r\'eseau de manager efficacement et de d\'ecouvrir le r\'eseau.
+Nous citons HPOenView \cite{OpenView} capable de localiser une erreur et d'envoyer des notifications de plusieurs \'ev\`enements. Ces \'ev\`enements incluent principalement des pertes dans le r\'eseau et les informations sur les caract\'eristiques des liens.
+L'inconv\'enient de ces outils est leur co\^ut et ils ne sont pas abordables pour les petites et moyennes organisations.
+La d\'ecouverte de r\'eseaux informatiques s'effectue  aussi avec des protocoles r\'eseaux dont les plus connus sont ICMP \cite{rfc792} et SNMP \cite{rfc2821}.
+Divers algorithmes ont \'et\'e propos\'es. 
+Nous pouvons citer l'algorithme de {\em Narayan et al.} \cite{Breitbart:2004:TDH:1008463.1008464} qui r\'ealise la d\'ecouverte de topologie et de services pour des r\'eseaux h\'et\'erog\`enes en se servant du syst\`eme netInventory \cite{netInventory}. 
+Cet algorithme est bas\'e sur deux hypoth\`eses : 
+$(i)$ chaque domaine doit avoir un seul sous-r\'eseau et 
+$(2i)$ les tables de routage sont compl\`etes. 
+Pour la d\'ecouverte de topologie, le syst\`eme {\em netInventory} \'enum\`ere la liste des adresse IP, envoie des messages ECHO or ICMP pour d\'eterminer si un noeud est actif. Dans le cas o\`u PING est d\'esactiv\'e, netInventory se sert de ipRouteTable et ipNetToMediaTable dans les routeurs pour connaitre l'\'etat d'un noeud.
+\newline
+De m\^eme, l'algorithme propos\'e par {\em Kuangyu Qin} \cite{QinKuangyuChunquan2010} est bas\'e sur {\em SNMP} et suppose que l'administrateur r\'eseau est connect\'e \`a l'interface de routage et envoie des paquets de d\'ecouverte aux routeurs. La station de gestion d\'ebute la d\'ecouverte par la lecture des tables de routage. En utilisant les MIB (Management Information Base) et les agents SNMP, cet algorithme \'elimine les \'equipements redondants et g\'en\`ere une topologie efficiente m\^eme quand il existe des VLAN dans le r\'eseau.
+\newline
+Un autre algorithme, propos\'e par {\em Bilal Saeed, TarekSheltami et Elhadi Shakshuki} \cite{SAEED2015104}, est bas\'e sur netInventory et acc\'el\`ere la d\'ecouverte de la topologie sans g\'en\'erer du trafic suppl\'ementaire. Cet algorithme, nomme TDA (Topology Discovery Algorithm), se sert du multi-threading pour g\'erer toutes les requ\^etes de d\'ecouverte r\'eseau sur la plateforme Android.
+Une \'etude bibliographique, effectu\'ee par {\em Ahmed et al.} \cite{AhmedRafatAbouchabaka2014}, fournit les diff\'erentes techniques et algorithmes pour la d\'ecouverte de topologie de r\'eseaux informatiques. Les auteurs d\'eclarent que la plupart des algorithmes de d\'ecouvertes physiques de r\'eseau sont bas\'es sur le protocole SNMP. En d'autres termes, ils supposent que tous les noeuds de ce r\'eseau sont repertori\'es et activ\'es au moment de la d\'ecouverte. 
+\newline
+
+{\bf Conclusion} :
+cette m\'ethode est contraire \`a notre sujet de recherche dans lequel nous ignorions les noeuds de notre r\'eseau.
+
+\subsection{Tomographie des r\'eseaux}
+La tomographie de r\'eseaux est une m\'ethode qui \'etudie les caract\'eristiques internes d'un r\'eseau (c'est-\`a-dire les liens et noeuds ON/OFF, la bande passante, la congestion du r\'eseau) en utilisant les mesures point-\`a-point (entre noeuds) obtenues \`a partir des sondes plac\'ees dans ce r\'eseau et en supposant que le r\'eseau est mod\'elisable (on peut d\'efinir un mod\`ele avec l'estimateur du maximum de vraisemblance ou l'inf\'erence bay\'esienne). Il fait aussi la pr\'ediction de la topologie du r\'eseau.
+\newline
+Cette m\'ethode est utilis\'ee en l'absence de syst\`eme de supervision fiable pour identifier les caract\'eristiques des liens et faire un diagnostic de ce dernier (quel noeud/lien est indisponible, congestionn\'e ou ajout\'e) car il est impossible de contr\^oler les flux et l'\'etat des \'equipements.
+Les probl\`emes, r\'esolus par la tomographie des r\'eseaux,  sont regroup\'es en $3$ cat\'egories :
+
+\subsubsection{L'estimation des param\`etres (caract\'eristiques) d'un lien}
+
+L'article de {\em Ghita et al.} \cite{ghitaArgyrakiThiran2010} se propose de d\'ecouvrir la congestion des liens dits "corr\'el\'es" dans un r\'eseau informatique.
+Un lien entre deux noeuds du r\'eseau est une connexion logique au niveau de la couche $3$ du protocole TCP/IP et deux liens sont corr\'el\'es s'ils appartiennent au m\^eme domaine ou sous-r\'eseau.
+Pour r\'ealiser cet algorithme, il consid\`ere que la topologie du r\'eseau et le degr\'e de corr\'elation entre les liens sont connus et qu'il existe un trafic unicast entre les noeuds dans le r\'eseau (ce trafic est d\'esign\'e par chemin).
+Il \'enonce quatre hypoth\`eses pour l'exp\'erimentation de l'algorithme : 
+$(i)$ l'ensemble des chemins reste inchang\'e durant chaque simulation; 
+$(2i)$ chaque chemin est congestionn\'e si au moins un lien du chemin est congestionn\'e; 
+$(3i)$ le comportement de congestion de chaque lien pendant chaque simulation est mod\'elis\'e par un processus al\'eatoire stationnaire; 
+$(4i)$ deux ensembles de corr\'elations disjoints ne doivent pas \^etre travers\'es par les m\^emes chemins.
+\newline
+Diff\'erentes m\'ethodes ont \'et\'e propos\'ees et valid\'ees mais elles diff\`erent de l'algorithme {\em Ghita et al.} \cite{ghitaArgyrakiThiran2010} par les caract\'eristiques des liens fournis.
+En effet, les m\'ethodes initiales se basent sur les corr\'elations temporelles, chacune parfaitement corr\'el\'ee et envoy\'ee par des packets multicast \cite{adamsBuFreidmanHorowitz2000, aryaDuffieldVeitch2008, buDuffieldPrestiTowsley2002, caceresDuffieldHorowistzTowsley1999}. 
+Tous les taux de pertes des liens sont statistiquement identifiables dans une topologie en arbre \cite{chenCaoBu2007}.
+Cependant le multicast n'est pas largement d\'eploy\'e et les groupes de paquets unicast exigent un d\'eveloppement subtantiel et un co\^ut d'administration \'elev\'e. D'o\`u il est moins ais\'e de s\'electionner les corr\'elations temporelles.
+\newline
+L'ensemble des m\'ethodes qui suivent \cite{nGDuffield2006, padmanabhanQiuWang2003,sommerBarfordDuffieldRon2007, zhaoChenBindel2006} utilisent seulement des mesures unicast point-\`a-point (c'est-\`a-dire des mesures sur les liens) dans le simple but d'identifier les congestions de liens.
+\newline
+Les m\'ethodes bool\'eennes de tomographie de r\'eseaux consid\`erent des hypoth\`eses suppl\'ementaires \cite{padmanabhanQiuWang2003,nGDuffield2006} pour identifier les liens congestionn\'es en trouvant le plus petit ensemble de liens qui peut \^etre expliqu\'e par ces mesures.
+Ces hypoth\`eses sont : 
+$(i)$ les liens sont ind\'ependants;
+$(2i)$ les liens sont congestionn\'es \'equiprobablement; 
+$(3i)$ le nombre de liens congestionn\'es est faible.
+Toutes les pr\'ec\'edentes m\'ethodes \cite{ghitaArgyrakiThiran2010, nGDuffield2006, padmanabhanQiuWang2003,sommerBarfordDuffieldRon2007, zhaoChenBindel2006} se basent sur l'ind\'ependance des liens c'est-\`a-dire l'hypoth\`ese $(i)$.
+
+\vspace{-0.4cm}  
+\subsubsection{La pr\'ediction de topologie} 
+
+L'objectif de cette m\'ethode est d'identifier l'arbre de la topologie connectant un serveur aux autres machines du r\'eseau.
+L'id\'ee est d'utiliser une fonction croissante (ou monotone) du nombre de liens partag\'es entre deux noeuds ou le maximum de vraisemblance pour trouver l'arbre.
+\newline
+L'article de {\em Coates and al.} \cite{coatesCastroNowak2002} suppose que les mesures de la couche $2$ (protocole TCP/IP) des machines clientes sont assez fiables pour d\'ecouvrir le r\'eseau. Les mesures sont collect\'ees \`a l'aide de l'outil Traceroute. Ensuite l'auteur d\'efinit un mod\`ele bas\'e sur les chaines de Markov de Monte Carlo pour d\'eterminer les caract\'eristiques des liens du r\'eseau et d\'eduire les topologies probables. Enfin il propose un crit\`ere global du seuil maximum pour l'identification de topologie contrairement aux autres travaux \cite{andrieuDoucetFitzgerald2000bayesian, bestavrosAzerByers2005inference} qui emploient des strat\'egies semi-optimales de fusion des liens.
+ 
+\subsubsection{La densit\'e du trafic entre \'emetteur/recepteur}
+
+ Un probl\`eme de tomographie de r\'eseaux qui retient notre attention est l'estimation de la matrice de trafic qui pr\'evoit le volume de flots entre les noeuds point-\`a-point \`a partir des mesures \cite{vardi1996, caoDavisWielYu2000}.
+En effet, les variables inconnues sont les volumes de flots et nous suivons une certaine loi de probabilit\'e.
+\newline
+Les corr\'elations de flots ont \'et\'e \'etudi\'ees par {\em Singal et Michailidis} \cite{singalMichailidis2007} et ils montrent que, sous certaines classes de d\'ependances, les moments d'ordre $n$ de ces volumes de flots sont identifiables \`a partir des mesures de liens pour $n \ge 2$.
+Cette approche diff\`ere de $2$ aspects par rapport l'estimation des caract\'eristiques de liens.
+Premi\`erement, l'estimation des caract\'eristiques s'int\'eresse aux mesures point-\`a-point c'est-\`a-dire sur les liens tandis que le calcul du trafic point-\`a-point doit \^etre estim\'e dans la densit\'e de trafic \cite{vardi1996, singalMichailidis2007, caoDavisWielYu2000}.
+Deuxi\`emement, l'estimation des caract\'eristiques utilise les variables bool\'eennes et la connaissance des valeurs des variables des lois de distributions n'est pas n\'ecessaire comme cela se fait dans la densit\'e de trafic. La connaissance des valeurs des param\`etres engendre la restriction de l'extension des r\'esultats th\'eoriques \cite{singalMichailidis2007}.
+\newline
+
+{\bf Conclusion} :
+la tomographie de r\'eseaux n'est pas appropri\'ee pour notre sujet de recherche car nos mesures d'arcs d\'eterminent les caract\'eristiques de ces arcs et les noeuds sont inconnus emp\^echant la d\'ecouverte de r\'eseau qui est l'\'etape n\'ecessaire pour d\'ebuter la tomographie de r\'eseaux.
+
+
+\subsection{Reconstruction de la topologie par les s\'eries temporelles}
+Le brevet de {\em Chaudhary et al.} \cite{chaudhary2016network} d\'ecrit comment trouver le graphe induit par un r\'eseau de canalisations de fluides en se servant des mesures de capteurs de diff\'erentes stations qui \'emettent des fluides. Il consid\`ere le r\'eseau comme un arbre dans lequel la racine est une station comprenant un compresseur. La pr\'esence du compresseur induit un d\'elai de livraison entre la station source et les stations de livraison (d\'elai d'acheminement du fluide entre les noeuds du r\'eseau). 
+Le d\'elai est d\^u au temps mis par le fluide pour atteindre la station de livraison. 
+\newline
+Le traitement des mesures \cite{cincotta1995astronomical, hurley2011methods, mohanty2000robust} porte sur la recherche de pics, la suppression d'anomalies (observations non conformes \`a un motif dans le dataset de donn\'ees) et le lissage des donn\'ees. 
+Les donn\'ees obtenues identifient la relation d'adjacences entre les noeuds.
+Le traitement des retards temporels d\'eterminent la distance entre des noeuds du r\'eseau.
+L'analyse des s\'eries temporelles par paires d\'etermine la causalit\'e entre les capteurs associ\'es. 
+La causalit\'e est la recherche d'\'ev\`enements identiques observ\'es dans deux s\'eries de mesures.
+En d'autres termes, la causalit\'e consiste \`a savoir si les \'ev\`enements, observ\'es dans une s\'erie de mesures, se reproduisent dans une autre s\'erie. 
+Un mod\`ele de causalit\'e bas\'e sur les s\'eries temporelles des stations est d\'efini comme une r\'egression multiple avec un mod\`ele de Granger.
+\`A partir de ce mod\`ele, on calcule les diff\'erentes retards $X(t)$ et leurs coefficients.
+On d\'efinit \'egalement un mod\`ele de p\'enalisation bas\'e sur une r\'egression LASSO afin de filtrer les relations de causalit\'e et obtenir un graphe creux (sparse). 
+Le graphe de causalit\'e est alors un arbre.
+\newline
+Les auteurs {\em Chaudhary et al.}  proposent un script s'ex\'ecutant r\'ecursivement sur les noeuds du r\'eseau en choisissant, \`a chaque \'etape, les noeuds qui ne sont pas des puits. En se servant du graphe de causalit\'e (corr\'elation) et des retards de propagation, il d\'etermine les voisins du noeud $X_i$ et supprime les noeuds voisins de $X_i$  ayant une causalit\'e entre eux car le r\'eseau est un arbre.
+\newline
+La m\'ethode d\'ecrite ici est la construction du graphe it\'erativement \`a partir des sous-arbres du graphe. 
+En effet, le nombre de sous-arbres est l'ordre dans lequel on a supprim\'e les noeuds puits. 
+Cette m\'ethode est r\'ealisable en $O(n^2)$ car chaque sommet est trait\'e une fois et la recherche de son voisinage est en $O(n)$ avec $n$ le nombre de sommets.
+\newline 
+Cette m\'ethode est inadapt\'ee pour un DAG car sa complexit\'e est en $O(n^n)$.
+Elle ne s'ex\'ecute que sur des arbres.
+\newline

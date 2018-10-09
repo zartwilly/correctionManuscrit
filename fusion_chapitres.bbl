@@ -1,0 +1,399 @@
+\begin{thebibliography}{10}
+
+\bibitem{petitjean2011descriptionDTWexemple}
+Fran{\c{c}}ois Petitjean.
+\newblock Description des alignements form{\'e}s par dtw.
+\newblock 2011.
+
+\bibitem{loiDeConservation}
+James B.~Orlin Ravindra K.~Ahuja, Thomas L.~MAgnanti.
+\newblock Networks flows.
+\newblock {\em A Simon \& Schuster Company, Englewood Cliffs, NJ}, pages
+  166--196, 1993.
+
+\bibitem{OpenView}
+what is hp openview.
+\newblock 2012.
+
+\bibitem{rfc792}
+J.~Postel.
+\newblock {\em Internet Control Message Protocol}.
+\newblock IETF, sep 1981.
+\newblock RFC 792.
+
+\bibitem{rfc2821}
+J.~Klensin.
+\newblock {\em Simple Mail Transfer Protocol}.
+\newblock IETF, apr 2001.
+\newblock RFC 2821.
+
+\bibitem{Breitbart:2004:TDH:1008463.1008464}
+Yuri Breitbart, Minos Garofalakis, Ben Jai, Cliff Martin, Rajeev Rastogi, and
+  Avi Silberschatz.
+\newblock Topology discovery in heterogeneous ip networks: The netinventory
+  system.
+\newblock {\em IEEE/ACM Trans. Netw.}, 12(3):401--414, jun 2004.
+
+\bibitem{netInventory}
+netinventory documentation.
+
+\bibitem{QinKuangyuChunquan2010}
+Kuangyu Qin and Chunquan li.
+\newblock Network topologic discovery based on snmp.
+\newblock pages 1--3, 12 2010.
+
+\bibitem{SAEED2015104}
+Bilal Saeed, Tarek Sheltami, and Elhadi Shakshuki.
+\newblock A network topology discovery tool for android smart phones.
+\newblock {\em Procedia Computer Science}, 63:104 -- 111, 2015.
+\newblock The 6th International Conference on Emerging Ubiquitous Systems and
+  Pervasive Networks (EUSPN 2015)/ The 5th International Conference on Current
+  and Future Trends of Information and Communication Technologies in Healthcare
+  (ICTH-2015)/ Affiliated Workshops.
+
+\bibitem{AhmedRafatAbouchabaka2014}
+Rafat Ahmed~Alhanani and Jaafar Abouchabaka.
+\newblock An overview of different techniques and algorithms for network
+  topology discovery.
+\newblock pages 530--535, 11 2014.
+
+\bibitem{ghitaArgyrakiThiran2010}
+Denisa Ghita, Katerina Argyraki, and Patrick Thiran.
+\newblock Network tomography on correlated links.
+\newblock {\em Proceedings of the ACM Internet Measurement Conference (IMC)},
+  2010.
+
+\bibitem{adamsBuFreidmanHorowitz2000}
+Andrew Adams, Tian Bu, Ramn Caceres, Nick Duffield, Joseph Horowitz, Francesco
+  Lo~Presti, Sue B.~Moon, Vern Paxson, and Don Towsley.
+\newblock The use of end-to-end multicast measurements for characterizing
+  internal network behavior.
+\newblock 38, 10 1999.
+
+\bibitem{aryaDuffieldVeitch2008}
+Vijay Arya, Nick~G Duffield, and Darryl Veitch.
+\newblock Temporal delay tomography.
+\newblock pages 276--280, 2008.
+
+\bibitem{buDuffieldPrestiTowsley2002}
+Tian Bu, Nick Duffield, Francesco~Lo Presti, and Don Towsley.
+\newblock Network tomography on general topologies.
+\newblock 30(1):21--30, 2002.
+
+\bibitem{caceresDuffieldHorowistzTowsley1999}
+Ram{\'o}n C{\'a}ceres, Nick~G Duffield, Joseph Horowitz, and Donald~F Towsley.
+\newblock Multicast-based inference of network-internal loss characteristics.
+\newblock {\em IEEE Transactions on Information theory}, 45(7):2462--2480,
+  1999.
+
+\bibitem{chenCaoBu2007}
+Aiyou Chen, Jin Cao, and Tian Bu.
+\newblock Network tomography: Identifiability and fourier domain estimation.
+\newblock {\em IEEE Transactions on Signal Processing}, 58(12):6029--6039,
+  2010.
+
+\bibitem{nGDuffield2006}
+Nick Duffield.
+\newblock Network tomography of binary network performance characteristics.
+\newblock {\em IEEE Transactions on Information Theory}, 52(12):5373--5388,
+  2006.
+
+\bibitem{padmanabhanQiuWang2003}
+VN~Padmanbhan, L~Qiu, and H~Wang.
+\newblock Server-based inference of internet performance.
+\newblock 2003.
+
+\bibitem{sommerBarfordDuffieldRon2007}
+Joel Sommers, Paul Barford, Nick Duffield, and Amos Ron.
+\newblock Accurate and efficient sla compliance monitoring.
+\newblock 37(4):109--120, 2007.
+
+\bibitem{zhaoChenBindel2006}
+Yao Zhao, Yan Chen, and David Bindel.
+\newblock Towards unbiased end-to-end network diagnosis.
+\newblock 36(4):219--230, 2006.
+
+\bibitem{coatesCastroNowak2002}
+Mark Coates, Rui Castro, Robert Nowak, Manik Gadhiok, Ryan King, and Yolanda
+  Tsang.
+\newblock Maximum likelihood network topology identification from edge-based
+  unicast measurements.
+\newblock In {\em ACM SIGMETRICS Performance Evaluation Review}, volume~30,
+  pages 11--20. ACM, 2002.
+
+\bibitem{andrieuDoucetFitzgerald2000bayesian}
+C~Andrieu, A~Doucet, W~Fitzgerald, and JM~P{\'e}rez.
+\newblock Bayesian computational approaches to model selection.
+\newblock {\em Nonlinear and Nonstationary Signal Processing}, page~1, 2000.
+
+\bibitem{bestavrosAzerByers2005inference}
+Azer Bestavros, John~W Byers, and Khaled~A Harfoush.
+\newblock Inference and labeling of metric-induced network topologies.
+\newblock {\em IEEE Transactions on Parallel and Distributed Systems},
+  16(11):1053--1065, 2005.
+
+\bibitem{vardi1996}
+Yehuda Vardi.
+\newblock Network tomography: Estimating source-destination traffic intensities
+  from link data.
+\newblock {\em Journal of the American statistical association},
+  91(433):365--377, 1996.
+
+\bibitem{caoDavisWielYu2000}
+Jin Cao, Drew Davis, Scott Vander~Wiel, and Bin Yu.
+\newblock Time-varying network tomography: router link data.
+\newblock {\em Journal of the American statistical association},
+  95(452):1063--1075, 2000.
+
+\bibitem{singalMichailidis2007}
+Harsh Singhal and George Michailidis.
+\newblock Identifiability of flow distributions from link measurements with
+  applications to computer networks.
+\newblock {\em Inverse Problems}, 23(5):1821, 2007.
+
+\bibitem{chaudhary2016network}
+Harsh Chaudhary, Younghun Kim, Tarun Kumar, Abhishek Raman, and Rui Zhang.
+\newblock Network graph representation of physically connected network, oct
+  2016.
+\newblock US Patent 9,473,368.
+
+\bibitem{cincotta1995astronomical}
+Pablo~M Cincotta, Mariano Mendez, and Josue~A Nunez.
+\newblock Astronomical time series analysis. i. a search for periodicity using
+  information entropy.
+\newblock {\em The Astrophysical Journal}, 449:231, 1995.
+
+\bibitem{hurley2011methods}
+Paul~T Hurley, Andreas Kind, and Marc~Ph Stoecklin.
+\newblock Methods, systems and computer program products for detecting
+  flow-level network traffic anomalies via abstraction levels, jun 2011.
+\newblock US Patent 7,962,611.
+
+\bibitem{mohanty2000robust}
+Soumya~D Mohanty.
+\newblock Robust test for detecting nonstationarity in data from gravitational
+  wave detectors.
+\newblock {\em Physical Review D}, 61(12):122002, 2000.
+
+\bibitem{floreHarleDetectionRuptureMultiples2006}
+Flore Harle.
+\newblock Detection de ruptures multiples dans des series temporelles
+  multivariees : application a l inference de reseaux de dependance.
+\newblock Master's thesis, Grenoble Alpes, 2016.
+
+\bibitem{rath2003word}
+Toni~M Rath and Raghavan Manmatha.
+\newblock Word image matching using dynamic time warping.
+\newblock In {\em Computer Vision and Pattern Recognition, 2003. Proceedings.
+  2003 IEEE Computer Society Conference on}, volume~2, pages II--II. IEEE,
+  2003.
+
+\bibitem{chen2015ucr}
+Yanping Chen, Eamonn Keogh, Bing Hu, Nurjahan Begum, Anthony Bagnall, Abdullah
+  Mueen, and Gustavo Batista.
+\newblock The ucr time series classification archive, 2015.
+
+\bibitem{chen2004marriageLpNorm}
+Lei Chen and Raymond Ng.
+\newblock On the marriage of lp-norms and edit distance.
+\newblock In {\em Proceedings of the Thirtieth international conference on Very
+  large data bases-Volume 30}, pages 792--803. VLDB Endowment, 2004.
+
+\bibitem{muller2007dynamicDTW}
+Meinard M{\"u}ller.
+\newblock Dynamic time warping.
+\newblock {\em Information retrieval for music and motion}, pages 69--84, 2007.
+
+\bibitem{greenberg2002fastLCS}
+Ronald~I Greenberg.
+\newblock Fast and simple computation of all longest common subsequences.
+\newblock {\em arXiv preprint cs/0211001}, 2002.
+
+\bibitem{marteau2009time}
+Pierre-Fran{\c{c}}ois Marteau.
+\newblock Time warp edit distance with stiffness adjustment for time series
+  matching.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  31(2):306--318, 2009.
+
+\bibitem{berthold2016clusteringDistancePearson}
+Michael~R Berthold and Frank H{\"o}ppner.
+\newblock On clustering time series using euclidean distance and pearson
+  correlation.
+\newblock {\em arXiv preprint arXiv:1601.02213}, 2016.
+
+\bibitem{wang2013experimental}
+Xiaoyue Wang, Abdullah Mueen, Hui Ding, Goce Trajcevski, Peter Scheuermann, and
+  Eamonn Keogh.
+\newblock Experimental comparison of representation methods and distance
+  measures for time series data.
+\newblock {\em Data Mining and Knowledge Discovery}, 26(2):275--309, 2013.
+
+\bibitem{ye2011time}
+Lexiang Ye and Eamonn Keogh.
+\newblock Time series shapelets: a novel technique that allows accurate,
+  interpretable and fast classification.
+\newblock {\em Data mining and knowledge discovery}, 22(1-2):149--182, 2011.
+
+\bibitem{mueen2011logical}
+Abdullah Mueen, Eamonn Keogh, and Neal Young.
+\newblock Logical-shapelets: an expressive primitive for time series
+  classification.
+\newblock In {\em Proceedings of the 17th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 1154--1162. ACM, 2011.
+
+\bibitem{hills2014classificationShapelets}
+Jon Hills, Jason Lines, Edgaras Baranauskas, James Mapp, and Anthony Bagnall.
+\newblock Classification of time series by shapelet transformation.
+\newblock {\em Data Mining and Knowledge Discovery}, 28(4):851--881, 2014.
+
+\bibitem{lines2012shapelet}
+Jason Lines, Luke~M Davis, Jon Hills, and Anthony Bagnall.
+\newblock A shapelet transform for time series classification.
+\newblock In {\em Proceedings of the 18th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 289--297. ACM, 2012.
+
+\bibitem{rakthanmanon2013fast}
+Thanawin Rakthanmanon and Eamonn Keogh.
+\newblock Fast shapelets: A scalable algorithm for discovering time series
+  shapelets.
+\newblock In {\em proceedings of the 2013 SIAM International Conference on Data
+  Mining}, pages 668--676. SIAM, 2013.
+
+\bibitem{lin2012rotation}
+Jessica Lin, Rohan Khade, and Yuan Li.
+\newblock Rotation-invariant similarity in time series using bag-of-patterns
+  representation.
+\newblock {\em Journal of Intelligent Information Systems}, 39(2):287--315,
+  2012.
+
+\bibitem{lin2007experiencing}
+Jessica Lin, Eamonn Keogh, Li~Wei, and Stefano Lonardi.
+\newblock Experiencing sax: a novel symbolic representation of time series.
+\newblock {\em Data Mining and knowledge discovery}, 15(2):107--144, 2007.
+
+\bibitem{baydogan2013bag}
+Mustafa~Gokce Baydogan, George Runger, and Eugene Tuv.
+\newblock A bag-of-features framework to classify time series.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  35(11):2796--2802, 2013.
+
+\bibitem{paatheorique}
+Donghua~Pan Chonghui~Guo, Hailin~Li.
+\newblock An improved piecewise aggregate approximation based on statistical
+  features for time series mining.
+\newblock {\em 4th International Conference, KSEM 2010}, pages 234--244,
+  September 1-3, 2010.
+
+\bibitem{lin2003symbolic}
+Jessica Lin, Eamonn Keogh, Stefano Lonardi, and Bill Chiu.
+\newblock A symbolic representation of time series, with implications for
+  streaming algorithms.
+\newblock In {\em Proceedings of the 8th ACM SIGMOD workshop on Research issues
+  in data mining and knowledge discovery}, pages 2--11. ACM, 2003.
+
+\bibitem{keogh2002UCR}
+Eammon Keogh.
+\newblock The ucr time series data mining archive.
+\newblock {\em http://www. cs. ucr. edu/\~{} eamonn/TSDMA/index. html}, 2002.
+
+\bibitem{harary1960some}
+Frank Harary and Robert~Z Norman.
+\newblock Some properties of line digraphs.
+\newblock {\em Rendiconti del Circolo Matematico di Palermo}, 9(2):161--168,
+  1960.
+
+\bibitem{whitney1932congruent}
+Hassler Whitney.
+\newblock Congruent graphs and the connectivity of graphs.
+\newblock {\em American Journal of Mathematics}, 54(1):150--168, 1932.
+\newblock Concept of root graph was introduced by Whitney and he proved that if
+  two linegraphs are isomorphic and connected, then their root graphs are
+  isomorphic except for the triangle graph.
+
+\bibitem{lineGraphe}
+Harary F.
+\newblock 8. line graphs.
+\newblock {\em Graph theory (PDF)}, pages 71--83, 1972.
+
+\bibitem{krausz1943demonstration}
+J~Krausz.
+\newblock D{\'e}monstration nouvelle d'une th{\'e}or{\`e}me de whitney sur les
+  r{\'e}seaux.
+\newblock {\em Mat. Fiz. Lapok}, 50(1):75--85, 1943.
+
+\bibitem{ROOIJetWILF1965interchange}
+ACMM van Rooij and H~Wilf.
+\newblock The interchange graph of a finite graph.
+\newblock {\em Acta Mathematica Hungarica}, 16(3-4):263--269, 1965.
+
+\bibitem{beineke1968derived}
+Lowell~W Beineke.
+\newblock Derived graphs and digraphs.
+\newblock {\em Beitr{\"a}ge zur Graphentheorie}, pages 17--33, 1968.
+
+\bibitem{yannakakis1978node}
+Mihalis Yannakakis.
+\newblock Node-and edge-deletion np-complete problems.
+\newblock In {\em Proceedings of the tenth annual ACM symposium on Theory of
+  computing}, pages 253--264. ACM, 1978.
+
+\bibitem{Halldorsson2013}
+Bjarni~V. Halld{\'o}rsson, Dima Blokh, and Roded Sharan.
+\newblock Estimating population size via line graph reconstruction.
+\newblock {\em Algorithms for Molecular Biology}, 8(1):17, Jul 2013.
+
+\bibitem{ROUSSOPOULOS1973108}
+Nicholas~D. Roussopoulos.
+\newblock "a max m,n algorithm for determining the graph h from its line graph
+  g".
+\newblock {\em Information Processing Letters}, 2(4):108 -- 112, 1973.
+\newblock ''''.
+
+\bibitem{decompositionEnCliques}
+Simon~Klaus Degiorgi Daniele~Giorgio.
+\newblock A dynamic algorithm for line graph recognition.
+\newblock {\em Graph theoretic concepts in computer science (Aachen, 1995)},
+  lectures Notes in Computer Science, 1017, berlin:37--48, 1995.
+
+\bibitem{ORE}
+Oystein Ore.
+\newblock {\em The American Mathematical Monthly}, 69(8):819--820, 1962.
+
+\bibitem{decompositionEnCliquesParArcs}
+Philippe~G.H Lehot.
+\newblock An optimal algorithm to detect a line graph and output its root
+  graph.
+\newblock {\em ACM 21(4)}, pages 569--575, october 1974.
+
+\bibitem{halldorsson2011clark}
+Bjarni~V Halld{\'o}rsson, Derek Aguiar, Ryan Tarpine, and Sorin Istrail.
+\newblock The clark phaseable sample size problem: long-range phasing and loss
+  of heterozygosity in gwas.
+\newblock {\em Journal of Computational Biology}, 18(3):323--333, 2011.
+
+\bibitem{tomita2006worst}
+Etsuji Tomita, Akira Tanaka, and Haruhisa Takahashi.
+\newblock The worst-case time complexity for generating all maximal cliques and
+  computational experiments.
+\newblock {\em Theoretical Computer Science}, 363(1):28--42, 2006.
+
+\bibitem{eppstein2011listing}
+David Eppstein and Darren Strash.
+\newblock Listing all maximal cliques in large sparse real-world graphs.
+\newblock In {\em International Symposium on Experimental Algorithms}, pages
+  364--375. Springer, 2011.
+
+\bibitem{bagnall2015time}
+Anthony Bagnall, Jason Lines, Jon Hills, and Aaron Bostrom.
+\newblock Time-series classification with cote: the collective of
+  transformation-based ensembles.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  27(9):2522--2535, 2015.
+
+\bibitem{bagnallreview}
+Anthony Bagnall, Jason Lines, Aaron Bostrom, and James Large.
+\newblock A review and experimental evaluation of recent advances in time
+  series classification.
+
+\end{thebibliography}

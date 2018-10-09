@@ -1,0 +1,12 @@
+Dans ce chapitre, nous g\'en\'erons des topologies de r\'eseaux \'electriques qui sont des DAG sans circuits. \`A partir de ces topologies, nous construisons leurs line-graphes  que nous modifions selon  deux approches.
+%nous disposons des line-graphes que nous modifions de deux mani\`eres. 
+La premi\`ere approche consiste \`a changer les valeurs de $k$ cases choisies al\'eatoirement.
+La seconde approche construit une matrice associ\'ee au line-graphe du DAG dont chaque case contient une valeur de probabilit\'e puis applique une valeur de seuil sur cette matrice pour en d\'eduire une matrice d'adjacence. De ce fait, cette matrice d'adjacence contient des cases modifi\'ees qui seront d\'esign\'ees par {\em erreurs}. 
+\newline
+Notre objectif est d'\'evaluer les performances de notre couple d'algorithmes sur ces line-graphes modifi\'es c'est-\`a-dire la capacit\'e de nos algorithmes \`a corriger les {\em erreurs}.
+ Pour ce faire, nous divisons ce chapitre en quatre parties. 
+ La premi\`ere partie d\'ecrit la g\'en\'eration de graphes \'electriques (les DAG) et la construction de leurs line-graphes associ\'es. 
+ Ensuite, la seconde partie pr\'esente les diff\'erentes \'etapes de la modification des $k$ cases des line-graphes, le protocole d'exp\'erimentation et l'analyse des r\'esultats.
+ La troisi\`eme partie  analyse les performances des algorithmes sur des
+ line-graphes modifi\'es par la deuxi\`eme approche.
+ Enfin, dans la derni\`ere partie, nous analysons ces performances sur des graphes dit {\em grilles boucl\'ees}. Dans ces graphes, chaque sommet n'est couvert par aucune clique.

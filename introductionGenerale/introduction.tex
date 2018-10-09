@@ -1,0 +1,171 @@
+% introduction
+%une bonne connaissance des infrastructures qui supportent la distribution d’énergie
+
+\documentclass[onecolumn, 12pt]{book}
+
+\usepackage[latin1]{inputenc}   
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+%\usepackage[T1]{fontenc}
+
+%\usepackage[francais]{babel}     
+\usepackage{layout}    
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} 
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{color} 
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+%\usepackage{epstopdf}
+%\usepackage[outdir=/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/]{epstopdf}
+%\usepackage[outdir=./../../fusion_fichiers/images_fusionChapitres/]{epstopdf}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{enumitem} 
+\usepackage{amsthm} % ajouter pour environnement proof
+\usepackage{placeins}
+\usepackage{multirow}
+
+ \newcounter{subsubsubsection}
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\title{Chapitre6 : Exp\'erimentations sur des donn\'ees al\'eatoires}
+\author{Wilfried Ehounou}
+\date{\oldstylenums{\today}} 
+
+
+%--- d\'efinition macro ------
+\def\R{\mbox{I\hspace{-.15em}R}}
+\def\N{\mbox{I\hspace{-.15em}N}}
+\def\Z{\mbox{I\hspace{-.15em}Z}}
+\def\Q{\mbox{I\hspace{-.15em}Q}}
+
+\newtheorem{definition}{D\'efinition}
+\newtheorem{theorem}{Th\'eor\`eme}
+\newtheorem{property}{Propri\'et\'e}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Exemple}
+\newtheorem{remark}{Remarque}
+
+%---- path figures ----
+\graphicspath{
+{/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/}
+}
+ 
+\begin{document}
+
+Un r\'eseau de distribution \'energ\'etique est un ensemble d'\'equipements \'energ\'etiques interconnect\'es permettant d'ach\'eminer l'\'energie des centres de production aux consommateurs. 
+Le r\'eseau est compos\'e d'une infrastructure de transport et d'une infrastructure de distribution de l'\'energie. Ces infrastructures sont sp\'ecifiques \`a l'\'energie et sont g\'er\'ees chacune par un gestionnaire de r\'eseau ou Distribution Source Operator. Son r\^ole est de maintenir la continuit\'e et la qualit\'e de l'approvisionnement physique des clients c'est-\`a-dire assurer l'entretien et le d\'eveloppement du r\'eseau. 
+En effet, le gestionnaire de transport achemine, au niveau national, l'\'energie depuis son lieu de production \`a son lieu de consommation \`a travers le r\'eseau de distribution. Quant au gestionnaire de distribution, il distribue l'\'energie aux consommateurs au niveau r\'egional.
+\newline
+
+Un exemple de r\'eseau \'energ\'etique g\'er\'e localement par un gestionnaire de r\'eseau est un datacenter. Le datacenter a la particularit\'e de contenir un r\'eseau thermique, \'electrique et informatique. Le r\'eseau \'electrique alimente les \'equipements des autres r\'eseaux. La connaissance de son infrastructure est indispensable pour le gestionnaire afin
+de fournir  la puissance n\'ecessaire au fonctionnement d'un \'equipement et 
+ d'\'eviter les surco\^uts de production d'\'electricit\'e parce que l'\'electricit\'e ne se stocke pas.
+Pour ce faire, 
+%les consommations dans le temps des \'equipements du r\'eseau \'electrique sont coll\'ect\'ees 
+des sondes sont install\'ees dans le r\'eseau \'electrique afin de collecter les consommations des \'equipements dans le temps. Les mesures temporelles des consommations sont int\'egr\'ees dans un outil de supervision de ce r\'eseau. Cet outil permet d'avoir l'\'etat de tous les \'equipements \`a un instant donn\'ee, de connaitre la topologie de fonctionnement du r\'eseau et aussi la topologie g\'en\'erale du r\'eseau c'est-\`a-dire l'ensemble des \'equipements arr\^et\'es et en fonctionnement.
+\newline
+
+Malheureusement,  l'\'etat du r\'eseau affich\'e par l'outil de supervision est souvent \'erronn\'e. 
+En effet,  les sondes de certains \'equipements pr\'esents dans le r\'eseau physique ne sont pas repertori\'ees dans la base de donn\'ees de l'outil et leurs mesures ne figurent nulle part dans l'outil de supervision. Cela donne l'impression que ces \'equipements sont en panne et  les \'equipements qui leur sont rattach\'es sont aliment\'es par d'autres \'equipements qui fonctionnent en surcapacit\'e.  
+En outre, les sondes de certains \'equipements sont interchang\'ees avec d'autres. Les puissances sont remplac\'ees par des intensit\'es et aussi la puissance d'un \'equipement est remplac\'ee par celle  un autre \'equipement. Ces erreurs humaines impliquent le non respect de la loi de conservation des noeuds et aussi une maintenance complexe  parce que nous ignorons les sondes interchang\'ees.
+%Enfin, 
+Ces probl\`emes proviennent d'une faible communication  entre les diff\'erents metiers dans le datacenter et aussi de la mise \`a jour \'erronn\'ee ou tardive des maintenances dans la base de donn\'ees de l'outil. Ceux-ci entrainent la topologie connue n'est pas la topologie r\'eelle, des pr\'evisions \'elev\'ees de consommation \'electriques et enfin des co\^uts de maintenances exorbitants.
+\newline
+
+Afin de r\'eduire les erreurs humaines dans la d\'ecouverte du r\'eseau, nous proposons des m\'ethodes pour d\'eterminer la topologie du r\'eseau \'electrique en se basant uniquement sur les mesures temporelles collect\'ees.
+Nous allons supposer que 
+\begin{itemize}
+\item Toutes les mesures sont connues malgr\'e des valeurs absentes dans certaines s\'eries de mesures et aussi les \'equipements rattach\'es \`a ces mesures sont incorrects, 
+\item Un \'equipement ne s'alimente pas lui m\^eme mais peut alimenter plusieurs autres \'equipements.
+\item Le r\'eseau \'electrique fonctionne en monophas\'e et en triphas\'e. 
+\item Le r\'eseau \'electrique est aliment\'e \`a un seul gestionnaire de r\'eseau mais contient plusieurs sources d'\'energie (les groupes \'electrog\`enes, les onduleurs).
+\item Les pertes par effets joules au cours du transport de l'\'electricit\'e sont n\'egligeables.
+\end{itemize}
+
+
+Nous d\'ebutons dans le chapitre $1$ par la mod\'elisation du r\'eseau \'electrique comme un r\'eseau de flots dans lequel les flots sont les mesures \'electriques et le r\'eseau est un DAG sans circuit d\'equipements comme sommets et de c\^ables comme arcs. Les mesures sont d\'ecrites par des s\'eries temporelles et une nouvelle loi de conservation \ref{loiDeConservation} est propos\'ee en ad\'equation avec les lois physiques.
+ \newline
+ 
+ Dans le chapitre $2$, nous pr\'esentons les analyses effectu\'ees avec les s\'eries temporelles puis  nous indiquons que la comparaison de s\'eries temporelles est adapt\'ee \`a notre probl\`eme. Ensuite nous pr\'esentons l'ensemble de m\'ethodes de comparaison de s\'eries temporelles et nous retenons la distance de Pearson comme la m\'ethode de calcul des coefficients de similarit\'e  entres les mesures. Enfin nous commentons les r\'esultats obtenus avec cette m\'ethode.
+ \newline
+ 
+ Dans le chapitre $3$, les coefficients de similarit\'e forment une matrice dite {\em matrice de corr\'elation} et le graphe associ\'e \`a cette matrice est dit {\em graphe de corr\'elation}. Cette matrice de corr\'elation est la matrice d'adjacence du line-graphe du graphe non orient\'e sous jacent au DAG du r\'eseau \'electrique \`a condition que cette matrice ne contienne aucune case \'erronn\'ee. Nous montrons que le line-graphe admet un partitionnement unique en cliques \`a l'exception de situations d'ambigu\"{i}t\'es d\'ecrites dans ce chapitre. Ce partitionnement est appel\'e la {\em couverture de corr\'elation}.  
+ Ensuite, nous pr\'esentons deux algorithmes (couverture et correction) qui proposent le partitionnement du graphe de corr\'elation s'il n'y a aucune case \'erronn\'ee, sinon qui retourne le line-graphe le plus proche du graphe de corr\'elation en cas de cases \'erronn\'ees.
+ Enfin, nous d\'ecrivons la construction du graphe non orient\'e sous jacent au DAG du r\'eseau \'electrique puis nous orientons les ar\^etes de ce graphe.
+ \newline
+ 
+ Dans le chapitre $4$, nous \'evaluons les performances de nos algorithmes sur des graphes g\'en\'er\'es  \`a partir de trois exp\'erimentations. La premi\`ere exp\'erimentation consiste \`a modifier des cases dans le graphe de corr\'elation. La seconde exp\'erimentation consiste \`a attribuer les coefficients de corr\'elation entre les arcs en se basant sur la distribution des valeurs des cases de la matrice du graphe de corr\'elation. La derni\`ere  exp\'erimentation se r\'ealise sur des graphes ayant plus de deux couvertures de corr\'elation. 
+Nous \'evaluons le nombre de cases corrig\'ees apr\`es l'ex\'ecution de nos algorithmes.
+ 
+ 
+ 
+ \end{document}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Un r\'eseau de distribution \'energ\'etique est un ensemble d'infrastructures \'energ\'etiques permettant d'ach\'eminer l'\'energie des centres de production aux consommateurs. 
+%Le r\'eseau est compos\'e d'une infrastructure de transport et d'une infrastructure de distribution de l'\'energie. Ces infrastructures sont sp\'ecifiques \`a l'\'energie et sont g\'er\'ees chacune par un gestionnaire de r\'eseau ou Distribution Source Operator. Son r\^ole est de maintenir la continuit\'e et la qualit\'e de l'approvisionnement physique des clients c'est-\`a-dire assurer l'entretien et le d\'eveloppement du r\'eseau. 
+%En effet, le gestionnaire de transport achemine, au niveau national, l'\'energie depuis son lieu de production \`a son lieu de consommation c'est-\`a-dire le r\'eseau de distribution. Quant au gestionnaire de distribution, il distribue l'\'energie aux consommateurs au niveau r\'egional.
+%\newline
+%Un exemple de r\'eseau \'energ\'etique g\'er\'e localement par un gestionnaire de r\'eseau est un datacenter. Le datacenter est la particularit\'e de contenir un r\'eseau thermique, \'electrique et informatique. Le r\'eseau \'electrique alimente les \'equipements des autres r\'eseaux. La connaissance de son infrastructure est indispensable pour le gestionnaire afin
+%de fournir  la puissance n\'ecessaire au fonctionnement d'un \'equipement et 
+% d'\'eviter les surco\^uts de production d'\'electricit\'e parce que l'\'electricit\'e ne se stocke pas.
+%Pour ce faire, 
+%%les consommations dans le temps des \'equipements du r\'eseau \'electrique sont coll\'ect\'ees 
+%des sondes sont install\'ees dans le r\'eseau \'electrique afin de collecter les consommations des \'equipements dans le temps. Les mesures temporelles des consommations sont int\'egr\'ees dans un outil de supervision de ce r\'eseau. Cet outil permet d'avoir l'\'etat de tous les \'equipements \`a un instant donn\'ee, de connaitre la topologie de fonctionnement du r\'eseau et aussi la topologie g\'en\'erale du r\'eseau c'est-\`a-dire l'ensemble des \'equipements arr\^et\'es et en fonctionnement.
+%\newline
+%Malheureusement,  l'\'etat du r\'eseau affich\'e par l'outil de supervision est souvent \'erronn\'e. 
+%En effet,  les sondes de certains \'equipements pr\'esents dans le r\'eseau physique ne sont pas repertori\'ees dans la base de donn\'ees de l'outil et leurs mesures ne figurent nulle part dans l'outil de supervision. Cela donne l'impression que ces \'equipements sont en panne et  les \'equipements qui leur sont rattach\'es sont aliment\'es par d'autres \'equipements qui fonctionnent en surcapacit\'e.  
+%En outre, les sondes de certains \'equipements sont interchang\'ees avec d'autres. Les puissances sont remplac\'ees par des intensit\'es et aussi la puissance d'un \'equipement est remplac\'ee par celle  un autre \'equipement. Ces erreurs humaines impliquent le non respect de la loi de conservation des noeuds et aussi une maintenance complexe  parce que nous ignorons les sondes interchang\'ees.
+%Enfin, 
+%
+%Ces probl\`emes proviennent d'une faible communication  entre les diff\'erents metiers dans le datacenter et aussi la mise \`a jour \'erronn\'ee ou tardive des maintenances dans la base de donn\'ees de l'outil. Ceux-ci entrainent l'erreur de la topologie des \'equipements en fonctionnement du r\'eseau, des pr\'evisions \'elev\'ees de consommation \'electriques et enfin des co\^uts de maintenances exorbitants.
+%\newline
+%Afin de r\'eduire les erreurs humaines dans la d\'ecouverte du r\'eseau , nous allons proposons des m\'ethodes pour d\'eterminer la topologie du r\'eseau \'electrique en se basant uniquement sur les mesures temporelles collect\'ees.
+%Nous allons supposer que 
+%\begin{itemize}
+%\item Toutes les mesures sont connues malgr\'e des valeurs absentes dans certaines s\'eries de mesures et aussi les \'equipements rattach\'es \`a ces mesures sont incorrects. 
+%\item Un \'equipement ne s'alimente pas soit m\^eme et peut alimenter plusieurs \'equipements.
+%\item Le r\'eseau \'electrique fonctionne en monophas\'e et en triphas\'e. 
+%\item Le r\'eseau \'electrique est aliment\'e \`a un seul gestionnaire de r\'eseau mais contient plusieurs sources d'\'energie (les groupes \'electrog\`enes, les onduleurs).
+%\item Les pertes par effets joules au cours du transport de l'\'electricit\'e sont n\'egligeables.
+%\end{itemize}
+%\newline
+%
+%Nous debutons dans le chapitre $1$ par la mod\'elisation du r\'eseau \'electrique comme un reseau de flots dans lequel les flots sont les mesures \'electriques et le reseau est un DAG sans circuit d\'equipements comme sommets et de c\^ables comme arcs. Les mesures sont d\'ecrites par des s\'eries temporelles et une nouvelle loi de conservation \ref{loiDeConservation} est propos\'ee en ad\'equation avec les lois physiques.
+% \newline
+% Dans le chapitre $2$, nous pr\'esentons les analyses effectu\'ees avec les s\'eries temporelles puis  nous indiquons que la comparaison de s\'eries temporelles est adapt\'ee \`a notre probl\`eme. Ensuite nous pr\'esentons l'ensemble de m\'ethodes de comparaison de s\'eries temporelles et nous retenons la distance de Pearson comme la m\'ethode de calcul des coefficients de similarit\'e  entres les mesures. Enfin nous commentons les resultats obtenus avec cette methode.
+% \newline
+% Dans le chapitre $3$, les coefficients de similarit\'e forment une matrice dite {\em matrice de corr\'elation} et le graphe associ\'e \`a cette matrice est dit {\em graphe de corr\'elation}. Cette matrice de corr\'elation est la matrice d'adjacence du line-graphe du graphe non orient\'e sous jacent au DAG du r\'eseau \'electrique \`a condition que cette matrice ne contienne aucune case \'erronn\'ee. Nous montrons que le line-graphe admet un partitionnement unique en cliques \`a l'execption de situations d'ambiguit\'es d\'ecrites dans ce chapitre. Ce partitionnement est appel\'e la {\em couverture de corr\'elation}.  
+% Ensuite, nous pr\'esentons deux algorithmes (couverture et correction) qui propose le partitionnement du graphe de corr\'elation s'il n'y a aucune case \'erronn\'ee sinon retourne le line-graphe le plus proche du graphe de corr\'elation en cas de cases \'erronn\'ees.
+% Enfin, nous decrivons la construction du graphe non orient\'e sous jacent au DAG du r\'eseau electrique puis nous orientons les ar\^etes de ce graphe.
+% \newline
+% Dans le chapitre $4$, nous \'evaluons les performances de nos algorithmes sur des graphes g\'en\'er\'es  \`a partir de trois exp\'erimentations. La premi\`ere exp\'erimentation consiste \`a modifier des cases dans le graphe de corr\'elation. La seconde exp\'erimentation consiste \`a attribuer les coefficients de corr\'elation entre les arcs en se basant sur la distribution des valeurs des cases de la matrice du graphe de corr\'elation. La derni\`ere  exp\'erimentation se r\'ealise sur des graphes ayant plus de deux couvertures de corr\'elation. 
+%Nous \'evaluons le nombre de cases corrig\'ees apr\`es l'ex\'ecution de nos algorithmes.
+% 
+% 
+% 
+% \end{document}

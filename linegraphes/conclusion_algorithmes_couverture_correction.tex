@@ -1,0 +1,22 @@
+% --- a supprimer ce commenntaire cest une redite de l'algorithme de couverture
+%Dans cette section, nous d\'ecrivons deux algorithmes. 
+%Le premier algorithme est {\em l'algorithme de couverture} et il est bas\'e sur l'algorithme de Lehot \cite{decompositionEnCliques}. L'algorithme consid\`ere que chaque sommet peut avoir $4$ \'etats. Le premier \'etat $Cliq = 1$ est attribu\'e \`a des sommets couverts par une clique ou deux cliques et qui n'a aucune ar\^ete incidente. Le second \'etat $Cliq = 2$ est attribu\'e \`a des sommets couverts par une clique et qui poss\`ede des ar\^etes incidentes. Le troisi\`eme \'etat $Cliq = 3$ est attribu\'e \`a des sommets initialement n'ayant aucun \`etat ($Cliq=0$) et couvert par une clique. Et  le dernier \'etat $Cliq = -1$  est attribu\'e \`a des sommets couverts par deux cliques ayant des ar\^etes incidentes ou un sommet ayant des ar\^etes incidentes qui ne forme pas une clique. 
+%\`A la fin de l'algorithme, les cliques d\'ecouvertes sont stock\'ees dans la line-couverture $\cal H$ et les sommets dont l'\'etat est $Cliq = -1$ sont contenus dans l'ensemble $\cal C$ des sommets \`a corriger.
+
+
+Dans cette section, nous d\'ecrivons deux algorithmes. 
+Le premier algorithme est {\em l'algorithme de couverture} qui attribue un \'etat \`a un sommet du graphe de corr\'elation en fonction des cliques qui le couvrent. L'ensemble de cliques est la couverture de corr\'elation ${\cal CC}$. La particularit\'e de la couverture de corr\'elation est que chaque sommet appartient \`a $1$ ou $2$ cliques. Lorsqu'un  sommet  n'est pas couvert par $1$ ou $2$ cliques, cela signifie que le graphe de corr\'elation n'est pas un line-graphe et ces sommets sont regroup\'es dans l'ensemble $\cal C$ de sommets \`a corriger.
+\newline
+%Le second algorithme present\'e est l'algorithme de correction dont l'objectif est de corriger les sommets de l'ensemble de sommets \`a corriger afin que $G_c$ devient le line-graphe le plus proche possible du DAG. La correction consiste \`a ajouter et supprimer des ar\`etes  incidentes \`a chaque sommet de sommets de tel sorte que la clique retenue soit de co\^ut minimum. Nous supposons que les co\^ut des op\'erations {\em ajouter une ar\^ete} et {\em supprimer une ar\^ete} sont connues.
+
+
+
+Le second algorithme est {\em l'algorithme de correction}. Il consiste \`a ajouter ou \`a supprimer des ar\^etes au voisinage d'un sommet $u \in {\cal C}$ afin que la partition de ce sommet et son voisinage forme deux cliques. Pour assurer ces op\'erations d'ajout et de suppression, il utilise une phase d'augmentation et de compression. 
+En effet, la phase d'augmentation d\'etermine les cliques de ${\cal CC}$ contenant $u$, les cliques de ${\cal CC}$  dont $u$ partage une ar\^ete avec un sommet de la clique (cliques voisines), les cliques contractables (cliques de ${\cal CC}$ dont l'intersection retourne le sommet $u$) et les cliques d\'ependantes (cliques contenant $u$ dans lesquelles un des sommets partagent une ar\^ete avec une clique de la couverture de corr\'elation ${\cal CC}$). 
+Puis elle effectue le produit cart\'esien de ces ensembles de cliques. Chaque \'el\'ement de ce produit est not\'e $\pi_1$ ou $\pi_2$.
+Quant \`a la phase de compression, elle s\'electionne deux \'el\'ements du produit cart\'esien qu'elle note  $\pi_1$ et $\pi_2$, puis elle ajoute des ar\^etes \`a  $\pi_1$ et $\pi_2$ dans l'ensemble des ar\^etes initiales du graphe de correction pour en faire des cliques. Elle cr\'ee aussi l'ensemble $\pi_s$ des ar\^etes \`a supprimer pour que le sommet $u$ ne soit couvert que par deux cliques. 
+Les cliques $\pi_1$ et $\pi_2$ sont ajout\'ees \`a la couverture de corr\'elation ${\cal CC}$. 
+\newline
+Avec la d\'ecouverte de la couverture de corr\'elation ${\cal CC}$, nous allons construire le graphe racine de ce line-graphe dans la section suivante.
+
+

@@ -1,0 +1,166 @@
+\documentclass[onecolumn, 12pt]{book}
+
+\usepackage[latin1]{inputenc}   
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+%\usepackage[T1]{fontenc}
+
+%\usepackage[francais]{babel}     
+\usepackage{layout}    
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} 
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{color} 
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+%\usepackage{epstopdf}
+%\usepackage[outdir=/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/]{epstopdf}
+%\usepackage[outdir=./../../fusion_fichiers/images_fusionChapitres/]{epstopdf}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{placeins}
+\usepackage{amssymb} %---------> symbole R reel
+ 
+ \newcounter{subsubsubsection}
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+
+% \title{Mod\`ele de Donn\'ees}
+% \author{Willy Ehounou}
+ %\date{01/06/15}
+\title{Chapitre4 : Corr\'elations de mesures \'electriques}
+\author{Wilfried Ehounou}
+\date{\oldstylenums{\today}} 
+
+\newtheorem{definition}{D\'efinition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{property}{Propri\'et\'e}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}{Observation}
+\newtheorem{example}{Exemple}
+\newtheorem{remark}{Remarque}
+\newtheorem{Proof}{Preuve}
+
+% d\'efinition macro
+\def\R{\mbox{I\hspace{-.15em}R}}
+\def\N{\mbox{I\hspace{-.15em}N}}
+\def\Z{\mbox{I\hspace{-.15em}Z}}
+\def\Q{\mbox{I\hspace{-.15em}Q}}
+
+% definition macro algorithmes
+%\newcommand{\algorithmicrequire}{\textbf{Require:}}
+%\newcommand{\algorithmicensure}{\textbf{Ensure:}}
+%\newcommand{\algorithmicend}{\textbf{end}}
+%\newcommand{\algorithmicif}{\textbf{si}}
+%\newcommand{\algorithmicthen}{\textbf{alors}}
+%\newcommand{\algorithmicelse}{\textbf{sinon}}
+%\newcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+%\newcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+%\newcommand{\algorithmicfor}{\textbf{Pour}}
+%\newcommand{\algorithmicforall}{\textbf{Pour tout}}
+%\newcommand{\algorithmicdo}{\textbf{faire}}
+%\newcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+%\newcommand{\algorithmicwhile}{\textbf{Tant que}}
+%\newcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+%\newcommand{\algorithmicloop}{\textbf{loop}}
+%\newcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+%\newcommand{\algorithmicrepeat}{\textbf{repeter}}
+%\newcommand{\algorithmicuntil}{\textbf{jusqu'\`a}}
+%\newcommand{\algorithmicprint}{\textbf{print}}
+%\newcommand{\algorithmicreturn}{\textbf{retourner}}
+%\newcommand{\algorithmictrue}{\textbf{true}}
+%\newcommand{\algorithmicfalse}{\textbf{false}}
+
+%---- path figures ----
+\graphicspath{
+{/home/willy/Documents/latexDoc/redaction/fusion_fichiers/images_fusionChapitres/}
+}
+ 
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Mesures : Des Series Temporelles}
+\input{introductionSeriesTemporelles}
+
+\section{S\'eries temporelles}
+\input{seriesTemporelles}
+
+
+Notre objectif est de trouver la m\'ethode qui calcule au mieux la corr\'elation entre des arcs en tenant compte des caract\'eristiques de nos donn\'ees (valeurs manquantes et \'erronn\'ees \`a certains instants $t$ dans les s\'eries temporelles des arcs).
+
+
+%\section{\'Etat de l'art de la corr\'elation de s\'eries temporelles}
+%\subsection{Corr\'elation sur les s\'eries enti\'eres}
+%	\subsubsection{Time Warp Edit TWE}
+%	\subsubsection{Move-Split-Merge MSM}
+%	\subsubsection{Elastic Ensemble EE}
+%	\subsubsection{Collective of Transform Ensemble COTE}
+%	\subsubsection{Distance de Pearson}
+%\subsection{Corr\'elation par intervalles}
+%	\subsubsection{Time Series Forest TSF}
+%	\subsubsection{Learned Pattern Similarity LPS}
+%\subsection{Corr\'elation sur parties significatives}
+%	\subsubsection{Shapelet Transform ST}
+%	\subsubsection{Fast Shapelets FS}
+%	\subsubsection{Learned Shapelets LS}
+%\subsection{Corr\'elation par aggregation des features}
+%	\subsubsection{Bag of Pattern BOP}
+%	\subsubsection{Symbolic Aggregate approXimation SAX}
+%	\subsubsection{Dynamic Time Warping Features$ DTW_{F}$}
+%
+%\section{M\'ethode de corr\'elation de mesures \'electriques : distance de Pearson}
+%\subsection{D\'etermination de la matrice de corr\'elation}
+
+
+\section{\'Etat de l'art des m\'ethodes de similarit\'e}
+Les diff\'erentes m\'ethodes de calculs des coefficients de similarit\'e se basent sur les s\'eries temporelles associ\'ees aux arcs du r\'eseau.
+Nous allons pr\'esenter les principales m\'ethodes de calculs de similarit\'e qui sont regroup\'ees en $3$ familles et qui sont d\'etaill\'ees dans cette section.
+\subsection{ Similarit\'e sur les s\'eries enti\`eres}
+	\label{seriesEntieres}
+	\input{seriesEntieresIntroduction}
+	\subsubsection{Dynamic Time Warping  DTW}
+		\input{seriesEntieresDynamicTimeWarping}
+	\subsubsection{Time Warp Edit TWE}
+		\input{seriesEntieresTimeWarpEdit}
+	\subsubsection{Move-Split-Merge MSM}
+		\input{seriesEntieresMoveSplitMerge}
+	\subsubsection{Distance de Pearson}
+		\input{seriesEntieresDistancePearson}
+	\subsubsection{Longest Common Subsequence}
+		\input{seriesEntieresLongestCommonSubsequence}
+%	\subsubsection{Collective of Transform Ensemble COTE}
+%		\input{seriesEntieresCOTE}
+%	\subsubsection{Elastic Ensemble}
+%		\input{seriesEntieresElasticEnsemble}
+	\input{seriesEntieresConclusion}
+\subsection{Similarit\'e sur les s\'equences}
+	\input{shapeletsDescription}
+\subsection{Similarit\'e par aggr\'egation des caract\'eristiques descriptives}
+	\input{agregationDescription}
+\subsection{Conclusion sur les m\'ethodes de similarit\'e}
+	\input{conclusionSeriesDistances}
+
+\section{M\'ethode de similarit\'e entre des mesures \'electriques : distance de Pearson}
+	\subsection{Choix de la distance}
+		\input{choixDistance}
+%	\subsection{Calcul de la distance}
+%		\input{calculDistance}
+	\subsection{R\'esultats sur des donn\'ees r\'eelles}
+		\input{ResultatsCorrelationChamplan}
+\section{Conclusion du chapitre}
+	\input{conclusionChapitre}		
+
+\end{document}

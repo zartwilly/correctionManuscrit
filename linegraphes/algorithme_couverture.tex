@@ -1,0 +1,395 @@
+% description de l'algo de lehot
+L'algorithme de {\em couverture} que nous proposons est une am\'elioration de celui de {\em Lehot}.
+Ainsi, nous pr\'esentons tout d'abord bri\`evement le principe de l'algorithme de couverture en cliques de {\em Lehot} \cite{decompositionEnCliquesParArcs}. 
+\newline
+Soient $H$ et $G$ deux graphes. Nous supposons que $H$ est le line-graphe de $G$.
+Le but de cet algorithme est d'identifier le graphe racine $L^{-1}(H)$ de $H$.
+L'algorithme va construire $G$  au fur et \`a mesure en identifiant les cliques dans $H$. 
+%Les ar\^etes et les sommets de $H$ et les ar\^etes et les sommets d\'ecouverts dans $G$
+Les ar\^etes et les sommets de $H$ et $G$ peuvent avoir au cours de l'ex\'ecution plusieurs \'etats :
+%''----------- sommets de H et G 
+%\begin{itemize}
+%	\item Sommets ``bien-d\'efinis'' : sommets d\'ecouverts de $G$ dont la clique correspondante dans $H$ a \'et\'e trouv\'e et identifi\'e.
+%	\item Sommets ``\`a moiti\'e-nomm\'es'' :  sommets de $H$, dont  l'ar\^ete d\'ecouverte dans $G$, a une extr\'emit\'e  ``bien-d\'efinie''. 
+%	%des sommets ``bien-d\'efinis'' de $G$ qui sont adjacents et dont l'ar\^ete qu'ils partagent dans $G$ est un sommet de $H$. 
+%	\item Sommets ``pleinement-nomm\'es'' :  sommets de $H$, dont l'ar\^ete d\'ecouverte dans $G$  a des extr\'emit\'es, sont ``bien-d\'efinis''.
+%	 %une ar\^ete de $G$ dont chaque extr\'emit\'e forme une clique dans $H$.
+%	\item Sommets ``basiques'' : des ar\^etes de $G$ qui partagent une extr\'emit\'e. Ces sommets sont not\'es $x-y$ dans $H$ avec $x$ et $y$ des sommets d\'ecouverts de $G$.
+%	\item Sommets ``partag\'es'' : sommets de $H$ partageant une ar\^ete avec des sommets ``basiques'' adjacents. Ce sont des ar\^etes d\'ecouvertes de $G$ qui ont une extr\'emit\'e commune. 
+%\end{itemize}
+\begin{itemize}
+	\item Sommet ``bien-d\'efini'' : un sommet d\'ecouvert de $G$ tel que la clique correspondante dans $H$ a \'et\'e trouv\'ee et identifi\'ee.
+	\item Sommet ``\`a moiti\'e-nomm\'e'' :  un sommet de $H$ tel que  l'ar\^ete correspondante dans $G$ a une extr\'emit\'e  ``bien-d\'efinie''. 
+	%des sommets ``bien-d\'efinis'' de $G$ qui sont adjacents et dont l'ar\^ete qu'ils partagent dans $G$ est un sommet de $H$. 
+	\item Sommet ``pleinement-nomm\'e'' : un sommet de $H$ tel que l'ar\^ete correspondante dans $G$  a des extr\'emit\'es ``bien-d\'efinies''.
+	 %une ar\^ete de $G$ dont chaque extr\'emit\'e forme une clique dans $H$.
+	\item Sommet ``basique'' : un sommet de $H$ tel que chaque sommet est une ar\^ete de $G$. Ces sommets sont not\'es $x-y$ dans $H$ avec $x$ et $y$ des sommets d\'ecouverts de $G$.
+	\item Sommet ``partag\'e'' : sommet de $H$ partageant une ar\^ete avec des sommets ``basiques'' adjacents. Ce sommet est une extr\'emit\'e commune entre des ar\^etes de $G$ incidentes. 
+\end{itemize}
+%''----------- sommets de H et G 
+
+
+L'id\'ee de cet algorithme est de d\'eterminer une couverture de corr\'elation de $H$ en d\'etectant, selon $3$ cas \cite{decompositionEnCliquesParArcs} dans $H$, 
+les sommets partag\'es adjacents \`a un sommet ``basique'' qui forment une clique.
+% ou les sommets partag\'es adjacents \`a deux sommets ``basiques'' qui forment une clique.
+Nous illustrons le fonctionnement de l'algorithme avec l'exemple suivant illustr\'e par la figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}.
+L'algorithme s\'electionne deux sommets ``basiques''  $1-2, 2-3$ et  l'ensemble $X$ des sommets adjacences aux sommets ``basiques''.
+Si $X = \emptyset$ alors il n'existe pas de sommet partag\'e dans  $G$ et les sommets $1-2, 2-3$ sont \'etiquett\'es ``\`a moiti\'e nomm\'e'' (figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(a)).
+Si $X=\{x\}$ alors le sommet $x$ est un sommet partag\'e dans  $H$ si $x = 2-4$ car le triangle $x, 1-2, 2-3$ est impair. Dans le cas o\`u $x = 1-3$, le  triangle $x, 1-2, 2-3$ est pair et
+aucun sommet d\'ecouvert dans $G$ n'est incident aux sommets du triangle $x, 1-2, 2-3$ (figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(b)). 
+Le sommet $x$ dans $H$ est \'etiquett\'e ``pleinement-nomm\'e'' et les autres sommets $1-2, 2-3$ dans $H$ sont \'etiquet\'es ``\`a moiti\'e nomm\'es''.
+Si $X=\{x,y\}$, il n'existe  aucun sommet partag\'e dans  $H$ si $x$ et $y$ sont adjacents dans $H$. Dans le cas o\`u  ils ne sont pas adjacents alors ils forment deux triangles avec $1-2, 2-3$. Si $x=2-4$ et $y=1-3$ alors le triangle $\{2-4,1-2, 2-3\}$ est impair et $x$ est le sommet partag\'e dans $H$
+(figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(c)).
+Enfin pour $|X| = |\{a,b,c, \cdots\}| = 3$, le sommet $b$ dans $H$ est \'etiquet\'e sommet partag\'e si $a$ est adjacent \`a $b$ sinon le sommet $a$ devient le sommet partag\'e.
+La derni\`ere \'etape s\'electionne al\'eatoirement un sommet ``\`a moiti\'e-nomm\'e'' dans $H$ qui est adjacent \`a un sommet  ``pleinement-nomm\'e'' dans $H$. Si ce sommet n'est pas d\'ej\`a couvert par une clique alors il est ``pleinement-nomm\'e'' et il est un sommet partag\'e dans $H$. 
+\`A la fin de cette \'etape, tous les sommets sont \'etiquet\'es \`a ``pleinement-nomm\'e"  dans $H$ et ils deviennent des sommets partag\'es dans $H$.
+\newline
+L'algorithme s'ex\'ecute  en $O(m)+m'$ avec $m$  le nombre d'ar\^etes dans $G$ et $m'$ le nombre d'ar\^etes dans $L(G)$. Il retourne la liste de cliques d\'ecouvertes dans $H$ dans laquelle chaque clique correspond  \`a un sommet de $G$. Cette liste de cliques est appel\'ee {\em couverture de corr\'elation} (${\cal CC}$).
+Malheureusement, si $H$ n'est pas un line-graphe alors il ne retourne pas de couverture partielle.
+%\newline
+
+\subsubsection{Description de l'algorithme de couverture}
+Nous proposons  l'algorithme de {\em couverture} (voir algorithme \ref{algo:couverture}) en lien avec celui de {\em Lehot} qui couvre  autant que possible les sommets du graphe de corr\'elation  $G_c$ par une ou deux cliques.
+Notre algorithme retourne la {\em couverture de corr\'elation} (${\cal CC}$) de $G_c$ si la matrice d'adjacence de $G_c$ ne contient aucune case \'erron\'ee sinon il renvoie une {\em couverture de corr\'elation partielle} de $G_c$.
+\newline
+%% ---- figure etapes de decouverte de l'algo de lehot
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[scale=0.50]{deroulementAlgorithmeLehot.eps}\vspace{-0.5em}
+	\caption{ Identification des sommets partag\'es dans le graphe $H$ et nommage des sommets de $G$. }\vspace{-0.5em}
+	\label{deroulementAlgorithmeLehotRechercheSommetsPartages}
+\end{figure}
+%% ---- figure etapes de decouverte de l'algo de lehot
+\FloatBarrier
+
+Soient $G_c = (V,E)$ un graphe de corr\'elation et $Cliq(v)$ l'\'etat de chaque sommet $v$ de   $G_c$.
+L'algorithme de {\em couverture} va construire une couverture de corr\'elation ${\cal CC}(G_c)$ de $G_c$ en ajoutant des cliques d\'ecouvertes dans ${\cal CC}(G_c)$.  
+Une clique est un ensemble de sommets qui induit un sous-graphe complet. 
+Si un sommet appartient \`a une clique alors il est couvert par cette clique. 
+De m\^eme, si deux sommets $u$ et $v$ appartiennent \`a une m\^eme clique, alors la clique couvre l'ar\^ete $[x,y]$.
+Initialement ${\cal CC}(G_c)$ est vide et chaque sommet de $v \in V$ a un \'etat $Cliq(v)=0$. 
+\newline
+\`A chaque \'etape de l'algorithme, chaque sommet $v$ a $5$ \'etats possibles :
+\begin{itemize}
+	\item $Cliq(v)=0$ : le sommet $v$ n'est couvert par aucune clique. Il correspond \`a un sommet ``basique'' dans l'algorithme de {\em Lehot}.
+	\item $Cliq(v)=1$ : le sommet $v$ est couvert par une clique ou deux cliques. Dans le cas o\`u il est couvert par deux cliques, l'intersection de ces cliques donne le sommet $v$. Ce sommet est \'etiquett\'e ``pleinement-nomm\'e" dans l'algorithme de {\em Lehot}.
+	\item $Cliq(v) = 2$ : le sommet $v$ est couvert par une clique et peut \^etre couvert par une seconde clique. Ce sommet est ``bien-nomm\'e" dans l'algorithme de {\em Lehot}.
+	\item $Cliq(v) = 3$ : le sommet $v$ est un sommet ambigu. L'algorithme doit identifier la clique \`a laquelle il appartient pour qu'elle devienne un sommet partag\'e dans l'algorithme de {\em Lehot}.
+	\item $Cliq(v) = -1$ :  le sommet $v$ est couvert par plus de deux cliques. Il est contenu dans l'ensemble $\cal C$ et doit \^etre corrig\'e par l'algorithme de correction.
+\end{itemize}
+
+Nous choisissons un sommet $v$ de degr\'e minimum qui n'appartient \`a aucune clique ou qui est un sommet ambigu. 
+S'il existe une partition coh\'erente (voir d\'efinition \ref{cliquesCoherentes}) de ce sommet et de son voisinage $\{v\} \cup \Gamma_{G_c}(v)$ en deux cliques $C_1, C_2$, alors ces deux cliques sont contenues dans la couverture de corr\'elation ${\cal CC}(G_c)$ en cours de construction. Les sommets $v$ et $u$ (avec $u \in  \Gamma_{G_c}(v)$), appartenant \`a $C_1$ ou $C_2$, ont leurs \'etats modifi\'es \`a chaque \'etape de l'algorithme de la mani\`ere suivante :
+\begin{itemize}
+\item $Cliq(v) = 1$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et la clique $C_2$ est vide. 
+\item $Cliq(v) = 3$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et la clique $C_2$ est non vide. 
+\item $Cliq(v) = 2$ si son \'etat pr\'ec\'edent est diff\'erent de $0$.
+\item $Cliq(u) = 1$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et l'ensemble des ar\^etes incidentes \`a $u$ est vide.
+\item $Cliq(u) = 2$ si son \'etat pr\'ec\'edent est \'egal \`a $3$ et l'ensemble des ar\^etes incidentes \`a $u$ est vide.
+\item $Cliq(u) = 3$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et l'ensemble des ar\^etes incidentes \`a $u$ est non vide.
+\item $Cliq(u) = -1$ si son \'etat pr\'ec\'edent est \'egal \`a $3$ et l'ensemble des ar\^etes incidentes \`a $u$ est non vide.
+\end{itemize} 
+Dans le cas o\`u il n'existe aucune partition coh\'erente (voir d\'efinition \ref{cliquesCoherentes}) au sommet $v$, son \'etat est \`a $Cliq(v)=-1$.
+\newline
+%\vspace{-1.5cm}
+  %% ---- figure etapes de decouverte de l'algo de lehot
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=500pt, height= 300pt]{exempleAlgorithmeCouverture.eps}\vspace{-0.5em}
+	\caption{ Les diff\'erentes \'etapes de la couverture en cliques du graphe $G$. Les ar\^etes de m\^eme couleur appartiennent \`a la m\^eme clique.  Les ar\^etes $(b,c)$ et $(a,d)$ sont supprim\'ees du graphe avant l'ex\'ecution de l'algorithme de {\em couverture}.  }\vspace{-0.5em}
+	\label{exempleAlgorithmeCouverture}
+\end{figure}
+%% ---- figure etapes de decouverte de l'algo de lehot
+\FloatBarrier
+%% description de l'algo
+L'algorithme de recherche de couverture de corr\'elation ${\cal CC}(G_c)$ (voir algorithme \ref{algo:couverture})  consid\`ere, tant qu'il en existe, un sommet $v$ dont les ar\^etes incidentes sont couvertes par une seule clique. 
+Il affecte \`a ce sommet l'\'etat $Cliq(v) = 1$, sauvegarde cette clique dans ${\cal CC}(G_c)$ puis supprime ces ar\^etes incidentes dans le graphe $G_c$. Les voisins de ce sommet passent \`a l'\'etat $2$.
+\newline
+Si au cours de l'ex\'ecution un tel sommet $v$ n'existe pas alors l'algorithme de {\em couverture} consid\`ere un sommet $u$ dont son voisinage peut \^etre couvert par deux cliques et qui n'a pas \'et\'e pr\'ec\'edemment couverte par une clique de ${\cal CC}(G_c)$. 
+Si cette partition en deux cliques est unique, l'algorithme affecte $Cliq(u) = 1$ \`a ce sommet et supprime les ar\^etes. 
+Dans le cas o\`u ce sommet appartient \`a un des cas de la figure \ref{configurationAmbiguite} (cas d'un sommet encadr\'e), nous avons montr\'e que ces graphes sont les seuls line-graphes pour lesquels deux partitions possibles existent. 
+Nous utilisons la fonction de d\'ecision  $Verif-correl$  (section \ref{VerifCorrel}) pour lever l'ambigu\"{i}t\'e.
+\newline
+Un \'etat est affect\'e aux autres sommets $v$ de la clique couvrant $v$ selon l'un des trois cas. 
+Dans le premier cas, l'\'etat actuel appartient \`a $Cliq(v) \in \{2,3\}$ si les sommets $v$ ont des ar\^etes incidentes non encore couvertes par une clique et l'\'etat pr\'ec\'edent est $Cliq(v) \in \{ 3,0\}$. 
+Dans le second cas, $Cliq(v) = 1$ est attribu\'e aux sommets $v$ si l'ensemble des ar\^etes incidentes est vide. 
+Enfin, dans le dernier cas, l'algorithme  affecte $Cliq(v) = -1$ \`a ces sommets si leur \'etat pr\'ec\'edent est  $Cliq(v) \in \{2,3\}$ et leurs ar\^etes incidentes ne forment pas une clique.
+\newline
+\`A la fin  de l'ex\'ecution de cet algorithme, tous les sommets $v$ dont l'\'etat courant est $Cliq(v) = -1$  n'ont pas \'et\'e couverts. 
+Ces sommets appartiennent \`a l'ensemble $\cal C$ des sommets \`a corriger par l'algorithme de correction.
+\newline
+
+ La figure \ref{exempleAlgorithmeCouverture} d\'etaille l'algorithme de {\em couverture} (algorithme \ref{algo:couverture})  sur un graphe $G=(V,E)$  dans lequel nous avons supprim\'e deux ar\^etes. L'objectif de la suppression d'ar\^etes dans la figure \ref{exempleAlgorithmeCouverture}(a) est d'obtenir des sommets \`a corriger \`a la fin de la couverture.
+ Nous s\'electionnons le sommet $f$ car il est de degr\'e minimum. 
+ Il forme une clique avec son voisinage alors la clique $\{f,b,e\}$ est ajout\'ee \`a l'ensemble  ${\cal CC}(G)$ puis les ar\^etes $(f,b), (b,e), (f,e)$ sont supprim\'ees de $E$. 
+ L'\'etat de $f$ est $Cliq(f) = 1$ et les sommets $b$ et $e$ ont $Cliq(b) = Cliq(e) = 3$ (voir figure \ref{exempleAlgorithmeCouverture}(c)). 
+ \newline
+ Le second sommet trait\'e est $a$ car son \'etat est $Cliq(a) = 0$. Il existe deux partitions coh\'erentes $\{a,b\}$ et $\{a,e,c\}$ au voisinage de $a$. Ces deux partitions sont ajout\'ees \`a    ${\cal CC}(G)$ et les ar\^etes de ces cliques sont supprim\'ees de $E$. L'algorithme attribue 
+ \begin{itemize}
+\item  Au sommet $a$, l'\'etat $Cliq(a) = 1$,
+\item Aux sommets $b$ et $e$, les \'etats $Cliq(b) = Cliq(e) = 2$ car leur \'etat pr\'ed\'ecent \'etait $Cliq(b) = Cliq(e) = 3$ et ces sommets ont encore un voisin,
+\item Au sommet $c$, l'\'etat $Cliq(b) = 3$.
+ \end{itemize}
+ On traite les autres sommets ($c$) de la m\^eme mani\`ere jusqu'\`a ce qu'on s\'electionne le sommet $d$.
+ Ce sommet a deux partitions $\{d,b\}$ et $\{d,e\}$ non coh\'erentes (voir d\'efinition \ref{cliquesCoherentes}) parce que la fonction $Verif-correl$ (section \ref{VerifCorrel}) appliqu\'ee \`a ces partitions retourne 0. 
+ Ce sommet est donc \`a corriger ${\cal C} = \{d\}$ (voir figure \ref{exempleAlgorithmeCouverture}(e)).
+\newline
+
+Si le graphe $G_c=(V_c, E_c)$ est un graphe de corr\'elation alors l'algorithme de couverture en d\'etermine la couverture de corr\'elation ${\cal CC}(G_c)$.
+En effet, si $G_c$ est un line-graphe, par r\'ecurrence sur l'ensemble des sommets et \`a chaque \'etape, il existe un sommet non encore couvert qui :
+\begin{itemize}
+\item Soit est couvert par une clique appartenant \`a ${\cal CC}(G_c)$ et son voisinage restant peut \^etre convert par une nouvelle clique.
+\item Soit n'est couvert par aucune clique de  ${\cal CC}(G_c)$ et son voisinage restant peut \^etre couvert par une ou deux nouvelles cliques.
+\item Soit est dans une ambigu\"{i}t\'e alors on a recours \`a la fonction $Verif-correl$ (section \ref{VerifCorrel}) pour d\'eterminer les bonnes partitions de ce sommet.
+\end{itemize}
+
+\subsubsection{Complexit\'e de l'algorithme de couverture}
+La complexit\'e de l'algorithme est au pire des cas en $O(m \times \Delta(G_c))$ avec $m$ le nombre d'ar\^etes et $\Delta(G_c)$ le degr\'e maximum du graphe.
+%On rappelle que l'algorithme de Lehot \cite{decompositionEnCliques} a une complexit\'e en $O(m) +E$. 
+Le facteur $\Delta(G_c)$ dans notre algorithme est du \`a la recherche de la partition en deux cliques $C_1$ et $C_2$ et est n\'ecessaire \`a la d\'etermination de l'ensemble des sommets $v$ tels que $Cliq(v) = -1$, en nombre le plus petit possible.
+\newline
+
+{\bf Conclusion} : si le graphe $G_c$ est un line-graphe, tous ses sommets $v$ sont labellis\'es \`a $Cliq(v) = 1$ et l'algorithme  de {\em couverture} trouve une partition du voisinage d'un sommet en une ou deux cliques de fa\c con unique (voir les lemmes pr\'ec\'edents). 
+Une fois ce sommet et ses ar\^etes incidentes supprim\'ees, le graphe restant est toujours un line-graphe, et la propri\'et\'e se propage.
+%Donc, si $G_c$ est un line-graphe, cet algorithme en trouvera toujours la couverture de corr\'elation unique.
+Ainsi $G_c$ qui poss\`ede des sommets $v$ aux \'etats $Cliq(v) = -1$ n'est pas un line-graphe. Nous proposons l'algorithme de correction qui retourne le line-graphe le plus proche de $G_c$.
+
+
+%---------------------------- algorithme de couverture ---------------------------------------------------------------------
+\begin{algorithm}
+\algsetup{indent=2em}
+\caption{Couverture}
+\label{algo:couverture}
+\begin{algorithmic}[1]
+\IF{$G_c$ est isomorphe \`a un graphe double (voir figure \ref{graphe2Couverture})}
+	\STATE{le traiter avec $Verif-correl$ $(^1)$}
+\ELSE
+	\WHILE {il existe un sommet $u$ t.q $Cliq(u) \in \{0,3\}$}
+		\STATE{ choisir un sommet $u$ de degr\'e minimum}
+		\IF{ $\{u\} \cup \Gamma_{G_c}(u)$ peut \^etre couvert par deux cliques $C_1$ et $C_2$ coh\'erentes, \\ ~~~~~~$C_1$ maximale et $C_2 = \emptyset$ si $Cliq(u)=3$ $(^2)$ }
+			\IF{$Cliq(u) = 0$ et $C_2 \neq \emptyset$}
+				\STATE{ $Cliq(u)= 3$ }
+			\ELSE
+				\IF{$Cliq(u) = 0$ et $C_2 =  \emptyset$}
+					\STATE{$Cliq(u) = 1$}
+				\ELSE
+					\STATE{$Cliq(u) = 2$}
+				\ENDIF
+			\ENDIF
+			\STATE{ $\epsilon_u = E(G_c[C_1]) \cup E(G_c[C_2])$ }
+			\FOR{$w \in \Gamma_{G_c}(u)$}
+				\STATE{ $\alpha(w) = card\{[w,x] \in E - \epsilon_u\}$}
+				\IF{$\alpha_w > 0$}
+					\IF{ $Cliq(w) = 0$ }
+						\STATE{$Cliq(w) = 3$}
+					\ELSE
+						\IF{$Cliq(w) = 3$}
+							\STATE{$Cliq(w) = -1$}
+						\ENDIF	
+					\ENDIF
+				\ELSE
+					\IF{$Cliq(w) = 0$}
+						\STATE{$Cliq(w) = 1$}
+					\ELSE
+						\IF{$Cliq(w) = 3$}
+							\STATE{$Cliq(w) = 2$}
+						\ENDIF
+					\ENDIF
+				\ENDIF
+			\ENDFOR
+			\STATE{$E = E - \epsilon_{u}$}
+		\ELSE
+			\STATE{$Cliq(u) = -1$}
+		\ENDIF
+	\ENDWHILE
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+%
+%\begin{algorithm}[!ht]
+%\label{algo:couverture}
+%\caption{couverture}
+%%\begin{algorithmic}[1]
+%\noindent DEBUT\\
+%\noindent 1. {\bf Si} $G_c$ est isomorphe \`a un graphe double (voir figure \ref{graphe2Couverture} ), {\bf alors} le traiter avec Verif-correl$(^1)$ \\
+%~~\indent {\bf Sinon} \\
+%~2. \indent {\bf Tant que} il existe un sommet $u$ t.q $Cliq(u) \in \{0,3\}$\\ 
+%       	\indent~~~~~~{\bf Faire}\\
+%~3.	       	\indent~~~~~~~~choisir $u$ de degr\'e minimum\\
+%~4.       	\indent~~~~~~~~{\bf Si} $\{u\} \cup \Gamma_{G_c}(u)$ peut \^etre couvert par deux cliques $C_1$ et $C_2$ coh\'erentes,\\
+%		\indent~~~~~~~~~~~~~~$C_1$ maximale et $C_2 = \emptyset$ si $Cliq(u)=3$ $(^2)$\\
+%	       	\indent~~~~~~~~~~~~{\bf alors}\\
+%~5.	       	\indent~~~~~~~~~~~~~~{\bf Si } $Cliq(u) = 0$ et $C_2\neq \emptyset$ {\bf Alors} $Cliq = 3$ \\
+%~6.		\indent~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq = 0$ et $C_2 =  \emptyset$ {\bf Alors} $Cliq(u) = 1$\\
+%~7.		\indent~~~~~~~~~~~~~~~~~~~~~~~{\bf Sinon} $Cliq(u) = 2$ 	\\
+%~8.		\indent~~~~~~~~~~~~~~~~~~~~~~~{\bf FinSi}\\      	
+%~9.		\indent~~~~~~~~~~~~~~{\bf FinSi}\\
+%~10.		\indent ~~~~~~~~~~~~~$\epsilon_u = E(G_c[C_1]) \cup E(G_c[C_2])$\\
+%~11.		\indent ~~~~~~~~~~~~~{\bf Pour tout} $w \in \Gamma_{G_c}(u)$ {\bf Faire} \\
+%~12.		\indent~~~~~~~~~~~~~~~~$\alpha(w) = card\{[w,x] \in E - \epsilon_u\}$\\
+%~13.		\indent~~~~~~~~~~~~~~~~{\bf Si} $\alpha_w > 0$ {\bf Alors}\\
+%~14.		\indent~~~~~~~~~~~~~~~~~~{\bf Si} $Cliq(w) = 0$ {\bf Alors} $Cliq(w) =3$\\
+%~15.		\indent~~~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 3$ {\bf Alors} $Cliq(w) =-1$\\
+%~16.		\indent~~~~~~~~~~~~~~~~~~{\bf FinSi} \\
+%~17.		\indent~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 0$ {\bf Alors} $Cliq(w) =1$\\
+%~18. 	\indent~~~~~~~~~~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 3$ {\bf Alors} $Cliq(w) = 2$ \\
+%~19. 	\indent~~~~~~~~~~~~~~~~~~~~~~~~~{\bf FinSi} \\
+%~20.		\indent ~~~~~~~~~~~~~{\bf FinPourTout}\\
+%~21.		\indent ~~~~~~~~~~~~~$E = E - \epsilon_u$\\
+%~22.		\indent            ~~~~~~~{\bf Sinon} $Cliq(u) = -1$\\
+%	       	\indent~~~~~~~~~~~~{\bf FinSi}\\
+%%       	\indent~~~~~~
+%~23. \indent {\bf FinTant que}\\
+%~24. \noindent {\bf Fin Si}\\
+%\noindent FIN\\
+%%\end{algorithmic}
+%\end{algorithm}
+%---------------------------- algorithme de couverture ---------------------------------------------------------------------
+
+\FloatBarrier
+$^1$ : chaque graphe de la figure \ref{graphe2Couverture} admet deux couvertures de corr\'elation, souvent isomorphes, mais une seule de ces couvertures de corr\'elation peut correspondre au DAG du r\'eseau \'electrique sous-jacent. Dans ce cas, on utilise la fonction $Verif-correl$ afin de d\'eterminer la couverture de corr\'elation la plus probable.
+\newline
+
+ $^2$ :  le sommet $u$ choisi (s'il existe) ne sera pas prioritairement un sommet tel que $Cliq(u) = 0$ et $u$ est un point d'ambigu\"{i}t\'e. Si lors d'une \'etape, seul un tel choix est possible et qu'il n'y a aucun sommet $u$ tel que $Cliq(u) = -1$, c'est que chaque sommet du graphe initial $G_c$ est un point d'ambigu\"{i}t\'e.
+ Dans ce cas, $G_c$ est une union de composantes connexes isomorphes \`a un des graphes de la figure  \ref{graphe2Couverture}.
+Dans ce cas, n'importe quel choix conduit \`a une couverture de corr\'elation correcte.
+%\newline
+
+
+
+
+%%--------------------------- old version -----------------------------------------------------------------------------------------
+
+%L'algorithme de {\em couverture} est une am\'elioration de  celui de {\em Lehot} \cite{decompositionEnCliquesParArcs}.
+%En effet, l'algorithme de Lehot se subdivise en deux parties. 
+%La premi\`ere partie consiste \`a nommer des sommets appartenant \`a une m\^eme clique et la seconde partie \`a comparer, s'il existe, le line-graphe propos\'e avec celui du graphe racine. 
+%Concernant l'identification, il distingue cinq cat\'egories de sommets:
+%\begin{itemize}
+%\item les sommets ``bien-d\'efini" : des sommets du graphe racine $G$ dont leur clique correspondante dans $L(G)$ a \'et\'e trouv\'ee et identifi\'ee.
+%\item les sommets ``\`a moiti\'e-nomm\'e" : des sommets de $L(G)$ dont un sommet de leur ar\^ete dans $G$ a d\'ej\`a \'et\'e ``bien-d\'efini".
+%\item les sommets ``pleinement-nomm\'e" : des ar\^etes de $G$ dont leurs sommets dans $L(G)$ sont "bien-d\'efini".
+%\item les sommets ``basique" : sommets adjacents dans $L(G)$. Not\'e $2-3$, chaque chiffre est un sommet dans $G$.
+%\item les sommets ``d'intersection" : sommets adjacents aux sommets ``basique" appartenant \`a deux cliques.
+%\end{itemize}
+%Le but de cet algorithme est d'identifier les sommets ``d'intersection" parmi les sommets adjacents d'un sommet de $L(G)$ \`a partir des trois cas \cite{decompositionEnCliquesParArcs}. \newline
+%L'algorithme d\'ebute par la s\'election de deux sommets ``basique" $1-2, 2-3$ et de leur ensemble d'adjacences $X$.
+%Si $|X| = \emptyset$ alors tous les sommets des cliques sont identifi\'es en sommets ``\`a moiti\'e-nomm\'e".
+%Si $|X| = 1$ alors il existe un sommet $x$ adjacent aux deux sommets ``basique" ($1-2,2-3$) tel que $(x,1-2,2-3)$ forme un triangle ``impair" si $x=2-4$ ou ce sommet forme un triangle ``pair" si $x=1-3$. Le sommet $x$ devient un sommet {\em d'intersection} et est identifi\'e en ``pleinement-nomm\'e". Les autres sommets $1-2,2-3$ sont identifi\'es en sommets ``\`a moiti\'e-nomm\'e".
+%Dans le cas o\`u  $|X = \{x,y\}|=2$, si $x$ et $y$ sont adjacents alors il n'existe pas de sommets ``d'intersection" sinon ils forment deux triangles avec $1-2,2-3$. Un de ces triangles est ``impair" et il implique que $x=2-4$ , $y=1-3$. $y$ est identifi\'e en sommet {\em d'intersection}.
+%Enfin pour $|X =\{ a,b,...\}| \ge 3$, le sommet $b$ est d\'eclar\'e sommet {\em d'intersection}  si $a$ et $b$ sont adjacents sinon  le sommet $a$ devient un sommet {\em d'intersection}. 
+%La derni\`ere \'etape s\'electionne al\'eatoirement un sommet $u$ ``\`a moiti\'e-nomm\'e". Ce sommet est adjacent \`a un sommet $v$ ``pleinement-nomm\'e". Si ce sommet $v$ n'est pas d\'ej\`a couvert par une clique, alors il existe un sommet $z$ ``pleinement-nomm\'e" qui appartient d\'ej\`a \`a une clique et qui est d\'eclar\'e sommet {\em d'intersection} de ces deux pr\'ec\'edents sommets $u$ et $v$. Nous trouvons ces sommets $u$ et $v$ dans une pile dans laquelle $u$ et $v$ sont en t\^ete de pile et nous les nommons avec le num\'ero de la clique. 
+%\`A la fin de cette \'etape, tous les sommets sont nomm\'es ``pleinement-nomm\'e" et nous identifions les sommets ``pleinement-nomm\'e" adjacents par un nouveau num\'ero de clique.
+%%% ---- figure etapes de decouverte de l'algo de lehot
+%\begin{figure}[htb!]
+%	\centering
+%	\includegraphics[scale=0.50]{deroulementAlgorithmeLehot.eps}\vspace{-0.5em}
+%	\caption{ Identification des sommets partag\'es dans le graphe $H$ et nommage des sommets de $G$. }\vspace{-0.5em}
+%	\label{grapheRacineLineGrapheExemple}
+%\end{figure}
+%%% ---- figure etapes de decouverte de l'algo de lehot
+%\newline
+%Nous comparons le line-graphe propos\'e $H$ et le line-graphe $L(G)$ de $G$, ar\^etes par ar\^etes, et s'il existe une clique de $H$ n'ayant pas de correspondance dans $L(G)$ alors $L(G)$ n'est pas un line-graphe et l'algorithme ne retourne pas de r\'esultats c'est-\`a-dire aucunes cliques d\'ecouvertes lors de l'identification des sommets.
+%Cet algorithme s'ex\'ecute en $O(N)+E$ avec $N$  le nombre d'ar\^etes dans $G$ et $E$ le nombre d'ar\^etes dans $L(G)$ car le processus d'identification des ar\^etes est en $O(N)$ et la comparaison entre les graphes est en $E$ \'etapes.
+%\newline
+%
+%\subsubsection{Description de l'algorithme de couverture}
+%Notre algorithme de couverture  couvre autant que possible des sommets du graphe de corr\'elation  $G_c$ par une ou deux cliques et si $G_c$ ne contient aucune case \'erronn\'ee alors il retourne sa {\em couverture de corr\'elation} ${\cal H}$. Dans le cas contraire, les sommets couverts par plus de deux cliques sont sauvegard\'es dans l'ensemble $\cal C$ des sommets \`a corriger. Notre algorithme de couverture retourne alors les cliques d\'ecouvertes et l'ensemble $\cal C$. 
+%%La particularit\'e de notre algorithme est que les sommets appartenant \`a des cliques d\'ej\`a decouvertes ne sont plus trait\'es.
+%
+%Soit le graphe de corr\'elation $G_c = (V,E)$.
+%Consid\'erons $\cal H$ un ensemble de cliques d\'ecouvertes de $G_c$ initialement vide et chaque sommet $v \in V$ a un \'etat  $Cliq(v)$ initialis\'e \`a $0$.
+%\newline
+%Chaque sommet $v$ a cinq \'etats possibles:
+%\begin{itemize}
+%	\item $0$ : il n'est couvert par aucune clique. Il correspond aussi \`a l'\'etat initial des sommets. C'est un sommet ``basique''.
+%	\item $1$ : le sommet $v$ est couvert par une clique ou deux cliques. Dans le cas o\`u il est couvert par deux cliques, l'intersection de ces cliques donne le sommet $v$. Ce sommet est identifi\'e par ``pleinement-nomm\'e".
+%	\item $2$ : le sommet est couvert par une clique et peut \^etre couvert par une seconde clique. Ce sommet est ``bien-nomm\'e".
+%	\item $3$ : le sommet $v$ est un sommet ambigu. Ce sommet est ``d'intersection''.
+%	\item $-1$ :  le sommet $v$ est couvert par plus de deux cliques. Il est contenu dans l'ensemble $\cal C$ et doit \^etre corrig\'e par l'algorithme de correction.
+%\end{itemize}
+%Nous choisissons un sommet $v$ de degr\'e minimum tel qu'il n'appartient \`a aucune clique ou qu'il est un sommet ambigu. 
+%S'il existe une partition coh\'erente de ce sommet et de son voisinage $\{v\} \cup \Gamma_{G_c}(v)$ en deux cliques $C_1, C_2$, alors ces deux cliques sont contenues dans la line-couverture $\cal H$ en cours de construction. Les sommets $v$ et $u$ (avec $u \neq v$), appartenant \`a $C_1$ ou $C_2$, ont leurs \'etats modifi\'es de la mani\`ere suivante :
+%\begin{itemize}
+%\item $Cliq(v) = 1$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et la clique $C_2$ est vide. 
+%\item $Cliq(v) = 3$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et la clique $C_2$ est non vide. 
+%\item $Cliq(v) = 2$ si son \'etat pr\'ec\'edent est diff\'erent de $0$.
+%\item $Cliq(u) = 1$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et l'ensemble des ar\^etes incidentes \`a $u$ est vide.
+%\item $Cliq(u) = 2$ si son \'etat pr\'ec\'edent est \'egal \`a $3$ et l'ensemble des ar\^etes incidentes \`a $u$ est vide.
+%\item $Cliq(u) = 3$ si son \'etat pr\'ec\'edent est \'egal \`a $0$ et l'ensemble des ar\^etes incidentes \`a $u$ est non vide.
+%\item $Cliq(u) = -1$ si son \'etat pr\'ec\'edent est \'egal \`a $3$ et l'ensemble des ar\^etes incidentes \`a $u$ est non vide.
+%\end{itemize} 
+%Dans le cas o\`u il n'existe aucune partition coh\'erente au sommet $v$, son \'etat est \`a $Cliq(v)=-1$.
+%\newline
+%
+%%% description de l'algo
+%L'algorithme de recherche de la couverture de corr\'elation $\cal H$ consid\`ere, tant qu'il en existe, un sommet dont les ar\^etes incidentes sont couverts par une seule clique. 
+%Il labellise ce sommet en $Cliq = 1$, sauvegarde cette clique dans $\cal H$ puis supprime ces ar\^etes incidentes dans le graphe $G_c$. 
+%Si au cours de l'ex\'ecution un tel sommet n'existe pas alors l'algorithme consid\`ere un sommet dont les ar\^etes incidentes peuvent \^etre couvertes par deux cliques et qui n'a pas \'et\'e pr\'ec\'edemment couvert par une clique de $H$. 
+%Si cette partition en deux cliques est unique, l'algorithme labellise ce sommet en $Cliq = 1$ et supprime les ar\^etes. 
+%Dans le cas o\`u ce sommet appartient \`a un des cas de la figure \ref{configurationAmbiguite} (cas d'un sommet encadr\'e), nous avons montr\'e que ces graphes sont les seuls line-graphes pour lesquels deux partitions possibles existent. 
+%Nous utilisons la fonction de d\'ecision {\em Verif-correl} pour lever l'ambiguit\'e.
+%Les autres sommets de la clique sont labellis\'es selon trois cas. Dans le premier cas, ils recoivent $Cliq \in \{2,3\}$ si ils poss\`edent des ar\^etes incidentes et leur label actuel est $Cliq \in \{ 3,0\}$. Dans le second cas, $Cliq = 1$ est attribu\'e \`a ces sommets si l'ensemble des ar\^etes incidentes est vide. Enfin, dans le dernier cas, ils recoivent $Cliq = -1$ si leur label actuel est  $Cliq \in \{2,3\}$ et ces ar\^etes incidentes ne forme pas une clique.
+%\`A la fin  de l'ex\'ecution de cet algorithme, tous les sommets qui sont labellis\'es \`a $Cliq= -1$  sont \`a corriger par l'algorithme de correction. Ces sommets appartiennent \`a l'ensemble $\cal C$ des sommets \`a corriger.
+%%Dans cet algorithme, on consid\'ere \`a chaque \'etape un sommet couvert par au plus une clique et dont toutes les ar\^etes incidentes ne sont pas (encore) couvertes par une des cliques pr\'ealablement choisie. On d\'etermine alors si cet ensemble d'ar\^etes appartient \`a une nouvelle clique (notamment dans le cas d'un sommet d\'ej\`a contenu par une clique), soit s'il est couvert par deux nouvelles cliques (uniquement dans le cas ou le sommet n'est couvert par aucune clique d\'ej\`a trouv\'ee). Les sommets correspondant au premier cas sont trait\'es en priorit\'e, et \`a chaque \'etape, si une possibilit\'e d'ambiguit\'e est d\'etect\'ee (figure \ref{configurationAmbiguite}), elle est lev\'ee par l'utilisation de la fonction \textit{Verif\_correl}.
+%
+%
+%\begin{algorithm}[!ht]
+%\caption{couverture\_cliques}
+%\noindent DEBUT\\
+%\noindent 1. {\bf Si} $G_c$ est isomorphe \`a un graphe double (voir figure \ref{graphe2Couverture} ), {\bf alors} le traiter avec Verif\_correl$(^1)$ \\
+%~~\indent {\bf Sinon} \\
+%~2. \indent {\bf Tant que} il existe un sommet $u$ t.q $Cliq(u) \in \{0,3\}$\\ 
+%       	\indent~~~~~~{\bf Faire}\\
+%~3.	       	\indent~~~~~~~~choisir $u$ de degr\'e minimum\\
+%~4.       	\indent~~~~~~~~{\bf Si} $\{u\} \cup \Gamma_{G_c}(u)$ peut \^etre couvert par deux cliques $C_1$ et $C_2$ coh\'erentes,\\
+%		\indent~~~~~~~~~~~~~~$C_1$ maximale et $C_2 = \emptyset$ si $Cliq(u)=3$ $(^2)$\\
+%	       	\indent~~~~~~~~~~~~{\bf alors}\\
+%~5.	       	\indent~~~~~~~~~~~~~~{\bf Si } $Cliq(u) = 0$ et $C_2\neq \emptyset$ {\bf Alors} $Cliq = 3$ \\
+%~6.		\indent~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq = 0$ et $C_2 =  \emptyset$ {\bf Alors} $Cliq(u) = 1$\\
+%~7.		\indent~~~~~~~~~~~~~~~~~~~~~~~{\bf Sinon} $Cliq(u) = 2$ 	\\
+%~8.		\indent~~~~~~~~~~~~~~~~~~~~~~~{\bf FinSi}\\      	
+%~9.		\indent~~~~~~~~~~~~~~{\bf FinSi}\\
+%~10.		\indent ~~~~~~~~~~~~~$\epsilon_u = E(G_c[C_1]) \cup E(G_c[C_2])$\\
+%~11.		\indent ~~~~~~~~~~~~~{\bf Pour tout} $w \in \Gamma_{G_c}(u)$ {\bf Faire} \\
+%~12.		\indent~~~~~~~~~~~~~~~~$\alpha(w) = card\{[w,x] \in E - \epsilon_u\}$\\
+%~13.		\indent~~~~~~~~~~~~~~~~{\bf Si} $\alpha_w > 0$ {\bf Alors}\\
+%~14.		\indent~~~~~~~~~~~~~~~~~~{\bf Si} $Cliq(w) = 0$ {\bf Alors} $Cliq(w) =3$\\
+%~15.		\indent~~~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 3$ {\bf Alors} $Cliq(w) =-1$\\
+%~16.		\indent~~~~~~~~~~~~~~~~~~{\bf FinSi} \\
+%~17.		\indent~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 0$ {\bf Alors} $Cliq(w) =1$\\
+%~18. 	\indent~~~~~~~~~~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 3$ {\bf Alors} $Cliq(w) = 2$ \\
+%~19. 	\indent~~~~~~~~~~~~~~~~~~~~~~~~~{\bf FinSi} \\
+%~20.		\indent ~~~~~~~~~~~~~{\bf FinPourTout}\\
+%~21.		\indent ~~~~~~~~~~~~~$E = E - \epsilon_u$\\
+%~22.		\indent            ~~~~~~~{\bf Sinon} $Cliq(u) = -1$\\
+%	       	\indent~~~~~~~~~~~~{\bf FinSi}\\
+%%       	\indent~~~~~~
+%~23. \indent {\bf FinTant que}\\
+%~24. \noindent {\bf Fin Si}\\
+%\noindent FIN\\
+%\end{algorithm}
+%
+%\FloatBarrier
+%$^1$ : chaque graphe de la figure \ref{graphe2Couverture} admet deux line-couvertures, souvent isomorphes, mais une seule de ces line-couvertures correspond au DAG du r\'eseau \'electrique sous-jacent. Dans ce cas, on utilise les mesures de corr\'elation de la matrice de mesures $M_c$ afin de d\'eterminer la line-couverture la plus probable.
+%\newline
+%
+% $^2$ :  le sommet $u$ choisi (s'il existe) ne sera pas prioritairement un sommet tel que $Cliq(u) = 0$ et $u$ est un point d'ambigu\"{i}t\'e. Si lors d'une \'etape, seul un tel choix est possible et qu'il n'y a aucun sommet $u$ tel que $Cliq(u) = -1$, c'est que chaque sommet du graphe initial $G_c$ est un point d'ambigu\"{i}t\'e.
+% Dans ce cas, $G_c$ est une union de composantes connexes isomorphes \`a un des graphes de la figure  \ref{graphe2Couverture}.
+%Dans ce cas, n'importe quel choix conduit \`a une d\'ecomposition correcte.
+%Dans tous les autres cas de sommets $u$ s\'electionn\'es, le lemme \ref{lemmaCoherente} montre que le choix de d\'ecomposition est unique si $G_c$ est un line-graphe.
+%\newline
+%
+%
+%% parler d'ambiguite  
+%% afin de leverr l'ambiguite, on a recous a u oracle dont la reponse est tjrs correcte. l'oracle utilse les lois de conversation .....
+%
+%\subsubsection{Complexit\'e de l'algorithme de couverture}
+%La complexit\'e de l'algorithme est au pire en $O(m \times \Delta(G_c))$ avec $m$ le nombre d'ar\^etes et $\Delta(G_c)$ le degr\'e maximum du graphe.
+%%On rappelle que l'algorithme de Lehot \cite{decompositionEnCliques} a une complexit\'e en $O(m) +E$. 
+%Le facteur $\Delta(G_c)$ dans notre algorithme est du \`a la recherche de la partition en deux cliques $C_1$ et $C_2$ et est n\'ecessaire \`a la d\'etermination de l'ensemble des sommets $v$ tels que $Cliq(v) = -1$, en nombre le plus petit possible.
+%\newline
+%
+%En conclusion, si le graphe $G_c$ est bien un line-graphe, tous ses sommets sont labellis\'es \`a $Cliq = 1$ et l'algorithme  de couverture trouvera une partition du voisinage d'un sommet en une ou deux cliques de fa\c con unique (voir les lemmes pr\'ec\'edents). 
+%Une fois ce sommet et ses ar\^etes incidentes supprim\'es, le graphe restant est toujours un line-graphe, et la propri\'et\'e se propage.
+%%Donc, si $G_c$ est un line-graphe, cet algorithme en trouvera toujours la couverture de corr\'elation unique.
+%Ainsi $G_c$ qui poss\`ede des sommets labellis\'es \`a $Cliq = -1$ n'est pas un line-graphe. Nous allons proposer l'algorithme de correction qui retourne le line-graphe le plus proche de $G_c$.

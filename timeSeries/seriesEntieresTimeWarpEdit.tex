@@ -1,0 +1,69 @@
+La distance {\em Time Warp Edit} (TWE) est une mesure de distance pour des s\'eries temporelles  discr\`etes. En comparaison avec les distances telles {\em Dynamic Time Warping (DTW)} \cite{muller2007dynamicDTW} et {\em longest common subsequence (LCS)} \cite{greenberg2002fastLCS}, la distance {\em TWE} est une m\'etrique propos\'ee par {\em P.F. Marteau} en $2009$. 
+La distance {\em TWE} a quatre propri\'et\'es :
+\begin{itemize}
+	\item Traite le d\'ecalage temporelle local avec des performances \'elev\'ees.
+	\item Satisfait l'in\'egalit\'e triangulaire c'est-\`a-dire $AB \le AC+CB$ avec $AB,AC, CB$ des cot\'es d'un triangle quelconque.
+	\item Comprend le param\`etre de rigidit\'e $\nu$ qui contr\^ole l'\'elasticit\'e de la m\'etrique.
+	\item Utilise la diff\'erence de temps pour comparer les segments de s\'eries temporelles comme des co\^uts de correspondances locales. 
+\end{itemize}
+Le param\`etre $\nu$ est important dans l'algorithme de {\em TWE} parce qu'il rend plus flexible l'identification de motifs (matching) entre les s\'eries temporelles. 
+La preuve de son efficacit\'e a \'et\'e prouv\'ee dans \cite{marteau2009time}.
+
+L'algorithme de {\em TWE} introduit trois op\'erations : $delete_A$, $delete_B$ et $match$ pour l'\'edition de deux s\'eries discr\`etes $A$ et $B$. L'\'edition d'une s\'erie temporelle consiste \`a modifier cette s\'erie en sous-ensembles de m\^emes tailles \`a partir d'une des trois op\'erations et chaque sous-ensemble est d\'esign\'e par  {\em s\'equence}. La similarit\'e entre les s\'eries $A$ et $B$ est le co\^ut minimum de s\'equences n\'ecessaire pour transformer $A$ en $B$.
+En se basant sur ces trois op\'erations, l'algorithme de {\em TWE} calcule le co\^ut d'une s\'equence \`a chaque op\'eration pour toutes les paires de s\'eries avec l'\'equation \ref{coutSequenceTWE}. Dans cette \'equation, $U$ d\'esigne l'ensemble des s\'eries finies $U = \{A_1^p ~|~ p\in \N \}$ o\`u $A_1^p$ est une s\'erie avec des temps discrets variant de $1$ \`a $p$,
+ $A_1^0$ est la s\'erie nulle de longueur nulle et 
+ $a'_i$ d\'esigne le $i^{ieme}$ \'el\'ement de la s\'erie $A$.
+Nous consid\'erons alors que $a'_i \in S \times T$ o\`u $S \subset R^d$ avec $d \ge 1$ int\`egre un espace multidimensionnel de variables et $T \subset R$  int\`egre la variable temporelle.
+Ainsi, nous pouvons \'ecrire $a'_i = (a_i, t_{a_i})$, o\`u $a_i \in S$ et $t_{a_i} \in T$ avec la condition que  $t_{a_i} > t_{a_j}$ quand $i > j$ (le temps est strictement croissant dans la s\'equence des \'el\'ements).
+La p\'enalit\'e not\'ee $\lambda$ est constante.
+La similarit\'e entre les s\'eries $A$ et $B$ est calcul\'ee r\'ecursivement par 
+\begin{equation}
+	\delta_{\lambda,\nu}(A_1^p, B_1^q) = min
+	\begin{cases}
+		\delta_{\lambda,\nu}(A_1^{p-1}, B_1^q) + \Gamma(a'_p \rightarrow \Lambda) ~~~~~ delete_A, \\
+		 \delta_{\lambda,\nu}(A_1^{p-1}, B_1^{q-1}) + \Gamma(a'_p \rightarrow b'_q) ~~~~~ match, \\
+		 \delta_{\lambda,\nu}(A_1^{p-1}, B_1^q) + \Gamma(\Lambda \rightarrow a'_p) ~~~~~ delete_B, \\
+	\end{cases}
+	\label{coutSequenceTWE}
+\end{equation} 
+avec 
+ \[
+	\begin{array}{lcl} 
+	\Gamma(a'_p \rightarrow \Lambda) & = & d(a'_p, a_{p-1}) + \lambda  \\ 
+	\Gamma(a'_p \rightarrow b'_q) & = & d(a'_p, b'_{q}) + d(a'_{p-1}, b'_{q-1}) \\
+	\Gamma(\lambda \rightarrow b'_q)  & = & d(b'_q, b'_{q-1}) + \lambda. 
+	\end{array}
+\]
+La r\'ecursivit\'e est initialis\'ee par 
+  \[  
+ 	\begin{cases}
+ 	\delta_{\lambda,\nu}(A_1^0, B_1^0) = 0, \\
+ 	\delta_{\lambda,\nu}(A_1^0, B_1^j) = \infty ~pour~ j \ge 1, \\
+ 	\delta_{\lambda,\nu}(A_1^0, B_0^j) = \infty ~pour~ j \ge 1,
+ 	\end{cases}
+ \]
+ avec $a'_0 = b'_0 = 0$ par convention.
+ \newline
+L'algorithme {\em TWE} introduit la rigidit\'e,  constante positive $\nu$, dans la d\'efinition de $\delta_{\lambda, \nu}$ en choisissant $d(a', b') = d_{LP}(a,b) + \nu \times d_{LP}(t_a,t_b)$ qui caract\'erise la rigidit\'e de $\delta_{\lambda, \nu}$.
+Si $\nu = 0$ alors $\delta_{\lambda, \nu}$ est la distance de $S$ et non de $S \times T$.
+Dans cette \'equation, $d_{LP}$ est la m\'etrique $l_p$ norm \cite{chen2004marriageLpNorm}.
+L'expression finale de $\delta_{\lambda, \nu}$ est pr\'esent\'ee par l'\'equation \ref{tweFinalExpression}.
+\begin{equation}
+	\delta_{\lambda,\nu}(A_1^p, B_1^q) = min
+	\begin{cases}
+		\delta_{\lambda,\nu}(A_1^{p-1}, B_1^q) + \Gamma(a'_p \rightarrow \Lambda) ~~~~~ delete_A, \\
+		 \delta_{\lambda,\nu}(A_1^{p-1}, B_1^{q-1}) + \Gamma(a'_p \rightarrow b'_q) ~~~~~ match, \\
+		 \delta_{\lambda,\nu}(A_1^{p-1}, B_1^q) + \Gamma(\Lambda \rightarrow a'_p) ~~~~~ delete_B, \\
+	\end{cases}
+	\label{tweFinalExpression}
+\end{equation} 
+avec 
+ \[
+	\begin{array}{lcl} 
+	\Gamma(a'_p \rightarrow \Lambda) &=& d_{LP}(a'_p, a_{p-1}) +\nu . (t_{a_p} - t_{a_{p-1}}) +\lambda \\  
+	\Gamma(a'_p \rightarrow b'_q) &=& d_{LP}(a'_p, b'_{q}) + d_{LP}(a'_{p-1}, b'_{q-1}) + \nu . ( |t_{a_p} - t_{b_{q}}| +  |t_{a_{p-1}} - t_{b_{q-1}}|)  \\ 
+	\Gamma( \lambda \rightarrow b'_q) &=& d_{LP}(b'_q, b'_{q-1}) + \nu . (t_{b_q} - t_{b_{q-1}}) + \lambda
+	\end{array}
+\]	
+
+%\hspace{-1.2 cm}

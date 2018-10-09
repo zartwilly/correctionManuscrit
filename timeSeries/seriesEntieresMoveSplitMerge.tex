@@ -1,0 +1,131 @@
+{\em Move Split Merge (MSM)} est une distance qui est bas\'ee sur le co\^ut de transformation d'une s\'erie temporelle en une autre s\'erie en utilisant une s\'equence d'op\'erations de {\em move}, {\em split} et {\em merge}.
+{\em MSM} a l'avantage d'\^etre une m\'etrique et \^etre invariant au choix de l'origine de la s\'erie. 
+En effet, soit $X=(x_1, \cdots,x_m)$ une s\'erie temporelle dans laquelle $x_i$ est un r\'eel. Une translation de $X$ par $t$, o\`u $t$ est aussi un r\'eel, est une transformation qui ajoute $t$ \`a chaque \'el\'ement de $X$ et produit la s\'erie $X+t = (x_1+t, \cdots,x_m+t)$. 
+Si la distance $D$ est invariante au choix de l'origine alors  $D(X, Y ) = D(X + t, Y + t)$. {\em MSM} est invariante au choix de l'origine parce que toute transformation $S$ qui convertit $X$ et $Y$ convertit aussi $X+t$ en $Y+t$. 
+Quant \`a la m\'etrique, elle permet l'utilisation d'un large nombre d'outils pour indexer, regrouper et visualiser des s\'eries dans des espaces vectoriels arbitraires.
+\newline
+Nous pr\'esentons un algorithme de complexit\'e quadratique qui calcule la similarit\'e entre deux s\'eries.
+% details de l'algorithme
+%----
+Soient $X = (x_1, \cdots,x_m)$ et $Y = (y_1, \cdots, y_n)$ deux s\'eries temporelles. 
+L'algorithme \ref{algorithmeMSM} d\'ecrit la m\'ethode dynamique de calcul de la distance entre $X$ et $Y$. Pour chaque  couple $(i,j)$ tel que $1 \le i \le m$ et $1 \le j \le n$, nous d\'efinissons $Cost(i,j)$ la distance {\em MSN} entre les $i$ premiers \'el\'ements de $X$ et les $j$ premiers \'el\'ements de $Y$. Ainsi, la distance {\em MSN} entre $X$ et $Y$ est simplement $Cost(X,Y)$.
+Comme indiqu\'e dans l'algorithme \ref{algorithmeMSM}, $Cost(i,j)$ est calcul\'e r\'ecursivement en se basant sur   $Cost(i,j-1)$, $Cost(i-1,j)$ et $Cost(i-1,j-1)$.
+\newline
+$Cost(i,j) = min
+				\begin{cases}
+				Cost(i-1,j-1) + |x_i -y_j|, \\
+				Cost(i-1, j) + C(x_i, x_{i-1}, y_j), \\
+				Cost(i, j-1) + C(y_j, x_{i}, y_{j-1})
+				\end{cases}
+				$
+avec 
+$$
+C(x_i, x_{i-1},y_j) = 
+ 	\begin{cases}
+ 	c ~si~ x_{i-1} \le x_i \le y_j ~ou~  x_{i-1} \ge x_i \ge y_j \\
+ 	c + min( |x_i - x_{i-1}|, |x_i -y_j| ) ~ sinon
+ 	\end{cases}
+$$
+
+\begin{algorithm}
+\algsetup{indent=2em}
+\caption{MSM(X,Y)}
+\label{algorithmeMSM}
+\begin{algorithmic}[1]
+\REQUIRE{ s\'erie  $X=(x_1, \cdots, x_m)$}
+\REQUIRE{ s\'erie $Y=(y_1, \cdots, y_n)$}
+\STATE $Cost(1,1) = |x_1 - y_1|$
+\FOR{ $i = 2, \cdots, m$}
+	\STATE $Cost(i,1) = Cost(i-1,1) + C(x_i, x_{i-1},y_1)$
+\ENDFOR
+\FOR{ $j = 2, \cdots, n$}
+	\STATE $Cost(1,j) = Cost(1,j-1) + C(y_j, x_{1},y_{j-1})$
+\ENDFOR
+\FOR{ $i = 2, \cdots, m$}
+	\FOR{ $j = 2, \cdots, n$}
+		\STATE $Cost(i,j) = min
+				\begin{cases}
+				Cost(i-1,j-1) + |a_i -b_j|, \\
+				Cost(i-1, j) + C(a_i, a_{i-1},b_j), \\
+				Cost(i, j-1) + C(b_j, a_{i},b_{j-1})
+				\end{cases}
+				$
+	\ENDFOR
+\ENDFOR
+\RETURN{la distance MSM $D(X,Y)$ est $Cost(m,n)$.}
+\end{algorithmic}
+\end{algorithm}
+
+
+%----
+%Les exp\'erimentations r\'ealis\'ees sur $20$ datasets disponibles sur la base de donn\'ees de s\'eries temporelles {\em UCR} \cite{keogh2002UCR} montre que {\em MSM} produit le plus faible erreur de classification par rapport \`a {\em DTW} et  la {\em distance euclidienne} (voir tableau \ref{comparaison20datasetsUcr}).
+%% mettre le tableau
+%
+%%----------------------------
+%This chapter has described MSM, a novel metric for time series, that is based
+%on the cost of transforming one time series into another using a sequence of individual
+%Move, Split, and Merge operations. MSM has the attractive property of being both
+%metric and invariant to the choice of origin, whereas DTW is not metric, and ERP
+%is not invariant to the choice of origin. These properties may make MSM a more
+%appealing choice, compared to existing alternatives, in various domains. Metricity, in
+%particular, allows the use of a large number of existing tools for indexing, clustering
+%and visualization, that have been designed to work in arbitrary metric spaces.
+%We have presented a quadratic-time algorithm for computing the MSM distance
+%between two time series. A large part of the paper has been dedicated to explaining
+%the algorithm and proving its correctness. At the same time, despite the relatively
+%complex proof, the actual algorithm is quite short and easy to implement, as shown
+%on Figure 3.10, and on the implementations we have posted online.
+%Experiments on all 20 datasets available at the UCR time series archive [3]
+%demonstrate that, in ten of the 20 datasets, MSM produces lower nearest neighbor
+%classification error rate than constrained DTW, unconstrained DTW, ERP, and the
+%Euclidean distance. The fact that MSM gave the best accuracy in several datasets
+%supports the conclusion that MSM is a method worth being aware of and experiment-
+%ing with, in domains where practitioners currently use DTW or ERP. The attractive
+%theoretical properties of MSM are an additional factor that can make MSM an ap-
+%pealing choice, compared to existing alternatives.
+%
+%Let X = (x 1 , . . . , x m ) and Y = (y 1 , . . . , y n ) be two time series. Figure 3.10
+%describes a simple dynamic programming algorithm for computing the MSM distance
+%between X and Y . For each (i, j) such that 1 ≤ i ≤ m and 1 ≤ j ≤ n, we define
+%Cost(i, j) to be the MSM distance between the first i elements of X and the first j
+%elements of Y . This way, the MSM distance between X and Y is simply Cost(m, n).
+%As the algorithm on Figure 3.10 shows, for i > 1 and j > 1, Cost(i, j) can be
+%computed recursively based on Cost(i, j − 1), Cost(i − 1, j), and Cost(i − 1, j − 1). In
+%this section we explain why it is correct to define the Cost function in this recursive
+%manner, and we fully specify how to actually compute the Cost function.
+%
+%
+%
+%
+%\noindent DEBUT\\
+%\noindent 1. {\bf Si} $G$ estt isomorphe \`a un graphe double (voir figure XXX), {\bf alors} le traiter avec Verif\_correl \\
+%~~\indent {\bf Sinon} \\
+%~2. \indent {\bf Tant que} il existe un sommet $u$ t.q $Cliq(u) \in \{0,3\}$\\ 
+%       	\indent~~~~~~{\bf Faire}\\
+%~3.	       	\indent~~~~~~~~choisir $u$ de degr\'e minimum\\
+%~4.       	\indent~~~~~~~~{\bf Si} $\{u\} \cup \Gamma_G(u)$ peut \^etre couvert par deux cliques $C_1$ et $C_2$ coh\'erentes,\\
+%		\indent~~~~~~~~~~~~~~$C_1$ maximale et $C_2 = \emptyset$ si $Cliq(u)=3$\\
+%	       	\indent~~~~~~~~~~~~{\bf alors}\\
+%~5.	       	\indent~~~~~~~~~~~~~~{\bf Si } $Cliq(u) = 0$ et $C_2\neq \emptyset$ {\bf Alors} $Cliq = 3$ \\
+%~6.		\indent~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq = 0$ et $C_2 =  \emptyset$ {\bf Alors} $Cliq(u) = 1$\\
+%~7.		\indent~~~~~~~~~~~~~~~~~~~~~~~{\bf Sinon} $Cliq(u) = 2$ 	\\
+%~8.		\indent~~~~~~~~~~~~~~~~~~~~~~~{\bf FinSi}\\      	
+%~9.		\indent~~~~~~~~~~~~~~{\bf FinSi}\\
+%~10.		\indent ~~~~~~~~~~~~~$\epsilon_u = E(G[C_1]) \cup E(G[C_2])$\\
+%~11.		\indent ~~~~~~~~~~~~~{\bf Pour tout} $w \in \Gamma_G(u)$ {\bf Faire} \\
+%~12.		\indent~~~~~~~~~~~~~~~~$\alpha(w) = card\{[w,x] \in E - \epsilon_u\}$\\
+%~13.		\indent~~~~~~~~~~~~~~~~{\bf Si} $\alpha_w > 0$ {\bf Alors}\\
+%~14.		\indent~~~~~~~~~~~~~~~~~~{\bf Si} $Cliq(w) = 0$ {\bf Alors} $Cliq(w) =3$\\
+%~15.		\indent~~~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 3$ {\bf Alors} $Cliq(w) =-1$\\
+%~16.		\indent~~~~~~~~~~~~~~~~~~{\bf FinSi} \\
+%~17.		\indent~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 0$ {\bf Alors} $Cliq(w) =1$\\
+%~18. 	\indent~~~~~~~~~~~~~~~~~~~~~~~~~{\bf Sinon Si} $Cliq(w) = 3$ {\bf Alors} $Cliq(w) = 2$ \\
+%~19. 	\indent~~~~~~~~~~~~~~~~~~~~~~~~~{\bf FinSi} \\
+%~20.		\indent ~~~~~~~~~~~~~{\bf FinPourTout}\\
+%~21.		\indent ~~~~~~~~~~~~~$E = E - \epsilon_u$\\
+%~22.		\indent            ~~~~~~~{\bf Sinon} $Cliq(u) = -1$\\
+%	       	\indent~~~~~~~~~~~~{\bf FinSi}\\
+%       	\indent~~~~~~
+%~23. \indent {\bf FinTant que}\\
+%~24. \noindent {\bf Fin Si}\\
+%\noindent FIN\\

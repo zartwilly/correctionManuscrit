@@ -1,0 +1,32 @@
+\label{VerifCorrel}
+La fonction $Verif-correl$ d\'etermine le sous-ensemble d'arcs entrants et sortants d'un sommet du r\'eseau \'electrique en se basant sur les mesures physiques et les lois de conservation $R$ d\'efinies dans le paragraphe \ref{reglesLocales}. 
+\newline
+Soit $S \subset A$ l'ensemble  fini d'arcs incidents \`a un sommet  $v \in V$ et 
+$x \in GP$ une grandeur physique 
+telle que chaque arc $a \in S$ a un flot $gp_{a}^{x}$.
+Nous partitionnons $S$ en deux sous-ensembles $S_1$ et $S_2$ tels que $S_1 \cap S_2  = \emptyset$.
+\newline
+La fonction $Verif-correl$ est bool\'eenne, prend en param\`etres $S_1$, $S_2$ et une grandeur $x$. 
+Elle retourne $1$ si :
+\begin{itemize}
+	\item $S_1$ est l'ensemble des arcs entrants du sommet $v$.
+	\item $S_2$ est l'ensemble des arcs sortants du sommet $v$.
+\end{itemize} 
+Si les lois $R$ ne sont pas v\'erifi\'ees alors $Verif-correl$ retourne $0$.
+$$
+Verif-correl(S_1, S_2, x) = 1 \Leftrightarrow  \sum_{ a_i \in S_1} gp_{a_i}^{x}(t) - \sum_{a_ j\in S_2} gp_{a_j}^{x}(t)  \le \epsilon 
+$$
+En effet, consid\'erons $t$ un instant de temps et 
+		$diff(t) =  \sum_{ a_i \in S_1} gp_{a_i}^{x}(t) - \sum_{a_ j\in S_2} gp_{a_j}^{x}(t)$ la diff\'erence entre les flots entrants et sortants \`a un instant $t$.
+La diff\'erence $diff(t)$ doit toujours \^etre inf\'erieure aux pertes par effets joules $\epsilon$ quelle que soit l'instant $t$. 
+\newline
+Nous d\'ecidons que la fonction $Verif-Correl$ retourne $0$ si plus de $10\%$ des diff\'erences $diff(t)$ sont sup\'erieures \`a  $\epsilon$.
+\newline
+
+
+Nous consid\'erons, dans la suite du rapport, que la {\em d\'ecision de $Verif-correl$ est toujours exacte}. Cela signifie que 
+si $Verif-correl(S1, S2, x) = 0$ alors les arcs de $S$ ne partagent pas un sommet de $V$.
+%Cependant, dans la pratique, nous utilisons  rarement cette fonction parce que nous devons tester dans l'ordre de $2^{|S|}$ bipartitions dans le pire des cas pour obtenir la bonne partition et cela est impossible pour $S$ tr\`es grand. 
+Cependant, dans la pratique, nous n'utilisons pas cette fonction pour d\'eterminer la topologie car pour un sommet $v$ de la topologie ayant un ensemble d'arcs $S_v$, nous devons  tester dans l'ordre de $2^{|S_{v}|}$ bipartitions dans le pire des cas pour obtenir la bonne bipartition et cela est impossible pour $S_{v}$ tr\`es grand. 
+%La valeur $\epsilon$ dans le r\'eseau est connue. 
+%Dans le cas o\`u cette valeur $\epsilon$ est inconnue, quel est la valeur minimum de ces pertes  \`a partir de laquelle une partition de $S$  identifie un sommet dans $V$?

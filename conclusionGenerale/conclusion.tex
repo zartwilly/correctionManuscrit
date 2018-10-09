@@ -1,0 +1,34 @@
+Les algorithmes pr\'esent\'es dans ce document s'inscrivent dans le cas g\'en\'eral de l'\'etude de d\'ecouverte de topologie. La probl\'ematique \`a laquelle nous avons tent\'e de repondre est :
+\'etant donn\'es un ensemble de mesures physiques souvent \'erron\'ees et de lois physiques sur les liens d'un r\'eseau de flots, est il possible de d\'ecouvrir la topologie d'un r\'eseau \'energ\'etique dans lequel les mesures sont extraites?
+Nous avons restreint le r\'eseau \'energ\'etique \`a un r\'eseau \'electrique parce que l'entreprise {\em DCbrain SAS}, \`a l'origine de la th\`ese, avait de soucis de sch\'emas \'electriques pendant l'\'etude \'energ\'etique d'un datacenter. Elle a constat\'e que le sch\'ema \'electrique n'\'etait pas mis \`a jour  entre deux maintenances successives.
+Pour repondre alors \`a ce probl\`eme, nous avons proc\'ed\'e en $4$ \'etapes.
+\newline
+
+La premi\`ere \'etape a \'et\'e de consid\'erer les mesures comme des s\'eries temporelles ensuite de s\'electionner les grandeurs physiques pr\'esentes dans le r\'eseau et de d\'efinir des lois de conservation adapt\'ees aux grandeurs de ce r\'eseau. Ensuite nous avons mod\'elis\'e le r\'eseau par un graphe de flots dans lequel les mesures sont les flots, les sommets sont les \'equipements, les arcs sont les c\^ables \'electriques et le graphe est un DAG sans circuit.
+\newline
+
+Dans la seconde \'etape, nous avons remarqu\'e, sur certains \'equipements adjacents dont nous connaissons leurs mesures, que les courbes des mesures ont les m\^emes comportements aux m\^emes instants de temps. Nous avons d\'ecid\'e de comparer  les comportements des s\'eries temporelles en supposant que les arcs, d'o\`u proviennent les mesures, ont une extr\'emit\'e commune si leurs s\'eries temporelles ont des comportements similaires. Nous avons list\'e les diff\'erentes m\'ethodes de comparaison et nous avons choisi la distance de Pearson parce qu'elle est une m\'etrique, 
+elle est de complexit\'e lin\'eaire et 
+elle ne traite pas le d\'ecalage temporel. 
+Les valeurs de distances aussi appel\'ees coefficients de similarit\'e appartiennent \`a $[0,1]$. Un coefficient proche de $1$ signifie qu'il existe une extr\'emit\'e commune entre une paire d'arcs. En testant la distance de Pearson sur un sous-r\'eseau r\'eel du datacenter {\em Champlan}, nous avons constat\'e des erreurs dans les coefficients de similarit\'e c'est-\`a-dire un coefficient proche de $0$ alors qu'il n'existe aucune extr\'emit\'e commune entre une paire d'arcs. Ces erreurs  sont dues aux m\'ecanismes de fonctionnement, aux donn\'ees et aussi \`a la distance de Pearson. 
+Les coefficients de similarit\'e forment la matrice de corr\'elation et le graphe associ\'e \`a cette matrice est le {\em graphe de corr\'elation}. Si cette matrice ne contient aucune erreur alors le graphe de corr\'elation est le line-graphe du graphe non orient\'e sous-jacent au DAG du r\'eseau \'electrique. 
+\newline
+
+Le troisi\`eme \'etape a montr\'e que le line-graphe a une partition unique de son ensemble d'ar\^etes en cliques appel\'e la {\em couverture de corr\'elation} sauf en cas d'ambigu\"{i}t\'es o\`u nous utilisons les mesures \'electriques et la fonction $Verif-correl$ (voir section \ref{VerifCorrel}) pour d\'eterminer la bonne partition au voisinage d'un sommet ambigu. 
+Nous avons propos\'e  l'algorithme de couverture qui retourne la couverture de corr\'elation du graphe de corr\'elation si celui-ci ne contient aucune erreur. 
+Dans le cas contraire, les sommets n'\'etant pas couverts dans la couverture de corr\'elation sont corrig\'es avec l'algorithme de correction. La correction consiste alors \`a supprimer et \`a ajouter des ar\^etes incidentes \`a un sommet \`a corriger de telle sorte que le partitionnement de son voisinage forme deux cliques et le co\^ut de modification des ar\^etes incidentes de ce sommet soit de co\^ut minimum. 
+Nous avons propos\'e, \`a partir de la couverture de corr\'elation, une m\'ethode pour construire le graphe non orient\'e  sous-jacent au DAG et aussi une heuristique pour orienter les ar\^etes de ce graphe. Cependant cette heuristique ne donne pas une solution optimale.
+\newline
+
+Dans la quatri\`eme \'etape, nous avons \'evalu\'e nos algorithmes sur des graphes g\'en\'er\'es. 
+La premi\`ere exp\'erimentation consiste \`a modifier des cases de la matrice d'adjacence du line-graphe des graphes g\'en\'er\'es puis \`a v\'erifier le nombre d'ar\^etes corrig\'ees par nos algorithmes.  
+Nous avons constat\'e que l'approche {\em al\'eatoire sans remise} donne les meilleurs r\'esultats en termes d'ar\^etes corrig\'ees mais la fonction de co\^ut n'a aucune influence sur ce r\'esultat. 
+Par ailleurs, toutes les cases modifi\'ees sont corrig\'ees par l'algorithme lorsque le nombre de cases \`a corriger est faible c'est-\`a-dire inf\'erieure \`a $6$. 
+La seconde exp\'erimentation consiste \`a attribuer des valeurs de corr\'elation entre les paires d'arcs \`a partir de la distribution des valeurs de corr\'elation du r\'eseau de {\em Champlan}. 
+Puis \`a determiner la valeur de seuil qui donne le nombre minimum d'ar\^etes corrig\'ees par nos algorithmes. 
+Nous avons d\'eduit que cette valeur de seuil appartient \`a l'intervalle $]0.6,0.7]$ parce que il y'a peu d'erreurs dans cet intervalle avant la correction et l'algorithme de correction fournit de meilleurs r\'esultats dans ces situations.     
+La derni\`ere exp\'erimentation se d\'eroule sur des graphes {\em grilles boucl\'ees} dans lesquelles chaque sommet est couvert par plus de deux cliques. Nous avons  montr\'e que les corrections de sommets en ajoutant et en supprimant uniquement des ar\^etes ont la m\^eme borne sup\'erieure de la distance line. Cependant les distances de correction sont invariants quelque soit la m\'ethode (ajouter ou supprimer uniquement)  et ne tendent pas vers la borne sup\'erieure d\'efinie.
+\newline
+
+Nous parvenons \`a d\'eterminer un graphe isomorphe au graphe non orient\'e sous-jacent au DAG du r\'eseau \'electrique lorsqu'il y'a peu d'erreurs de corr\'elation (c'est-\`a-dire nombre inf\'erieur  \`a $6$) entre les paires d'arcs. En revanche, il est difficile de trouver le graphe le plus proche isomorphe au graphe non orient\'e dont le nombre d'erreurs est sup\'erieur \`a $6$. 
+Une solution est d'utiliser une expertise humaine qui identifie certaines sommets de DAG et les ar\^etes incidentes \`a ces sommets afin de r\'eduire le nombre de sommets \`a corriger. 

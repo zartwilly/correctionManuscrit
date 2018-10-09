@@ -1,0 +1,52 @@
+%% kel est le but de notre etude, kest ce qu'on recherche lorsqu'on compare 2 series.
+%%%nous recherchons * la propagation des changements de regimes dans le reseau electrique. cela signifie que la consommation de puissance d'un noeud baisse quand les \'equipements qu'il alimente sont \`a l'arr\^et. * les arcs rattach\'es aux m\^emes noeuds doivent avoir les m\^emes profils de consommation.
+%Nos s\'eries temporelles ont la particularit\'e d'\^etre des mesures \'electriques. Pour certaines grandeurs comme la puissance ou l'intensit\'e, les mesures se propagent dans l'ensemble du r\'eseau en suivant la loi de conservation \cite{loiDeConservation} ainsi que les changements de r\'egimes de consommation qui font apparaitre des pics dans les courbes des s\'eries temporelles. En d'autres termes, les arcs rattach\'es aux m\^emes noeuds doivent avoir les m\^emes {\em profils de consommation}. Le {\em profil de consommation} d'un arc est la variation, dans le temps, de la quantit\'e d'\'energie en fonction de l'\'etat de fonctionnement de l\'equipement auquel cet arc est rattach\'e et qui l'alimente. Cela signifie que la consommation en puissance d'un noeud
+% baisse quand les \'equipements qu'il alimente sont \`a l'arr\^et ou 
+% augmente quand des \`equipements se mettent en marche.
+%La mesure de similarit\'e devra determiner les arcs partageant un noeud ou les series qui ont les memes profils de consommation
+%La distance de similarit\'e entre des paires de s\'eries calcule un coefficient qui compare les profils de consommation des arcs dont proviennent les s\'eries. Des s\'eries qui ont les m\^emes profils doivent avoir la distance la plus \'elev\'ee (c'est-\`a-dire $1$) et celles qui ont des profils diff\'erents ont la distance la plus faible (c'est-\`a-dire $0$).
+
+%------------ % kel est le but de notre etude, kest ce qu'on recherche lorsqu'on compare 2 series.
+Nos s\'eries temporelles ont la particularit\'e d'\^etre des mesures \'electriques. Ces s\'eries sont associ\'ees aux arcs entrants dans des \'equipements. Pour certaines grandeurs comme la puissance ou l'intensit\'e, les mesures se propagent dans l'ensemble du r\'eseau en suivant la loi de conservation \cite{loiDeConservation}. Cela implique que tout variation de consommation \'electrique des \'equipements apparait dans les courbes des s\'eries temporelles comme des pics. Cela signifie que la consommation en puissance d'un \'equipement
+ baisse quand les \'equipements qu'il alimente sont \`a l'arr\^et ou 
+ augmente quand ces \'equipements se mettent en marche.
+Nous d\'esignons la courbe d'une s\'erie temporelle par le {\em profil de consommation} d'un arc. 
+%Le profil de consommation d'un arc est la variation, au cours du temps, de la quantit\'e d'\'energie qui circule dans l'arc.
+Ainsi nous supposons que les arcs rattach\'es aux m\^emes \'equipements ont les m\^emes profils de consommation.
+N\'eammoins, des arcs appartenant \`a la chaine de propagation de l'\'electricit\'e (c'est-\`a-dire tous les arcs par lesquels l'\'electricit\'e transite) n'ont pas les m\^emes profils car certains \'equipements sont rattach\'es \`a deux sources d'\'energies et les pics s'attenuent durant la propagation.
+{\em La distance de similarit\'e entre des paires de s\'eries calcule le coefficient de similarit\'e qui compare les profils de consommation des arcs}. Des arcs ont les m\^emes profils  si et seulement si le coefficient de similarit\'e est le plus \'elev\'e (c'est-\`a-dire $1$) et ont des profils diff\'erents si  leur coefficient est le plus faible (c'est-\`a-dire $0$).
+%------------
+\newline
+
+Le choix de notre m\'ethode de calcul de similarit\'e d\'epend des donn\'ees que nous avons collect\'ees. En effet, dans ces donn\'ees, nous avons certains arcs qui n'ont pas de mesures associ\'ees \`a des grandeurs physiques. Chaque valeur dans une s\'erie est la moyenne des valeurs sur un intervalle de $10$ minutes. 
+Il existe aussi des valeurs manquantes dans certaines s\'eries de mesures. Nous avons attribu\'e \`a ces valeurs manquantes la moyenne des valeurs \`a leur voisinage. Cette interpolation pose probl\`eme dans le calcul de similarit\'e avec les {\em shapelets}.
+ En effet, \'etant donn\'e le shapelet candidat contenant des valeurs extrapol\'ees, la correspondance entre le shapelet candidat et toutes autres s\'equences est fortement d\'egrad\'ee \`a cause des valeurs extrapol\'ees qui augmentent la distance euclidienne entre elles. Ensuite, il s'ex\'ecute lentement sur de grands ensembles de donn\'ees. Enfin le shapelet candidat est de longueur quelconque et sa d\'etermination passe par la g\'en\'eration de toutes les shapelets possibles. 
+ Ce qui conduit \`a une complexit\'e de ${\cal O}(m^2)$, avec $m$ la taille de la longue s\'erie temporelle. 
+% Cela rend le calcul impossible quand  notre ensemble de donn\'ees est de dimension $30 * 4320$ avec $30$ le nombre de s\'eries temporelles et $4320$ le taille d'une s\'erie temporelle.
+ Cela rend le calcul irr\'ealisable pour notre ensemble de donn\'ees de dimension $30 * 4320$ avec $30$ le nombre de s\'eries temporelles et $4320$ le taille d'une s\'erie temporelle.
+\newline
+
+% incinvenient avec les sax, bop 
+Par ailleurs, les m\'ethodes par aggr\'egation des caract\'eristiques descriptives fournissent \'egalement des r\'esultats mitig\'es. Prenons l'exemple de m\'ethodes de similarit\'e avec {\em Symbolic Aggregate approXimation}. Elle consiste \`a subdiviser chaque s\'erie en $M$ s\'equences de tailles identiques puis \`a encoder chaque s\'equence par une lettre alphab\'etique, chaque lettre \'etant choisie dans un alphabet de lettres pr\'ed\'efinies. La transformation d'une s\'equence en une lettre s'obtient gr\^ace \`a une repr\'esentation {\em PAA (Piecewise Aggregate Approximation)} et \`a une table de correspondance entre l'alphabet. 
+La repr\'esentation {\em PAA} \cite{paatheorique} d'une s\'equence est la moyenne des valeurs de la s\'equence. La table de correspondance contient la liste ordonn\'ee des points appel\'es {\em breakpoints} dont chaque valeur est une division arbritraire de la distribution gaussienne en zones \'equiprobables \cite{lin2003symbolic} et un alphabet. Et \`a chaque point de la liste {\em breakpoints}, une lettre lui est associ\'ee.
+La transformation de cette repr\'esentation en lettres a une complexit\'e de  ${\cal O}(mM)$ \cite{lin2003symbolic} avec $M$ est le nombre de s\'equences de la s\'erie
+et $m$ la taille de la s\'erie.
+Le principal inconvenient provient de  l'erreur produite lors de transformation. L'encodage consid\'er\'e par {\em SAX} est celui qui minimise cette erreur.
+ Ainsi, une s\'erie peut avoir deux encodages diff\'erents si nous changeons l'origine des s\'equences. L'encodage n'est donc pas unique.
+De m\^eme, il est difficile de d\'etecter les variations dans la s\'erie avec l'encodage {\em SAX} car  toute variation faible mais continue dans le temps a le m\^eme encodage.  Par contre, une variation forte dans la s\'erie ne modifie pas l'encodage dans le {\em breakpoint} puisque la distance {\em PAA} est la moyenne des valeurs dans la s\'equence. 
+\newline
+
+% prkoi choisir DistPearson par rapport a DTW, TWE et MSM et LCSS
+Enfin, les m\'ethodes de similarit\'e, dont le r\'esultat est le moins impact\'e par les valeurs extrapol\'ees et les profils de consommation, sont celles qui utilisent l'int\'egralit\'e de s\'eries temporelles. \`A cet effet, la fen\^etre glissante de $6$ (correspondant \`a une heure) permet d'abord d'attribuer des valeurs aux instants $t$ ayant des valeurs manquantes puis de supprimer des petites variations qui peuvent p\'enaliser nos similarit\'es et enfin de mettre en \'evidence les fortes variations dans la s\'erie.
+Parmi les distances \'enum\'er\'ees dans la section \ref{seriesEntieres}, nous avons d\'ecid\'e de choisir la {\em distance de Pearson} comme m\'ethode de calcul du coefficient de  similarit\'e entre les s\'eries temporelles  pour les raisons suivantes :
+\begin{itemize}
+	\item La distance de Pearson est une m\'etrique alors que {\em DTW} ne l'est pas. Toutefois, ces distances ne respectent pas l'in\'egalit\'e triangulaire.
+	\item La classification par la m\'ethode de {\em k-means} avec la distance euclidienne produit les m\^emes r\'esultats que celle avec la distance de Pearson \cite{berthold2016clusteringDistancePearson}. {\em k-means} est une classification de r\'eference dans les bases de donn\'ees {\em UCR} \cite{keogh2002UCR} 
+	\item Elle est de complexit\'e {\em lin\'eaire} alors que la complexit\'e de la distance {\em MSM} est quadratique.
+	\item Elle ne traite pas de d\'ecalage entre les s\'eries comme {\em TWE}. Le traitement du d\'ecalage entre les s\'eries n'est pas n\'ecessaire puisque les s\'eries sont moyenn\'ees sur $10$ minutes et les possibles valeurs d\'ecal\'ees ont d\'ej\`a \'et\'e moyenn\'ees. De m\^eme, nous ne sommes pas parvenus \`a trouver une valeur de rigidit\'e $\nu$ correcte pour {\em TWE} \`a cause des probl\`emes dans le dataset de {\em Champlan} (valeurs manquantes et incorrectes). 
+	\item La distance de Pearson n\'ecessite que les s\'eries soient normalis\'ees. Les coefficients de Pearson d\'esignent les similarit\'es entre des paires de s\'eries normalis\'ees et ils appartiennent \`a l'intervalle $[0,1]$.  Si le coefficient est \'egal \`a $1$ alors il existe une forte similarit\'e entre les s\'eries. Cependant, il n'existe pas de similarit\'e si le coefficient est  \'egal \`a $0$.
+\end{itemize}
+
+
+{\bf Conclusion} : 
+La distance de Pearson est la mieux adapt\'ee aux calculs des coefficients de similarit\'e entre des s\'eries parce qu'elle est une m\'etrique, de complexit\'e lin\'eaire, d\'etecte les variations simultan\'ees (faibles et fortes) entre des paires de s\'eries. Toutefois, elle ne respecte pas l'in\'egalit\'e triangulaire et n\'ecessite que les donn\'ees soient normalis\'ees. Elle est donc une bonne m\'etrique pour comparer les profils de consommation.

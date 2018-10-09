@@ -1,0 +1,80 @@
+Nous pr\'esentons, dans cette section,  les distances qui transforment au pr\'ealable les s\'eries pour comparer leurs caract\'eristiques. Ces caract\'eristiques sont appel\'ees des { \em features}. 
+\newline
+Pour mesurer la similarit\'e entre des s\'eries temporelles, des m\'ethodes proposent de repr\'esenter les donn\'ees en sous-s\'equences diff\'erentes, chacune formant une classe. Cette transformation est d\'esign\'ee par {\em shapelets}. Un shapelet consid\`ere que les sous-s\'equences sont ind\'ependantes. 
+Le calcul de similarit\'e entre des s\'eries se produit localement entre les s\'equences de m\^eme phase au moyen d'une m\'etrique. G\'en\'eralement on utilise la distance euclidienne. 
+D'abord, les shapelets g\'en\'eralisent l'algorithme des $k$ plus proche voisins ({\em k-means}) largement utilis\'e dans les arbres de d\'ecision pour am\'eliorer les classifications \cite{wang2013experimental}. Ensuite, ils sont interpr\'etables et donne une id\'ee de la diff\'erence entre deux classes \cite{ye2011time}. Enfin, ils peuvent \^etre tr\`es  pr\'ecis que d'autres m\'ethodes concurrentes \cite{mueen2011logical, ye2011time}.
+\newline 
+{\em Hills et al.} \cite{hills2014classificationShapelets} propose l'algorithme \ref{algoTransformShapelets} de transformation de s\'eries  en {\em shapelets} en retournant les $k$ premiers shapelets dans une seule ex\'ecution.
+L'algorithme \ref{algoTransformShapelets} se d\'ecrit comme suit :
+Soient $w_i$ une sous-s\'erie d'une s\'erie temporelle $A$ avec $i \le k$ et $W_l$ l'ensemble de taille $l$ de s\'eries $w_i$.
+La distance de {\em shapelet}  $sDist(S, T)$ entre un shapelet $S$ et une s\'erie $T$ est la distance euclidienne minimum entre $S$ et $w_i \in W_l$.
+$$
+sDist(S, T) = min_{w_i \in W_l} (dist(S, w_i))
+$$
+Le meilleur shapelet a une distance $sDist$ faible pour les instances d'une classe et des distances $sDist$ \'elev\'ees pour les instances des autres classes.
+\newline
+Nous consid\'erons $w_i$ comme un {\em shapelet candidat}. L'ensemble de valeurs de $sDist$ pour chaque candidat est trouv\'e en utilisant la fonction {\em findDistances} et est \'evalu\'e par la proc\'edure {\em assessCandidate} au moyen de la mesure $f-statistic$. 
+Les $k$ meilleurs shapelets sont retourn\'es apr\`es la suppression des sous-s\'eries candidats par la fonction {\em removeSelfSimilar}.
+Nous nous servons de la proc\'edure d'estimation de longueur, d\'ecrite dans \cite{lines2012shapelet}, pour trouver les valeurs appropri\'ees \`a utiliser comme les longueurs maximales et minimales de shapelets. 
+Nous g\'en\'erons un maximum de $k=10n$ shapelets o\`u $n$ est la taille de la s\'erie initiale.
+\newline
+Nous transformons la s\'erie initiale  en utilisant les meilleurs shapelets comme des features o\`u 
+$sDist(S_i, T_j)$ d\'esigne l'\'el\'ement $i$ dans l'instance $j$ de la s\'erie transform\'ee, 
+$S_i$ est le $i^{ieme}$ shapelet et $T_j$ est la $j^{ieme}$ instance dans la s\'erie initiale.
+La complexit\'e de l'algorithme  est de ${\cal O}(n*m^2)$ avec 
+$n$ le nombre de s\'eries temporelles et
+$m$ la plus longue s\'erie temporelle \cite{rakthanmanon2013fast}.
+\begin{algorithm}
+\algsetup{indent=2em}
+\caption{ShapeletSelection(T,min,max,k)}
+\label{algoTransformShapelets}
+\begin{algorithmic}[1]
+\STATE $kShapelets \leftarrow \emptyset$
+\FOR {all $T_i$ in T}
+	\STATE $shapelets \leftarrow \emptyset$
+	\FOR {$l \leftarrow min ~\TO~max $}
+		\STATE $W_{i,l} \leftarrow generateCandidates(T_i,l)$
+		\FOR { all subsequence S $ \in W_{i,l}$ }
+			\STATE{$D_S \leftarrow findDistances(S,T)$}
+			\STATE{$quality \leftarrow assessCandidate(S, D_S)$}
+			\STATE{shapelets.add(S, quality)}
+		\ENDFOR
+	\ENDFOR
+	\STATE{sortByQuality(shapelets)}
+	\STATE{removeSelfSimilar(shapelets)}
+	\STATE{$kShapelets \leftarrow merge(k, kShapelets, shapelets)$}
+\ENDFOR
+\RETURN{kShapelets}.
+\end{algorithmic}
+\end{algorithm}
+\newline 
+
+{\bf Conclusion} : les shapelets transforment la s\'erie en un sous-ensembles de s\'equences avec la fonction {\em generateCandidate}. Chaque s\'equence d'une s\'erie est nomm\'ee {\em shapelet candidat} et ce {\em shapelet candidat} est compar\'e avec  les autres shapelets candidat de la m\^eme s\'erie \`a partir \`a la {\em distance de shapelet}. Une fois les {\em shapelets candidats} de chaque s\'erie s\'electionn\'ee avec l'algorithme {\em ShapeletSelection}, on les compare avec la distance euclidienne.
+Cette m\'ethode est inefficace pour des s\'eries de grandes tailles.
+%We transform the original data using the best shapelets as
+%features, where attribute i in instance j of the transformed
+%data is sDist(S i , T j ) , where S i is the i th best shapelet and
+%T j is the j th instance of the original data.
+%
+%It makes a single
+%pass through the original data, taking each subseries of each
+%series as a shapelet candidate. The set of sDist values for
+%each candidate is found using f indDistances and assessed
+%using the f-stat quality measure in the assessCandidate
+%procedure. The best k shapelets are returned, after removing
+%overlapping candidates in the method removeSelf Similar .
+%We use the length estimation procedure described in [23] to
+%determine the appropriate values to use as the minimum
+%and maximum shapelet lengths, and generate a maximum
+%of k = 10n shapelets, where n is the size of the training set
+%of the original data.
+%
+%
+%One benefit of the shapelet approach is that shapelets are comprehensible, and can offer insight into the problem domain. The original shapelet-based classifier embeds the shapelet-discovery algorithm in a decision tree, and uses information gain to assess the quality of candidates, finding a new shapelet at each node of the tree through an enumerative search. 
+%
+%Shapelets are time series
+%subsequences selected (or learned) so as to discriminate classes. Amongst these
+%approaches,  the  Shapelet  Transform  (ST)  [6]  uses  shapelets  as  surrogates  for
+%representing time series: each time series is projected against the set of shapelets,
+%resulting in a vector in which components represent the distances between the
+%time series and the shapelets.

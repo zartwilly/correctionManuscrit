@@ -1,0 +1,19 @@
+\contentsline {chapter}{\numberline {1}Mesures : Des Series Temporelles}{5}
+\contentsline {section}{\numberline {1.1}S\'eries temporelles}{5}
+\contentsline {subsection}{\numberline {1.1.1}La mod\'elisation et la pr\'evison d'une s\'erie temporelle}{6}
+\contentsline {subsection}{\numberline {1.1.2}La d\'etection de rupture}{8}
+\contentsline {subsection}{\numberline {1.1.3}La comparaison de s\'eries temporelles}{8}
+\contentsline {section}{\numberline {1.2}\'Etat de l'art des m\'ethodes de similarit\'e}{8}
+\contentsline {subsection}{\numberline {1.2.1} Similarit\'e sur les s\'eries enti\`eres}{9}
+\contentsline {subsubsection}{\numberline {1.2.1.1}Dynamic Time Warping DTW}{9}
+\contentsline {subsubsection}{\numberline {1.2.1.2}Time Warp Edit TWE}{10}
+\contentsline {subsubsection}{\numberline {1.2.1.3}Move-Split-Merge MSM}{12}
+\contentsline {subsubsection}{\numberline {1.2.1.4}Distance de Pearson}{12}
+\contentsline {subsubsection}{\numberline {1.2.1.5}Longest Common Subsequence}{14}
+\contentsline {subsection}{\numberline {1.2.2}Similarit\'e sur les s\'equences}{14}
+\contentsline {subsection}{\numberline {1.2.3}Similarit\'e par aggr\'egation des caract\'eristiques descriptives}{15}
+\contentsline {subsection}{\numberline {1.2.4}Conclusion sur les m\'ethodes de similarit\'e}{16}
+\contentsline {section}{\numberline {1.3}M\'ethode de similarit\'e entre des mesures \'electriques : distance de Pearson}{17}
+\contentsline {subsection}{\numberline {1.3.1}Choix de la distance}{17}
+\contentsline {subsection}{\numberline {1.3.2}R\'esultats sur des donn\'ees r\'eelles}{18}
+\contentsline {section}{\numberline {1.4}Conclusion du chapitre}{23}

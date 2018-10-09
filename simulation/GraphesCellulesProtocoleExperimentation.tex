@@ -1,0 +1,16 @@
+Consid\'erons $G_{k,k'}$ un graphe cellule dans lequel le nombre de lignes est identique le nombre de colonnes ($k = k'$). Nous notons $G_k$ pour d\'esigner $G_{k,k'}$ et $G_k$ contient $k \times k +1$ cellules.
+Nous construisons $48$ graphes cellules dans lesquels chaque graphe contient $k \times k +1$ cellules $k \in \{1,3,\cdots,99\}$.
+Dans chaque graphe $G_k$, nous ex\'ecutons  notre couple d'algorithmes $50$ fois puis nous r\'ecup\'erons la distance line  minimale entre $G_k$ et les line-graphes $L(G_k)$ propos\'ees.
+Nous utilisons la   distance line  minimale parce qu'il est impossible de trouver la bonne permutation qui minimise la distance line \`a cause de la combinatoire factorielle de l'ensemble $\cal C$.
+\newline
+Soient $\phi^{+}(u,v)$ le poids de l'op\'eration {\em ajouter une ar\^ete} et $\phi^{-}(u,v)$ le poids de l'op\'eration {\em supprimer une ar\^ete}. 
+Nous d\'efinissons les fonctions de co\^ut {\em ajout} et {\em suppression} comme suit :
+\begin{enumerate}[label = (\alph*)]
+%\item {\em unitaire} : ajouter et supprimer une ar\^ete ont un poids $1$ ($\phi^{+} = \phi^{-} = 1$).
+\item {\em ajout} : nous donnons un poids minimal \`a l'op\'eration ``ajouter d'ar\^etes''. Ainsi nous attribuons un poids $\phi^{+} = 1$ pour l'ajout d'ar\^etes et un poids $\phi^{-} = 10$ pour la suppression d'ar\^etes.
+\item {\em suppression} : Ici nous faisons l'op\'eration inverse en donnant un poids maximal \`a l'op\'eration d'ajout d'ar\^etes. Ainsi, l'ajout d'une ar\^ete a un poids $\phi^{+} = 10$ alors que la suppression a un poids $\phi^{-} = 1$.
+\end{enumerate}
+L'objectif de notre exp\'erimentation est de comparer les distances lines th\'eoriques avec celles obtenus avec l'utilisation des fonctions de co\^uts mentionn\'ees ci-dessus.
+
+
+%Nous allons comparer les diff\'erentes fonctions de co\^ut en utilisant les distances line calcul\'ees. Les courbes croissantes dans les figures \ref{priorAjout1Ajout10}, \ref{priorAjout1Supp10} et \ref{priorAjout1Supp1} s'explique par le fait que les distances line sont rang\'ees par ordre croissant.
