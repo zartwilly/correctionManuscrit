@@ -1,0 +1,11 @@
+# exclude compilation files 
+*.aux
+*.lof
+*.loa
+*.bbl
+*.log
+*.lot
+*.out
+*.gz
+*.toc
+*.pdf
