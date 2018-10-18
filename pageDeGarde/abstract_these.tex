@@ -1,0 +1,152 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Modèle pour la 4ème de couverture des thèses préparées à l'Université Paris-Saclay, basé sur le modèle produit par Nikolas STOTT / Template for back cover of thesis made at Université Paris-Saclay, based on the template made by Nikolas STOTT
+%%% Mis à jour par Aurélien ARNOUX (École polytechnique)/ Updated by Aurélien ARNOUX (École polytechnique)
+%%% Les instructions concernant chaque donnée à remplir sont données en bloc de commentaire / Rules to fill this file are given in comment blocks
+%%% ATTENTION Ces informations doivent tenir sur une seule page une fois compilées / WARNING These informations must contain in no more than one page once compiled
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Version du 05 Avril 2018
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{geometry}
+\geometry{
+left=16mm,
+top=30mm,
+right=16mm,
+bottom=30mm
+}
+\usepackage{xcolor}
+\definecolor{bordeau}{rgb}{0.3515625,0,0.234375}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{multicol}
+\setlength{\columnseprule}{0pt}
+\setlength\columnsep{10pt}
+
+%\usepackage[french]{babel}
+
+\label{form}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Formulaire / Form
+%%% Remplacer les paramètres des \newcommand par les informations demandées / Replace \newcommand parameters by asked informations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\logoEd}{STIC}																		%% Logo de l'école doctorale. Indiquer le sigle / Doctoral school logo. Indicate the acronym : 2MIB; AAIF; ABIES; BIOSIGNE; CBMS; EDMH; EDOM; EDPIF; EDSP; EOBE; INTERFACES; ITFA; PHENIICS; SDSV; SDV; SHS; SMEMAG; SSMMH; STIC
+\newcommand{\PhDTitleFR}{Algorithme de graphes pour la d\'ecouverte de la topologie d'un r\'eseau \'energ\'etique par la connaissance de ses flots}													%% Titre de la thèse en français / Thesis title in french
+\newcommand{\keywordsFR}{graphes, d\'ecouverte de topologie, flots, line-graphes, d\'etection de changements, s\'eries temporelles. }														%% Mots clés en français, séprarés par des , / Keywords in french, separated by ,
+\newcommand{\abstractFR}{
+Dans les r\'eseaux \'energ\'etiques, la connaissance des \'equipements, leurs emplacements et leurs fonctions sont les pr\'erequis \`a l'exploitation de l'infrastucture. En effet, tout op\'erateur dispose d'une carte appel\'ee {\em sch\'ema synoptique} indiquant les connexions entres les \'equipements. 
+\`A partir de cette carte, sont prises des d\'ecisions pour un fonctionnement optimal du r\'eseau.
+Ce sch\'ema synoptique peut \^etre erron\'e parce que  des op\'erations de maintenance sur le r\'eseau n'auraient pas \'et\'e retranscrites ou mal saisies.
+Et cela peut entrainer des co\^uts suppl\'ementaires d'exploitation du r\'eseau \'energ\'etique.
+\newline
+Nous consid\'erons le r\'eseau \'electrique d'un Datacenter. Ce r\'eseau est compos\'e d'une topologie physique mod\'elis\'ee par un {\em DAG sans circuit} et de mesures \'electriques sur ces arcs.
+La particularit\'e de ce r\'eseau est que les mesures contiennent des erreurs et la topologie est inconnue c'est-\`a-dire les arcs sont connus et les extr\'emit\'es de ces arcs sont inconnues. 
+Dans le cas o\`u ces mesures sont correctes alors la corr\'elation des arcs induit la matrice d'adjacence du {\em line-graphe} de notre {\em DAG}. Un {line-graphe} est un graphe dans lequel chaque sommet et son voisinage peuvent \^etre partitionn\'es par une ou deux cliques et chaque ar\^ete est couverte par une clique.
+Cependant, avec la pr\'esence des erreurs de mesures, nous avons un graphe avec des ar\^etes en plus ou en moins qui n'est pas n\'ecessairement un line-graphe. Si ce graphe est un line-graphe alors il n'est pas le line-graphe de notre DAG.  
+Notre probl\`eme est de d\'ecouvrir cette topologie en se basant sur ces mesures \'electriques. 
+\newline
+Nous d\'ebutons par une \'etude bibliographique des corr\'elations de mesures possibles afin de d\'eterminer celle qui est pertinente pour notre probl\`eme.
+Ensuite nous proposons deux algorithmes pour r\'esoudre ce probl\`eme. Le premier algorithme est {\em l'algorithme de couverture} et il d\'etermine l'ensemble des cliques qui couvre chaque sommet de notre graphe. Le second algorithme est {\em l'algorithme de correction}. Il ajoute et supprime des ar\^etes au voisinage d'un sommet non couvert de telle sorte que son voisinage soit partitionn\'e en une ou deux cliques. %former une clique. 
+Enfin, nous \'evaluons les performances de nos algorithmes en v\'erifiant le nombre d'ar\^etes corrig\'ees et la capacit\'e \`a retourner le graphe le plus proche du line-graphe de notre DAG.
+}															%% Résumé en français / abstract in french
+
+\newcommand{\PhDTitleEN}{Algorithm of graphs for topology discovery for a energy network from flot knowledges}													%% Titre de la thèse en anglais / Thesis title in english
+\newcommand{\keywordsEN}{graphs, topology discovery, flow, linegraphs, change detection, time series.}														%% Mots clés en anglais, séprarés par des , / Keywords in english, separated by ,
+\newcommand{\abstractEN}{
+In energy network, the knowledge of equipments, their locations and their functions are the important informations for the distributor service operator. In fact, each operator has a network plan often named {\em synoptic schema}. That schema shows the interconnexion between equipments in the network. From this schema, some management decisions have taken for ensuring an optimal performance of a network.
+Sometimes, a synoptic schema has some mistakes because the maintenance operations, such as changed the connexion between equipments or replaced equipments,  have not been updated  or have been written with errors. And these mistakes increase exploitation cost  in the energy network.
+\newline
+We consider an electric network of a datacenter.
+This network consists of physical topology modelised by a DAG without circuit and measurements are on the edges of a DAG. 
+The main point of the network is that measurements are some mistakes and the topology is unknown i.e we know edges but the nodes of edges are unknown.
+When measurements are correct then the correlations between pairwise edges provide  the adjacency matrix of the linegraph of undirected graph of the DAG.
+A linegraph is a graph in which each node and the neighbor are partitionned by one or deux cliques. 
+However, with the mistakes in measurements, the obtained graph is not a linegraph because it contains more or less edges. If the obtained graph is a linegraph then it is a linegraph of the other DAG. 
+Our problem is to discovery the topology of the DAG with some mistakes in measurements.
+\newline
+We start by the state of art in the measurement correlations in order to choose the good method for our problem. Then, we propose two algorithms to resolve our problem. The first algorithm is the cover algorithm and it returns the set of cliques in the graph. The second algorithm is a correction algorithm which adds or deletes edges in the graph for getting a nearest linegraph of the DAG. In the last, we evaluate the performances of the algorithms by checking the number of edges corrected and the ability to return a nearest linegraph of the DAG.
+}															%% Résumé en anglais / abstract in english
+
+\label{layout}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Mise en page / Page layout      
+%%% NE RIEN MODIFIER / DO NOT MODIFY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+%%% Logo de l'école doctorale. Le nom du fichier correspond au sigle de l'ED / Doctoral school logo. Filename correspond to doctoral school acronym
+%%% Les noms valides sont / Valid names are : 2MIB; AAIF; ABIES; BIOSIGNE; CBMS; EDMH; EDOM; EDPIF; EDSP; EOBE; INTERFACES; ITFA; PHENIICS; SDSV; SDV; SHS; SMEMAG; SSMMH; STIC
+\begin{textblock*}{61mm}(3mm,3mm)
+	\noindent\includegraphics[height=24mm]{media/ed/\logoEd.jpeg} %%ed%%
+\end{textblock*}
+
+
+
+%%%Titre de la thèse en français / Thesis title in french
+\begin{center}
+\fbox{\parbox{0.95\textwidth}{
+{\bf Titre:}\PhDTitleFR 
+\medskip
+
+%%%Mots clés en français, séprarés par des ; / Keywords in french, separated by ;
+{\bf Mots clés:} \keywordsFR 
+\vspace{-2mm}
+
+%%% Résumé en français / abstract in french
+\begin{multicols}{2}
+{\bf Résumé:} 
+\abstractFR 
+\end{multicols}
+}}
+\end{center}
+
+\vspace*{0mm}
+
+%%%Titre de la thèse en anglais / Thesis title in english
+\begin{center}
+\fbox{\parbox{0.95\textwidth}{
+{\bf Title:} \PhDTitleEN 
+
+\medskip
+
+%%%Mots clés en anglais, séprarés par des ; / Keywords in english, separated by ;
+{\bf Keywords:}  \keywordsEN %%3 à 6 mots clés%%
+\vspace{-2mm}
+\begin{multicols}{2}
+	
+%%% Résumé en anglais / abstract in english
+{\bf Abstract:} 
+\abstractEN
+\end{multicols}
+}}
+\end{center}
+
+
+\begin{textblock*}{161mm}(10mm,270mm)
+\color{bordeau}
+{\bf\noindent Université Paris-Saclay	         }
+
+\noindent Espace Technologique / Immeuble Discovery 
+
+\noindent Route de l’Orme aux Merisiers RD 128 / 91190 Saint-Aubin, France 
+\end{textblock*}
+
+\begin{textblock*}{20mm}(182mm,255mm)
+\includegraphics[width=20mm]{media/UPSACLAY-petit}
+\end{textblock*}
+
+\end{document}
