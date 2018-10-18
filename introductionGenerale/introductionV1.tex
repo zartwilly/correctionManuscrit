@@ -1,24 +1,24 @@
 \chapter{Introduction G\'en\'erale}
 
-Un r\'eseau de distribution \'energ\'etique est un ensemble d'\'equipements \'energ\'etiques interconnect\'es permettant d'ach\'eminer l'\'energie des centres de production aux consommateurs. 
-Le r\'eseau est compos\'e d'une infrastructure de transport et d'une infrastructure de distribution de l'\'energie. Ces infrastructures sont sp\'ecifiques \`a l'\'energie et sont g\'er\'ees chacune par un gestionnaire de r\'eseau ou Distribution Source Operator. Son r\^ole est de maintenir la continuit\'e et la qualit\'e de l'approvisionnement physique des clients c'est-\`a-dire assurer l'entretien et le d\'eveloppement du r\'eseau. 
+Un r\'eseau de distribution \'energ\'etique est un ensemble d'\'equipements \'energ\'etiques interconnect\'es permettant d'acheminer l'\'energie des centres de production aux consommateurs. 
+Le r\'eseau est compos\'e d'une infrastructure de transport et d'une infrastructure de distribution de l'\'energie. Ces infrastructures sont sp\'ecifiques au type d'\'energie et sont g\'er\'ees chacune par un gestionnaire de r\'eseau ou Distribution Source Operator. Son r\^ole est de maintenir la continuit\'e et la qualit\'e de l'approvisionnement physique des clients c'est-\`a-dire assurer l'entretien et le d\'eveloppement du r\'eseau. 
 En effet, le gestionnaire de transport achemine, au niveau national, l'\'energie depuis son lieu de production \`a son lieu de consommation \`a travers le r\'eseau de distribution. Quant au gestionnaire de distribution, il distribue l'\'energie aux consommateurs au niveau r\'egional.
 \newline
 
-Un exemple de r\'eseau \'energ\'etique g\'er\'e localement par un gestionnaire de r\'eseau est un datacenter. Le datacenter a la particularit\'e de contenir un r\'eseau thermique, \'electrique et informatique. Le r\'eseau \'electrique alimente les \'equipements des autres r\'eseaux. La connaissance de son infrastructure est indispensable pour le gestionnaire afin
+Un exemple de r\'eseau \'energ\'etique g\'er\'e localement par un gestionnaire de r\'eseau est un centre de donn\'ees ou data center. Le data center a la particularit\'e de contenir un r\'eseau thermique, \'electrique et informatique. Le r\'eseau \'electrique alimente les \'equipements des autres r\'eseaux. La connaissance de son infrastructure est indispensable pour le gestionnaire afin
 de fournir  la puissance n\'ecessaire au fonctionnement d'un \'equipement et 
  d'\'eviter les surco\^uts de production d'\'electricit\'e parce que l'\'electricit\'e ne se stocke pas.
 Pour ce faire, 
 %les consommations dans le temps des \'equipements du r\'eseau \'electrique sont coll\'ect\'ees 
-des sondes sont install\'ees dans le r\'eseau \'electrique afin de collecter les consommations des \'equipements dans le temps. Les mesures temporelles des consommations sont int\'egr\'ees dans un outil de supervision de ce r\'eseau. Cet outil permet d'avoir l'\'etat de tous les \'equipements \`a un instant donn\'ee, de connaitre la topologie de fonctionnement du r\'eseau et aussi la topologie g\'en\'erale du r\'eseau c'est-\`a-dire l'ensemble des \'equipements arr\^et\'es et en fonctionnement.
+des sondes sont install\'ees dans le r\'eseau \'electrique afin de collecter les consommations des \'equipements dans le temps. Les mesures temporelles des consommations sont int\'egr\'ees dans un outil de supervision de ce r\'eseau. Cet outil permet d'avoir l'\'etat de tous les \'equipements \`a un instant donn\'e, de conna\^itre la topologie de fonctionnement du r\'eseau et aussi la topologie g\'en\'erale du r\'eseau c'est-\`a-dire l'ensemble des \'equipements arr\^et\'es et en fonctionnement.
 \newline
 
-Malheureusement,  l'\'etat du r\'eseau affich\'e par l'outil de supervision est souvent \'erron\'e. 
+Malheureusement,  l'\'etat du r\'eseau affich\'e par l'outil de supervision est souvent erron\'e. 
 En effet,  les sondes de certains \'equipements pr\'esentes dans le r\'eseau physique ne sont pas r\'epertori\'ees dans la base de donn\'ees de l'outil et leurs mesures ne figurent nulle part dans l'outil de supervision. Cela donne l'impression que ces \'equipements sont en panne et  les \'equipements rattach\'es \`a ces derniers sont aliment\'es par d'autres \'equipements qui fonctionnent en surcapacit\'e.  
-En outre, les sondes de certains \'equipements sont interchang\'ees avec d'autres. Les puissances sont remplac\'ees par des intensit\'es et aussi la puissance d'un \'equipement est remplac\'ee par celle  un autre \'equipement. Ces erreurs humaines impliquent le non respect de la loi de conservation des noeuds et aussi une maintenance complexe  parce que nous ignorons les sondes interchang\'ees.
+En outre, les sondes de certains \'equipements sont interchang\'ees avec d'autres. Les puissances sont remplac\'ees par des intensit\'es et aussi la puissance d'un \'equipement est remplac\'ee par celle  d'un autre \'equipement. Ces erreurs humaines impliquent le non respect de la loi de conservation des noeuds et aussi une maintenance complexe  parce que nous ignorons o\`u sont situ\'ees les sondes interchang\'ees.
 %Enfin, 
-Ces probl\`emes proviennent d'une faible communication  entre les diff\'erents m\'etiers dans le datacenter et aussi de la mise \`a jour \'erron\'ee ou tardive des maintenances dans la base de donn\'ees de l'outil. 
-Ceux-ci entrainent  des pr\'evisions \'elev\'ees de consommation \'electriques, des co\^uts de maintenances exorbitants et enfin que la topologie connue n'est pas la topologie r\'eelle.
+Ces probl\`emes proviennent d'une faible communication  entre les diff\'erents m\'etiers dans le data center et aussi de la mise \`a jour erron\'ee ou tardive des maintenances dans la base de donn\'ees de l'outil. 
+Ceux-ci entrainent  des pr\'evisions \'elev\'ees des consommations \'electriques, des co\^uts de maintenances exorbitants et enfin la topologie connue n'est pas la topologie r\'eelle.
 \newline
 
 Afin de r\'eduire les erreurs humaines dans la d\'ecouverte du r\'eseau, nous proposons des m\'ethodes pour d\'eterminer la topologie du r\'eseau \'electrique en se basant uniquement sur les mesures temporelles collect\'ees. 
@@ -26,25 +26,25 @@ Des travaux similaires de d\'ecouverte de topologie ont \'et\'e r\'ealis\'es par
 \newline
 Nous allons consid\'erer, dans notre cas, que 
 \begin{itemize}
-\item Toutes les mesures sont connues malgr\'e des valeurs absentes dans certaines s\'eries de mesures et aussi les \'equipements rattach\'es \`a ces mesures sont incorrects, 
+\item Toutes les mesures sont connues malgr\'e des valeurs absentes dans certaines s\'eries de mesures et aussi les \'equipements rattach\'es \`a ces mesures sont incorrects.
 \item Un \'equipement ne s'alimente pas lui-m\^eme mais peut alimenter plusieurs autres \'equipements.
 \item Le r\'eseau \'electrique fonctionne en monophas\'e et en triphas\'e. 
 \item Le r\'eseau \'electrique est aliment\'e \`a un seul gestionnaire de r\'eseau mais contient plusieurs sources d'\'energie (les groupes \'electrog\`enes, les onduleurs).
-\item Les pertes par effets joules au cours du transport de l'\'electricit\'e sont n\'egligeables.
+\item Les pertes par Effet Joule au cours du transport de l'\'electricit\'e sont n\'egligeables.
 \end{itemize}
 
 
-Nous d\'ebutons dans le chapitre $1$ par la mod\'elisation du r\'eseau \'electrique comme un r\'eseau de flots dans lequel les flots sont les mesures \'electriques et le r\'eseau est un DAG sans circuit. Dans le DAG, les sommets sont des \'equipements et les arcs sont de c\^ables. Les mesures sont d\'ecrites par des s\'eries temporelles et une nouvelle loi de conservation \cite{loiDeConservation} est propos\'ee en ad\'equation avec les lois physiques.
+Nous d\'ebutons dans le chapitre $ 1 $ par la mod\'elisation du r\'eseau \'electrique comme un r\'eseau de flots dans lequel les flots sont les mesures \'electriques et le r\'eseau est un DAG sans circuit. Dans le DAG, les sommets sont des \'equipements et les arcs sont des c\^ables. Les mesures sont d\'ecrites par des s\'eries temporelles et une nouvelle loi de conservation \cite{loiDeConservation} est propos\'ee en ad\'equation avec les lois physiques.
  \newline
  
- Dans le chapitre $2$, nous pr\'esentons les analyses effectu\'ees avec les s\'eries temporelles puis  nous indiquons que la comparaison de s\'eries temporelles est adapt\'ee \`a notre probl\`eme. Ensuite nous pr\'esentons l'ensemble de m\'ethodes de comparaison de s\'eries temporelles et nous retenons la distance de Pearson comme la m\'ethode de calcul des coefficients de similarit\'e  entre les mesures. Enfin nous commentons les r\'esultats obtenus avec cette m\'ethode.
+ Dans le chapitre $ 2 $, nous pr\'esentons les analyses effectu\'ees avec les s\'eries temporelles puis  nous indiquons que la comparaison de s\'eries temporelles est adapt\'ee \`a notre probl\`eme. Ensuite nous pr\'esentons l'ensemble de m\'ethodes de comparaison de s\'eries temporelles et nous retenons la distance de Pearson comme la m\'ethode de calcul des coefficients de similarit\'e  entre les mesures. Enfin nous commentons les r\'esultats obtenus avec cette m\'ethode.
  \newline
  
- Dans le chapitre $3$, les coefficients de similarit\'e forment une matrice dite {\em matrice de corr\'elation} et le graphe associ\'e \`a cette matrice est dit {\em graphe de corr\'elation}. Cette matrice de corr\'elation est la matrice d'adjacence du line-graphe du graphe non orient\'e sous jacent au DAG du r\'eseau \'electrique \`a condition que cette matrice ne contienne aucune case \'erron\'ee. Nous montrons que le line-graphe admet un partitionnement unique en cliques \`a l'exception de situations d'ambigu\"{i}t\'es d\'ecrites dans ce chapitre. Ce partitionnement est appel\'e la {\em couverture de corr\'elation}.  
- Ensuite, nous pr\'esentons deux algorithmes (couverture et correction) qui proposent le partitionnement du graphe de corr\'elation s'il n'y a aucune case \'erronn\'ee, sinon qui retourne le line-graphe le plus proche du graphe de corr\'elation en cas de cases \'erron\'ees.
+ Dans le chapitre $ 3 $, les coefficients de similarit\'e forment une matrice dite {\em matrice de corr\'elation} et le graphe associ\'e \`a cette matrice est dit {\em graphe de corr\'elation}. Cette matrice de corr\'elation est la matrice d'adjacence du line-graphe du graphe non orient\'e sous-jacent au DAG du r\'eseau \'electrique \`a condition que cette matrice ne contienne aucune case erron\'ee. Nous montrons que le line-graphe admet un partitionnement unique en cliques \`a l'exception de situations d'ambigu\"{i}t\'es d\'ecrites dans ce chapitre. Ce partitionnement est appel\'e la {\em couverture de corr\'elation}.  
+ Ensuite, nous pr\'esentons deux algorithmes (couverture et correction) qui proposent le partitionnement du graphe de corr\'elation s'il n'y a aucune case erron\'ee, sinon qui retourne le line-graphe le plus proche du graphe de corr\'elation en cas de cases erron\'ees.
  Enfin, nous d\'ecrivons la construction du graphe non orient\'e sous-jacent au DAG du r\'eseau \'electrique puis nous orientons les ar\^etes de ce graphe.
  \newline
  
- Dans le chapitre $4$, nous \'evaluons les performances de nos algorithmes sur des graphes g\'en\'er\'es  \`a partir de trois exp\'erimentations. La premi\`ere exp\'erimentation consiste \`a modifier des cases dans le graphe de corr\'elation. La seconde exp\'erimentation consiste \`a attribuer les coefficients de corr\'elation entre les arcs en se basant sur la distribution des valeurs des cases de la matrice du graphe de corr\'elation. La derni\`ere  exp\'erimentation se r\'ealise sur des graphes ayant plus de deux couvertures de corr\'elation. 
+ Dans le chapitre $ 4 $, nous \'evaluons les performances de nos algorithmes sur des graphes g\'en\'er\'es  \`a partir de trois exp\'erimentations. La premi\`ere exp\'erimentation consiste \`a modifier des cases dans le graphe de corr\'elation. La seconde exp\'erimentation consiste \`a attribuer les coefficients de corr\'elation entre les arcs en se basant sur la distribution des valeurs des cases de la matrice du graphe de corr\'elation. La derni\`ere  exp\'erimentation se r\'ealise sur des graphes ayant plus de deux couvertures de corr\'elation. 
 Nous \'evaluons le nombre de cases corrig\'ees apr\`es l'ex\'ecution de nos algorithmes.
  
