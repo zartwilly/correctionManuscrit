@@ -1,8 +1,8 @@
 Les mod\`eles de classification de s\'eries temporelles bas\'es sur des caract\'eristiques
-descriptives  supposent  d'extraire  un  ensemble  de  caract\'eres qu'on  esp\`ere  \^etre
+descriptives  supposent  d'extraire  un  ensemble  de  caract\`eres qu'on  esp\`ere  \^etre
 repr\'esentatif de la forme g\'en\'erale d'une s\'erie temporelle. Le plus commun\'ement,
-ces caract\'eres sont quantifi\'ees pour former des "sacs de mots" (BoW pour "Bag of Words'').
-Dans la r\'ecup\'eration d'information, l'approche {\em BoW} d'estimation de la fr\'equence des mots en ignorant leur localisation est tr\`es commune. L'id\'ee est d'estimer la fr\'equence d'occurences des caract\'eristiques des s\'eries puis  d'utiliser ces fr\'equences comme des features pour faire de la  classification.
+ces caract\`eres sont quantifi\'ees pour former des "sacs de mots" (BoW pour "Bag of Words'').
+Dans la r\'ecup\'eration d'information, l'approche {\em BoW} d'estimation de la fr\'equence des mots en ignorant leur localisation est tr\`es commune. L'id\'ee est d'estimer la fr\'equence d'occurences des caract\`eres des s\'eries puis  d'utiliser ces fr\'equences comme des features pour faire de la  classification.
 \newline
 Les approches suivantes diff\`erent uniquement par les caract\'eristiques extraites.
 En effet, l'approche {\em Bag Of Pattern (BOP)} \cite{lin2012rotation} convertit la s\'erie temporelle en une s\'erie discr\`ete gr\^ace \`a la m\'ethode {\em Symbolic Aggregate approXimation (SAX)} \cite{lin2007experiencing}. Il cr\'ee un ensemble de mots {\em SAX} pour chaque s\'erie par l'application d'une fen\^etre glissante, puis se sert de la fr\'equence des mots dans la s\'erie comme sa nouvelle caract\'eristique. 
