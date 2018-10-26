@@ -2,14 +2,14 @@ La distance {\em Time Warp Edit} (TWE) est une mesure de distance pour des s\'er
 La distance {\em TWE} a quatre propri\'et\'es :
 \begin{itemize}
 	\item Traite le d\'ecalage temporelle local avec des performances \'elev\'ees.
-	\item Satisfait l'in\'egalit\'e triangulaire c'est-\`a-dire $AB \le AC+CB$ avec $AB,AC, CB$ des cot\'es d'un triangle quelconque.
+	\item Satisfait l'in\'egalit\'e triangulaire c'est-\`a-dire $AB \le AC+CB$ avec les distances$AB,AC, CB$ des cot\'es d'un triangle quelconque.
 	\item Comprend le param\`etre de rigidit\'e $\nu$ qui contr\^ole l'\'elasticit\'e de la m\'etrique.
 	\item Utilise la diff\'erence de temps pour comparer les segments de s\'eries temporelles comme des co\^uts de correspondances locales. 
 \end{itemize}
 Le param\`etre $\nu$ est important dans l'algorithme de {\em TWE} parce qu'il rend plus flexible l'identification de motifs (matching) entre les s\'eries temporelles. 
 La preuve de son efficacit\'e a \'et\'e prouv\'ee dans \cite{marteau2009time}.
 
-L'algorithme de {\em TWE} introduit trois op\'erations : $delete_A$, $delete_B$ et $match$ pour l'\'edition de deux s\'eries discr\`etes $A$ et $B$. L'\'edition d'une s\'erie temporelle consiste \`a modifier cette s\'erie en sous-ensembles de m\^emes tailles \`a partir d'une des trois op\'erations et chaque sous-ensemble est d\'esign\'e par  {\em s\'equence}. La similarit\'e entre les s\'eries $A$ et $B$ est le co\^ut minimum de s\'equences n\'ecessaire pour transformer $A$ en $B$.
+L'algorithme de {\em TWE} introduit trois op\'erations : $delete_A$, $delete_B$ et $match$ pour l'\'edition de deux s\'eries discr\`etes $A$ et $B$. L'\'edition d'une s\'erie temporelle consiste \`a modifier cette s\'erie en sous-ensembles de m\^eme cardinalit\'e \`a partir d'une des trois op\'erations et chaque sous-ensemble est d\'esign\'e par  {\em s\'equence}. La similarit\'e entre les s\'eries $A$ et $B$ est le co\^ut minimum de s\'equences n\'ecessaire pour transformer $A$ en $B$.
 En se basant sur ces trois op\'erations, l'algorithme de {\em TWE} calcule le co\^ut d'une s\'equence \`a chaque op\'eration pour toutes les paires de s\'eries avec l'\'equation \ref{coutSequenceTWE}. Dans cette \'equation, $U$ d\'esigne l'ensemble des s\'eries finies $U = \{A_1^p ~|~ p\in \N \}$ o\`u $A_1^p$ est une s\'erie avec des temps discrets variant de $1$ \`a $p$,
  $A_1^0$ est la s\'erie nulle de longueur nulle et 
  $a'_i$ d\'esigne le $i^{ieme}$ \'el\'ement de la s\'erie $A$.
@@ -46,7 +46,7 @@ La r\'ecursivit\'e est initialis\'ee par
  \newline
 L'algorithme {\em TWE} introduit la rigidit\'e,  constante positive $\nu$, dans la d\'efinition de $\delta_{\lambda, \nu}$ en choisissant $d(a', b') = d_{LP}(a,b) + \nu \times d_{LP}(t_a,t_b)$ qui caract\'erise la rigidit\'e de $\delta_{\lambda, \nu}$.
 Si $\nu = 0$ alors $\delta_{\lambda, \nu}$ est la distance de $S$ et non de $S \times T$.
-Dans cette \'equation, $d_{LP}$ est la m\'etrique $l_p$ norm \cite{chen2004marriageLpNorm}.
+Dans cette \'equation, $d_{LP}$ est la m\'etrique  norme $L_p$ \cite{chen2004marriageLpNorm}.
 L'expression finale de $\delta_{\lambda, \nu}$ est pr\'esent\'ee par l'\'equation \ref{tweFinalExpression}.
 \begin{equation}
 	\delta_{\lambda,\nu}(A_1^p, B_1^q) = min
@@ -65,5 +65,3 @@ avec
 	\Gamma( \lambda \rightarrow b'_q) &=& d_{LP}(b'_q, b'_{q-1}) + \nu . (t_{b_q} - t_{b_{q-1}}) + \lambda
 	\end{array}
 \]	
-
-%\hspace{-1.2 cm}
