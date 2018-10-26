@@ -1,30 +1,7 @@
-%quel est la grandeur quon a selectionne
-%travailler sur un sous graphe de champlan why 
-%	presentation de champlan dans le chapitre precedent
-%	description du reseau de champlan et presentation du reseau (affichage) 
-% calcul des coefficient de similarite
-%representation de la matrice de correlation
-%comparer les faux positfs avec les faux negatifs 
-%choix du seuil ou de epsilon
-%conclusion
-
-% 0 - description de champlan dans le chapitre precedent
-% 1 - grandeur selectionnee
-%% -----
-%---lien sur relation entre correlation Pearson et taille de l echantillon https://www.researchgate.net/post/What_is_the_minimum_sample_size_to_run_Pearsons_R
-
-
-%  ------ chapitre precedent
-%Nous avons les tensions triphas\'ees $U_{12}, U_{23}, U_{13}$, les intensit\'es triphas\'ees 
-%$I_{12}, I_{23}, I_{13}$, les puissances active $P$, apparente $S$ et reactive $Q$, le  facteur de puissance $FP$ ou $cos \phi$, l'intensit\'e $I$, la tension $U$.
-%Nous constatons qu'il existe deux syst\`emes de fonctionnement : le syst\`eme triphas\'e regroupant les grandeurs $U_{12}, U_{23}, U_{13}, I_{12}, I_{23}, I_{13}$ et le syst\`eme monophas\'e regroupant les grandeurs $I,U$. Les autres grandeurs sont communes aux deux syst\`emes (les grandeurs $P, Q, S, cos \phi$).
-%Le syst\`eme triphas\'e est utilis\'e des sources \'electriques jusqu'aux diff\'erents tableaux \'electriques parce que le triphas\'e permet de transporter beaucoup d'\'energies.
-%Quant au syst\`eme monophas\'e, il est utilis\'e des tableaux \'electriques jusqu'aux baies serveurs. Les baies sont des armoires qui alimentent plusieurs serveurs.
-%  ------ chapitre precedent
 Nous pr\'esentons les r\'esultats obtenus avec la distance de Pearson.
 \newline
-Les grandeurs physiques collect\'ees proviennent du {\em datacenter Champlan} sont au nombre de $10$. Elles sont regroup\'ees dans les syst\`emes triphas\'e et monophas\'e.
-Dans les s\'eries de mesures  provenant des arcs en triphas\'e, nous remarquons qu'il y'a toujours des mesures sur une phase et les autres phases ne contiennent aucune mesure. Il n'y a aucune mesure sur deux phases simultan\'ement et lorsqu'il  existe des mesures, les $i$ premi\`eres mesures sont sur la phase $1$, les $n-i$ mesures sont sur la phase $2$. 
+Les grandeurs physiques collect\'ees proviennent du {\em data center Champlan} sont au nombre de $10$. Elles sont regroup\'ees dans les syst\`emes triphas\'e et monophas\'e.
+Dans les s\'eries de mesures  provenant des arcs en triphas\'e, nous remarquons qu'il y a toujours des mesures sur une phase et les autres phases ne contiennent aucune mesure. Il n'y a aucune mesure sur deux phases simultan\'ement et lorsqu'il  existe des mesures, les $i$ premi\`eres mesures sont sur la phase $1$, les $n-i$ mesures sont sur la phase $2$. 
 Les autres grandeurs ne contiennent des mesures 
 soit dans les $i$ premiers instants de temps, 
 soit dans les $n-i$ derniers instants de temps. 
@@ -43,7 +20,7 @@ Nous consid\'erons un sous-r\'eseau \'electrique de {\em Champlan} dans lequel
 	\item Aucun \'equipement n'est aliment\'e par un onduleur. La pr\'esence d'un onduleur modifie le profil de consommation d'un arc car l'onduleur recr\'ee le signal en attribuant des puissances diff\'erentes. Cela implique que nous n'avons pas des m\^emes variations.
 	 
 \end{itemize}
-Un exemple de ce sous-r\'eseau est illustr\'e dans la figure \ref{sousReseauChamplan} dans lequel nous avons $31$ \'equipements. Les sources sont identifi\'ees par {\em TGBT} (TGBT1, TGBT2, TGBT4) et $GF$(1,2) d\'esigne le groupe froid qui g\`ere la climatisation. Les tableaux sont {\em DD205, DD206, DD105, DD106, DD108, MSC3, R486, R481, CVC1 et CVC2}. Les baies sont {\em R491, R488, R484A, R484B, R042, R483, R487, R492, R490, R493, R494}. Les onduleurs sont indiqu\'es par {\em OND} (1,2,RG). Les \'equipements {\em TGBT} sont aliment\'es par une source externe au datacenter, le fournisseur d'\'electricit\'e r\'egional {\em Enedis}.  
+Un exemple de ce sous-r\'eseau est illustr\'e dans la figure \ref{sousReseauChamplan} dans lequel nous avons $31$ \'equipements. Les sources sont identifi\'ees par {\em TGBT} (TGBT1, TGBT2, TGBT4) et $GF$(1,2) d\'esigne le groupe froid qui g\`ere la climatisation. Les tableaux sont {\em DD205, DD206, DD105, DD106, DD108, MSC3, R486, R481, CVC1 et CVC2}. Les baies sont {\em R491, R488, R484A, R484B, R042, R483, R487, R492, R490, R493, R494}. Les onduleurs sont indiqu\'es par {\em OND} (1,2,RG). Les \'equipements {\em TGBT} sont aliment\'es par une source externe au data center, le fournisseur d'\'electricit\'e r\'egional {\em Enedis}.  
 % ---- figure sous-reseau champlan
 \begin{figure}[htb!] 
 \centering
@@ -51,7 +28,7 @@ Un exemple de ce sous-r\'eseau est illustr\'e dans la figure \ref{sousReseauCham
 \caption{Le sous-r\'eseau de Champlan \'etudi\'e : Les sources sont {\em TGBT1, TGBT2, TGBT4}. $GF$(1,2) d\'esigne le groupe froid qui g\`ere la climatisation. 
 Les tableaux sont {\em DD205, DD206, DD105, DD106, DD108, MSC3, R486, R481, CVC1 et CVC2}. 
 Les baies sont {\em R491, R488, R484A, R484B, R042, R483, R487, R492, R490, R493, R494}. Les onduleurs sont indiqu\'es par {\em OND1,OND2,RGOND}. 
-Les \'equipements {\em TGBT} sont aliment\'es par une source externe au datacenter, le fournisseur d'\'electricit\'e r\'egional {\em Enedis}.
+Les \'equipements {\em TGBT} sont aliment\'es par une source externe au data center, le fournisseur d'\'electricit\'e r\'egional {\em Enedis}.
 }
 \label{sousReseauChamplan}
 \end{figure}
@@ -59,7 +36,7 @@ Les \'equipements {\em TGBT} sont aliment\'es par une source externe au datacent
 \newline
 
 % 3-  coefficients de similarite 
-Nous allons calcul\'e la corr\'elation entre les arcs du {\em sous-r\'eseau de Champlan} en supposant que {\em deux arcs incidents \`a un \'equipement sont fortement corr\'el\'es et deux arcs non corr\'el\'es ne poss\`edent aucun \'equipement en commun}.
+Nous allons calculer la corr\'elation entre les arcs du {\em sous-r\'eseau de Champlan} en supposant que {\em deux arcs incidents \`a un \'equipement sont fortement corr\'el\'es et deux arcs non corr\'el\'es ne poss\`edent aucun \'equipement en commun}.
 Chaque arc est identifi\'e par deux \'equipements, celui qui fournit l'\'electricit\'e ($x$) et celui qui en consomme ($y$). Nous d\'esignons par convention $x->y$, l'arc entre $x$ et $y$. Par exemple, l'arc entre $TGBT1$ et $R481$ est not\'e $TGBT1->R481$. 
 \newline
 Soient trois arcs $x->y$ et $y->z$ et $t->u$. 
@@ -80,7 +57,7 @@ Le coefficient de similarit\'e $0.1$ indique toutes les valeurs dans l'intervall
 % 4 erreur de similarite et categorisation de ces erreurs 
 Nous disposons de la topologie \'electrique r\'eelle de {\em Champlan}.
 Nous comparons  les coefficients de similarit\'e  calcul\'es par rapport aux arcs qui sont incidents dans la topologie de {\em Champlan}.
-Pour ce faire, nous pr\'esentons, dans la figure \ref{distribution_0_1_distance_pearson}, les distributions des arcs incidents et non incidentes  en fonction des coefficients de similarit\'e. Les arcs non incidentes sont d\'esign\'es par $cases\_0$ et les arcs incidents par $cases\_1$.
+Pour ce faire, nous pr\'esentons, dans la figure \ref{distribution_0_1_distance_pearson}, les distributions des arcs incidents et non incidents  en fonction des coefficients de similarit\'e. Les arcs non incidents sont d\'esign\'es par $cases\_0$ et les arcs incidents par $cases\_1$.
 	% arcs non adjacents : prkoi on a des coeff = 1?
 		% ---- figure  profils_consommation_cases_0_similarite_1
 		\begin{figure}[htb!] 
@@ -96,8 +73,8 @@ Pour ce faire, nous pr\'esentons, dans la figure \ref{distribution_0_1_distance_
 		\end{figure}
 %		\FloatBarrier
 		% ---- figure  profils_consommation_cases_0_similarite_1
-	La distribution des arcs non incidents est asym\'etrique vers la gauche. Cela est normale puisque nous avons suppos\'e que les arcs non incidents ont des coefficients de similarit\'e qui tendent vers $0$. 
-	Cependant, nous avons $4$ paires d'arcs qui ont des coefficients $corr(x->y,y->z) = 1$. La figure \ref{profils_consommation_cases_0_similarite_1} pr\'esente les profils de consommation de ces $4$ paires arcs. Nous constatons que :
+	La distribution des arcs non incidents est asym\'etrique vers la gauche. Cela est normal puisque nous avons suppos\'e que les arcs non incidents ont des coefficients de similarit\'e qui sont proche de $0$. 
+	Cependant, nous avons quatre paires d'arcs qui ont des coefficients $corr(x->y,y->z) = 1$. La figure \ref{profils_consommation_cases_0_similarite_1} pr\'esente les profils de consommation de ces quatre paires d'arcs. Nous constatons que :
 	\begin{itemize}
 		\item Les arcs $R486->R487$ et $R481->R488$ ont des profils oppos\'es et en appliquant la valeur absolue sur les valeurs de chaque s\'erie, les profils se superposent. Il n'y a aucune corr\'elation entre cette paire d'arcs. 
 		\item Les arcs $TGBT1->DD205$ et $TGBT4->MSC3$ ont leurs profils qui se superposent et la corr\'elation de Pearson entre ces s\'eries est alors nulle.
@@ -117,7 +94,7 @@ Pour ce faire, nous pr\'esentons, dans la figure \ref{distribution_0_1_distance_
 		\end{figure}
 		% ---- figure  profils_consommation_cases_1_similarite_0.1
 	En ce qui concerne la distribution des coefficients de similarit\'e des arcs incidents ($cases\_1$), elle est aussi asym\'etrique \`a gauche avec un pic  pour les coefficients appartenant \`a l'intervalle $[0.1,0.2[$. Pour comprendre cette distribution, nous repr\'esentons les profils de consommation de certaines paires d'arcs incidents  ayant leur coefficient de similarit\'e appartenant \`a  l'intervalle $[0.1,0.2[$ dans la figure \ref{profils_consommation_cases_1_similarite_01}.  
-	Dans ces repr\'esentations, il y'a toujours une courbe constante et sa pr\'esence est due \`a l'impossibilit\'e de collecter des donn\'ees \`a cause d'une panne. 
+	Dans ces repr\'esentations, il y a toujours une courbe constante et sa pr\'esence est due \`a l'impossibilit\'e de collecter des donn\'ees \`a cause d'une panne. 
 	Cette s\'erie contient alors des valeurs nulles. Il y'a aussi la fourniture d'\'energie dans les branches. En effet, la source ne fournit que la quantit\'e d'\'energie demand\'ee par un \'equipement. Les s\'eries des arcs sont diff\'erentes et la distance de Pearson est la plus faible ($corr(x->y,y->z) = 0.1$). 
 	Dans ce cas, les erreurs sont introduites par les donn\'ees et le fonctionnement du r\'eseau.
 \newline	
@@ -132,22 +109,22 @@ Sur cette matrice, diff\'erentes valeurs de seuils $s \in [0,1]$ sont test\'ees 
 Des arcs $x->y$ et $x->z$ dont leur coefficient $corr(x->y, x->z) \ge s$ ont leur case $M_{c,s}[x->y, x->z] = 1$ sinon $M_{c,s}[x->y, x->z] = 0$ si $corr(x->y, x->z) < s$. 
 La figure \ref{distrib_relationAdjacence_seuils_distancePerson} pr\'esente les distributions des relations d'incidences entre les arcs apr\`es l'application  des seuils sur la matrice de corr\'elation. Pour un seuil donn\'e, les relations d'incidences sont regroup\'ees en $4$ cat\'egories :
 \begin{itemize}
-	\item Les incidences {\em vrais positives} : il existe un sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 1$. 
-	\item Les incidences {\em vrais n\'egatives} : il existe aucun sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 0$. 
-	\item Les incidences {\em fausses positives} :  il existe aucun sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 1$. 
+	\item Les incidences {\em vraies positives} : il existe un sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 1$. 
+	\item Les incidences {\em vraies n\'egatives} : il n'existe aucun sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 0$. 
+	\item Les incidences {\em fausses positives} :  il n'existe aucun sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 1$. 
 	\item Les incidences {\em fausses n\'egatives} :  il existe un sommet en commun entre les arcs et la case associ\'ee de la paire d'arcs $[x->y, x->z]$ est $M_{c,s}(x->y, x->z) = 0$. 
 \end{itemize}
-Les incidences {\em fausses positives} et {\em fausses n\'egatives} constituent des {\em erreurs d'incidences} dans la matrice d'adjacence $M_{c,s}$. Nous consid\'erons aussi certaines incidences {\em vrai positives}  et {\em vrais n\'egatives} comme les {\em erreurs d'incidences}.
+Les incidences {\em fausses positives} et {\em fausses n\'egatives} constituent des {\em erreurs d'incidences} dans la matrice d'adjacence $M_{c,s}$. Nous consid\'erons aussi certaines incidences {\em vraies positives}  et {\em vraies n\'egatives} comme les {\em erreurs d'incidences}.
 Chaque graphique affiche les erreurs d'incidences associ\'ees \`a un seuil. Par exemple, dans le graphique {\em VraiPositive\_ErreurAdjacence} de la figure \ref{distrib_relationAdjacence_seuils_distancePerson} nous avons $17$ paires d'arcs partageant un sommet pour un seuil $s=0.4$. De m\^eme, nous avons $57$ paires d'arcs n'ayant aucun sommet en commun pour un seuil $s=0.4$ dans le graphique {\em fauxNegatives\_ErreurAdjacence} de la figure \ref{distrib_relationAdjacence_seuils_distancePerson}. 
 Nous observons qu'il n'existe aucun seuil qui 
-maximise les nombres d'incidences {\em vrai positives}  et {\em vrai n\'egatives}  et qui
+maximise les nombres d'incidences {\em vraies positives}  et {\em vraies n\'egatives}  et qui
 minimise les nombres  d'incidences {\em fausses positives} et {\em fausses n\'egatives}.
 Et cela est due \`a l'introduction des erreurs des coefficients de similarit\'e dans la {\em matrice de corr\'elation} $matE$.
 		% ---- figure distrib_relationAdjacence_seuils
 		\begin{figure}[htb!] 
 		\centering
 		\includegraphics[scale = 0.14]{distrib_relationAdjacence_seuils.jpeg}
-		\caption{ Distributions des relations d'incidences entre les arcs apr\`es l'application  de seuils. On distingue $4$ relations d'incidences entre les arcs : incidences {\em fausses positives} (graphique en bas \`a gauche),{\em fausses n\'egatives} (graphique en bas \`a droite), {\em vrais positives} (graphique en haut \`a gauche) et {\em vrai n\'egatives} (graphique en haut \`a droite).
+		\caption{ Distributions des relations d'incidences entre les arcs apr\`es l'application  de seuils. On distingue $4$ relations d'incidences entre les arcs : incidences {\em fausses positives} (graphique en bas \`a gauche),{\em fausses n\'egatives} (graphique en bas \`a droite), {\em vraies positives} (graphique en haut \`a gauche) et {\em vraies n\'egatives} (graphique en haut \`a droite).
 		}
 		\label{distrib_relationAdjacence_seuils_distancePerson}
 		\end{figure}
@@ -165,6 +142,6 @@ Et cela est due \`a l'introduction des erreurs des coefficients de similarit\'e 
 %choix du seuil ou de epsilon
 %conclusion
 {\bf Conclusion} :
-dans cette section, nous avons limit\'e notre \'etude sur un {\em sous-r\'eseau de Champlan} dans lequel les \'equipements ne sont pas aliment\'es par un onduleur. Ce choix fut pr\'ef\'er\'e \`a cause de notre hypoth\`ese qui stipule que les variations d'\'electricit\'e se propagent dans le r\'eseau. Nous avons calcul\'e les coefficients de similarit\'e $corr$ avec la grandeur {\em P} parce que c'est la seule grandeur qui fournit des mesures en monophas\'e et en triphas\'ee. Certains coefficients de similarit\'e sont \'erron\'es \`a cause des donn\'ees, de la m\'ethode de calcul  et du m\'ecanisme de fonctionnement du r\'eseau de Champlan. Ces coefficients forment la {\em matrice de corr\'elation} $M_c$ carr\'ee et sym\'etrique dans laquelle sont test\'es des seuils. 
+dans cette section, nous avons limit\'e notre \'etude sur un {\em sous-r\'eseau de Champlan} dans lequel les \'equipements ne sont pas aliment\'es par un onduleur. Ce choix fut pr\'ef\'er\'e \`a cause de notre hypoth\`ese qui stipule que les variations d'\'electricit\'e se propagent dans le r\'eseau. Nous avons calcul\'e les coefficients de similarit\'e $corr$ avec la grandeur {\em P} parce que c'est la seule grandeur qui fournit des mesures en monophas\'e et en triphas\'ee. Certains coefficients de similarit\'e sont erron\'es \`a cause des donn\'ees, de la m\'ethode de calcul  et du m\'ecanisme de fonctionnement du r\'eseau de Champlan. Ces coefficients forment la {\em matrice de corr\'elation} $M_c$ carr\'ee et sym\'etrique dans laquelle sont test\'es des seuils. 
 Si $M_c$ ne contient aucune erreur de similarit\'e alors il existe un seuil qui d\'etermine la matrice d'adjacence de la topologie du sous-r\'eseau de Champlan. Malheureusement, nous ne sommes pas parvenus \`a d\'eterminer la bonne valeur de seuil et aussi \`a obtenir les coefficients de similarit\'e qui refl\`etent les relations d'adjacences des arcs.
 
