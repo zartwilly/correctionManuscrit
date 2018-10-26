@@ -1,9 +1,9 @@
 \contentsline {chapter}{\numberline {1}Introduction G\'en\'erale}{15}{chapter.1}
 \contentsline {chapter}{\numberline {2}R\'eseaux de flots et mesures physiques}{19}{chapter.2}
-\contentsline {section}{\numberline {2.1}R\'eseau \'electrique d'un datacenter : un graphe de flots}{20}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Topologie du r\'eseau \'electrique du datacenter}{20}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.1}R\'eseau \'electrique d'un data center : un graphe de flots}{20}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Topologie du r\'eseau \'electrique du data center}{20}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}R\'eseau \'electrique : un graphe de flots}{21}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Mod\'elisation du r\'eseau \'electrique du datacenter}{22}{section.2.2}
+\contentsline {section}{\numberline {2.2}Mod\'elisation du r\'eseau \'electrique du data center}{22}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Description du graphe de flots}{22}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Grandeurs, flots et contraintes physiques}{22}{subsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.2.1}Grandeurs physiques}{23}{subsubsection.2.2.2.1}

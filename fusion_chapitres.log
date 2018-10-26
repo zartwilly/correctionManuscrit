@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.12)  1 OCT 2018 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.16)  26 OCT 2018 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **fusion_chapitres.tex
 (./fusion_chapitres.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 7 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 11 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
@@ -33,7 +33,7 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -50,23 +50,23 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -87,8 +87,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
@@ -160,11 +160,10 @@ Package: layout 2014/10/28 v1.2c Show layout parameters
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
@@ -199,23 +198,15 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ulht=\dimen122
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 143.
+Package color Info: Driver file: pdftex.def on input line 147.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count140
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
@@ -225,28 +216,28 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 )
 (/usr/share/texlive/texmf-dist/tex/latex/moreverb/moreverb.sty
 Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
-\tab@position=\count141
-\tab@size=\count142
-\listing@line=\count143
+\tab@position=\count140
+\tab@size=\count141
+\listing@line=\count142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count144
+\lst@mode=\count143
 \lst@gtempboxa=\box30
 \lst@token=\toks33
-\lst@length=\count145
+\lst@length=\count144
 \lst@currlwidth=\dimen123
-\lst@column=\count146
-\lst@pos=\count147
+\lst@column=\count145
+\lst@pos=\count146
 \lst@lostspace=\dimen124
 \lst@width=\dimen125
-\lst@newlines=\count148
-\lst@lineno=\count149
+\lst@newlines=\count147
+\lst@lineno=\count148
 \lst@maxwidth=\dimen126
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count150
-\lst@skipnumbers=\count151
+\c@lstnumber=\count149
+\lst@skipnumbers=\count150
 \lst@framebox=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -259,45 +250,51 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
-Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 Package etexcmds Info: Could not find \expanded.
@@ -306,17 +303,19 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
+(grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -326,7 +325,7 @@ e
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen129
 \captionmargin@=\dimen130
@@ -336,7 +335,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen134
 \caption@hangindent=\dimen135
 )
-\c@ContinuedFloat=\count152
+\c@ContinuedFloat=\count151
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
@@ -346,10 +345,10 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen136
 \enit@toks=\toks34
 \enit@inbox=\box32
-\enitdp@description=\count153
+\enitdp@description=\count152
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
+Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks35
 \thm@bodyfont=\toks36
 \thm@headfont=\toks37
@@ -364,13 +363,17 @@ Package: amsthm 2015/03/04 v2.20.2
 Package: placeins 2005/04/18  v 2.2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip53
+\multirow@cntb=\count153
+\multirow@dima=\skip54
 \bigstrutjot=\dimen137
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box33
-\beforetitleunit=\skip53
-\aftertitleunit=\skip54
+\beforetitleunit=\skip55
+\aftertitleunit=\skip56
 \ttl@plus=\dimen138
 \ttl@minus=\dimen139
 \ttl@toksa=\toks41
@@ -379,99 +382,98 @@ Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \titlewidthfirst=\dimen142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package hobsub Info: Skipping package `etexcmds' (already loaded).
 Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen143
 \Hy@linkcounter=\count154
 \Hy@pagecounter=\count155
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count156
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count157
-LaTeX Info: Redefining \url on input line 5041.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen144
 \Fld@menulength=\count158
 \Field@Width=\dimen145
 \Fld@charsize=\dimen146
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
 \Hy@abspage=\count159
 \c@Item=\count160
 \c@Hfootnote=\count161
 )
-
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 \Fld@listcount=\count162
 \c@bookmark@seq@number=\count163
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip55
+\Hy@SectionHShift=\skip57
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
@@ -479,12 +481,12 @@ Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count165
 \calc@Adimen=\dimen147
 \calc@Bdimen=\dimen148
-\calc@Askip=\skip56
-\calc@Bskip=\skip57
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count166
-\calc@Cskip=\skip58
+\calc@Cskip=\skip60
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
@@ -493,10 +495,11 @@ Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 \AM@pageheight=\dimen150
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box34
-\AM@toc@title=\toks42
+\AM@global@opts=\toks42
+\AM@toc@title=\toks43
 \c@AM@survey=\count167
 \AM@templatesizebox=\box35
 )
@@ -504,35 +507,35 @@ File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen151
 \extrarowheight=\dimen152
-\NC@list=\toks43
-\extratabsurround=\skip59
-\backup@length=\skip60
+\NC@list=\toks44
+\extratabsurround=\skip61
+\backup@length=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 702.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/textpos/textpos.sty
-Package: textpos 2014/01/03 v1.7j
+Package: textpos 2016/06/07 v1.8
 
-Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
+Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
@@ -547,11 +550,11 @@ Grid set 16 x 16 = 38.39343pt x 49.68562pt
 \TPboxrulesize=\dimen157
 \TP@ox=\dimen158
 \TP@oy=\dimen159
-\TP@tbargs=\toks44
+\TP@tbargs=\toks45
 \TP@prevdepth=\dimen160
 TextBlockOrigin set to 0pt x 0pt
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count168
 \mult@box=\box38
 \multicol@leftmargin=\dimen161
@@ -564,8 +567,8 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \page@free=\dimen163
 \premulticols=\dimen164
 \postmulticols=\dimen165
-\multicolsep=\skip61
-\multicolbaselineskip=\skip62
+\multicolsep=\skip63
+\multicolbaselineskip=\skip64
 \partial@page=\box39
 \last@line=\box40
 \maxbalancingoverflow=\dimen166
@@ -600,7 +603,7 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \mc@col@check@num=\count176
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count177
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -674,19 +677,19 @@ LaTeX Font Info:    ... okay on input line 182.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count186
 \scratchdimen=\dimen170
 \scratchbox=\box64
 \nofMPsegments=\count187
 \nofMParguments=\count188
-\everyMPshowfont=\toks45
+\everyMPshowfont=\toks46
 \MPscratchCnt=\count189
 \MPscratchDim=\dimen171
 \MPnumerator=\count190
 \makeMPintoPDFobject=\count191
-\everyMPtoPDFconversion=\toks46
+\everyMPtoPDFconversion=\toks47
 )
 \c@lstlisting=\count192
 Package caption Info: Begin \AtBeginDocument code.
@@ -695,10 +698,10 @@ Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box65
 Package hyperref Info: Link coloring OFF on input line 182.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count193
 )
@@ -712,109 +715,99 @@ LaTeX Info: Redefining \nameref on input line 182.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
-Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 ABD: EveryShipout initializing macros
-<./pageDeGarde/pageDeGarde.pdf, id=373, 597.50829pt x 845.0471pt>
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/pageDeGarde.pdf>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf used on input line 196.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
- <use ./pageDeGarde/pageDeGarde.pdf>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf used on input line 196.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<./pageDeGarde/pageDeGarde.pdf, id=376, page=1, 597.50829pt x 845.0471pt>
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/pageDeGarde.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf, page1 used on input lin
+<./pageDeGarde/pageDeGarde_these.pdf, id=373, 597.50829pt x 845.0471pt>
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf  used on input lin
 e 196.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/pageDeGarde.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf, page1 used on input lin
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf  used on input lin
 e 196.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<./pageDeGarde/pageDeGarde_these.pdf, id=376, page=1, 597.50829pt x 845.0471pt>
+
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf , page1 used on in
+put line 196.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf , page1 used on in
+put line 196.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/pageDeGarde.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf, page1 used on input lin
-e 196.
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf , page1 used on in
+put line 196.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/pageDeGarde.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf, page1 used on input lin
-e 196.
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf , page1 used on in
+put line 196.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: ./pageDeGarde/pageDeGarde.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/pageDeGarde.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/pageDeGarde.pdf, page1 used on input lin
-e 196.
+File: ./pageDeGarde/pageDeGarde_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/pageDeGarde_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/pageDeGarde_these.pdf , page1 used on in
+put line 196.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
  [1
 
- <./pageDeGarde/pageDeGarde.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.m
-ap}>]
-<./pageDeGarde/abstract.pdf, id=402, 597.50829pt x 845.0471pt>
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/abstract.pdf>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf used on input line 197.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
- <use ./pageDeGarde/abstract.pdf>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf used on input line 197.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<./pageDeGarde/abstract.pdf, id=405, page=1, 597.50829pt x 845.0471pt>
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/abstract.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf, page1 used on input line 1
+ <./pageDeGarde/pageDeGarde_these.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pd
+ftex.map}>]
+<./pageDeGarde/abstract_these.pdf, id=402, 597.50829pt x 845.0471pt>
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf  used on input line 1
 97.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/abstract.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf, page1 used on input line 1
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf  used on input line 1
 97.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<./pageDeGarde/abstract_these.pdf, id=405, page=1, 597.50829pt x 845.0471pt>
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf , page1 used on input
+ line 197.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf , page1 used on input
+ line 197.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/abstract.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf, page1 used on input line 1
-97.
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf , page1 used on input
+ line 197.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/abstract.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf, page1 used on input line 1
-97.
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf , page1 used on input
+ line 197.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: ./pageDeGarde/abstract.pdf Graphic file (type pdf)
-
-<use ./pageDeGarde/abstract.pdf, page 1>
-Package pdftex.def Info: ./pageDeGarde/abstract.pdf, page1 used on input line 1
-97.
+File: ./pageDeGarde/abstract_these.pdf Graphic file (type pdf)
+<use ./pageDeGarde/abstract_these.pdf, page 1>
+Package pdftex.def Info: ./pageDeGarde/abstract_these.pdf , page1 used on input
+ line 197.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
- [2 <./pageDeGarde/abstract.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 201.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ [2 <./pageDeGarde/abstract_these.pdf>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 200.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 201.
+LaTeX Font Info:    Try loading font information for U+msb on input line 200.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -822,14 +815,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.201 
+l.200 
        [1
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+] (./remerciements/remerciements.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
+
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 	\tableofcontents
+l.207 	\tableofcontents
                         [2] (./fusion_chapitres.toc [3
 
 ] [4])
@@ -919,24 +937,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 CC.jpg, id=826, 200.75pt x 132.495pt>
 File: ./images_fusionChapitres/ReseauFlotsExempleArmoiresTableauxElectriques_ok
 ken_PCC.jpg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/ReseauFlotsExempleArmoiresTableauxElectriques_okk
 en_PCC.jpg>
 Package pdftex.def Info: ./images_fusionChapitres/ReseauFlotsExempleArmoiresTab
-leauxElectriques_okken_PCC.jpg used on input line 41.
+leauxElectriques_okken_PCC.jpg  used on input line 35.
 (pdftex.def)             Requested size: 240.89877pt x 158.99318pt.
-
 <./images_fusionChapitres/ReseauFlotsExemple_Baie_serveurs.jpg, id=827, 477.785
 pt x 359.3425pt>
 File: ./images_fusionChapitres/ReseauFlotsExemple_Baie_serveurs.jpg Graphic fil
 e (type jpg)
-
 <use ./images_fusionChapitres/ReseauFlotsExemple_Baie_serveurs.jpg>
 Package pdftex.def Info: ./images_fusionChapitres/ReseauFlotsExemple_Baie_serve
-urs.jpg used on input line 41.
+urs.jpg  used on input line 35.
 (pdftex.def)             Requested size: 238.8919pt x 179.6708pt.
-)
-(./reseauFlotsMesures/reseauFlotsGrapheFlots.tex)
+) (./reseauFlotsMesures/reseauFlotsGrapheFlots.tex)
 (./reseauFlotsMesures/reseauFlotsConclusionDatacenterGrapheFlots.tex [21 <./ima
 ges_fusionChapitres/ReseauFlotsExempleArmoiresTableauxElectriques_okken_PCC.jpg
 > <./images_fusionChapitres/ReseauFlotsExemple_Baie_serveurs.jpg>])
@@ -950,12 +964,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 )
 (./reseauFlotsMesures/reseauFlotsConstraintesFlots.tex [24])
 (./reseauFlotsMesures/reseauFlotsDescriptionVerifCorrel.tex
-Underfull \hbox (badness 10000) in paragraph at lines 18--25
+Underfull \hbox (badness 10000) in paragraph at lines 18--28
 
  []
 
 ) (./reseauFlotsMesures/reseauFlotsConclusionModelisation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 27--2
+Underfull \hbox (badness 10000) in paragraph at lines 30--2
 
  []
 
@@ -989,14 +1003,13 @@ Chapitre 3.
 (./timeSeries/seriesTemporelles.tex [33
 
 ] [34]
-<./images_fusionChapitres/exempleSerieTemporelleComposante.pdf, id=982, 903.375
+<./images_fusionChapitres/exempleSerieTemporelleComposante.pdf, id=981, 903.375
 pt x 1084.05pt>
 File: ./images_fusionChapitres/exempleSerieTemporelleComposante.pdf Graphic fil
 e (type pdf)
-
 <use ./images_fusionChapitres/exempleSerieTemporelleComposante.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/exempleSerieTemporelleComposa
-nte.pdf used on input line 49.
+nte.pdf  used on input line 49.
 (pdftex.def)             Requested size: 451.6864pt x 542.02368pt.
 
 Overfull \hbox (3.3312pt too wide) in paragraph at lines 57--62
@@ -1024,23 +1037,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
  []
 
 ) [37] (./timeSeries/seriesEntieresIntroduction.tex
-<./images_fusionChapitres/caracteristiquesFiftyWordUCR.jpeg, id=1009, 606.265pt
+<./images_fusionChapitres/caracteristiquesFiftyWordUCR.jpeg, id=1008, 606.265pt
  x 336.25626pt>
 File: ./images_fusionChapitres/caracteristiquesFiftyWordUCR.jpeg Graphic file (
 type jpg)
-
 <use ./images_fusionChapitres/caracteristiquesFiftyWordUCR.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/caracteristiquesFiftyWordUCR.
-jpeg used on input line 9.
+jpeg  used on input line 9.
 (pdftex.def)             Requested size: 303.13176pt x 168.12772pt.
  [38 <./images_fusionChapitres/caracteristiquesFiftyWordUCR.jpeg>])
 (./timeSeries/seriesEntieresDynamicTimeWarping.tex
-<./images_fusionChapitres/DTW2courbes.png, id=1017, 521.95pt x 417.56pt>
+<./images_fusionChapitres/DTW2courbes.png, id=1016, 521.95pt x 417.56pt>
 File: ./images_fusionChapitres/DTW2courbes.png Graphic file (type png)
-
 <use ./images_fusionChapitres/DTW2courbes.png>
-Package pdftex.def Info: ./images_fusionChapitres/DTW2courbes.png used on input
- line 4.
+Package pdftex.def Info: ./images_fusionChapitres/DTW2courbes.png  used on inpu
+t line 4.
 (pdftex.def)             Requested size: 260.97435pt x 208.77948pt.
  [39 <./images_fusionChapitres/DTW2courbes.png>]) (./timeSeries/seriesEntieresT
 imeWarpEdit.tex [40]
@@ -1113,15 +1124,13 @@ ousReseauChamplan-eps-converted-to.pdf ./images_fusionChapitres/sousReseauChamp
 lan.eps>
 (epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
-
-<./images_fusionChapitres/sousReseauChamplan-eps-converted-to.pdf, id=1177, 752
+<./images_fusionChapitres/sousReseauChamplan-eps-converted-to.pdf, id=1176, 752
 .8125pt x 414.54875pt>
 File: ./images_fusionChapitres/sousReseauChamplan-eps-converted-to.pdf Graphic 
 file (type pdf)
-
 <use ./images_fusionChapitres/sousReseauChamplan-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/sousReseauChamplan-eps-conver
-ted-to.pdf used on input line 50.
+ted-to.pdf  used on input line 50.
 (pdftex.def)             Requested size: 489.32233pt x 269.45349pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 46--60
@@ -1133,25 +1142,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--68
 
  []
 
-
-<./images_fusionChapitres/distribution_0_1_distance_pearson.jpeg, id=1178, 883.
+<./images_fusionChapitres/distribution_0_1_distance_pearson.jpeg, id=1177, 883.
 3pt x 607.26875pt>
 File: ./images_fusionChapitres/distribution_0_1_distance_pearson.jpeg Graphic f
 ile (type jpg)
-
 <use ./images_fusionChapitres/distribution_0_1_distance_pearson.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/distribution_0_1_distance_pea
-rson.jpeg used on input line 72.
+rson.jpeg  used on input line 72.
 (pdftex.def)             Requested size: 485.81651pt x 333.99884pt.
-
 <./images_fusionChapitres/profils_consommation_cases_0_similarite_1.jpeg, id=11
-80, 646.415pt x 443.6575pt>
+79, 646.415pt x 443.6575pt>
 File: ./images_fusionChapitres/profils_consommation_cases_0_similarite_1.jpeg G
 raphic file (type jpg)
-
 <use ./images_fusionChapitres/profils_consommation_cases_0_similarite_1.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/profils_consommation_cases_0_
-similarite_1.jpeg used on input line 88.
+similarite_1.jpeg  used on input line 88.
 (pdftex.def)             Requested size: 420.16476pt x 288.37395pt.
 
 Overfull \hbox (35.92915pt too wide) has occurred while \output is active
@@ -1161,13 +1166,12 @@ S : DISTANCE DE PEARSON \OT1/cmr/m/n/12 51
 
 [51]
 <./images_fusionChapitres/profils_consommation_cases_1_similarite_01.jpeg, id=1
-188, 646.415pt x 443.6575pt>
+187, 646.415pt x 443.6575pt>
 File: ./images_fusionChapitres/profils_consommation_cases_1_similarite_01.jpeg 
 Graphic file (type jpg)
-
 <use ./images_fusionChapitres/profils_consommation_cases_1_similarite_01.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/profils_consommation_cases_1_
-similarite_01.jpeg used on input line 113.
+similarite_01.jpeg  used on input line 113.
 (pdftex.def)             Requested size: 420.16476pt x 288.37395pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--126
@@ -1187,15 +1191,13 @@ S : DISTANCE DE PEARSON \OT1/cmr/m/n/12 53
 Underfull \vbox (badness 4217) has occurred while \output is active []
 
  [54 <./images_fusionChapitres/profils_consommation_cases_0_similarite_1.jpeg>]
-
-<./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg, id=1208, 3613.
+<./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg, id=1207, 3613.
 5pt x 2484.28125pt>
 File: ./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg Graphic fi
 le (type jpg)
-
 <use ./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/distrib_relationAdjacence_seu
-ils.jpeg used on input line 149.
+ils.jpeg  used on input line 149.
 (pdftex.def)             Requested size: 505.88657pt x 347.79701pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 140--156
@@ -1234,16 +1236,14 @@ rapheRacineLineGrapheExemple-eps-converted-to.pdf ./images_fusionChapitres/grap
 heRacineLineGrapheExemple.eps>
 (epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/grapheRacineLineGrapheExemple-eps-converted-to.pdf, i
-d=1232, 768.8725pt x 311.1625pt>
+d=1231, 768.8725pt x 311.1625pt>
 File: ./images_fusionChapitres/grapheRacineLineGrapheExemple-eps-converted-to.p
 df Graphic file (type pdf)
-
 <use ./images_fusionChapitres/grapheRacineLineGrapheExemple-eps-converted-to.pd
 f>
 Package pdftex.def Info: ./images_fusionChapitres/grapheRacineLineGrapheExemple
--eps-converted-to.pdf used on input line 20.
+-eps-converted-to.pdf  used on input line 20.
 (pdftex.def)             Requested size: 499.7612pt x 202.25322pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--37
@@ -1265,16 +1265,14 @@ raphesRacinesDeQuatresAretes-eps-converted-to.pdf ./images_fusionChapitres/grap
 hesRacinesDeQuatresAretes.eps>
 (epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/graphesRacinesDeQuatresAretes-eps-converted-to.pdf, i
-d=1248, 623.32875pt x 507.8975pt>
+d=1247, 623.32875pt x 507.8975pt>
 File: ./images_fusionChapitres/graphesRacinesDeQuatresAretes-eps-converted-to.p
 df Graphic file (type pdf)
-
 <use ./images_fusionChapitres/graphesRacinesDeQuatresAretes-eps-converted-to.pd
 f>
 Package pdftex.def Info: ./images_fusionChapitres/graphesRacinesDeQuatresAretes
--eps-converted-to.pdf used on input line 54.
+-eps-converted-to.pdf  used on input line 54.
 (pdftex.def)             Requested size: 311.6636pt x 253.94814pt.
  [61 <./images_fusionChapitres/graphesRacinesDeQuatresAretes-eps-converted-to.p
 df>]
@@ -1291,16 +1289,14 @@ eufSousGraphesInterditDesLineGraphes-eps-converted-to.pdf ./images_fusionChapit
 res/neufSousGraphesInterditDesLineGraphes.eps>
 (epstopdf)             \includegraphics on input line 81.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/neufSousGraphesInterditDesLineGraphes-eps-converted-t
-o.pdf, id=1266, 775.89874pt x 686.565pt>
+o.pdf, id=1265, 775.89874pt x 686.565pt>
 File: ./images_fusionChapitres/neufSousGraphesInterditDesLineGraphes-eps-conver
 ted-to.pdf Graphic file (type pdf)
-
 <use ./images_fusionChapitres/neufSousGraphesInterditDesLineGraphes-eps-convert
 ed-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/neufSousGraphesInterditDesLin
-eGraphes-eps-converted-to.pdf used on input line 81.
+eGraphes-eps-converted-to.pdf  used on input line 81.
 (pdftex.def)             Requested size: 387.94843pt x 343.28166pt.
 ) [62 <./images_fusionChapitres/neufSousGraphesInterditDesLineGraphes-eps-conve
 rted-to.pdf>] (./linegraphes/linegraphes_ambigus.tex
@@ -1322,18 +1318,15 @@ onfigurationAmbiguite-eps-converted-to.pdf ./images_fusionChapitres/configurati
 onAmbiguite.eps>
 (epstopdf)             \includegraphics on input line 52.
 Package epstopdf Info: Output file is already uptodate.
-
-<./images_fusionChapitres/configurationAmbiguite-eps-converted-to.pdf, id=1292,
+<./images_fusionChapitres/configurationAmbiguite-eps-converted-to.pdf, id=1291,
  435.6275pt x 584.1825pt>
 File: ./images_fusionChapitres/configurationAmbiguite-eps-converted-to.pdf Grap
 hic file (type pdf)
-
 <use ./images_fusionChapitres/configurationAmbiguite-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/configurationAmbiguite-eps-co
-nverted-to.pdf used on input line 52.
+nverted-to.pdf  used on input line 52.
 (pdftex.def)             Requested size: 304.93716pt x 408.92496pt.
-
-[64 <./images_fusionChapitres/configurationAmbiguite-eps-converted-to.pdf>]
+ [64 <./images_fusionChapitres/configurationAmbiguite-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./images_fusionChapitres/graphe2Couverture
 .eps>
 (epstopdf)                    date: 2017-02-21 22:22:01
@@ -1347,18 +1340,15 @@ raphe2Couverture-eps-converted-to.pdf ./images_fusionChapitres/graphe2Couvertur
 e.eps>
 (epstopdf)             \includegraphics on input line 74.
 Package epstopdf Info: Output file is already uptodate.
-
-<./images_fusionChapitres/graphe2Couverture-eps-converted-to.pdf, id=1302, 630.
+<./images_fusionChapitres/graphe2Couverture-eps-converted-to.pdf, id=1301, 630.
 355pt x 182.6825pt>
 File: ./images_fusionChapitres/graphe2Couverture-eps-converted-to.pdf Graphic f
 ile (type pdf)
-
 <use ./images_fusionChapitres/graphe2Couverture-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/graphe2Couverture-eps-convert
-ed-to.pdf used on input line 74.
+ed-to.pdf  used on input line 74.
 (pdftex.def)             Requested size: 472.76509pt x 137.01152pt.
-)
-(./linegraphes/introduction_probleme_proxi_line.tex)
+) (./linegraphes/introduction_probleme_proxi_line.tex)
 (./linegraphes/probleme_distance_line.tex [65 <./images_fusionChapitres/graphe2
 Couverture-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 18--23
@@ -1383,18 +1373,15 @@ eroulementAlgorithmeLehot-eps-converted-to.pdf ./images_fusionChapitres/deroule
 mentAlgorithmeLehot.eps>
 (epstopdf)             \includegraphics on input line 58.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/deroulementAlgorithmeLehot-eps-converted-to.pdf, id=1
-355, 720.6925pt x 824.07875pt>
+354, 720.6925pt x 824.07875pt>
 File: ./images_fusionChapitres/deroulementAlgorithmeLehot-eps-converted-to.pdf 
 Graphic file (type pdf)
-
 <use ./images_fusionChapitres/deroulementAlgorithmeLehot-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/deroulementAlgorithmeLehot-ep
-s-converted-to.pdf used on input line 58.
+s-converted-to.pdf  used on input line 58.
 (pdftex.def)             Requested size: 360.34537pt x 412.03836pt.
-
-[69]
+ [69]
 Overfull \hbox (3.5592pt too wide) in paragraph at lines 65--74
 []\OT1/cmr/m/n/12 Soient $\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = (\OML/cmm/m/it
 /12 V; E\OT1/cmr/m/n/12 )$ un graphe de corr^^Selation et $\OML/cmm/m/it/12 Cli
@@ -1421,17 +1408,16 @@ xempleAlgorithmeCouverture-eps-converted-to.pdf ./images_fusionChapitres/exempl
 eAlgorithmeCouverture.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/exempleAlgorithmeCouverture-eps-converted-to.pdf, id=
-1368, 994.71625pt x 624.3325pt>
+1367, 994.71625pt x 624.3325pt>
 File: ./images_fusionChapitres/exempleAlgorithmeCouverture-eps-converted-to.pdf
  Graphic file (type pdf)
-
 <use ./images_fusionChapitres/exempleAlgorithmeCouverture-eps-converted-to.pdf>
+
 Package pdftex.def Info: ./images_fusionChapitres/exempleAlgorithmeCouverture-e
-ps-converted-to.pdf used on input line 98.
+ps-converted-to.pdf  used on input line 98.
 (pdftex.def)             Requested size: 500.01308pt x 300.00009pt.
-[71]
+ [71]
 Underfull \hbox (badness 10000) in paragraph at lines 105--121
 
  []
@@ -1483,18 +1469,15 @@ orrectionGraph-eps-converted-to.pdf ./images_fusionChapitres/./correctionGraph.
 eps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
-
-<./images_fusionChapitres/correctionGraph-eps-converted-to.pdf, id=1456, 1139.2
+<./images_fusionChapitres/correctionGraph-eps-converted-to.pdf, id=1455, 1139.2
 5626pt x 457.71pt>
 File: ./images_fusionChapitres/correctionGraph-eps-converted-to.pdf Graphic fil
 e (type pdf)
-
 <use ./images_fusionChapitres/correctionGraph-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/correctionGraph-eps-converted
--to.pdf used on input line 85.
+-to.pdf  used on input line 85.
 (pdftex.def)             Requested size: 512.66058pt x 205.96759pt.
- [77]
-[78 <./images_fusionChapitres/correctionGraph-eps-converted-to.pdf>]
+[77] [78 <./images_fusionChapitres/correctionGraph-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 126--134
 
  []
@@ -1534,16 +1517,14 @@ xempleGraphesRacinesIsomorphes-eps-converted-to.pdf ./images_fusionChapitres/Ex
 empleGraphesRacinesIsomorphes.eps>
 (epstopdf)             \includegraphics on input line 33.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/ExempleGraphesRacinesIsomorphes-eps-converted-to.pdf,
- id=1499, 770.88pt x 510.90875pt>
+ id=1498, 770.88pt x 510.90875pt>
 File: ./images_fusionChapitres/ExempleGraphesRacinesIsomorphes-eps-converted-to
 .pdf Graphic file (type pdf)
-
 <use ./images_fusionChapitres/ExempleGraphesRacinesIsomorphes-eps-converted-to.
 pdf>
 Package pdftex.def Info: ./images_fusionChapitres/ExempleGraphesRacinesIsomorph
-es-eps-converted-to.pdf used on input line 33.
+es-eps-converted-to.pdf  used on input line 33.
 (pdftex.def)             Requested size: 539.61234pt x 357.63368pt.
 
 Overfull \hbox (16.36613pt too wide) in paragraph at lines 33--38
@@ -1583,16 +1564,14 @@ rientationAretesHeuristiqueContreExemple-eps-converted-to.pdf ./images_fusionCh
 apitres/orientationAretesHeuristiqueContreExemple.eps>
 (epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/orientationAretesHeuristiqueContreExemple-eps-convert
-ed-to.pdf, id=1512, 617.30624pt x 491.8375pt>
+ed-to.pdf, id=1511, 617.30624pt x 491.8375pt>
 File: ./images_fusionChapitres/orientationAretesHeuristiqueContreExemple-eps-co
 nverted-to.pdf Graphic file (type pdf)
-
 <use ./images_fusionChapitres/orientationAretesHeuristiqueContreExemple-eps-con
 verted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/orientationAretesHeuristiqueC
-ontreExemple-eps-converted-to.pdf used on input line 103.
+ontreExemple-eps-converted-to.pdf  used on input line 103.
 (pdftex.def)             Requested size: 432.11142pt x 344.28389pt.
  [84]) (./linegraphes/conclusionChapitreLinegraphes.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
@@ -1681,15 +1660,13 @@ ecapProtocoleEtude-eps-converted-to.pdf ./images_fusionChapitres/recapProtocole
 Etude.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
-
-<./images_fusionChapitres/recapProtocoleEtude-eps-converted-to.pdf, id=1551, 51
+<./images_fusionChapitres/recapProtocoleEtude-eps-converted-to.pdf, id=1550, 51
 5.9275pt x 208.78pt>
 File: ./images_fusionChapitres/recapProtocoleEtude-eps-converted-to.pdf Graphic
  file (type pdf)
-
 <use ./images_fusionChapitres/recapProtocoleEtude-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/recapProtocoleEtude-eps-conve
-rted-to.pdf used on input line 29.
+rted-to.pdf  used on input line 29.
 (pdftex.def)             Requested size: 386.94467pt x 156.5846pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--40
@@ -1733,16 +1710,16 @@ K$ \OT1/cmr/m/sl/12 CASES DE LA MATRICE DU LINE-GRAPHE \OT1/cmr/m/n/12 93
 
 [93] (./simulation/experimentation1InterpretationModeAleatoireSansRemise.tex
 <./images_fusionChapitres/simulation_distanceMoyenDLDH_k_0_aleatoire_p_05.jpeg,
- id=1580, 2860.6875pt x 762.85pt>
+ id=1579, 2860.6875pt x 762.85pt>
 File: ./images_fusionChapitres/simulation_distanceMoyenDLDH_k_0_aleatoire_p_05.
 jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/simulation_distanceMoyenDLDH_k_0_aleatoire_p_05.j
 peg>
 Package pdftex.def Info: ./images_fusionChapitres/simulation_distanceMoyenDLDH_
-k_0_aleatoire_p_05.jpeg used on input line 15.
+k_0_aleatoire_p_05.jpeg  used on input line 15.
 (pdftex.def)             Requested size: 499.97307pt x 159.9937pt.
- [94]
+
+[94]
 Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
@@ -1764,16 +1741,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--66
 
  []
 
-
 <./images_fusionChapitres/permut_distanceMoyenDLDH_k_1_2_5_9_aleatoire_p_05.jpe
-g, id=1599, 2860.6875pt x 3814.25pt>
+g, id=1598, 2860.6875pt x 3814.25pt>
 File: ./images_fusionChapitres/permut_distanceMoyenDLDH_k_1_2_5_9_aleatoire_p_0
 5.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/permut_distanceMoyenDLDH_k_1_2_5_9_aleatoire_p_05
 .jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/permut_distanceMoyenDLDH_k_1_
-2_5_9_aleatoire_p_05.jpeg used on input line 70.
+2_5_9_aleatoire_p_05.jpeg  used on input line 70.
 (pdftex.def)             Requested size: 549.99657pt x 569.9594pt.
 
 Overfull \hbox (26.75037pt too wide) in paragraph at lines 70--79
@@ -1825,15 +1800,14 @@ K$ \OT1/cmr/m/sl/12 CASES DE LA MATRICE DU LINE-GRAPHE \OT1/cmr/m/n/12 99
 
 [99]
 <./images_fusionChapitres/simulation_comparaisonDifferentesMethodes_by_FonctDeC
-out_unitaire_500G_p_correl_05.jpeg, id=1629, 1525.7pt x 1525.7pt>
+out_unitaire_500G_p_correl_05.jpeg, id=1628, 1525.7pt x 1525.7pt>
 File: ./images_fusionChapitres/simulation_comparaisonDifferentesMethodes_by_Fon
 ctDeCout_unitaire_500G_p_correl_05.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/simulation_comparaisonDifferentesMethodes_by_Fonc
 tDeCout_unitaire_500G_p_correl_05.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/simulation_comparaisonDiffere
-ntesMethodes_by_FonctDeCout_unitaire_500G_p_correl_05.jpeg used on input line 2
-8.
+ntesMethodes_by_FonctDeCout_unitaire_500G_p_correl_05.jpeg  used on input line 
+28.
 (pdftex.def)             Requested size: 381.42407pt x 381.42407pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 42--48
@@ -1843,29 +1817,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--48
 [100 <./images_fusionChapitres/simulation_comparaisonDifferentesMethodes_by_Fon
 ctDeCout_unitaire_500G_p_correl_05.jpeg>])
 (./simulation/experimentation1InfluenceCasesModifieesDistributionsHamming.tex
-<./images_fusionChapitres/comparaison_p_correl_s_aleatoire_aucune.jpeg, id=1635
+<./images_fusionChapitres/comparaison_p_correl_s_aleatoire_aucune.jpeg, id=1634
 , 1678.27pt x 1678.27pt>
 File: ./images_fusionChapitres/comparaison_p_correl_s_aleatoire_aucune.jpeg Gra
 phic file (type jpg)
-
 <use ./images_fusionChapitres/comparaison_p_correl_s_aleatoire_aucune.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/comparaison_p_correl_s_aleato
-ire_aucune.jpeg used on input line 5.
+ire_aucune.jpeg  used on input line 5.
 (pdftex.def)             Requested size: 419.56647pt x 419.56647pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
  []
 
-
-<./images_fusionChapitres/comparaison_p_correl_s_aleatoire_ajout.jpeg, id=1638,
+<./images_fusionChapitres/comparaison_p_correl_s_aleatoire_ajout.jpeg, id=1637,
  1678.27pt x 1678.27pt>
 File: ./images_fusionChapitres/comparaison_p_correl_s_aleatoire_ajout.jpeg Grap
 hic file (type jpg)
-
 <use ./images_fusionChapitres/comparaison_p_correl_s_aleatoire_ajout.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/comparaison_p_correl_s_aleato
-ire_ajout.jpeg used on input line 33.
+ire_ajout.jpeg  used on input line 33.
 (pdftex.def)             Requested size: 419.56647pt x 419.56647pt.
 
 Overfull \hbox (28.41801pt too wide) has occurred while \output is active
@@ -1874,14 +1845,13 @@ K$ \OT1/cmr/m/sl/12 CASES DE LA MATRICE DU LINE-GRAPHE \OT1/cmr/m/n/12 101
  []
 
 [101]
-<./images_fusionChapitres/comparaison_p_correl_s_aleatoire_supp.jpeg, id=1645, 
+<./images_fusionChapitres/comparaison_p_correl_s_aleatoire_supp.jpeg, id=1644, 
 1678.27pt x 1678.27pt>
 File: ./images_fusionChapitres/comparaison_p_correl_s_aleatoire_supp.jpeg Graph
 ic file (type jpg)
-
 <use ./images_fusionChapitres/comparaison_p_correl_s_aleatoire_supp.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/comparaison_p_correl_s_aleato
-ire_supp.jpeg used on input line 51.
+ire_supp.jpeg  used on input line 51.
 (pdftex.def)             Requested size: 419.56647pt x 419.56647pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 58--62
@@ -1903,13 +1873,13 @@ K$ \OT1/cmr/m/sl/12 CASES DE LA MATRICE DU LINE-GRAPHE \OT1/cmr/m/n/12 103
 [103 <./images_fusionChapitres/comparaison_p_correl_s_aleatoire_ajout.jpeg>])
 (./simulation/experimentation1RelationDHDC.tex [104 <./images_fusionChapitres/c
 omparaison_p_correl_s_aleatoire_supp.jpeg>]
-<./images_fusionChapitres/correlation_dh_dl_p_05.jpeg, id=1660, 1459.4525pt x 1
+<./images_fusionChapitres/correlation_dh_dl_p_05.jpeg, id=1659, 1459.4525pt x 1
 033.8625pt>
 File: ./images_fusionChapitres/correlation_dh_dl_p_05.jpeg Graphic file (type j
 pg)
- <use ./images_fusionChapitres/correlation_dh_dl_p_05.jpeg>
-Package pdftex.def Info: ./images_fusionChapitres/correlation_dh_dl_p_05.jpeg u
-sed on input line 11.
+<use ./images_fusionChapitres/correlation_dh_dl_p_05.jpeg>
+Package pdftex.def Info: ./images_fusionChapitres/correlation_dh_dl_p_05.jpeg  
+used on input line 11.
 (pdftex.def)             Requested size: 510.81604pt x 361.8573pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--34
@@ -1938,14 +1908,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 (./simulation/experimentation2AffectationProbabilitesCasesMatrice.tex
 <./images_fusionChapitres/distribution_0_1_metrique_wil_shapelets_P_len4950.jpe
-g, id=1675, 883.3pt x 607.26875pt>
+g, id=1674, 883.3pt x 607.26875pt>
 File: ./images_fusionChapitres/distribution_0_1_metrique_wil_shapelets_P_len495
 0.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/distribution_0_1_metrique_wil_shapelets_P_len4950
 .jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/distribution_0_1_metrique_wil
-_shapelets_P_len4950.jpeg used on input line 4.
+_shapelets_P_len4950.jpeg  used on input line 4.
 (pdftex.def)             Requested size: 500.0089pt x 249.9918pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--20
@@ -1960,26 +1929,24 @@ RICE DU LINE-GRAPHE \OT1/cmr/m/n/12 107
 
 [107]
 <./images_fusionChapitres/distributionsCases01avecCoefficientAsymetries.jpeg, i
-d=1684, 1525.7pt x 1048.91875pt>
+d=1683, 1525.7pt x 1048.91875pt>
 File: ./images_fusionChapitres/distributionsCases01avecCoefficientAsymetries.jp
 eg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/distributionsCases01avecCoefficientAsymetries.jpe
 g>
 Package pdftex.def Info: ./images_fusionChapitres/distributionsCases01avecCoeff
-icientAsymetries.jpeg used on input line 25.
+icientAsymetries.jpeg  used on input line 25.
 (pdftex.def)             Requested size: 499.99052pt x 250.00107pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 21--32
 
  []
 
-<./images_fusionChapitres/distribution01.jpeg, id=1686, 867.24pt x 289.08pt>
+<./images_fusionChapitres/distribution01.jpeg, id=1685, 867.24pt x 289.08pt>
 File: ./images_fusionChapitres/distribution01.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/distribution01.jpeg>
-Package pdftex.def Info: ./images_fusionChapitres/distribution01.jpeg used on i
-nput line 46.
+Package pdftex.def Info: ./images_fusionChapitres/distribution01.jpeg  used on 
+input line 46.
 (pdftex.def)             Requested size: 550.02965pt x 249.99782pt.
 
 Overfull \hbox (26.78345pt too wide) in paragraph at lines 46--47
@@ -2001,9 +1968,9 @@ RICE DU LINE-GRAPHE \OT1/cmr/m/n/12 109
 eg>]
 File: ./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg Graphic fi
 le (type jpg)
- <use ./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg>
+<use ./images_fusionChapitres/distrib_relationAdjacence_seuils.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/distrib_relationAdjacence_seu
-ils.jpeg used on input line 20.
+ils.jpeg  used on input line 20.
 (pdftex.def)             Requested size: 499.98685pt x 249.99687pt.
 )
 
@@ -2032,15 +1999,13 @@ ecapProtocoleEtudeSeuil-eps-converted-to.pdf ./images_fusionChapitres/recapProt
 ocoleEtudeSeuil.eps>
 (epstopdf)             \includegraphics on input line 4.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/recapProtocoleEtudeSeuil-eps-converted-to.pdf, id=169
-6, 481.8pt x 346.29375pt>
+5, 481.8pt x 346.29375pt>
 File: ./images_fusionChapitres/recapProtocoleEtudeSeuil-eps-converted-to.pdf Gr
 aphic file (type pdf)
-
 <use ./images_fusionChapitres/recapProtocoleEtudeSeuil-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/recapProtocoleEtudeSeuil-eps-
-converted-to.pdf used on input line 4.
+converted-to.pdf  used on input line 4.
 (pdftex.def)             Requested size: 361.3491pt x 259.71967pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--19
@@ -2061,20 +2026,18 @@ Overfull \hbox (3.48816pt too wide) in paragraph at lines 16--18
 graphe pour chaque seuil. Le graphique
  []
 
-
 <./images_fusionChapitres/choix_du_seuil_pour_fauxPositif_seuil_fauxNegatif_seu
 il_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_normale.jpeg,
- id=1727, 3051.4pt x 3051.4pt>
+ id=1726, 3051.4pt x 3051.4pt>
 File: ./images_fusionChapitres/choix_du_seuil_pour_fauxPositif_seuil_fauxNegati
 f_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_normale.
 jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/choix_du_seuil_pour_fauxPositif_seuil_fauxNegatif
 _seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_normale.j
 peg>
 Package pdftex.def Info: ./images_fusionChapitres/choix_du_seuil_pour_fauxPosit
 if_seuil_fauxNegatif_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh
-_aleatoire_normale.jpeg used on input line 28.
+_aleatoire_normale.jpeg  used on input line 28.
 (pdftex.def)             Requested size: 549.22832pt x 549.22832pt.
 
 Overfull \hbox (25.98212pt too wide) in paragraph at lines 28--29
@@ -2092,17 +2055,16 @@ Negatif_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_no
 rmale.jpeg>]
 <./images_fusionChapitres/choix_fct_cout_pour_fauxPositif_seuil_fauxNegatif_seu
 il_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_s_07.jpeg, id
-=1742, 2746.26pt x 2746.26pt>
+=1741, 2746.26pt x 2746.26pt>
 File: ./images_fusionChapitres/choix_fct_cout_pour_fauxPositif_seuil_fauxNegati
 f_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_s_07.jpe
 g Graphic file (type jpg)
-
 <use ./images_fusionChapitres/choix_fct_cout_pour_fauxPositif_seuil_fauxNegatif
 _seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh_aleatoire_s_07.jpeg
 >
 Package pdftex.def Info: ./images_fusionChapitres/choix_fct_cout_pour_fauxPosit
 if_seuil_fauxNegatif_seuil_fauxPositif_correction_fauxNegatif_correction_moy_dh
-_aleatoire_s_07.jpeg used on input line 55.
+_aleatoire_s_07.jpeg  used on input line 55.
 (pdftex.def)             Requested size: 549.24228pt x 549.24228pt.
 
 Overfull \hbox (25.99608pt too wide) in paragraph at lines 55--56
@@ -2160,16 +2122,14 @@ s pos-i-tives \OT1/cmr/m/n/12 en-tre les $2$ fonc-tions de co^ut apr^^Res l'alg
 orithme
  []
 
-
 <./images_fusionChapitres/comparaison_fct_couts_moy_dh_s_07_aleatoire_supp_ajou
-t_normale.jpeg, id=1757, 1525.7pt x 1525.7pt>
+t_normale.jpeg, id=1756, 1525.7pt x 1525.7pt>
 File: ./images_fusionChapitres/comparaison_fct_couts_moy_dh_s_07_aleatoire_supp
 _ajout_normale.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/comparaison_fct_couts_moy_dh_s_07_aleatoire_supp_
 ajout_normale.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/comparaison_fct_couts_moy_dh_
-s_07_aleatoire_supp_ajout_normale.jpeg used on input line 22.
+s_07_aleatoire_supp_ajout_normale.jpeg  used on input line 22.
 (pdftex.def)             Requested size: 381.42407pt x 381.42407pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--33
@@ -2219,19 +2179,17 @@ xempleGrapheCelluleG33-eps-converted-to.pdf ./images_fusionChapitres/exempleGra
 pheCelluleG33.eps>
 (epstopdf)             \includegraphics on input line 14.
 Package epstopdf Info: Output file is already uptodate.
-
-<./images_fusionChapitres/exempleGrapheCelluleG33-eps-converted-to.pdf, id=1774
+<./images_fusionChapitres/exempleGrapheCelluleG33-eps-converted-to.pdf, id=1773
 , 458.71375pt x 411.5375pt>
 File: ./images_fusionChapitres/exempleGrapheCelluleG33-eps-converted-to.pdf Gra
 phic file (type pdf)
-
 <use ./images_fusionChapitres/exempleGrapheCelluleG33-eps-converted-to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/exempleGrapheCelluleG33-eps-c
-onverted-to.pdf used on input line 14.
+onverted-to.pdf  used on input line 14.
 (pdftex.def)             Requested size: 275.23038pt x 246.92441pt.
-
-[120]) (./simulation/grillesBoucleesCorrectionGkk.tex [121 <./images_fusionChap
-itres/exempleGrapheCelluleG33-eps-converted-to.pdf>]
+ [120])
+(./simulation/grillesBoucleesCorrectionGkk.tex [121 <./images_fusionChapitres/e
+xempleGrapheCelluleG33-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./images_fusionChapitres/exempleGrapheCell
 uleAjoutG33.eps>
 (epstopdf)                    date: 2018-07-05 17:48:30
@@ -2245,16 +2203,14 @@ xempleGrapheCelluleAjoutG33-eps-converted-to.pdf ./images_fusionChapitres/exemp
 leGrapheCelluleAjoutG33.eps>
 (epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/exempleGrapheCelluleAjoutG33-eps-converted-to.pdf, id
-=1788, 776.9025pt x 421.575pt>
+=1787, 776.9025pt x 421.575pt>
 File: ./images_fusionChapitres/exempleGrapheCelluleAjoutG33-eps-converted-to.pd
 f Graphic file (type pdf)
-
 <use ./images_fusionChapitres/exempleGrapheCelluleAjoutG33-eps-converted-to.pdf
 >
 Package pdftex.def Info: ./images_fusionChapitres/exempleGrapheCelluleAjoutG33-
-eps-converted-to.pdf used on input line 46.
+eps-converted-to.pdf  used on input line 46.
 (pdftex.def)             Requested size: 466.14508pt x 252.94695pt.
  [122 <./images_fusionChapitres/exempleGrapheCelluleAjoutG33-eps-converted-to.p
 df>]
@@ -2271,16 +2227,14 @@ xempleGrapheCellulesSuppressionG33-eps-converted-to.pdf ./images_fusionChapitre
 s/exempleGrapheCellulesSuppressionG33.eps>
 (epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
-
 <./images_fusionChapitres/exempleGrapheCellulesSuppressionG33-eps-converted-to.
-pdf, id=1798, 458.71375pt x 411.5375pt>
+pdf, id=1797, 458.71375pt x 411.5375pt>
 File: ./images_fusionChapitres/exempleGrapheCellulesSuppressionG33-eps-converte
 d-to.pdf Graphic file (type pdf)
-
 <use ./images_fusionChapitres/exempleGrapheCellulesSuppressionG33-eps-converted
 -to.pdf>
 Package pdftex.def Info: ./images_fusionChapitres/exempleGrapheCellulesSuppress
-ionG33-eps-converted-to.pdf used on input line 120.
+ionG33-eps-converted-to.pdf  used on input line 120.
 (pdftex.def)             Requested size: 321.09743pt x 288.07428pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 126--129
@@ -2299,14 +2253,13 @@ Underfull \vbox (badness 1360) has occurred while \output is active []
 [124 <./images_fusionChapitres/exempleGrapheCellulesSuppressionG33-eps-converte
 d-to.pdf>]) (./simulation/grillesBoucleesAnalyseResultats.tex
 <./images_fusionChapitres/comparaison_distances_line_graphes_cellules_k_2x50.jp
-eg, id=1815, 1983.41pt x 1572.87625pt>
+eg, id=1814, 1983.41pt x 1572.87625pt>
 File: ./images_fusionChapitres/comparaison_distances_line_graphes_cellules_k_2x
 50.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/comparaison_distances_line_graphes_cellules_k_2x5
 0.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/comparaison_distances_line_gr
-aphes_cellules_k_2x50.jpeg used on input line 17.
+aphes_cellules_k_2x50.jpeg  used on input line 17.
 (pdftex.def)             Requested size: 495.85129pt x 393.2181pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
@@ -2414,14 +2367,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 Appendix A.
 (./annexes.tex
 <./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLDH_k_1_2
-_3_4_5_p_05.jpeg, id=1887, 2860.6875pt x 3814.25pt>
+_3_4_5_p_05.jpeg, id=1886, 2860.6875pt x 3814.25pt>
 File: ./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLDH_
 k_1_2_3_4_5_p_05.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLDH_k
 _1_2_3_4_5_p_05.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/unitaire_aleatoire_sansRemise
-_distanceMoyenDLDH_k_1_2_3_4_5_p_05.jpeg used on input line 7.
+_distanceMoyenDLDH_k_1_2_3_4_5_p_05.jpeg  used on input line 7.
 (pdftex.def)             Requested size: 549.99657pt x 599.99095pt.
 
 Overfull \hbox (26.75037pt too wide) in paragraph at lines 7--8
@@ -2436,14 +2388,13 @@ LaTeX Warning: Float too large for page by 96.73747pt on input line 10.
 ] [136 <./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLD
 H_k_1_2_3_4_5_p_05.jpeg>]
 <./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLDH_k_6_7
-_8_9_p_05.jpeg, id=1896, 2860.6875pt x 3814.25pt>
+_8_9_p_05.jpeg, id=1895, 2860.6875pt x 3814.25pt>
 File: ./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLDH_
 k_6_7_8_9_p_05.jpeg Graphic file (type jpg)
-
 <use ./images_fusionChapitres/unitaire_aleatoire_sansRemise_distanceMoyenDLDH_k
 _6_7_8_9_p_05.jpeg>
 Package pdftex.def Info: ./images_fusionChapitres/unitaire_aleatoire_sansRemise
-_distanceMoyenDLDH_k_6_7_8_9_p_05.jpeg used on input line 16.
+_distanceMoyenDLDH_k_6_7_8_9_p_05.jpeg  used on input line 16.
 (pdftex.def)             Requested size: 549.99657pt x 599.99095pt.
 
 Overfull \hbox (26.75037pt too wide) in paragraph at lines 16--17
@@ -2459,27 +2410,27 @@ sRemise_distanceMoyenDLDH_k_6_7_8_9_p_05.jpeg>] [138
 
 ] [139] [140] [141]
 [142] [143])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
  [144]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
  (./fusion_chapitres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
 Package rerunfilecheck Info: File `fusion_chapitres.out' has not changed.
-(rerunfilecheck)             Checksum: 48C3EC7C4B38D7AC930AED91278BCDA1;8631.
+(rerunfilecheck)             Checksum: 3161180CFFA6A6400A8D5DED7E46B331;8634.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
- 13147 strings out of 494883
- 212638 string characters out of 6178693
- 330671 words of memory out of 5000000
- 15410 multiletter control sequences out of 15000+600000
+ 13197 strings out of 494780
+ 214116 string characters out of 6176875
+ 329533 words of memory out of 5000000
+ 15494 multiletter control sequences out of 15000+600000
  16607 words of font info for 62 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
+ 81 hyphenation exceptions out of 8191
  42i,18n,43p,1310b,1196s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
@@ -2501,10 +2452,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvro8a.pfb>
-Output written on fusion_chapitres.pdf (146 pages, 12296043 bytes).
+Output written on fusion_chapitres.pdf (146 pages, 12297653 bytes).
 PDF statistics:
- 2108 PDF objects out of 2487 (max. 8388607)
- 1859 compressed objects within 19 object streams
- 523 named destinations out of 1000 (max. 500000)
+ 2106 PDF objects out of 2487 (max. 8388607)
+ 1857 compressed objects within 19 object streams
+ 522 named destinations out of 1000 (max. 500000)
  982 words of extra memory for PDF output out of 10000 (max. 10000000)
 

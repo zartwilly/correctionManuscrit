@@ -1,9 +1,9 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction G\351n\351rale}{}% 1
 \BOOKMARK [0][-]{chapter.2}{R\351seaux de flots et mesures physiques}{}% 2
-\BOOKMARK [1][-]{section.2.1}{R\351seau \351lectrique d'un datacenter : un graphe de flots}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{Topologie du r\351seau \351lectrique du datacenter}{section.2.1}% 4
+\BOOKMARK [1][-]{section.2.1}{R\351seau \351lectrique d'un data center : un graphe de flots}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Topologie du r\351seau \351lectrique du data center}{section.2.1}% 4
 \BOOKMARK [2][-]{subsection.2.1.2}{R\351seau \351lectrique : un graphe de flots}{section.2.1}% 5
-\BOOKMARK [1][-]{section.2.2}{Mod\351lisation du r\351seau \351lectrique du datacenter}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Mod\351lisation du r\351seau \351lectrique du data center}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.2.1}{Description du graphe de flots}{section.2.2}% 7
 \BOOKMARK [2][-]{subsection.2.2.2}{Grandeurs, flots et contraintes physiques}{section.2.2}% 8
 \BOOKMARK [3][-]{subsubsection.2.2.2.1}{Grandeurs physiques}{subsection.2.2.2}% 9
