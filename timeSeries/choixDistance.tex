@@ -7,18 +7,19 @@
 %La distance de similarit\'e entre des paires de s\'eries calcule un coefficient qui compare les profils de consommation des arcs dont proviennent les s\'eries. Des s\'eries qui ont les m\^emes profils doivent avoir la distance la plus \'elev\'ee (c'est-\`a-dire $1$) et celles qui ont des profils diff\'erents ont la distance la plus faible (c'est-\`a-dire $0$).
 
 %------------ % kel est le but de notre etude, kest ce qu'on recherche lorsqu'on compare 2 series.
-Nos s\'eries temporelles ont la particularit\'e d'\^etre des mesures \'electriques. Ces s\'eries sont associ\'ees aux arcs entrants dans des \'equipements. Pour certaines grandeurs comme la puissance ou l'intensit\'e, les mesures se propagent dans l'ensemble du r\'eseau en suivant la loi de conservation \cite{loiDeConservation}. Cela implique que tout variation de consommation \'electrique des \'equipements apparait dans les courbes des s\'eries temporelles comme des pics. Cela signifie que la consommation en puissance d'un \'equipement
+Nos s\'eries temporelles ont la particularit\'e d'\^etre des mesures \'electriques. Ces s\'eries sont associ\'ees aux arcs entrants dans des \'equipements. Pour certaines grandeurs comme la puissance ou l'intensit\'e, les mesures se propagent dans l'ensemble du r\'eseau en suivant la loi de conservation \cite{loiDeConservation}. 
+Cela implique que toute variation de consommation \'electrique des \'equipements apparait dans les courbes des s\'eries temporelles comme des pics. Cela signifie que la consommation en puissance d'un \'equipement
  baisse quand les \'equipements qu'il alimente sont \`a l'arr\^et ou 
  augmente quand ces \'equipements se mettent en marche.
 Nous d\'esignons la courbe d'une s\'erie temporelle par le {\em profil de consommation} d'un arc. 
 %Le profil de consommation d'un arc est la variation, au cours du temps, de la quantit\'e d'\'energie qui circule dans l'arc.
-Ainsi nous supposons que les arcs rattach\'es aux m\^emes \'equipements ont les m\^emes profils de consommation.
+Ainsi, nous supposons que les arcs rattach\'es aux m\^emes \'equipements ont les m\^emes profils de consommation.
 N\'eammoins, des arcs appartenant \`a la chaine de propagation de l'\'electricit\'e (c'est-\`a-dire tous les arcs par lesquels l'\'electricit\'e transite) n'ont pas les m\^emes profils car certains \'equipements sont rattach\'es \`a deux sources d'\'energies et les pics s'attenuent durant la propagation.
 {\em La distance de similarit\'e entre des paires de s\'eries calcule le coefficient de similarit\'e qui compare les profils de consommation des arcs}. Des arcs ont les m\^emes profils  si et seulement si le coefficient de similarit\'e est le plus \'elev\'e (c'est-\`a-dire $1$) et ont des profils diff\'erents si  leur coefficient est le plus faible (c'est-\`a-dire $0$).
 %------------
 \newline
 
-Le choix de notre m\'ethode de calcul de similarit\'e d\'epend des donn\'ees que nous avons collect\'ees. En effet, dans ces donn\'ees, nous avons certains arcs qui n'ont pas de mesures associ\'ees \`a des grandeurs physiques. Chaque valeur dans une s\'erie est la moyenne des valeurs sur un intervalle de $10$ minutes. 
+Le choix de notre m\'ethode de calcul de similarit\'e d\'epend des donn\'ees que nous avons collect\'ees. En effet, dans ces donn\'ees, certains arcs n'ont pas de mesures associ\'ees \`a des grandeurs physiques. Chaque valeur dans une s\'erie est la moyenne des valeurs sur un intervalle de $10$ minutes. 
 Il existe aussi des valeurs manquantes dans certaines s\'eries de mesures. Nous avons attribu\'e \`a ces valeurs manquantes la moyenne des valeurs \`a leur voisinage. Cette interpolation pose probl\`eme dans le calcul de similarit\'e avec les {\em shapelets}.
  En effet, \'etant donn\'e le shapelet candidat contenant des valeurs extrapol\'ees, la correspondance entre le shapelet candidat et toutes autres s\'equences est fortement d\'egrad\'ee \`a cause des valeurs extrapol\'ees qui augmentent la distance euclidienne entre elles. Ensuite, il s'ex\'ecute lentement sur de grands ensembles de donn\'ees. Enfin le shapelet candidat est de longueur quelconque et sa d\'etermination passe par la g\'en\'eration de toutes les shapelets possibles. 
  Ce qui conduit \`a une complexit\'e de ${\cal O}(m^2)$, avec $m$ la taille de la longue s\'erie temporelle. 
@@ -27,11 +28,11 @@ Il existe aussi des valeurs manquantes dans certaines s\'eries de mesures. Nous 
 \newline
 
 % incinvenient avec les sax, bop 
-Par ailleurs, les m\'ethodes par aggr\'egation des caract\'eristiques descriptives fournissent \'egalement des r\'esultats mitig\'es. Prenons l'exemple de m\'ethodes de similarit\'e avec {\em Symbolic Aggregate approXimation}. Elle consiste \`a subdiviser chaque s\'erie en $M$ s\'equences de tailles identiques puis \`a encoder chaque s\'equence par une lettre alphab\'etique, chaque lettre \'etant choisie dans un alphabet de lettres pr\'ed\'efinies. La transformation d'une s\'equence en une lettre s'obtient gr\^ace \`a une repr\'esentation {\em PAA (Piecewise Aggregate Approximation)} et \`a une table de correspondance entre l'alphabet. 
+Par ailleurs, les m\'ethodes par aggr\'egation des caract\'eristiques descriptives fournissent \'egalement des r\'esultats mitig\'es. Prenons l'exemple de m\'ethodes de similarit\'e avec {\em Symbolic Aggregate approXimation}(SAX). Elle consiste \`a subdiviser chaque s\'erie en $M$ s\'equences de taille identique puis \`a encoder chaque s\'equence par une lettre alphab\'etique, chaque lettre \'etant choisie dans un alphabet de lettres pr\'ed\'efinies. La transformation d'une s\'equence en une lettre s'obtient gr\^ace \`a une repr\'esentation {\em PAA (Piecewise Aggregate Approximation)} et \`a une table de correspondance entre l'alphabet. 
 La repr\'esentation {\em PAA} \cite{paatheorique} d'une s\'equence est la moyenne des valeurs de la s\'equence. La table de correspondance contient la liste ordonn\'ee des points appel\'es {\em breakpoints} dont chaque valeur est une division arbritraire de la distribution gaussienne en zones \'equiprobables \cite{lin2003symbolic} et un alphabet. Et \`a chaque point de la liste {\em breakpoints}, une lettre lui est associ\'ee.
 La transformation de cette repr\'esentation en lettres a une complexit\'e de  ${\cal O}(mM)$ \cite{lin2003symbolic} avec $M$ est le nombre de s\'equences de la s\'erie
 et $m$ la taille de la s\'erie.
-Le principal inconvenient provient de  l'erreur produite lors de transformation. L'encodage consid\'er\'e par {\em SAX} est celui qui minimise cette erreur.
+Le principal inconv\'enient provient de  l'erreur produite lors de transformation. L'encodage consid\'er\'e par {\em SAX} est celui qui minimise cette erreur.
  Ainsi, une s\'erie peut avoir deux encodages diff\'erents si nous changeons l'origine des s\'equences. L'encodage n'est donc pas unique.
 De m\^eme, il est difficile de d\'etecter les variations dans la s\'erie avec l'encodage {\em SAX} car  toute variation faible mais continue dans le temps a le m\^eme encodage.  Par contre, une variation forte dans la s\'erie ne modifie pas l'encodage dans le {\em breakpoint} puisque la distance {\em PAA} est la moyenne des valeurs dans la s\'equence. 
 \newline
