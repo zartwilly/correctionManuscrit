@@ -1,8 +1,8 @@
 Nous pr\'esentons, dans cette section,  les distances qui transforment au pr\'ealable les s\'eries pour comparer leurs caract\'eristiques. Ces caract\'eristiques sont appel\'ees des { \em features}. 
 \newline
 Pour mesurer la similarit\'e entre des s\'eries temporelles, des m\'ethodes proposent de repr\'esenter les donn\'ees en sous-s\'equences diff\'erentes, chacune formant une classe. Cette transformation est d\'esign\'ee par {\em shapelets}. Un shapelet consid\`ere que les sous-s\'equences sont ind\'ependantes. 
-Le calcul de similarit\'e entre des s\'eries se produit localement entre les s\'equences de m\^eme phase au moyen d'une m\'etrique. G\'en\'eralement on utilise la distance euclidienne. 
-D'abord, les shapelets g\'en\'eralisent l'algorithme des $k$ plus proche voisins ({\em k-means}) largement utilis\'e dans les arbres de d\'ecision pour am\'eliorer les classifications \cite{wang2013experimental}. Ensuite, ils sont interpr\'etables et donne une id\'ee de la diff\'erence entre deux classes \cite{ye2011time}. Enfin, ils peuvent \^etre tr\`es  pr\'ecis que d'autres m\'ethodes concurrentes \cite{mueen2011logical, ye2011time}.
+Le calcul de similarit\'e entre des s\'eries se produit localement entre les s\'equences de m\^eme phase au moyen d'une m\'etrique. G\'en\'eralement la m\'etrique utilis\'ee est la distance euclidienne. 
+D'abord, les shapelets g\'en\'eralisent l'algorithme des $k$ plus proche voisins ({\em k-means}) largement utilis\'e dans les arbres de d\'ecision pour am\'eliorer les classifications \cite{wang2013experimental}. Ensuite, ils sont interpr\'etables et donnent une id\'ee de la diff\'erence entre deux classes \cite{ye2011time}. Enfin, ils peuvent \^etre aussi plus  pr\'ecis que d'autres m\'ethodes concurrentes \cite{mueen2011logical, ye2011time}.
 \newline 
 {\em Hills et al.} \cite{hills2014classificationShapelets} propose l'algorithme \ref{algoTransformShapelets} de transformation de s\'eries  en {\em shapelets} en retournant les $k$ premiers shapelets dans une seule ex\'ecution.
 L'algorithme \ref{algoTransformShapelets} se d\'ecrit comme suit :
@@ -50,7 +50,7 @@ $m$ la plus longue s\'erie temporelle \cite{rakthanmanon2013fast}.
 \newline 
 
 {\bf Conclusion} : les shapelets transforment la s\'erie en un sous-ensembles de s\'equences avec la fonction {\em generateCandidate}. Chaque s\'equence d'une s\'erie est nomm\'ee {\em shapelet candidat} et ce {\em shapelet candidat} est compar\'e avec  les autres shapelets candidat de la m\^eme s\'erie \`a partir \`a la {\em distance de shapelet}. Une fois les {\em shapelets candidats} de chaque s\'erie s\'electionn\'ee avec l'algorithme {\em ShapeletSelection}, on les compare avec la distance euclidienne.
-Cette m\'ethode est inefficace pour des s\'eries de grandes tailles.
+Cette m\'ethode est inefficace pour des s\'eries de grande taille.
 %We transform the original data using the best shapelets as
 %features, where attribute i in instance j of the transformed
 %data is sDist(S i , T j ) , where S i is the i th best shapelet and
