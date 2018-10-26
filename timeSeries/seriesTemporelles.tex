@@ -4,7 +4,7 @@ Une s\'erie temporelle est une suite chronologique de valeurs r\'eelles $x_t$ \`
 \begin{equation}
 (x_t)_{ t \in \Theta}
 \end{equation}
-avec $\Theta $ l'ensemble discret des espaces de temps de dimension $n$.
+avec $\Theta $ l'ensemble discret et fini des espaces de temps de dimension $n$.
 \end{definition}
 L'intervalle de temps entre deux mesures successives d\'epend de la s\'erie. 
 Il peut s'agir d'un jour, d'une semaine, d'une minute, etc.
@@ -33,22 +33,22 @@ Nous distinguons deux types de mod\`eles :
 		\item Le mod\`ele multiplicatif : la variable $x_t$  est le produit de la tendance et d'une composante p\'eriodique :
 		$$x_t = Z_t(1 + S_t)(1 + Q_t).$$
 		Toutefois, l'application d'un logarithme nous permet de revenir au mod\`ele additif.
-		$$x_t = log(Z_t) +log(1 + S_t) + log(1 + Q_t).$$
+		$$y(t) = log(x_t) = log(Z_t) +log(1 + S_t) + log(1 + Q_t).$$
 	\end{itemize}
 	%L'utilisation de mod\`eles d\'eterministes pour la pr\'evision est \'el\'ementaire. Une fois d\'etermin\'ee la fonction $f$ \`a partir des donn\'ees observ\'ees $x_1 , ... , x_n$ , nous proposons une pr\'evision \`a la prochaine date par $\hat{X_{n+1}} = f(n+1)$.La pr\'ecision de cette pr\'evision peut aussi \^etre \'evalu\'ee par une estimation de la variance de $\epsilon_{n+1} = \hat{X_{n+1}} - f(n+1)$ . Cette estimation est r\'ealis\'ee par la variance empirique de la s\'erie des \'ecarts $\epsilon_i = X_{i} - f(i)$, consid\`er\'ee comme une s\'erie de variables al\'eatoires ind\'ependantes de m\^eme loi. La donn\'ee de cette variance empirique permettra de proposer un intervalle de confiance autour de la pr\'evision.
 
-	\item Les mod\`eles stochastiques : ils font l'hypoth\`ese que les r\'esidus $\epsilon_t$ ne sont pas ind\'ependants et qu'il est possible de pr\'evoir les r\'esidus en partie. L'avantage r\'eside dans la r\'eduction de l'impr\'ecision de la pr\'evision des termes futures de la s\'erie temporelle.  La variable $\epsilon_t$ devient une fonction des valeurs du pass\'ee et d'un terme d'erreur $\eta_t$ $$\epsilon_t = (\epsilon_{t-1}, \epsilon_{t-2}, ... , \eta_{t}).$$
+	\item Les mod\`eles stochastiques : ils font l'hypoth\`ese que les r\'esidus $\epsilon_t$ ne sont pas ind\'ependants et qu'il est possible de pr\'evoir les r\'esidus en partie. L'avantage r\'eside dans la r\'eduction de l'impr\'ecision de la pr\'evision des termes futurs de la s\'erie temporelle.  La variable $\epsilon_t$ devient une fonction des valeurs du pass\'e et d'un terme d'erreur $\eta_t$ $$\epsilon_t = (\epsilon_{t-1}, \epsilon_{t-2}, ... , \eta_{t}).$$
 	Nous pouvons citer, comme exemple de mod\`eles couramment utilis\'es, les mod\`eles SARIMA, ARIMA et ARMA. Dans ces mod\`eles, la mod\'elisation porte sur la forme du processus $(\epsilon_t)$. Un exemple de mod\'elisation est le mod\`ele autor\'egressif lin\'eaire d'ordre $2$ avec des coefficients autor\'egressifs $a_1$, $a_2$ d\'efinis par 
 	$$\epsilon_t = a_1 x_{t-1} + a_2 x_{t-2} + \eta_t,$$ o\`u $\eta_t$ est un bruit blanc.
 \end{itemize}
-Un exemple de s\'erie temporelle et de ses diff\'erentes composantes est pr\'esent\'e dans la figure \ref{exempleSerieTemporelleComposante}. La s\'erie temporelle est la donn\'ee du trafic des routes fran\c caises de $1989$ \`a $1996$.
+Un exemple de s\'erie temporelle et de ses diff\'erentes composantes est pr\'esent\'e dans la figure \ref{exempleSerieTemporelleComposante}. La s\'erie temporelle est la donn\'ee du trafic prise chaque mois des routes fran\c caises de $1989$ \`a $1996$.
 La premi\`ere ligne est la r\'epresentation de la s\'erie temporelle et la seconde est celle de la tendance. Quant \`a la troisi\`eme  et la derni\`ere ligne, elles repr\'esentent respectivement la figure de p\'eriodicit\'e et les r\'esidus. La p\'eriode de la s\'erie est de $12$.
 % ---- figure exemple de la serie temporelle et ses composante
 \begin{figure}[htb!] 
 \centering
 \includegraphics[scale = 0.5]{exempleSerieTemporelleComposante.pdf}
 %\includegraphics[scale = 0.5]{/home/willy/Downloads/exempleSerieTemporelleComposante.pdf}
-\caption{ S\'erie temporelle du trafic routier fran\c cais $1989$ \`a $1996$ avec ses composantes.}
+\caption{ S\'erie temporelle des valeurs mensuelles du trafic routier fran\c cais $1989$ \`a $1996$ avec ses composantes.}
 \label{exempleSerieTemporelleComposante}
 \end{figure}
 %\FloatBarrier
@@ -65,10 +65,10 @@ la {\em d\'etendancialisation} et la {\em d\'esaisonnalisation} de la s\'erie. U
 %L'utilit\'e de la mod\'elisation de s\'eries temporelles est couramment utilis\'e dans les 
 
 \subsection{La d\'etection de rupture}
-La d\'etection de ruptures consiste \`a d\'eceler la pr\'esence d'un ou de plusieurs pics dans la s\'erie temporelle et \`a les localiser dans la s\'erie temporelle. 
+La d\'etection de rupture consiste \`a d\'eceler la pr\'esence d'un ou de plusieurs pics dans la s\'erie temporelle et \`a les localiser dans la s\'erie temporelle. 
 D\'eterminer l'existence d'une rupture est d'autant plus difficile que cette derni\`ere n'est pas forc\'ement caract\'eris\'ee par un d\'ecalage de grande amplitude entre $x_t$ et $x_{t+1}$ par rapport \`a la dispersion des observations. 
 Un enjeu de la d\'etection est donc d'\^etre sensible aux faibles variations tout en garantissant une certaine robustesse au bruit.
-La th\`ese  de {\em Flore Harl\'e} \cite{floreHarleDetectionRuptureMultiples2006} 
+La th\`ese de master de {\em Flore Harl\'e} \cite{floreHarleDetectionRuptureMultiples2006} 
 propose une m\'ethode de d\'etection de changements univari\'ee et multivari\'ee \`a la m\'ediane des segments, le segment \'etant une subdivision de la s\'erie temporelle. Les mod\`eles propos\'es sont exprim\'es par des fonctions de vraisemblance afin d'illustrer l'augmentation de la difficult\'e lors de l'ajout de nouvelles inconnues.
 
 \subsection{La comparaison de  s\'eries temporelles}
@@ -76,16 +76,16 @@ Si deux s\'eries sont observ\'ees, nous pouvons nous demander quelle influence e
 Par exemple, \'etant donn\'ee deux s\'eries $X_t$ et $Y_t$, nous v\'erifions s'il existe par exemple des relations du type
 $Y_t = a_1 \times X_{t+1} + a_3 \times X_{t+3}. $
 \newline
-Ici, deux questions se posent : tout d'abord, la question de la causalit\'e c'est-\`a-dire quelle variable (ici ($X_t$)) va expliquer l'autre (ici ($Y_t)$), ce qui conduit \`a la deuxi\`eme question, celle du d\'ecalage temporel : si une influence de $(X_t)$ sur $(Y_t)$ existe, avec quel d\'elai et pendant combien de temps la variable explicative $(X_t)$ influence-t-elle la variable expliqu\'ee $(Y_t)$ ?
+Ici, deux questions se posent : tout d'abord, la question de la causalit\'e c'est-\`a-dire quelle variable (ici ($X_t$)) va expliquer l'autre (ici ($Y_t)$), ce qui conduit \`a la deuxi\`eme question, celle du d\'ecalage temporel: si une influence de $(X_t)$ sur $(Y_t)$ existe, avec quel d\'elai et pendant combien de temps la variable explicative $(X_t)$ influence-t-elle la variable expliqu\'ee $(Y_t)$ ?
 \newline
 
 %Dans notre cas d'\'etude, nous cherchons \`a comparer des s\'eries temporelles en supposant que les variation dans une s\'erie sont observables dans une autre s\'erie
 %Ainsi, deux s\'eries $x_1$ et $x_2$ sont identiques s'il existe une s\'erie $k(t)$ de moyenne constante $K$ et d'\'ecart-type nul $\sigma_k = 0$ telle que 
 %$$ \forall t \in \Theta, x_1(t) = k(t) \times x_2(t) .$$
 Nous allons consid\'erer un r\'eseau de flots mod\'elis\'e par un graphe $G$ et les arcs portent des mesures. Les mesures sont mod\'elis\'ees par des s\'eries temporelles.
-Dans notre cas d'\'etude, nous cherchons \`a comparer des s\'eries temporelles en supposant que les variations dans une s\'erie sont observables dans une autre s\'erie. Pour ce faire, nous d\'efinissons la corr\'elation entre des arcs comme suit : 
+Dans notre cas d'\'etude, nous cherchons \`a comparer des s\'eries temporelles en supposant que les variations dans une s\'erie sont observables dans une autre s\'erie. Pour ce faire, nous rappelons que le coefficient de similarit\'e est une valeur indiquant la relation existante entre deux arcs et nous d\'efinissons la corr\'elation entre des arcs comme suit : 
 
-\begin{definition} :  corr\'elation entre arcs\newline
+\begin{definition}  Corr\'elation entre arcs\newline
 Soit $corr$ le coefficient de similarit\'e entre les s\'eries $x$ et $y$ d\'efini de $\mathbb{R}^{n} \times \mathbb{R}^{n}
  \rightarrow [0,1]$ et 
  les arcs $A$ et $B$ contenant respectivement les s\'eries $x$ et $y$.
@@ -93,6 +93,7 @@ Soit $corr$ le coefficient de similarit\'e entre les s\'eries $x$ et $y$ d\'efin
 Deux arcs $A$ et $B$ sont corr\'el\'es si et seulement si le coefficient de similarit\'e entre les s\'eries $x$ et $y$ est contenu dans $[0.5,1]$. 
 ($corr(x, y) \in [0.5,1]$)
 \end{definition}
-On dit alors que  $A$ et $B$ sont {\em fortement  corr\'el\'es} si le coefficient de similarit\'e tend vers $1$ ($corr(x, y) \rightarrow 1$) et {\em faiblement corr\'el\'es} si $corr(x, y)$ tend vers $0.5$ ($corr(x,y) \rightarrow 0.5$).
+On dit alors que  $A$ et $B$ sont {\em fortement  corr\'el\'es} si 
+le coefficient de similarit\'e est contenu dans l'intervalle $[0.7, 1]$ ($corr(x, y) \in [0.7,1]$) et {\em faiblement corr\'el\'es} si $corr(x, y)$ appartient \`a l'intervalle $[0.5,0.7[$ ($corr(x,y) \in [0.5, 0.7[$).
 \newline
 
