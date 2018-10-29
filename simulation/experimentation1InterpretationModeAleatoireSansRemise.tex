@@ -6,7 +6,7 @@ Nous supposons que $p=0.5$ c'est-\`a-dire qu'il y'a autant de cases {\em fausses
 Nous repr\'esentons les distributions des distances de correction et de Hamming, la fonction de repartition de la corr\'elation entre ces distances  et la fonction cumulative de la distance de Hamming. 
 La distribution des distances de correction indique la proportion de graphes $LG_{k,p,\alpha}$ qui ont le m\^eme ensemble d'ar\^etes que les graphes $G_{k,p,\alpha}$. En ce qui concerne la distribution des distances de Hamming, elle indique  la proportion de graphes $LG_{k,p,\alpha}$ qui ont le m\^eme ensemble d'ar\^etes que les graphes $LG$.
 La corr\'elation entre les distances de correction et de Hamming, not\'ee {\em correlation\_DC\_DH}, est calcul\'ee avec la formule \ref{correlation_correction_hamming}. Sa fonction de repartition $F_k(x)$ indique le nombre de corr\'elations inf\'erieures \`a une valeur de corr\'elation $x$ donn\'ee.
-Quant \`a la fonction cumulative de la distance de Hamming, elle montre l'\'evolution du nombre de cases modifi\'ees de la matrice $M'_{k,p}$ en fonction du nombre de line-graphes  construites $LG$.
+Quant \`a la fonction cumulative de la distance de Hamming, elle montre l'\'evolution du nombre de cases modifi\'ees de la matrice $M'_{k,p}$ en fonction du nombre de line-graphes  construits $LG$.
 \newline
 %\vspace{-0.5cm}
 % -------------------- figure simulation_distanceMoyenDLDH_k_0_aleatoire_p_05 ------------------------
@@ -114,6 +114,6 @@ Cependant, au d\'el\`a de $k > 5$,  la distance de correction $moy\_DC_{k,0.5}$ 
 \newline
 
 {\bf Conclusion} : l'approche de correction {\em al\'eatoire sans remise} $(2c)$ propose des line-graphes $LG_{k,p}$  identiques \`a $LG$ quand $k \le 5$. Dans ce cas, le probl\`eme {\em Proxi-Line} est trait\'e car la distance line est major\'ee par $k$. 
-Toutefois, le nombre de cases \`a corriger apr\`es l'ex\'ecution de notre couple d'algorithmes est faible lorsque la distance de correction est inf\'erieure au double de $k$ ($moy\_DC_{k,0.5} = 2 \times k$) avec $k>5$. Cela conduit \`a majorer la distance line par le double des cases \'erron\'ees.
+Toutefois, le nombre de cases \`a corriger apr\`es l'ex\'ecution de notre couple d'algorithmes est faible lorsque la distance de correction est inf\'erieure au double de $k$ ($moy\_DC_{k,0.5} = 2 \times k$) avec $k>5$. Cela conduit \`a majorer la distance line par le double des cases erron\'ees.
 En outre, pour $k>5$, le pourcentage  $\eta_k$ de corr\'elation entre $moy\_DC_{k,0.5}$ et $moy\_DH_{k,0.5}$ croit. Nous allons \'etudier l'\'evolution de $\eta_k$  dans le paragraphe \ref{relationMoyDHmoyDC} mais nous commencons par la comparaison des diff\'erentes approches de correction pour en d\'eduire celle qui minimise les distances de correction ou de Hamming.
 
