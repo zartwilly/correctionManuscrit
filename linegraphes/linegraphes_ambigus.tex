@@ -3,17 +3,17 @@ D'apr\`es le th\'eor\`eme \ref{caracteristiquesLinegraphes}(b), les ar\^etes de 
 \newline
 Si le graphe de correction $G_c$ est sans erreur, alors il est un line-graphe et son partitionnement en cliques forme une {\em couverture de corr\'elation} not\'ee ${\cal CC}(G_c)$.
 Existe-t-il plusieurs {\em couvertures de corr\'elation} de $G_c$ c'est-\`a-dire $G_c$ a-t-il plusieurs graphes racines qui sont isomorphes ?
-Pour repondre \`a cette question, nous d\'efinissons la notion d'{\em ambigu\"{i}t\'e}. 
+Pour r\'epondre \`a cette question, nous d\'efinissons la notion d'{\em ambigu\"{i}t\'e}. 
 \newline
 
 \begin{definition}
 Soient $G$ un graphe non orient\'e et $L(G)$ le line-graphe de $G$. 
 \newline
-Une ambigu\"{i}t\'e dans $L(G)$ est un graphe isomorphe \`a l'un des graphes de la figure \ref{configurationAmbiguite}. Le sommet $X$ est appel\'e le {\bf point d'ambigu\"{i}t\'e}.
+Une ambigu\"{i}t\'e dans $L(G)$ est un sous-graphe isomorphe \`a l'un des graphes de la figure \ref{configurationAmbiguite}. Le sommet $X$ est appel\'e le {\bf point d'ambigu\"{i}t\'e}.
 \end{definition}
 
 \begin{lemma}
-	Soient $G = (V,E)$ un line-graphe  et $u$ un sommet de $V(G)$. 
+	Soient $G = (V,E)$ un line-graphe  et $u$ un sommet de $G$. 
 	\newline
 	Si $G$ admet deux couvertures de corr\'elation, alors il existe au moins un sommet $u$ de $G$ tel que $G[\{u\} \cup \Gamma_{G}(u)]$ est une ambigu\"{i}t\'e dans laquelle $u$ est le point ambigu\"{i}t\'e.
 \end{lemma}
@@ -35,7 +35,8 @@ Une ambigu\"{i}t\'e dans $L(G)$ est un graphe isomorphe \`a l'un des graphes de 
 	Si les deux \'egalit\'es sont v\'erifi\'ees, le sommet $v$ est alors couvert non pas par deux cliques mais par une seule de cardinalit\'e $3$.
 	Ainsi, les seuls cas possibles sont alors r\'esum\'es par la figure  \ref{graphe2Couverture}.
 	Le sommet $v$ est bien le point d'une ambigu\"{i}t\'e isomorphe \`a $G[\{u\} \cup \Gamma_{G}(u)]$.
-}
+} 
+\hspace{16 em}$\qed$
 \end{Proof}
 
 Nous d\'eduisons le corollaire suivant :
@@ -63,7 +64,7 @@ Ces contraintes font que si un graphe contient une ambigu\"{i}t\'e induite, alor
 
 \begin{definition}
 \label{cliquesCoherentes}
-Soient $G$ un graphe et $u$ un sommet de $G$ et $\Gamma_G(u)$ les sommets voisins de $u$. 
+Soient $G$ un graphe, $u$ un sommet de $G$ et $\Gamma_G(u)$ les sommets voisins de $u$. 
 \newline
 Une partition de $\Gamma_G(u)$ en deux cliques $C_{u1}, C_{u2}$ est {\bf coh\'erente } si et seulement si chaque sommet $v$ de $C_{u1}$ (resp. $C_{u2}$) a au plus un voisin dans $C_{u2}$  (resp. $C_{u1}$).
 \end{definition}
@@ -72,7 +73,7 @@ Une partition de $\Gamma_G(u)$ en deux cliques $C_{u1}, C_{u2}$ est {\bf coh\'er
 \begin{figure}[htb!] \vspace{-1.5em}
 \centering
 \includegraphics[scale=0.75]{graphe2Couverture.eps}
-\caption{ Les graphes possibles avec deux couvertures de corr\'elation et les points d'ambigu\"{i}t\'es encadr\'es. }
+\caption{ Les graphes possibles de deux couvertures de corr\'elation avec les points d'ambigu\"{i}t\'es encadr\'es. }
 \label{graphe2Couverture} 
 \end{figure}
 % ---- figure graphe de couverture
