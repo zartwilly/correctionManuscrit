@@ -12,8 +12,8 @@ Nous d\'ebutons par l'\'etat de l'art des algorithmes de couverture en cliques p
 \subsection{Recherche de Couverture en cliques}
 Diff\'erents travaux ont \'et\'e r\'ealis\'es sur la d\'ecouverte de {\em couverture en cliques} dans les line-graphes.
 Parmi lesquelles, nous citons  l'algorithme de {\em Roussopoulos}  \cite{ROUSSOPOULOS1973108} qui utilise une propri\'et\'e des line-graphes provenant des travaux de {\em Krausz} \cite{krausz1943demonstration}. 
-Il affirme que le graphe $G$ est un line-graphe si ces ar\^etes  peuvent \^etre partitionn\'ees en cliques  de telle sorte qu'aucun sommet ne soit couvert par plus de deux cliques. 
-L'algorithme propos\'e d\'etecte si $G$ est un line-graphe et il fournit, en plus, son graphe racine en temps lin\'eaire $O(max(\{m,n\}))$, avec $n$ et $m$ les nombres respectives de sommets et d'ar\^etes.
+Il affirme que le graphe $G$ est un line-graphe si ses ar\^etes  peuvent \^etre partitionn\'ees en cliques  de telle sorte qu'aucun sommet ne soit couvert par plus de deux cliques. 
+L'algorithme propos\'e d\'etecte si $G$ est un line-graphe et il fournit, en plus, son graphe racine en temps lin\'eaire $O(max(\{m,n\}))$, avec $n$ et $m$ les nombres respectifs de sommets et d'ar\^etes.
 \newline
 Un autre algorithme, propos\'e par {\em Klauss Simon} et {\em Daniele Degiorgi} \cite{decompositionEnCliques}, est une simplication du probl\`eme de reconnaissance de line-graphes. Bas\'e sur la preuve de {\em Oystein Ore} \cite{ORE} du th\'eor\`eme de {\em Whitney} \cite{whitney1932congruent}, il stipule que deux line-graphes connexes avec plus de quatre sommets sont isomorphes si et seulement si leurs graphes racines sont aussi isomorphes et que ces graphes  doivent \^etre diff\'erents de $K_{1,3}$ et $K_3$. Il d\'etermine en un temps lin\'eaire une couverture \'etant mise \`a jour sommet apr\`es sommet. 
 L'inconv\'enient de cette m\'ethode est le traitement de sommets appartenant \`a des cliques ayant d\'ej\`a \'et\'e d\'ecouverts parce qu'il applique le partitionnement sur la liste des sommets obtenus.
