@@ -6,14 +6,14 @@ Nous construisons la matrice $M_s$  selon les r\`egles suivantes :
 \item Si $M_c[i,j] \ge s$ alors $M_s[i,j] = 1$.
 \item Si $M_c[i,j] < s$ alors $M_s[i,j] = 0$.
 \end{itemize}
-La matrice $M_s$ est la matrice d'adjacence du graphe $G_s$  dit {\em graphe de corr\'elation}. Ces cases peuvent contenir des cases \'erron\'ees. Ces cases \'erron\'ees proviennent de la s\'election du seuil $s$ et de la g\'en\'eration de valeurs de corr\'elation pour les cases \`a $0$ et \`a $1$ du line-graphe $LG$. En effet ,
+La matrice $M_s$ est la matrice d'adjacence du graphe $G_s$  dit {\em graphe de corr\'elation}. Ces cases peuvent contenir des cases erron\'ees. Ces cases erron\'ees proviennent de la s\'election du seuil $s$ et de la g\'en\'eration de valeurs de corr\'elation pour les cases \`a $0$ et \`a $1$ du line-graphe $LG$. En effet ,
 \begin{itemize}
 	\item Si $M_s [i,j] = M_{LG} [i,j] = 0$ alors $M_{s} [i,j]$ est dit {\em vrai n\'egatif}. 
 	\item Si $M_s [i,j] = M_{LG} [i,j] = 1$ alors $M_{s} [i,j]$ est dit {\em vrai positif}. 
 	\item Si $M_s [i,j] = 0$ et $M_{LG} [i,j] = 1$ alors $M_{s} [i,j]$ est dit {\em faux n\'egatif}.
 	\item Si $M_s [i,j] = 1$ et $M_{LG} [i,j] = 0$ alors $M_{s} [i,j]$ est dit {\em faux positif}.
 \end{itemize}
-Un exemple de distributions des cases \'erron\'ees selon les valeurs de seuils est present\'e dans la figure \ref{distrib_relationAdjacence_seuils}. 
+Un exemple de distributions des cases erron\'ees selon les valeurs de seuils est pr\'esent\'e dans la figure \ref{distrib_relationAdjacence_seuils}. 
 %---------------- distributionsCases01avecCoefficientAsymetries ------------------
 \begin{figure}[htb!] 
 \centering
