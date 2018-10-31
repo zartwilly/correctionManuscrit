@@ -3,7 +3,7 @@ Nous recherchons la meilleure approche de correction parmi les cinq  \'enum\'er\
 Pour ce faire, nous disposons des distributions des distances de correction et de Hamming, des fonctions de repartition de ces distributions et aussi des moyennes de distances de correction et de Hamming associ\'ees aux $k$ cases modifi\'ees. Les distributions des distances de correction et de Hamming sont obtenues avec  $p=0.5$ et la fonction de co\^ut est {\em unitaire}.
 Les distributions de distances de chaque approche sont regroup\'ees dans les colonnes $1$ et $2$ dans les figures en annexes \ref{annexe_distribution_0_9}.
 %Nous avons montr\'e dans le paragraphe \ref{relationMoyDHmoyDL} que la distance line peut \^etre utilis\'ee comme m\'etrique de comparaison entre deux graphes. Cependant, 
-Nous d\'ecidons d'utiliser la moyenne des distances de Hamming pour la comparaison de approches de correction parce qu'il est facile de d\'eterminer le nombre de cases modifi\'ees \'etant donn\'ee que nous connaissons les line-graphes $LG$ et $LG_{k,p}$. 
+Nous d\'ecidons d'utiliser la moyenne des distances de Hamming pour la comparaison d'approches de correction parce qu'il est facile de d\'eterminer le nombre de cases modifi\'ees \'etant donn\'ee que nous connaissons les line-graphes $LG$ et $LG_{k,p}$. 
 \newline
 
 %ARRETER ICI
@@ -17,14 +17,12 @@ Nous d\'ecidons d'utiliser la moyenne des distances de Hamming pour la comparais
 Soit $G_{k,p,\alpha}^{i}$  le $i^{ieme}$  graphe g\'en\'er\'e contenant $k$ cases modifi\'ees la $\alpha^{ieme}$ fois avec la repartition $p=0.5$ des $k$ cases. Nous le notons $G_{k,\alpha}^{i}$ avec $ 0 \le i \le 500$ et $\alpha \le \alpha_{max}$. Le line-graphe de  $G_{k,\alpha}^{i}$ obtenu apr\`es l'algorithme de correction est not\'e $L(G_{k,\alpha}^{i})$. \\
 Soit $DH_k^i$ la distance de Hamming entre $LG$ et $L(G_{k,\alpha}^{i})$.  \\
 La variable $moy\_DH_{k}^{i}$ est la moyenne de $DH_k^i$ pour les $\alpha_{max}$ graphes $G_{k,\alpha}^{i}$ et la variable $moy\_DH_{k}$ est la moyenne de $moy\_DH_{k}^{i}$ pour $500$ graphes contenant $k$ cases modifi\'ees.
-La figure \ref{compareDifferentesMethodesCorrectionSommets_fct_cout_normal_p05} affiche les courbes  des diff\'erents approches de correction pour des distances de Hamming moyenn\'ees $moy\_DH_{k}$ en fonction des $k$ cases modifi\'ees. En ordonn\'e, nous avons le nombre de cases diff\'erentes entre deux line-graphes. 
+La figure \ref{compareDifferentesMethodesCorrectionSommets_fct_cout_normal_p05} affiche les courbes  des diff\'erents approches de correction pour des distances de Hamming moyenn\'ees $moy\_DH_{k}$ en fonction des $k$ cases modifi\'ees. En ordonn\'ee, nous avons le nombre moyen de cases diff\'erentes entre deux line-graphes. 
 \newline
 
 % ----------- figure compareDifferentesMethodesCorrectionSommets _fct_cout_normal_p05 ----
-%\vspace{-2.0cm}
 \begin{figure}[htb!] 
 \centering
-% a changer par des chemins relatifs
 \includegraphics[scale=0.25]{simulation_comparaisonDifferentesMethodes_by_FonctDeCout_unitaire_500G_p_correl_05.jpeg}
 \caption{ Comparaison des diff\'erentes approches de correction de sommets pour $k \in \{1,\cdots,9\}$ cases modifi\'ees. 
 Les courbes en bleu carr\'e : approche degr\'e minimum sans remise (2a), 
