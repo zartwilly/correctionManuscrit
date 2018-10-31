@@ -2,7 +2,7 @@ Nous allons comparer cette borne sup\'erieure de l'\'equation \ref{borneSuperieu
 \newline
 Consid\'erons $G_{k,k'}$ une grille boucl\'ee dans laquelle le nombre de sommets par lignes est identique le nombre de sommets par colonnes ($k = k'$). Nous le notons $G_k$.
 \newline
-Nous construisons $48$ grilles boucl\'ees  contenant chacune $k \times k +1$ cellules, avec $k \in \{2,\cdots,98\}$ un nombre pair.
+Nous construisons $48$ grilles boucl\'ees  contenant chacune $(k -1)\times (k-1) +1$ cellules, avec $k \in \{2,\cdots,98\}$ un nombre pair.
 Dans chaque graphe $G_k$, nous ex\'ecutons   $50$ fois notre couple d'algorithmes avec chaque modification d'ar\^etes et la distance de correction obtenue est compar\'ee avec la borne sup\'erieure (\'equation \ref{borneSuperieureDL}).
 \newline
 
@@ -21,24 +21,3 @@ Quant \`a la modification {\em suppression d'ar\^etes uniquement}, elle se d\'ef
 \end{itemize}
 Nous allons comparer l'\'evolution des distances de correction des $48$ graphes en fonction la borne sup\'erieure pour chaque modification r\'ealis\'ee.
 
-%
-%Consid\'erons $G_{k,k'}$ une grille boucl\'ee dans lequel le nombre de sommets par lignes est identique le nombre de sommets par colonnes ($k = k'$). Nous notons $G_k$ pour d\'esigner $G_{k,k'}$ et $G_k$ contient $k \times k +1$ cellules.
-%Nous construisons $48$ grilles boucl\'ees dans lesquels chaque graphe contient $k \times k +1$ cellules $k \in \{2,\cdots,98\}$.
-%Dans chaque graphe $G_k$, nous ex\'ecutons  notre couple d'algorithmes $50$ fois puis nous r\'ecup\'erons la distance de correction  minimale entre $G_k$ et les line-graphes $L(G_k)$ propos\'ees.
-%Nous utilisons la   distance de correction  minimale parce qu'il est impossible de trouver la bonne permutation qui minimise cette distance \`a cause de la combinatoire factorielle de l'ensemble $\cal C$.
-%\newline
-%Soient $\phi^{+}(u,v)$ le poids de l'op\'eration {\em ajouter une ar\^ete} et $\phi^{-}(u,v)$ le poids de l'op\'eration {\em supprimer une ar\^ete}. 
-%L'op\'eration {\em ajout uniquement} d'ar\^etes est telle que  $\phi^{+}(u,v) = 1$ pour l'ajout de l'ar\^ete $(u,v)$ et $\phi^{-}(u,v) = 10$ pour la suppression de l'ar\^ete $(u,v)$.
-%De m\^eme,  L'op\'eration {\em suppression uniquement} d'ar\^etes est telle que  $\phi^{+}(u,v) = 10$ pour l'ajout de l'ar\^ete $(u,v)$ et $\phi^{-}(u,v) = 1$ pour la suppression de l'ar\^ete $(u,v)$.
-%L'objectif de notre exp\'erimentation est de comparer l'\'evolution des distances de correction obtenues apr\`es la correction des grilles boucl\'ees par rapport aux bornes sup\'erieures des distances line th\'eoriques. 
-
-%Nous d\'efinissons les fonctions de co\^ut {\em ajout} et {\em suppression} comme suit :
-%\begin{enumerate}[label = (\alph*)]
-%%\item {\em unitaire} : ajouter et supprimer une ar\^ete ont un poids $1$ ($\phi^{+} = \phi^{-} = 1$).
-%\item {\em ajout} : nous donnons un poids minimal \`a l'op\'eration ``ajouter d'ar\^etes''. Ainsi nous attribuons un poids $\phi^{+} = 1$ pour l'ajout d'ar\^etes et un poids $\phi^{-} = 10$ pour la suppression d'ar\^etes.
-%\item {\em suppression} : Ici nous faisons l'op\'eration inverse en donnant un poids maximal \`a l'op\'eration d'ajout d'ar\^etes. Ainsi, l'ajout d'une ar\^ete a un poids $\phi^{+} = 10$ alors que la suppression a un poids $\phi^{-} = 1$.
-%\end{enumerate}
-%L'objectif de notre exp\'erimentation est de comparer les distances lines th\'eoriques avec celles obtenus avec l'utilisation des fonctions de co\^uts mentionn\'ees ci-dessus.
-
-
-%Nous allons comparer les diff\'erentes fonctions de co\^ut en utilisant les distances line calcul\'ees. Les courbes croissantes dans les figures \ref{priorAjout1Ajout10}, \ref{priorAjout1Supp10} et \ref{priorAjout1Supp1} s'explique par le fait que les distances line sont rang\'ees par ordre croissant.
