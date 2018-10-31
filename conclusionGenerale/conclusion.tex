@@ -1,6 +1,6 @@
 Les algorithmes pr\'esent\'es dans ce document s'inscrivent dans le cas g\'en\'eral de l'\'etude de d\'ecouverte de topologie. La probl\'ematique \`a laquelle nous avons tent\'e de repondre est :
-\'etant donn\'es un ensemble de mesures physiques souvent \'erron\'ees et de lois physiques sur les liens d'un r\'eseau de flots, est il possible de d\'ecouvrir la topologie d'un r\'eseau \'energ\'etique dans lequel les mesures sont extraites?
-Nous avons restreint le r\'eseau \'energ\'etique \`a un r\'eseau \'electrique parce que l'entreprise {\em DCbrain SAS}, \`a l'origine de la th\`ese, avait de soucis de sch\'emas \'electriques pendant l'\'etude \'energ\'etique d'un datacenter. Elle a constat\'e que le sch\'ema \'electrique n'\'etait pas mis \`a jour  entre deux maintenances successives.
+\'etant donn\'es un ensemble de mesures physiques souvent erron\'ees et de lois physiques sur les liens d'un r\'eseau de flots, est il possible de d\'ecouvrir la topologie d'un r\'eseau \'energ\'etique dans lequel les mesures sont extraites?
+Nous avons restreint le r\'eseau \'energ\'etique \`a un r\'eseau \'electrique parce que l'entreprise {\em DCbrain SAS}, \`a l'origine de la th\`ese, avait de soucis de sch\'emas \'electriques pendant l'\'etude \'energ\'etique d'un data center. Elle a constat\'e que le sch\'ema \'electrique n'\'etait pas mis \`a jour  entre deux maintenances successives.
 Pour repondre alors \`a ce probl\`eme, nous avons proc\'ed\'e en $4$ \'etapes.
 \newline
 
@@ -26,9 +26,9 @@ Nous avons constat\'e que l'approche {\em al\'eatoire sans remise} donne les mei
 Par ailleurs, toutes les cases modifi\'ees sont corrig\'ees par l'algorithme lorsque le nombre de cases \`a corriger est faible c'est-\`a-dire inf\'erieure \`a $6$. 
 La seconde exp\'erimentation consiste \`a attribuer des valeurs de corr\'elation entre les paires d'arcs \`a partir de la distribution des valeurs de corr\'elation du r\'eseau de {\em Champlan}. 
 Puis \`a determiner la valeur de seuil qui donne le nombre minimum d'ar\^etes corrig\'ees par nos algorithmes. 
-Nous avons d\'eduit que cette valeur de seuil appartient \`a l'intervalle $]0.6,0.7]$ parce que il y'a peu d'erreurs dans cet intervalle avant la correction et l'algorithme de correction fournit de meilleurs r\'esultats dans ces situations.     
+Nous avons d\'eduit que cette valeur de seuil appartient \`a l'intervalle $]0.6,0.7]$ parce que il y a peu d'erreurs dans cet intervalle avant la correction et l'algorithme de correction fournit de meilleurs r\'esultats dans ces situations.     
 La derni\`ere exp\'erimentation se d\'eroule sur des graphes {\em grilles boucl\'ees} dans lesquelles chaque sommet est couvert par plus de deux cliques. Nous avons  montr\'e que les corrections de sommets en ajoutant et en supprimant uniquement des ar\^etes ont la m\^eme borne sup\'erieure de la distance line. Cependant les distances de correction sont invariants quelque soit la m\'ethode (ajouter ou supprimer uniquement)  et ne tendent pas vers la borne sup\'erieure d\'efinie.
 \newline
 
-Nous parvenons \`a d\'eterminer un graphe isomorphe au graphe non orient\'e sous-jacent au DAG du r\'eseau \'electrique lorsqu'il y'a peu d'erreurs de corr\'elation (c'est-\`a-dire nombre inf\'erieur  \`a $6$) entre les paires d'arcs. En revanche, il est difficile de trouver le graphe le plus proche isomorphe au graphe non orient\'e dont le nombre d'erreurs est sup\'erieur \`a $6$. 
+Nous parvenons \`a d\'eterminer un graphe isomorphe au graphe non orient\'e sous-jacent au DAG du r\'eseau \'electrique lorsqu'il y a peu d'erreurs de corr\'elation (c'est-\`a-dire nombre inf\'erieur  \`a $6$) entre les paires d'arcs. En revanche, il est difficile de trouver le graphe le plus proche isomorphe au graphe non orient\'e dont le nombre d'erreurs est sup\'erieur \`a $6$. 
 Une solution est d'utiliser une expertise humaine qui identifie certaines sommets de DAG et les ar\^etes incidentes \`a ces sommets afin de r\'eduire le nombre de sommets \`a corriger. 
