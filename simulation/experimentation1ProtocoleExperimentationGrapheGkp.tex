@@ -10,7 +10,7 @@ Nous avons donc introduit trois param\`etres $k, p,  \alpha_{max}$:
  
 Nous  choisissons $\alpha_{max} = 5$ pour des temps de calculs r\'ealistes. 
 Chaque graphe g\'en\'er\'e est identifi\'e par une valeur de  $\alpha \in \{1,\cdots, \alpha_{max} \}$, est not\'e $G_{k,p,\alpha}$ et sa matrice d'adjacence est  $M_{k,p,\alpha}$. 
-La valeur $\alpha$ d\'esigne l'indice de modification de $k$ cases dans la  matrice $M_{LG}$ pour une valeur de $p$ donn\'ee. Il est utilis\'e pour faire varier les $k$ cases choisies dans un graphe. 
+La valeur $\alpha$ d\'esigne l'indice de modification de $k$ cases dans la  matrice $M_{LG}$ pour une valeur de $p$ donn\'ee. Elle est utilis\'ee pour faire varier les $k$ cases choisies dans un graphe. 
 Nous appliquons notre couple d'algorithmes sur une matrice $M_{k,p,\alpha}$ et nous obtenons la matrice $M'_{k,p,\alpha}$ qui est la matrice d'adjacence du line-graphe $LG_{k, p, \alpha}$. 
 
 % a ajouter des distance line et hamming
@@ -54,21 +54,17 @@ La correction de la matrice $M_{k,p,\alpha}$ est n\'ecessaire s'il existe des so
 Nous distinguons deux modes d'ex\'ecution de notre algorithme de correction:
 \begin{enumerate}
 	\item Mode avec remise :
-%			\begin{algorithm}[!ht]
 				\newline
 				\noindent 1. Ex\'ecution algorithme de couverture, {\bf return} ${\cal C}$ \\
 				~2. \indent {\bf Tant que} ${\cal C}$ n'est pas vide\\ 
 				~3.	       	\indent~~~~~~~~Correction d'un sommet de ${\cal C}$  \\
 				~4.	       	\indent~~~~~~~~Ex\'ecution algorithme de couverture, {\bf return} ${\cal C}$ \\
-%			\end{algorithm}
-	\item Modes sans remise :
-%			\begin{algorithm}[!ht]
+	\item Mode sans remise :
 				\newline
 				\noindent 1. Ex\'ecution algorithme de couverture, {\bf return} ${\cal C}$ \\
 				~2. \indent {\bf Tant que} ${\cal C}$ n'est pas vide\\ 
 				~3.	       	\indent~~~~~~~~Correction d'un sommet de ${\cal C}$  \\
 				~4.	       	\indent~~~~~~~~Mise \`a jour du sommet  de ${\cal C}$  \\
-%			\end{algorithm}
 \end{enumerate}
 \`A chaque \'etape $3$ dans les deux modes, un sommet de $\cal C$ est choisi selon :
 \begin{enumerate} [label = (\alph*)]
@@ -78,7 +74,6 @@ Nous distinguons deux modes d'ex\'ecution de notre algorithme de correction:
 \end{enumerate}
 La correction de chaque sommet de ${\cal C}$ implique l'ajout et la suppression des ar\^etes du graphe. Nous souhaitons orienter les d\'ecisions de l'algorithme de correction de telle sorte qu'il ajoute  ou supprime uniquement des ar\^etes ou 
 qu'il r\'ealise les deux op\'erations.
-%que la correction d'un sommet s'effectue soit en ajoutant des ar\^etes, soit en supprimant des ar\^etes ou  soit en r\'ealisant les deux op\'erations. 
  Nous  priorisons une op\'eration en attribuant des co\^uts diff\'erents \`a  la modification d'ar\^etes.
 Nous distinguons trois types d'op\'erations que nous appelons {\em fonctions de co\^ut} :
 \begin{enumerate}[label=(\roman*)]
@@ -94,46 +89,8 @@ Nous rappelons que la distance de correction n'est pas la somme de toutes les  m
 Ainsi nous nous limitons \`a la fonction de co\^ut {\em unitaire} dans un premier temps et nous consid\'erons les approches de correction suivantes : $1a$, $1b$, $2a$, $2b$, $2c$.  
 La lecture de l'approche de correction $(1a)$ est le suivant : $1)$ avec remise et $a)$ le degr\'e minimum.
 L'approche $(1c)$ n'est d'aucune utilit\'e car l'algorithme de correction ne parvient pas \`a fournir un line-graphe. En effet, l'ensemble $\cal C$ croit lin\'eairement \`a chaque \'etape de correction et la correction devient une boucle infinie.
-%En effet, nous avons rencontr\'e des cas dans lesquels l'algorithme de correction est dans une boucle infinie parce que les sommets corrig\'es augmentent l'ensemble $\cal C$ et les cases modif\'ees par chaque sommet corrig\'e \'eloignent la matrice obtenue de celle d'un line-graphe.
 Le tableau \ref{tab:recapApprocheCorrection} r\'esume les approches de correction retenues dans l'analyse des performances de l'algorithme de correction.
 % ------------ tableau recapitulatif -----------------------
-%\begin{table}[h]
-%   \centering
-%   \caption{\label{tab:recapApprocheCorrection} tableau r\'ecapitulatif des approches de corrections }
-%   \begin{tabular}{|l|c|c|r|}
-%   	\hline
-%  	Mode & choix sommets & fonction de co\^ut & paragraphes \\
-%  	\hline
-%%  	Sans Remise & Degre Min & unitaire & 1  \\
-%%  	\cline{1-9}     & \cline{1-3} & ajout       & 1  \\
-%	\multirow{9}{*}{Sans r\'emise} & 
-%								\multirow{3}{*}{degr\'e minimum} & unitaire & x\\
-%															  & & ajout & y\\
-%															  & & suppression & z\\
-%															  \hline
-%							& 
-%								\multirow{3}{*}{co\^ut minimum} & unitaire & x\\
-%															  & & ajout & y\\
-%															  & & suppression & z\\
-%															  \hline								  
-%							& 
-%								\multirow{3}{*}{al\'eatoire} & unitaire & x\\
-%															  & & ajout & y\\
-%															  & & suppression & z\\
-%															  \hline
-%															  \hline									 
-%	\multirow{6}{*}{Avec r\'emise} & 
-%								\multirow{3}{*}{degr\'e minimum} & unitaire & x\\
-%															  & & ajout & y\\
-%															  & & suppression & z\\
-%															  \hline
-%							& 
-%								\multirow{3}{*}{co\^ut minimum} & unitaire & x\\
-%															  & & ajout & y\\
-%															  & & suppression & z\\
-%															  \hline															  
-%   \end{tabular}
-%\end{table}
 \begin{table}[h]
    \centering
    \caption{\label{tab:recapApprocheCorrection} Tableau r\'ecapitulatif des approches de corrections }
