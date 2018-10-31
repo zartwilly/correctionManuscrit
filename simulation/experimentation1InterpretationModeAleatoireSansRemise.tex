@@ -13,7 +13,7 @@ Quant \`a la fonction cumulative de la distance de Hamming, elle montre l'\'evol
 \begin{figure}[htb!] 
 \centering
 \includegraphics[width=500pt,height=160pt]{simulation_distanceMoyenDLDH_k_0_aleatoire_p_05.jpeg}
-\caption{ Approche de correction al\'eatoire sans remise \`a co\^ut unitaire pour $k =0 $ case modifi\'ee. La premi\`ere colonne repr\'esente la distribution des distances correction $moy\_DC_{0,0.5}$. La seconde colonne est la distribution des distances de Hamming $moy\_DH_{0,0.5}$. La troisi\`eme colonne  est la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances (correlation\_DC\_DH).  La quatri\`eme colonne est la fonction cumulative des distances de Hamming.}
+\caption{ Approche de correction al\'eatoire sans remise \`a co\^ut unitaire pour $k =0 $ case modifi\'ee. La premi\`ere colonne repr\'esente la distribution des distances de correction $moy\_DC_{0,0.5}$. La seconde colonne est la distribution des distances de Hamming $moy\_DH_{0,0.5}$. La troisi\`eme colonne  est la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances (correlation\_DC\_DH).  La quatri\`eme colonne est la fonction cumulative des distances de Hamming.}
 \label{sansremise_unitaire_distanceMoyenDCDH_k_0_aleatoire_p_05} 
 \end{figure}
 \FloatBarrier
@@ -25,7 +25,7 @@ Et la colonne $4$ est celle de la fonction cumulative des distances de Hamming.
 Dans les colonnes $1$ et $2$, les distributions se divisent en deux zones: 
 \begin{itemize}
 \item Zone {\em gauche} ou {\em am\'eliorante} : elle correspond aux batonnets de l'intervalle $[0,k]$. Cet intervalle  am\'eliore l'ensemble $E'_{k,p,\alpha}$ des ar\^etes du graphe $LG_{k,p,\alpha}$ pour que $E'_{k,p,\alpha}$ soit identique \`a l'ensemble $E_{LG}$ des ar\^etes du graphe $LG$. Si $moy\_DH_{k,p} \rightarrow 0$ alors $LG_{k,p,\alpha}$ est tr\`es proche de $LG$. Si $moy\_DH_{k,p} \rightarrow k$ alors les matrices des graphes $LG_{k,p,\alpha}$ et $LG$ diff\`erent de $k$ cases et ces cases sont les $k$ cases modifi\'ees dans $LG$.
-\item Zone {\em droite} ou {\em d\'egradante} : elle correspond aux batonnets de l'intervalle $]k, +\infty[$. Cet intervalle d\'eteriore  l'ensemble $E'_{k,p,\alpha}$ des ar\^etes du graphe $LG_{k,p,\alpha}$. Ainsi, le line-graphe $LG_{k,p,\alpha}$ s'\'eloigne de $LG$ quand $moy\_DH_{k,p} \rightarrow +\infty$.
+\item Zone {\em droite} ou {\em d\'egradante} : elle correspond aux batonnets de l'intervalle $]k, +\infty[$. Cet intervalle d\'et\'eriore  l'ensemble $E'_{k,p,\alpha}$ des ar\^etes du graphe $LG_{k,p,\alpha}$. Ainsi, le line-graphe $LG_{k,p,\alpha}$ s'\'eloigne de $LG$ quand $moy\_DH_{k,p} \rightarrow +\infty$.
 \end{itemize}
 Ces deux zones sont s\'epar\'ees par une droite en pointill\'ee d'\'equation $y = k$.  Cette droite d\'esigne le nombre de cases modifi\'ees dans le line-graphe $LG$.
 \newline
@@ -48,14 +48,14 @@ F_k(x_1) = \left\{
 %\end{equation}
 avec $x_1$ la corr\'elation entre les distances et $x$ le nombre d'ar\^etes modifi\'ees.
 Les valeurs des distances de Hamming sont \'egales \`a $0$ donc sa fonction cumulative $y_{cumulDH}^{k}$ vaut $1$. 
-L'\'equation  \ref{eqCorrelMoyDCDH}(a) s'interpr\`ete comme suit : $F_k(x) = 100\%$ des line-graphes ont leurs distances de correction et de Hamming correl\'ees ($x = 1$).
+L'\'equation  \ref{eqCorrelMoyDCDH}(a) s'interpr\`ete comme suit : $F_k(x) = 100\%$ des line-graphes ont leurs distances de correction et de Hamming corr\'el\'ees ($x = 1$).
 \newline
 
 % k = {1,2}
 Pour $k \in \{1,2\}$, le pic des histogrammes se localise dans la zone {\em am\'eliorante} des colonnes $1$ et $2$ de la figure \ref{sansremise_unitaire_distanceMoyenDCDH_k_1_2_5_9_aleatoire_p_05} et son pourcentage est sup\'erieur \`a $50\%$. 
 Les autres batonnets sont dans la zone {\em d\'egradante} et leur pic a un pourcentage inf\'erieur \`a $10\%$ en moyenne. 
 Dans la colonne $1$ de la figure \ref{sansremise_unitaire_distanceMoyenDCDH_k_1_2_5_9_aleatoire_p_05}, le pic correspond aux $k$ cases modifi\'ees du graphe $G_{k,p,\alpha}$ et son pourcentage est identique \`a celui du pic de la colonne $2$. 
-Le pic de la colonne $2$ correspond \`a $moy\_DH_{k,0.5} = 0$ et signifie que  $LG$ et $LG_{k,p,\alpha}$ ont le m\^eme ensemble d'ar\^etes. Ainsi, les $k \le 2$ cases modifi\'ees sont supprim\'ees de la matrice $M'_{k,p,\alpha}$ lorsque $moy\_DC_{k,0.5} \le k$.
+Le pic de la colonne $2$, correspondant \`a $moy\_DH_{k,0.5} = 0$, signifie que  $LG$ et $LG_{k,p,\alpha}$ ont le m\^eme ensemble d'ar\^etes. Ainsi, les $k \le 2$ cases modifi\'ees sont supprim\'ees de la matrice $M'_{k,p,\alpha}$ lorsque $moy\_DC_{k,0.5} \le k$.
 Cependant, les distances de correction et de Hamming ont approximativement les m\^emes valeurs lorsque $moy\_DC_{k,0.5} > k$ ($moy\_DC_{k,0.5}$ est dans la partie {\em d\'egradante} de la figure \ref{sansremise_unitaire_distanceMoyenDCDH_k_1_2_5_9_aleatoire_p_05}). 
 Cela s'explique par le fait que les distances $moy\_DC_{k,0.5}$ et $moy\_DH_{k,0.5}$ sont corr\'el\'ees. Nous d\'etaillons la notion de corr\'elation de distances dans la section \ref{relationMoyDHmoyDC}.
 % ---- a ajouter dans la partie correlation
@@ -100,7 +100,7 @@ Enfin, pour $k=9$, la distribution des valeurs de distances est dans la zone {\e
 En comparant les pourcentages des distances $moy\_DC_{k,0.5}$ et $moy\_DH_{k,0.5}$, nous constatons qu'ils ne sont pas identiques comme pour $k \le 5$. En effet, certaines cases modifi\'ees ne sont pas corrig\'ees car l'algorithme de correction modifie \'enorm\'ement de cases qui sont diff\'erentes des $k$ cases et ce taux croit quand  $moy\_DC_{k,0.5}$ est \'elev\'e. 
 Le taux de cases corrig\'ees est de $53.38\%$ en moyenne.
 La variable $\eta_k$ passe \`a $22\%$ de line-graphes $LG_{k,p,\alpha}$ parce que la correction a modifi\'ee des cases diff\'erentes des $k$ cases. Cependant les distances de correction et de Hamming restent toujours corr\'el\'ees et $3\%$ line-graphes $LG_{k,p,\alpha}$ ont le m\^eme ensemble d'ar\^etes que $LG$ (voir ligne $4$ de la colonne $3$ de la figure \ref{sansremise_unitaire_distanceMoyenDCDH_k_1_2_5_9_aleatoire_p_05}).
-C'est pourquoi, les courbes de  $F_k(x)$ et $y_{cumulDH}^{k}$ ont cette forme enrob\'ee proche de la fonction  sigmoide de param\^etre $\lambda \le -15$. Pour rappel, nous pr\'ecisons que ces courbes  tendent vers la fonction suivante $f_{\lambda}(x) = \frac{1}{1+e^{\lambda * (x-0.5)}}$.
+C'est pourquoi, les courbes de  $F_k(x)$ et $y_{cumulDH}^{k}$ ont cette forme enrob\'ee proche de la fonction  sigmoide de param\`etre $\lambda \le -15$. Pour rappel, nous pr\'ecisons que ces courbes  tendent vers la fonction suivante $f_{\lambda}(x) = \frac{1}{1+e^{\lambda * (x-0.5)}}$.
 \newline
 Les  cases modifi\'ees $k \in \{1,\cdots,9\}$ sont pr\'esent\'ees dans les figures 
  \ref{sansremise_unitaire_distanceMoyenDCDH_k_1_5_aleatoire_p_05} et  
@@ -109,8 +109,8 @@ Les  cases modifi\'ees $k \in \{1,\cdots,9\}$ sont pr\'esent\'ees dans les figur
 % fin explication mode aleatoire sans remise avec cout unitaire 
 
 L'approche de correction $(2c)$ nous montre que les distances de correction et de Hamming se d\'egradent quand le nombre $k$ de cases modifi\'ees augmentent. En fait, pour $k \le 5$, le nombre de line-graphes $LG_{k,p,\alpha}$ identiques \`a $LG$ est sup\'erieur \`a $nombre\_graphe = 25\%$ avec des distances de correction $moy\_DC_{k,0.5} = k$. Pour des distances $moy\_DC_{k,0.5} = 2 \times k$, les  $k$ cases modifi\'ees sont corrig\'ees. 
-Des cases \'erron\'ees sont ajout\'ees pendant l'ex\'ecution de l'algorithme de correction mais elles sont peu nombreuses. Nous pouvons consid\'erer ces cases comme la pr\'ecision de notre algorithme  car ces cases indiquent le nombre de cases \`a modifier pour obtenir $LG$. Ainsi la distance de correction est major\'ee par le nombre de cases $k$ modifi\'ees.
-Cependant, au d\'el\`a de $k > 5$,  la distance de correction $moy\_DC_{k,0.5}$ double et moins de $50\%$ des $k$ cases sont corrig\'ees. Les cases \'erron\'ees ajout\'ees proviennent de l'ajout et la suppression d'ar\^etes dans le line-graphe $LG'_{k,p,\alpha}$ \'etant donn\'ee que la fonction de co\^ut est {\em unitaire}. La distance de correction est major\'ee par $2 \times k$ en moyenne.
+Des cases erron\'ees sont ajout\'ees pendant l'ex\'ecution de l'algorithme de correction mais elles sont peu nombreuses. Nous pouvons consid\'erer ces cases comme la pr\'ecision de notre algorithme  car ces cases indiquent le nombre de cases \`a modifier pour obtenir $LG$. Ainsi la distance de correction est major\'ee par le nombre de cases $k$ modifi\'ees.
+Cependant, au d\'el\`a de $k > 5$,  la distance de correction $moy\_DC_{k,0.5}$ double et moins de $50\%$ des $k$ cases sont corrig\'ees. Les cases erron\'ees proviennent de l'ajout et la suppression d'ar\^etes dans le line-graphe $LG'_{k,p,\alpha}$ \'etant donn\'ee que la fonction de co\^ut est {\em unitaire}. La distance de correction est major\'ee par $2 \times k$ en moyenne.
 \newline
 
 {\bf Conclusion} : l'approche de correction {\em al\'eatoire sans remise} $(2c)$ propose des line-graphes $LG_{k,p}$  identiques \`a $LG$ quand $k \le 5$. Dans ce cas, le probl\`eme {\em Proxi-Line} est trait\'e car la distance line est major\'ee par $k$. 
