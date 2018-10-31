@@ -5,8 +5,7 @@ Nous allons d\'ecrire comment nous g\'en\'erons le graphe $G$.
 Consid\'erons un graphe non orient\'e $G=(V, E)$ dans lequel  $V$ est l'ensemble de $n$ sommets, $E$ l'ensemble des $m$ ar\^etes et $\alpha$ son degr\'e moyen choisi. 
 La probabilit\'e d'existence d'une ar\^ete entre deux sommets est de $\frac{\alpha}{n}$. 
 Afin de g\'en\'erer un tel graphe apr\`es avoir choisi $n$ et $\alpha$, nous s\'electionnons  deux sommets $x$ et $y$ de $V$ et nous g\'en\'erons une valeur $p_{xy}$ qui suit  une loi de probabilit\'e uniforme.
-Si $p_{xy}$ est sup\'erieure \`a la probabilit\'e d'existence d'une ar\^ete alors nous ajoutons l'ar\^ete $(x,y)$ \`a $E$.
-%Si $p_{xy} \ge \frac{\alpha}{n} $ alors on ajoute une ar\^ete \`a $G$.
+Si $p_{xy}$ est sup\'erieure \`a la probabilit\'e d'existence d'une ar\^ete alors nous ajoutons l'ar\^ete $[x,y]$ \`a $E$.
 \newline
 Si $G$ n'est pas connexe, nous choisissons al\'eatoirement un sommet dans chaque composante connexe et nous ajoutons une ar\^ete entre ces sommets.  Nous obtenons alors  $m$ ar\^etes.
 \newline
@@ -15,7 +14,6 @@ Nous effectuons ce tri avec un parcours en largeur {\em Breast First Search (BFS
 Chaque sommet $x$ obtient un ordre topologique $D_x$ et l'ar\^ete $e_{xy}$ devient 
 soit l'arc $a_{xy}$ si $D_x < D_y$ 
 soit l'arc $a_{yx}$ si $D_x > D_y$. 
-%L'ensemble $E=\{e_{xy}, \forall a_{xy} \in A\}$ contient les arcs du graphe $G$.
 Les arcs $a_{xy}$ forment l'ensemble $A$ des arcs de $G$. 
 Nous en d\'eduisons que $G=(V, A)$ est orient\'e et son line-graphe $LG$ est construit \`a partir de la d\'efinition \ref{definitionLineGraphe}.
 \newline
