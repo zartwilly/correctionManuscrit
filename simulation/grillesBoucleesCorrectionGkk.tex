@@ -13,10 +13,10 @@ Nous supposons que les deux op\'erations conduisent sur la m\^eme borne sup\'eri
 %Nous allons d\'etailler les op\'erations d'ajout et de suppression d'ar\^etes pendant l'algorithme de correction. 
 
 \subsubsubsection{Modification par {\em ajout d'ar\^etes uniquement}}
-Soit le graphe $G_{k,k'}$ contenant $k \times k' + 1$ cellules.
+Soit le graphe $G_{k,k'}$ contenant $(k -1) \times (k'-1) + 1$ cellules.
 Pour transformer chaque cellule en cliques comme cela est illustr\'e dans la figure \ref{exempleCorrectionGrapheCelluleAvecAjout}, nous ajoutons $2$ ar\^etes.
 Nous consid\'erons le sommet $(0,0)$ contenu dans les cellules $C_{0,0}$ et $C_{k-1,k'-1}$.
-Nous ajoutons $2$ ar\^etes dans $C_{0,0}$ et $C_{k-1,k'-1}$. Les cellules deviennent des cliques $K_4$. 
+Nous ajoutons $2$ ar\^etes dans $C_{0,0}$ et $C_{k-1,k'-1}$. Ces cellules deviennent des cliques $K_4$. 
 \newline
 L'ar\^ete $\{(i,j+1),(i+1,j)\}$ appartient aux cellules  $C_{i,j}$ et  $C_{i,j+1}$.
 Or cette ar\^ete est d\'ej\`a couverte par une clique $K_4$ de la cellule $C_{i,j}$.
@@ -31,7 +31,7 @@ L'ar\^ete  d'une cellule qui n'est pas contenue par une clique $K_4$ forme une c
 Les cellules ayant un seul sommet en commun sont transform\'ees en des cliques $K_4$. 
 \newline
 \`A la fin  de la correction, la grille boucl\'ee $G_{k,k'}$ est partitionn\'ee en des cliques finies $K_4$ et $K_2$.
-Dans cette construction, on remarque que chaque sommet est couvert par $2$ cliques. De cette construction d\'ecoule le lemme suivant :
+Dans cette construction, nous remarquons que chaque sommet est couvert par $2$ cliques. De cette construction d\'ecoule le lemme suivant :
 
 \begin{lemma}
 La distance line d'un graphe cellule $G_{k,k'}$ avec l'op\'eration  {\em ajout uniquement} est 
@@ -44,7 +44,7 @@ DL(G_{k,k'}) \le k \times k' +3
 \begin{figure}[htb!] 
 \centering
 \includegraphics[scale= 0.6]{exempleGrapheCelluleAjoutG33.eps}
-\caption{ La grille boucl\'ee $G_{4,4}$ : elle est compos\'ee de $16$ sommets, $33$ ar\^etes. Il contient $4$ cliques $K_{2}$ et $6$ cliques $K_4$. Les ar\^etes ajout\'ees sont les traits de couleur rouge.}
+\caption{ La grille boucl\'ee  corrig\'e $G_{4,4}$ : elle est compos\'ee de $16$ sommets, $33$ ar\^etes. Il contient $4$ cliques $K_{2}$ et $6$ cliques $K_4$. Les ar\^etes ajout\'ees sont les traits de couleur rouge.}
 \label{exempleCorrectionGrapheCelluleAvecAjout}
 \end{figure}
 % ---- figure exemple correction graphe cellule G_{4,4}
