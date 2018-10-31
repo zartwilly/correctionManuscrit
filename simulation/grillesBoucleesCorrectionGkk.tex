@@ -2,16 +2,6 @@ Nous allons consid\'erer les modifications de l'ensemble des ar\^etes de $G_{k,k
 La premi\`ere modification  se base uniquement par ajout d'ar\^etes et la seconde sur la suppression d'ar\^etes uniquement. 
 Nous supposons que les deux op\'erations conduisent sur la m\^eme borne sup\'erieure de $DL(G_{k,k'})$.
 
-
-%La grille boucl\'ee $G_{k,k'}$ ne contient aucune clique. 
-%Nous appliquons l'algorithme de correction pour couvrir les sommets de ${\cal C}$  avec des cliques et que le line-graphe d\'ecoulant de cette couverture de corr\'elation soit de distance minimale. 
-%Pour effectuer la correction, nous pouvons soit ajouter ou soit supprimer des ar\^etes uniquement.
-%Nous simulons l'op\'eration {\em ajout uniquement} d'ar\^etes en attribuant des poids tr\`es faibles pour chaque ar\^ete ajout\'ee  et des poids tr\`es  \'elev\'es pour chaque ar\^ete supprim\'ee. De m\^eme, l'op\'eration  {\em suppression uniquement} d'ar\^etes se r\'ealise en attribuant des poids tr\`es faibles pour chaque ar\^ete supprim\'ee et des poids tr\`es  \'elev\'es pour chaque ar\^ete ajout\'ee.
-%Nous allons d\'etailler les op\'erations d'ajout et de suppression d'ar\^etes pendant l'algorithme de correction. 
-
-%Soient la fonction de co\^ut {\em ajout} qui ajoute uniquement des ar\^etes et la fonction de co\^ut {\em suppression} qui supprime uniquement des ar\^etes. 
-%Nous allons d\'etailler les op\'erations d'ajout et de suppression d'ar\^etes pendant l'algorithme de correction. 
-
 \subsubsubsection{Modification par {\em ajout d'ar\^etes uniquement}}
 Soit le graphe $G_{k,k'}$ contenant $(k -1) \times (k'-1) + 1$ cellules.
 Pour transformer chaque cellule en cliques comme cela est illustr\'e dans la figure \ref{exempleCorrectionGrapheCelluleAvecAjout}, nous ajoutons $2$ ar\^etes.
@@ -91,7 +81,7 @@ Les ar\^etes partag\'ees entre deux cellules ont un des sommets couvert par une 
 
 \subsubsubsection{Modification par {\em suppression d'ar\^etes uniquement}}
 \label{modificationSuppressionAretesUniquement}
-Soit le graphe $G_{k,k'}$ contenant $k \times k' + 1$ cellules.
+Soit le graphe $G_{k,k'}$ contenant $(k-1) \times (k'-1) + 1$ cellules.
 Nous supprimons les ar\^etes \\ $[\{(0,0),(k-1,0) \},  \{(0,0),(0, k'-1) \}, \{(k-1,0),(k-1,k'+1) \}]$ de la  cellule $C_{k-1,k'-1}$. Cette cellule contient uniquement  l'ar\^ete $\{(0,k'-1),(k-1,k'-1) \}$ et cette ar\^ete forme la clique $K_2$.
 Nous supprimons \'egalement les ar\^etes $\{(0,k'-2),(0,k'-1)\}$ et $\{(k-2,k'-1),(k-1,k'-1) \}$  incidentes respectivement aux sommets $(0,k'-1)$ et $(k-1,k'-1)$ de sorte que ces sommets soient couverts par deux cliques $K_2$.
 Les sommets de degr\'e minimums $(0,0)$, $(k-1,0)$. Ils sont couverts par deux cliques $K_2$ c'est-\`a-dire $\{(0,0),(1,0)\}$ et $\{(k-2,0) ,(k-1,0)\}$.
@@ -102,14 +92,17 @@ Pour former une bipartition autour de ce sommet, nous allons supprimer $2$ ar\^e
 Les ar\^etes incidentes \`a un sommet de degr\'e $3$ et n'\'etant pas des cliques $K_2$ sont aussi supprim\'ees.
 \newline
 \`A la fin de l'algorithme de correction, la couverture de corr\'elation ne contient que des cliques $K_2$.
-Le graphe $G_{k,k'}$ est un cycle hamiltonien de taille $(k \times k'+1) + k' + 1$.
-La distance de correction entre $G_{k,k'}$ et $L(G_{k,k'})$ est $DC_{k,k'} = k \times k' +3 $ et cette distance est minimale.
+%Le graphe $G_{k,k'}$ est un cycle hamiltonien de  taille $(k \times k'+1) + k' + 1$.
+Le graphe $G_{k,k'}$ est un graphe hamiltonien.
+La distance de correction entre $G_{k,k'}$ et $L(G_{k,k'})$ est 
+$DC_{k,k'} = (k-1) \times (k'-1) +3 $ 
+et cette distance est minimale.
 
 \begin{lemma}
 La distance line  d'une grille boucl\'ee $G_{k,k'}$ avec l'op\'eration {\em suppression uniquement} d'ar\^etes est 
 \begin{equation}
 \label{borneSuperieureDL}
-DL(G_{k,k'}) = k \times k' +3 
+DL(G_{k,k'}) = (k-1) \times (k'-1) +3 
 %DL_{supp}(G_{k,k'}) = k \times (k' +1) ===> cela correspond a quoi?
 \end{equation}
 \end{lemma}
@@ -127,15 +120,7 @@ Une illustration de la correction avec l'op\'eration {\em suppression uniquement
 La grille $G_{4,4}$ poss\`ede $ k \times k' = 16$ cliques $K_2$ et $12$ ar\^etes sont supprim\'ees.
 \newline
 
-% conclusion
-%Nous avons d\'etermin\'e les distances line th\'eoriques selon les fonctions de co\^ut lors de la correction de sommets de graphes cellules. Nous allons v\'erifier si les distances line obtenues exp\'erimentalement convergent vers les distances line th\'eoriques.
 {\bf Conclusion} :
-nous avons d\'etermin\'e deux types de modifications d'ar\^etes qui ont une borne sup\'erieure de la distance line pour chaque op\'eration. En revanche, les cliques formant la couverture de corr\'elation sont diff\'erentes selon la modification. Dans la modification {\em ajout d'ar\^etes uniquement}, le grille boucl\'e $G_{k.k'}$ contient des cliques $K_4$ et $K_2$ alors que  $G_{k.k'}$ ne contient que des cliques $K_2$ dans la {\em suppression d'ar\^etes uniquement}. 
+nous avons d\'etermin\'e deux types de modifications d'ar\^etes qui ont une borne sup\'erieure de la distance line pour chaque op\'eration. En revanche, les cliques formant la couverture de corr\'elation sont diff\'erentes selon la modification. Dans la modification {\em ajout d'ar\^etes uniquement}, le grille boucl\'e $G_{k,k'}$ contient des cliques $K_4$ et $K_2$ alors que  $G_{k,k'}$ ne contient que des cliques $K_2$ dans la {\em suppression d'ar\^etes uniquement}. 
 
 
-
-%Nous remarquons que ces bornes  sont identiques. La distance line th\'eorique est alors born\'ee par $k \times k' +3$ quelque soit l'op\'eration de correction effectu\'ee.
-%Nous allons v\'erifier si les distances de correction, obtenues apr\`es la correction des grilles boucl\'ees,  convergent vers la borne des distances line th\'eoriques.
-%
-%
-%
