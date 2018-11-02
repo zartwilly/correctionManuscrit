@@ -11,7 +11,7 @@ N\'eammoins, des arcs appartenant \`a la chaine de propagation de l'\'electricit
 \newline
 
 Le choix de notre m\'ethode de calcul de similarit\'e d\'epend des donn\'ees que nous avons collect\'ees. En effet, dans ces donn\'ees, certains arcs n'ont pas de mesures associ\'ees \`a des grandeurs physiques. Chaque valeur dans une s\'erie est la moyenne des valeurs sur un intervalle de $10$ minutes. 
-Il existe aussi des valeurs manquantes dans certaines s\'eries de mesures. Nous avons attribu\'e \`a ces valeurs manquantes la moyenne des valeurs \`a leur voisinage. Cette interpolation pose probl\`eme dans le calcul de similarit\'e avec les {\em shapelets}.
+Il existe aussi des valeurs manquantes dans certaines s\'eries de mesures. Nous avons attribu\'e \`a ces valeurs manquantes la moyenne des valeurs \`a leur voisinage. Cette interpolation pose un probl\`eme dans le calcul de similarit\'e avec les {\em shapelets}.
  En effet, \'etant donn\'e le shapelet candidat contenant des valeurs extrapol\'ees, la correspondance entre le shapelet candidat et toutes autres s\'equences est fortement d\'egrad\'ee \`a cause des valeurs extrapol\'ees qui augmentent la distance euclidienne entre elles. Ensuite, il s'ex\'ecute lentement sur de grands ensembles de donn\'ees. Enfin le shapelet candidat est de longueur quelconque et sa d\'etermination passe par la g\'en\'eration de toutes les shapelets possibles. 
  Ce qui conduit \`a une complexit\'e de ${\cal O}(m^2)$, avec $m$ la taille de la longue s\'erie temporelle. 
  Cela rend le calcul irr\'ealisable pour notre ensemble de donn\'ees de dimension $30 * 4320$ avec $30$ le nombre de s\'eries temporelles et $4320$ le taille d'une s\'erie temporelle.
