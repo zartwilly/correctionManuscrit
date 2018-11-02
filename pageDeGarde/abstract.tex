@@ -49,8 +49,8 @@ Dans les r\'eseaux \'energ\'etiques, la connaissance des \'equipements, leurs em
 Ce sch\'ema synoptique peut \^etre \'erron\'e parce que  des op\'erations de maintenance sur le r\'eseau n'auraient pas \'et\'e retranscrites ou mal saisies.
 Et cela peut entrainer des co\^uts suppl\'ementaires d'exploitation du r\'eseau \'energ\'etique.
 \newline
-Nous consid\'erons le r\'eseau \'electrique d'un Datacenter. Ce r\'eseau est compos\'e d'une topologie physique mod\'elis\'ee par un {\em DAG sans circuit} et de mesures \'electriques sur ces arcs.
-La particularit\'e de ce r\'eseau est que les mesures contiennent des erreurs et la topologie est inconnue c'est-\`a-dire les arcs sont connus et les extr\'emit\'es de ces arcs sont inconnues. 
+Nous consid\'erons le r\'eseau \'electrique d'un data center. Ce r\'eseau est compos\'e d'une topologie physique mod\'elis\'ee par un {\em DAG sans circuit} et de mesures \'electriques sur ces arcs.
+La particularit\'e de ce r\'eseau est que les mesures contiennent des erreurs et que la topologie est inconnue c'est-\`a-dire les arcs sont connus et les extr\'emit\'es de ces arcs sont inconnues. 
 Dans le cas o\`u ces mesures sont correctes alors la corr\'elation des arcs induit la matrice d'adjacence du {\em line-graphe} de notre {\em DAG}. Un {line-graphe} est un graphe dans lequel chaque sommet et son voisinage peuvent \^etre partitionn\'es par une ou deux cliques et que chaque ar\^ete est couverte par une clique.
 Cependant, avec la pr\'esence des erreurs de mesures, nous avons un graphe avec des ar\^etes en plus ou en moins qui n'est pas n\'ecessairement un line-graphe. Si ce graphe est un line-graphe alors il n'est pas le line-graphe de notre DAG.  
 Notre probl\`eme est de d\'ecouvrir cette topologie en se basant sur ces mesures \'electriques. 
