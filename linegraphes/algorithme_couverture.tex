@@ -130,9 +130,24 @@ En effet, si $G_c$ est un line-graphe, par r\'ecurrence sur l'ensemble des somme
 \end{itemize}
 
 \subsubsection{Complexit\'e de l'algorithme de couverture}
-La complexit\'e de l'algorithme est au pire des cas en $O(m \times \Delta(G_c))$ avec $m$ le nombre d'ar\^etes et $\Delta(G_c)$ le degr\'e maximum du graphe.
-%On rappelle que l'algorithme de Lehot \cite{decompositionEnCliques} a une complexit\'e en $O(m) +E$. 
-Le facteur $\Delta(G_c)$ dans notre algorithme est d\^u \`a la recherche de la partition en deux cliques $C_1$ et $C_2$ et est n\'ecessaire \`a la d\'etermination de l'ensemble des sommets $v$ tels que $Cliq(v) = -1$, en nombre le plus petit possible.
+
+Si $G_c$ est un line-graphe, le sommet choisi $u$ (s'il existe) \`a la ligne $4$ de l'algorithme \ref{algo:couverture}  est \`a l'\'etat $Cliq(u) = 0$ et le sommet $u$ n'est pas un sommet ambigu. Dans le cas contraire, il est \`a l'\'etat $Cliq(u) = 3$.
+Chaque s\'election de sommets conduit \`a  une unique et correcte partition et aussi \`a une seule couverture de corr\'elation. 
+Nous montrons par induction sur l'ensemble des sommets qu'\`a chaque \'etape de l'algorithme \ref{algo:couverture}, il y a un sommet :
+\begin{itemize}
+	\item Non couvert par aucune clique et certains de ses voisins peuvent \^etre couverts par $1$ ou $2$ nouvelles cliques ($Cliq(u) = 0$, voir graphe $(b)$ de la figure \ref{exempleAlgorithmeCouverture}).
+	\item Couvert par une clique d\'ej\`a dans la couverture de corr\'elation ${\cal CC}$ et ses voisins non couverts peuvent \^etre couverts par une nouvelle clique  ($Cliq(u) = 3$, voir graphe $(c)$ de la figure \ref{exempleAlgorithmeCouverture}).
+\end{itemize} 
+L'algorithme de couverture d\'etermine la couverture de corr\'elation si $G_c$ est v\'eritablement un line-graphe.
+
+En revanche, si le graphe $G_c$ n'est pas un line-graphe alors, \`a certaines \'etapes, deux diff\'erents m\'ethodes de couvrir le sommet choisi par des cliques peuvent se pr\'esenter. Dans certains cas, nous choisissons al\'eatoirement  une des m\'ethodes (cela peut avoir un impact sur l'algorithme de correction). 
+Notons que nous r\'ealisons les m\^emes op\'erations si le graphe $G_c$ est non connexe, m\^eme si des composantes connexes sont isomorphes aux graphes de la figure  \ref{neufSousGraphesInterditDesLineGraphes}. 
+Le line-graphe obtenu est toujours un graphe connexe.
+\newline
+
+Concernant la complexit\'e, d\'eterminer si un sommet $u$ de $G_c$ est couvert par $1$ ou $2$ cliques a une complexit\'e de $O(\Delta(G_c)^2)$ (en d\'eterminant si le nombre chromatique du graphe compl\'ementaire est $1$ ou $2$). 
+Alors la complexit\'e de l'algorithme de couverture est dans le pire des cas $O(n \times \Delta(G_c)^2)$ avec $n$ le nombre de sommets.  
+Rappelons que l'algorithme de Lehot \cite{decompositionEnCliquesParArcs} a une complexit\'e de $O(n \times \Delta(G_c))$. Cependant, il ne fournit pas de couverture de corr\'elation partielle lorsque  $G_c$ n'est pas un line-graphe.
 \newline
 
 {\bf Conclusion} : si le graphe $G_c$ est un line-graphe, tous ses sommets $v$ sont labellis\'es \`a $Cliq(v) = 1$ et l'algorithme  de {\em couverture} trouve une partition du voisinage d'un sommet en une ou deux cliques de fa\c con unique (voir les lemmes pr\'ec\'edents). 
