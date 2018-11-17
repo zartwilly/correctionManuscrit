@@ -14,7 +14,7 @@ D'autre part, nous avons montr\'e que les distances de correction et de Hamming 
 
 % experimentation 2
 La seconde exp\'erimentation consid\`ere que chaque case de la matrice du line-graphe est associ\'ee \`a une valeur de corr\'elation.  Les valeurs de corr\'elation sont g\'en\'er\'ees en tenant compte des distributions des valeurs de corr\'elation  du r\'eseau \'electrique d'un data center {\em Champlan}. Ces corr\'elations sont calcul\'ees avec la {\em distance de Pearson}. Les valeurs de corr\'elation dans la matrice forment la {\em matrice de corr\'elation}. Nous avons d\'efini un ensemble de seuil dans lequel chaque seuil est appliqu\'e \`a la matrice de corr\'elation pour en construire la matrice d'adjacence du graphe $G_s$. Le graphe $G_s$ contient des cases {\em fausses n\'egatives} et des cases {\em fausses positives}. 
-Notre objectif est de minimiser le nombre de cases \'erronn\'ees dans le graphe $G_s$ apr\`es l'ex\'ecution de nos algorithmes et cela n\'ecessite la s\'election d'une valeur ad\'equate du seuil. 
+Notre objectif est de minimiser le nombre de cases erron\'ees dans le graphe $G_s$ apr\`es l'ex\'ecution de nos algorithmes et cela n\'ecessite la s\'election d'une valeur ad\'equate du seuil. 
 Nous avons consid\'er\'e l'approche de correction  {\em al\'eatoire sans remise $(2c)$} et nous avons s\'electionn\'e quatre fonctions de co\^ut : {\em unitaire}, {\em ajout}, {\em suppression} et {\em normale}. Les fonctions de co\^ut sont fonction des cases modifi\'ees par l'algorithme de correction.
 Nous avons d\'eduit que le bon seuil appartient \`a l'intervalle $s \in ]0.6,0.7]$ et la fonction {\em normale} donne de bons r\'esultats pour le calcul dans les distances de correction et de Hamming.
 \newline
