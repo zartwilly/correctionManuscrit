@@ -44,7 +44,7 @@ Nous distinguons trois familles de seuils:
 	\item Le seuil $s=0.7$ qui diminue le nombre de cases {\em fausses n\'egatives} et {\em fausses positives}. En effet, le nombre moyen de cases erron\'ees est faible $< 10$ avant la phase de correction et il est $ \le 5$ apr\`es la correction. 
 	Nous remarquons aussi les cases erron\'ees sont majoritairement des cases {\em fausses n\'egatives} apr\`es la correction.
 	La pr\'esence de ces cases provient du co\^ut de modification des ar\^etes car la compression $\pi_1,\pi_2, \pi_s$ de co\^ut minimale n\'ecessite la suppression d'ar\^etes existantes.
-	En effet, la matrice $M_s$ contient que des cases {\em fausses positives}. Pour trouver des bipartitions coh\'erentes (voir d\'efintion \ref{cliquesCoherentes}) autour des sommets \`a corriger, il faut ajouter beaucoup d'ar\^etes pour chaque partition et cela fait croitre le co\^ut de la correction. 
+	En effet, la matrice $M_s$ ne contient que des cases {\em fausses positives}. Pour trouver des bipartitions coh\'erentes (voir d\'efintion \ref{cliquesCoherentes}) autour des sommets \`a corriger, il faut ajouter beaucoup d'ar\^etes pour chaque partition et cela fait croitre le co\^ut de la correction. 
 	Nous avons remarqu\'e aussi que la suppression de quelques ar\^etes permet d'obtenir des cliques qui correspondent \`a des sommets de $G$. L'algorithme pr\'ef\`ere alors supprimer des ar\^etes car elles sont peu par rapport aux ar\^etes \`a ajouter et aussi le co\^ut de la suppression d'ar\^etes est faible.
 	 La distance de Hamming obtenue avec ce seuil est minimale par rapport aux autres seuils. Ce seuil fournit alors une meilleure correction des sommets de ${\cal C}$. 
 	
