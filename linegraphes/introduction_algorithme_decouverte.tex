@@ -9,7 +9,7 @@ Le probl\`eme consid\'er\'e ici est,
 \'etant donn\'e un graphe, de d\'eterminer s'il est un line-graphe et dans ce cas donner le graphe racine.
 Nous d\'ebutons par l'\'etat de l'art des algorithmes de couverture en cliques puis pr\'esentons nos algorithmes tout en sp\'ecifiant leurs particularit\'es par rapport aux m\'ethodes existantes. 
 
-\subsection{Recherche de Couverture en cliques}
+\subsection{Recherche de couverture en cliques}
 Diff\'erents travaux ont \'et\'e r\'ealis\'es sur la d\'ecouverte de {\em couverture en cliques} dans les line-graphes.
 Parmi lesquelles, nous citons  l'algorithme de {\em Roussopoulos}  \cite{ROUSSOPOULOS1973108} qui utilise une propri\'et\'e des line-graphes provenant des travaux de {\em Krausz} \cite{krausz1943demonstration}. 
 Il affirme que le graphe $G$ est un line-graphe si ses ar\^etes  peuvent \^etre partitionn\'ees en cliques  de telle sorte qu'aucun sommet ne soit couvert par plus de deux cliques. 
@@ -31,8 +31,8 @@ utilise un algorithme g\'en\'etique pour corriger un graphe de corr\'elation pou
 En effet, il propose une m\'ethode de d\'ecouverte de la g\'en\'ealogie de population en se basant sur les haplotypes partag\'es dans les g\'enomes des individus.  
 Un haplotype est un groupe d'all\`eles dans un organisme qui est transmis ensemble par un parent.
 Il mod\'elise un graphe dit {\em Clark Consistency} \cite{halldorsson2011clark} dans lequel les ar\^etes sont les haplotypes (ils sont uniques dans les g\'enomes) et les sommets sont les individus.
-Cette m\'ethode recherche le graphe racine induit par le graphe {\em Clark Consistency} si celui ci est un line-graphe. Dans le cas o\`u le graphe {\em Clark Consistency graph} n'est pas un line-graphe, l'algorithme suppose qu'il existe des sommets en plus dans le {\em graphe Clark Consistency}, va les supprimer afin que le graphe devienne un line-graphe et enfin retourner le graphe racine.     
-Le graphe {\em Clark consistency (CC)} a \'et\'e propos\'e dans  la m\'ethode d'identification d'haplotypes par {\em Andrew Clark}. 
+Cette m\'ethode recherche le graphe racine induit par le graphe {\em Clark Consistency} si celui-ci est un line-graphe. Dans le cas o\`u le graphe {\em Clark Consistency graph} n'est pas un line-graphe, l'algorithme suppose qu'il existe des sommets en plus dans le {\em graphe Clark Consistency}, va les supprimer afin que le graphe devienne un line-graphe et enfin retourner le graphe racine.     
+Le graphe {\em Clark Consistency (CC)} a \'et\'e propos\'e dans  la m\'ethode d'identification d'haplotypes par {\em Andrew Clark}. 
 En effet, {\em Andrew Clark} consid\`ere un ensemble de g\'enomes d'individus qui ont des haplotypes homozygotes et h\'et\'erozygotes. Il suppose que deux g\'enomes n'ont pas les m\^emes paires d'haplotypes. Les sommets du graphe CC sont les g\'enomes des individus et une ar\^ete de graphe CC entre deux g\'enomes existe s'ils partagent le m\^eme haplotype (homozygote ou h\'et\'erozygote). Les ar\^etes de ce graphe sont form\'ees par des individus partageant les m\^emes haplotypes. 
 %%%
 %A key component of our approach is the graph of potential sharing of haplotypes between individuals. This graph, called the Clark consistency (CC) graph, was first suggested in the context of a method for haplotype phasing by Andrew Clark [10]. Given the genotypes of a set of individuals, the CC graph has one node for each individual and an edge between two individuals if their genotypes are consistent with sharing a haplotype, i.e., if for every site where one of the individuals is homozygous, the other individual is either homozygous for the same allele or heterozygous. As the haplotypes of individuals that are homozygous for the whole region being considered are easily determined, we assume that every given individual has two different haplotypes (i.e., it is heterozygous for at least one of the genotyped markers) and no two individuals have the same pair of haplotypes.
