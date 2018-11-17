@@ -1,7 +1,7 @@
 
 
 % debut explication aprroche aleatoire sans remise avec cout unitaire 
-Nous supposons que $p=0.5$ c'est-\`a-dire qu'il y'a autant de cases {\em fausses n\'egatives} que de cases {\em fausses positives} dans la matrice $M_{k,p}$.
+Nous supposons que $p=0.5$ c'est-\`a-dire qu'il y a autant de cases {\em fausses n\'egatives} que de cases {\em fausses positives} dans la matrice $M_{k,p}$.
 \newline
 Nous repr\'esentons les distributions des distances de correction et de Hamming, la fonction de repartition de la corr\'elation entre ces distances  et la fonction cumulative de la distance de Hamming. 
 La distribution des distances de correction indique la proportion de graphes $LG_{k,p,\alpha}$ qui ont le m\^eme ensemble d'ar\^etes que les graphes $G_{k,p,\alpha}$. En ce qui concerne la distribution des distances de Hamming, elle indique  la proportion de graphes $LG_{k,p,\alpha}$ qui ont le m\^eme ensemble d'ar\^etes que les graphes $LG$.
@@ -22,7 +22,7 @@ Quant \`a la fonction cumulative de la distance de Hamming, elle montre l'\'evol
 Les figures \ref{sansremise_unitaire_distanceMoyenDCDH_k_0_aleatoire_p_05} et \ref{sansremise_unitaire_distanceMoyenDCDH_k_1_2_5_9_aleatoire_p_05} pr\'esentent les courbes respectives pour $k=0$ et $k \in \{1,2,5,9\}$ cases modifi\'ees. 
 La colonne $1$ indique la distribution des distances de correction, la colonne $2$ est la colonne de la distribution des distances de Hamming, la colonne $3$ est associ\'ee \`a la fonction de repartition de la corr\'elation entre les distances de correction et de Hamming avec en abscisse la corr\'elation entre ces distances ({\em correlation\_DC\_DH)}. 
 Et la colonne $4$ est celle de la fonction cumulative des distances de Hamming.
-Dans les colonnes $1$ et $2$, les distributions se divisent en deux zones: 
+Dans les colonnes $1$ et $2$, les distributions se divisent en deux zones : 
 \begin{itemize}
 \item Zone {\em gauche} ou {\em am\'eliorante} : elle correspond aux batonnets de l'intervalle $[0,k]$. Cet intervalle  am\'eliore l'ensemble $E'_{k,p,\alpha}$ des ar\^etes du graphe $LG_{k,p,\alpha}$ pour que $E'_{k,p,\alpha}$ soit identique \`a l'ensemble $E_{LG}$ des ar\^etes du graphe $LG$. Si $moy\_DH_{k,p} \rightarrow 0$ alors $LG_{k,p,\alpha}$ est tr\`es proche de $LG$. Si $moy\_DH_{k,p} \rightarrow k$ alors les matrices des graphes $LG_{k,p,\alpha}$ et $LG$ diff\`erent de $k$ cases et ces cases sont les $k$ cases modifi\'ees dans $LG$.
 \item Zone {\em droite} ou {\em d\'egradante} : elle correspond aux batonnets de l'intervalle $]k, +\infty[$. Cet intervalle d\'et\'eriore  l'ensemble $E'_{k,p,\alpha}$ des ar\^etes du graphe $LG_{k,p,\alpha}$. Ainsi, le line-graphe $LG_{k,p,\alpha}$ s'\'eloigne de $LG$ quand $moy\_DH_{k,p} \rightarrow +\infty$.
