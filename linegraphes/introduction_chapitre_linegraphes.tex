@@ -1,7 +1,7 @@
 Dans le chapitre pr\'ec\'edent, nous avons d\'etermin\'e la matrice de corr\'elation $M_c$ du graphe $G$ d'un r\'eseau \'electrique. Cette matrice peut contenir des cases erron\'ees. Une case erron\'ee  $M_c[i,j]$ est un coefficient de corr\'elation proche de $1$ (resp. de $0$) entre les arcs $i$ et $j$ alors que ces arcs ne partagent aucune extr\'emit\'e (resp. ces arcs ont une extr\'emit\'e commune).
 \newline
 Nous consid\'erons une matrice $M$ de dimension identique \`a celle de $M_c$ telle que, pour toute valeur de seuil $s \in [0,1]$ et toute paire d'arcs $(i,j)$, $M[i,j] = 1$ si et seulement si $M_c[i,j] \ge s$. La matrice $M$ est la matrice d'adjacence d'un graphe non orient\'e $G_c$ dit {\em graphe de corr\'elation}. Cette matrice peut \'egalement contenir des cases erron\'ees.  
-Une case erron\'ee $M[i,j] = 1$ d\'esigne la pr\'esence d'ar\^etes dans $G_c$ alors qu'il n'existe aucune ar\^ete entre les sommets $i$ et $j$ dans le line-grahe du graphe non-orient\'e sous-jacent au DAG $G$. 
+Une case erron\'ee $M[i,j] = 1$ d\'esigne la pr\'esence d'ar\^etes dans $G_c$ alors qu'il n'existe aucune ar\^ete entre les sommets $i$ et $j$ dans le line-graphe du graphe non-orient\'e sous-jacent au DAG $G$. 
 De m\^eme, l'absence d'une ar\^ete entre $i$ et $j$ dans $G_c$ alors qu'elle est pr\'esente dans le line-grahe du graphe non-orient\'e sous-jacent \`a $G$ est aussi une case erron\'ee  $M[i,j] = 0$.
 \newline 
 S'il n'existe aucune case erron\'ee dans la matrice $M$, alors $G_c$ est le line-graphe de graphe non-orient\'e sous-jacent au DAG $G$ et le line-graphe de $G$ est isomorphe \`a $G_c$.
