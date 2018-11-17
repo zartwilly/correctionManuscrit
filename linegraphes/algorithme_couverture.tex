@@ -1,6 +1,6 @@
 % description de l'algo de lehot
 L'algorithme de {\em couverture} que nous proposons est une am\'elioration de celui de {\em Lehot}.
-Ainsi, nous pr\'esentons tout d'abord bri\`evement le principe de l'algorithme de couverture en cliques de {\em Lehot} \cite{decompositionEnCliquesParArcs}. 
+Ainsi, nous pr\'esentons bri\`evement le principe de l'algorithme de couverture en cliques de {\em Lehot} \cite{decompositionEnCliquesParArcs}. 
 \newline
 Soient $H$ et $G$ deux graphes. Nous supposons que $H$ est le line-graphe de $G$ ($H=L(G)$).
 Le but de cet algorithme est d'identifier le graphe racine $L^{-1}(H)$ de $H$.
@@ -21,10 +21,10 @@ L'id\'ee de cet algorithme est de d\'eterminer une couverture de corr\'elation d
 les sommets partag\'es adjacents \`a un sommet ``basique'' qui forment une clique.
 Nous illustrons le fonctionnement de l'algorithme avec l'exemple suivant illustr\'e par la figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}.
 L'algorithme s\'electionne deux sommets ``basiques''  $1-2, 2-3$ et  l'ensemble $X$ des sommets adjacents aux sommets ``basiques''.
-Si $X = \emptyset$ alors il n'existe pas de sommet partag\'e dans  $G$ et les sommets $1-2, 2-3$ sont \'etiquet\'es ``\`a moiti\'e nomm\'e'' (figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(a)).
+Si $X = \emptyset$ alors il n'existe pas de sommet partag\'e dans  $G$ et les sommets $1-2, 2-3$ sont \'etiquet\'es ``\`a moiti\'e-nomm\'e'' (figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(a)).
 Si $X=\{x\}$ alors le sommet $x$ est un sommet partag\'e dans  $H$ si $x = 2-4$ car le triangle $\{x, 1-2, 2-3\}$ est impair. Dans le cas o\`u $x = 1-3$, le  triangle $\{x, 1-2, 2-3\}$ est pair et
 aucun sommet d\'ecouvert dans $G$ n'est incident aux sommets du triangle $\{x, 1-2, 2-3\}$ (figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(b)). 
-Le sommet $x$ dans $H$ est \'etiquet\'e ``pleinement-nomm\'e'' et les autres sommets $1-2, 2-3$ dans $H$ sont \'etiquet\'es ``\`a moiti\'e nomm\'es''.
+Le sommet $x$ dans $H$ est \'etiquet\'e ``pleinement-nomm\'e'' et les autres sommets $1-2, 2-3$ dans $H$ sont \'etiquet\'es ``\`a moiti\'e-nomm\'e''.
 Si $X=\{x,y\}$, il n'existe  aucun sommet partag\'e dans  $H$ si $x$ et $y$ sont adjacents dans $H$. Dans le cas o\`u  ils ne sont pas adjacents alors ils forment deux triangles avec $1-2, 2-3$. Si $x=2-4$ et $y=1-3$ alors le triangle $\{2-4,1-2, 2-3\}$ est impair et $x$ est le sommet partag\'e dans $H$
 (figure \ref{deroulementAlgorithmeLehotRechercheSommetsPartages}(c)).
 Enfin pour $|X| = |\{a,b,c, \cdots\}| = 3$, le sommet $b$ dans $H$ est \'etiquet\'e sommet partag\'e si $a$ est adjacent \`a $b$ sinon le sommet $a$ devient le sommet partag\'e.
