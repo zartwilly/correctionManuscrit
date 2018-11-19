@@ -1,6 +1,6 @@
 Nous pr\'esentons les r\'esultats obtenus avec la distance de Pearson.
 \newline
-Les grandeurs physiques collect\'ees proviennent du {\em data center Champlan} sont au nombre de $10$. Elles sont regroup\'ees dans les syst\`emes triphas\'e et monophas\'e.
+Les grandeurs physiques collect\'ees proviennent du {\em data center Champlan} et sont au nombre de $10$. Elles sont regroup\'ees dans les syst\`emes triphas\'e et monophas\'e.
 Dans les s\'eries de mesures  provenant des arcs en triphas\'e, nous remarquons qu'il y a toujours des mesures sur une phase et les autres phases ne contiennent aucune mesure. Il n'y a aucune mesure sur deux phases simultan\'ement et lorsqu'il  existe des mesures, les $i$ premi\`eres mesures sont sur la phase $1$, les $n-i$ mesures sont sur la phase $2$. 
 Les autres grandeurs ne contiennent des mesures 
 soit dans les $i$ premiers instants de temps, 
@@ -39,7 +39,7 @@ Les \'equipements {\em TGBT} sont aliment\'es par une source externe au data cen
 Nous allons calculer la corr\'elation entre les arcs du {\em sous-r\'eseau de Champlan} en supposant que {\em deux arcs incidents \`a un \'equipement sont fortement corr\'el\'es et deux arcs non corr\'el\'es ne poss\`edent aucun \'equipement en commun}.
 Chaque arc est identifi\'e par deux \'equipements, celui qui fournit l'\'electricit\'e ($x$) et celui qui en consomme ($y$). Nous d\'esignons par convention $x->y$, l'arc entre $x$ et $y$. Par exemple, l'arc entre $TGBT1$ et $R481$ est not\'e $TGBT1->R481$. 
 \newline
-Soient trois arcs $x->y$ et $y->z$ et $t->u$. 
+Soient trois arcs $x->y$, $y->z$ et $t->u$. 
 Le coefficient de similarit\'e $corr(x->y,y->z) = 1$ signifie que les arcs $x->y$ et $y->z$  ont les m\^emes profils de consommation, partagent le sommet $y$ et sont fortement corr\'el\'es. De m\^eme, le coefficient $corr(x->y,t->u) = 0$ indique que les arcs  $x->y$ et $t->u$ ne sont pas corr\'el\'es c'est-\`a-dire qu'ils n'ont pas de sommet en commun et que leurs profils de consommation sont diff\'erents.
 \newline
 
@@ -95,10 +95,10 @@ Pour ce faire, nous pr\'esentons, dans la figure \ref{distribution_0_1_distance_
 		% ---- figure  profils_consommation_cases_1_similarite_0.1
 	En ce qui concerne la distribution des coefficients de similarit\'e des arcs incidents ($cases\_1$), elle est aussi asym\'etrique \`a gauche avec un pic  pour les coefficients appartenant \`a l'intervalle $[0.1,0.2[$. Pour comprendre cette distribution, nous repr\'esentons les profils de consommation de certaines paires d'arcs incidents  ayant leur coefficient de similarit\'e appartenant \`a  l'intervalle $[0.1,0.2[$ dans la figure \ref{profils_consommation_cases_1_similarite_01}.  
 	Dans ces repr\'esentations, il y a toujours une courbe constante et sa pr\'esence est due \`a l'impossibilit\'e de collecter des donn\'ees \`a cause d'une panne. 
-	Cette s\'erie contient alors des valeurs nulles. Il y'a aussi la fourniture d'\'energie dans les branches. En effet, la source ne fournit que la quantit\'e d'\'energie demand\'ee par un \'equipement. Les s\'eries des arcs sont diff\'erentes et la distance de Pearson est la plus faible ($corr(x->y,y->z) = 0.1$). 
+	Cette s\'erie contient alors des valeurs nulles. Il y a aussi la fourniture d'\'energie dans les branches. En effet, la source ne fournit que la quantit\'e d'\'energie demand\'ee par un \'equipement. Les s\'eries des arcs sont diff\'erentes et la distance de Pearson est la plus faible ($corr(x->y,y->z) = 0.1$). 
 	Dans ce cas, les erreurs sont introduites par les donn\'ees et le fonctionnement du r\'eseau.
 \newline	
-Dans les cas d'erreurs de similarit\'e \'enonc\'ees plus haut, nous ne pouvons pas les \'eviter  pendant le calcul des coefficients parce que le m\'ecanisme de r\'ecup\'eration des donn\'ees est d\'efaillant et  l'arr\^et de la consommation d'\'electricit\'e d'une branche est masqu\'e par la mise en service de plusieurs serveurs dans une baie appartenant \`a une autre branche.
+Dans les cas d'erreurs de similarit\'e \'enonc\'es plus haut, nous ne pouvons pas les \'eviter  pendant le calcul des coefficients parce que le m\'ecanisme de r\'ecup\'eration des donn\'ees est d\'efaillant et  l'arr\^et de la consommation d'\'electricit\'e d'une branche est masqu\'e par la mise en service de plusieurs serveurs dans une baie appartenant \`a une autre branche.
 \newline 
 
 % matrice de correlation et type d erreurs
